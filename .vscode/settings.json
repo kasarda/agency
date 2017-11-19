@@ -1,11 +1,9 @@
 {
     "files.exclude": {
-        "node_modules": true,
-        "*-lock.json": true,
-        "*.lock": true,
+        "**/*.lock": true,
         ".gitignore": true,
-        "config": true,
-        "scripts": true,
-        ".vscode": true
+        "**/src/**/*.css": true,
+        "**/*.vscode": true,
+        "node_modules": true
     }
 }
