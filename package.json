@@ -2,6 +2,7 @@
   "name": "react-sass",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://kasarda.github.io/digital-agency",
   "dependencies": {
     "@types/animejs": "^2.0.0",
     "@types/react": "^16.0.25",
