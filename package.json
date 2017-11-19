@@ -2,6 +2,10 @@
   "name": "digital-agency",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Filip Kasarda",
+    "email": "kasardaafilip@gmail.com"
+  },
   "homepage": "http://kasarda.github.io/digital-agency",
   "dependencies": {
     "@types/animejs": "^2.0.0",
