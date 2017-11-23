@@ -4,9 +4,16 @@
 @import "ts-modules/normalize"
 @import "ts-modules/visibility"
 @import "ts-modules/grid"
-@import "ts-modules/animation"
+@import "theme.sass"
 
 body
   margin: 0
   padding: 0
   font-family: sans-serif
+
+h1
+  margin: 0
+
+.view
+  +dimension(100%, 100vh)
+  background: $blue-bg
