@@ -1,0 +1,36 @@
+/**! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  */
+#Home {
+  font-family: "Playfair Display", serif; }
+  #Home .column {
+    height: 250px; }
+    @media (min-width: 1024px) {
+      #Home .column {
+        padding-left: 86px; } }
+    @media (min-width: 1300px) {
+      #Home .column {
+        padding-left: 150px; } }
+    @media (min-width: 1600px) {
+      #Home .column {
+        padding-left: 250px; } }
+  #Home .wraper {
+    height: 100%;
+    width: 100%;
+    padding: 0 50px; }
+  #Home .rule {
+    width: 1px;
+    background-color: #fff;
+    margin-right: 25px; }
+  #Home h1 {
+    letter-spacing: 1.43px;
+    line-height: 78.3px;
+    font-size: 4.188em;
+    font-weight: 400;
+    margin: 0; }

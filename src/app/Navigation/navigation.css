@@ -1,0 +1,48 @@
+/**! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  */
+#Navigation {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  z-index: 999; }
+  @media (max-width: 767px) {
+    #Navigation {
+      padding-top: 25px; } }
+  #Navigation a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 0.688em;
+    letter-spacing: 4px;
+    transition: opacity 0.15s ease-in-out; }
+    #Navigation a:hover, #Navigation a.active {
+      opacity: .5; }
+  #Navigation .brand {
+    padding-left: 50px; }
+    @media (max-width: 767px) {
+      #Navigation .brand {
+        padding-left: 20px; } }
+    #Navigation .brand a {
+      padding: 0;
+      font-size: 1.125em;
+      letter-spacing: 8px; }
+  #Navigation .links {
+    padding-right: 50px; }
+    @media (max-width: 767px) {
+      #Navigation .links {
+        padding-right: 20px; } }
+    #Navigation .links a:first-child {
+      padding-left: 0; }
+    #Navigation .links a:last-child {
+      padding-right: 0; }
+  #Navigation svg use {
+    fill: #fff; }

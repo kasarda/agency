@@ -1,0 +1,31 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+
+#Home
+    font-family: $serif
+
+    .column
+        height: 250px
+        +min(1024px)
+            padding-left: 86px
+        +min(1300px)
+            padding-left: 150px
+        +min(1600px)
+            padding-left: 250px
+    .wraper
+        +dimension
+        padding: 0 50px
+
+
+
+    .rule
+        width: 1px
+        background-color: $font-color
+        margin-right: 25px
+
+    h1
+        letter-spacing: 1.43px
+        line-height: 78.3px
+        font-size: $heading-size
+        font-weight: $regular
+        margin: 0

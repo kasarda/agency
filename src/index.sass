@@ -4,16 +4,25 @@
 @import "ts-modules/normalize"
 @import "ts-modules/visibility"
 @import "ts-modules/grid"
+@import "flex.sass"
 @import "theme.sass"
+
+*, *:after, *:before
+  box-sizing: border-box
 
 body
   margin: 0
   padding: 0
-  font-family: sans-serif
-
-h1
-  margin: 0
+  font-family: $sans-serif
+  color: $font-color
+  font-size: $base-size
+  box-sizing: border-box
 
 .view
   +dimension(100%, 100vh)
-  background: $blue-bg
+  position: absolute
+  top: 0
+  left: 0
+
+.blue-background
+  background-color: $blue-bg

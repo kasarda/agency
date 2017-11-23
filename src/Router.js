@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import App from './app/App'
 import Navigation from './app/Navigation'
+import Home from './app/Home'
 
 class AppRouter extends Component {
     render() {
         return (
-            <div className="view">
-                <Navigation />
-                <BrowserRouter>
-                    <div id="outlet">
-                        <Route exact path="/" component={App} />
-                    </div>
-                </BrowserRouter>
-            </div>
-
+            <BrowserRouter>
+                <div id="outlet" className="view blue-background">
+                    <Navigation />
+                    <Route exact path="/" component={Home} />
+                </div>
+            </BrowserRouter>
         )
     }
 }
