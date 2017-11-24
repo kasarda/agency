@@ -9,28 +9,70 @@
   */
 #Home {
   font-family: "Playfair Display", serif; }
-  #Home .column {
-    height: 250px; }
-    @media (min-width: 1024px) {
-      #Home .column {
-        padding-left: 86px; } }
-    @media (min-width: 1300px) {
-      #Home .column {
-        padding-left: 150px; } }
-    @media (min-width: 1600px) {
-      #Home .column {
-        padding-left: 250px; } }
   #Home .wraper {
     height: 100%;
     width: 100%;
     padding: 0 50px; }
-  #Home .rule {
-    width: 1px;
-    background-color: #fff;
-    margin-right: 25px; }
-  #Home h1 {
-    letter-spacing: 1.43px;
-    line-height: 78.3px;
-    font-size: 4.188em;
-    font-weight: 400;
-    margin: 0; }
+    #Home .wraper .column {
+      position: relative;
+      height: 250px; }
+      @media (min-width: 1024px) {
+        #Home .wraper .column {
+          padding-left: 86px; } }
+      @media (min-width: 1300px) {
+        #Home .wraper .column {
+          padding-left: 150px; } }
+      @media (min-width: 1600px) {
+        #Home .wraper .column {
+          padding-left: 250px; } }
+      #Home .wraper .column .rule {
+        width: 100%;
+        height: 100%;
+        max-width: 800px;
+        background-color: #fff;
+        position: absolute;
+        animation: SlideOut .5s ease-in forwards; }
+      #Home .wraper .column h1 {
+        letter-spacing: 1.43px;
+        line-height: 78.3px;
+        font-size: 4.188em;
+        font-weight: 400;
+        padding-left: 25px;
+        margin: 0;
+        opacity: 0; }
+  #Home svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+#ScrollButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px; }
+  #ScrollButton .mouse {
+    width: 15px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out; }
+    #ScrollButton .mouse:hover {
+      opacity: .5; }
+    #ScrollButton .mouse .wheel {
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 100%;
+      position: relative;
+      top: -2px;
+      animation: Wheel 2s ease infinite; }
+
+@keyframes Wheel {
+  50% {
+    top: 2px; } }
+
+@keyframes SlideOut {
+  100% {
+    width: 1px; } }

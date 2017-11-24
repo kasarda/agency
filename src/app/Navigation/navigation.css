@@ -9,14 +9,14 @@
   */
 #Navigation {
   font-family: "Open Sans", sans-serif;
-  padding-top: 50px;
+  padding-top: 25px;
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
   z-index: 999; }
-  @media (max-width: 767px) {
+  @media (min-width: 768px) {
     #Navigation {
-      padding-top: 25px; } }
+      padding-top: 50px; } }
   #Navigation a {
     color: #fff;
     text-decoration: none;
@@ -27,19 +27,19 @@
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
   #Navigation .brand {
-    padding-left: 50px; }
-    @media (max-width: 767px) {
+    padding-left: 20px; }
+    @media (min-width: 768px) {
       #Navigation .brand {
-        padding-left: 20px; } }
+        padding-left: 50px; } }
     #Navigation .brand a {
       padding: 0;
       font-size: 1.125em;
       letter-spacing: 8px; }
   #Navigation .links {
-    padding-right: 50px; }
-    @media (max-width: 767px) {
+    padding-right: 20px; }
+    @media (min-width: 768px) {
       #Navigation .links {
-        padding-right: 20px; } }
+        padding-right: 50px; } }
     #Navigation .links a:first-child {
       padding-left: 0; }
     #Navigation .links a:last-child {

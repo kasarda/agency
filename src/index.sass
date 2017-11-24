@@ -3,6 +3,7 @@
 @import "ts-modules/lib"
 @import "ts-modules/normalize"
 @import "ts-modules/visibility"
+@import "ts-modules/animation"
 @import "ts-modules/grid"
 @import "flex.sass"
 @import "theme.sass"
@@ -20,9 +21,7 @@ body
 
 .view
   +dimension(100%, 100vh)
-  position: absolute
-  top: 0
-  left: 0
+  +position(0, 0, absolute)
 
 .blue-background
   background-color: $blue-bg
