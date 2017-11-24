@@ -1,54 +1,32 @@
 import React, { Component } from 'react'
-import Animation from 'animejs'
+import onMouseWheel from './wheel'
 
 import './Home.css'
 
-
-function ScrollButton() {
-
-    function onClick() {
-        console.log('Scroll Button clicked')
-    }
-
-    return (
-        <div id="ScrollButton" className="hidden-sm-down">
-            <div className="mouse flex justify-center align-center" onClick={onClick}>
-                <div className="wheel"></div>
-            </div>
-        </div>
-    )
-}
+import ScrollButton from './ScrollButton'
 
 
 class Home extends Component {
 
-    constructor() {
-        super()
-
-        this.state = {
-            ready: false
-        }
-    }
 
     componentDidMount() {
-
-        this.setState({
-            ready: true
+        onMouseWheel(e => {
+            if(e.wheelDown) {
+                console.log(
+                this.refs.rule.classList.add('slideIn')
+                )
+            }
         })
-
-    
     }
 
 
     render() {
 
-        const show_if_ready = this.state.ready ? '' : 'hide'
-
         return (
             <div id="Home" className="view">
 
                 <svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-
+                    <text x="0" y="0">C</text>
                 </svg>
 
                 <div className="wrapper flex direction-col justify-end">
