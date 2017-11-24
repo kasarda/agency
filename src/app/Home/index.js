@@ -51,7 +51,7 @@ class Home extends Component {
 
                 </svg>
 
-                <div className="wraper flex direction-col justify-center">
+                <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule hidden-sm-down" ref="rule"></div>
                         <h1 ref="heading" className="animate fadeIn delay">Digital <br />

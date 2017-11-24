@@ -4,13 +4,18 @@
 #Home
     font-family: $serif
 
-    .wraper
+    .wrapper
         +dimension
-        padding: 0 50px
+        padding: 0 20px
+        +min(md)
+            justify-content: center
+            padding: 0 50px
 
         .column
             position: relative
-            height: 250px
+            +min(md)
+                height: 250px
+
             +min(1024px)
                 padding-left: 86px
             +min(1300px)
@@ -27,13 +32,18 @@
                 animation: SlideOut .5s ease-in forwards
 
             h1
-                letter-spacing: 1.43px
-                line-height: 78.3px
-                font-size: $heading-size
+                letter-spacing: 0.089rem
+                line-height: $heading-line-height / 2
+                font-size: $heading-size / 2
                 font-weight: $regular
-                padding-left: 25px
+                padding-bottom: 50px
                 margin: 0
                 opacity: 0
+                +min(md)
+                    padding-bottom: 0
+                    padding-left: 25px
+                    font-size: $heading-size
+                    line-height: $heading-line-height
 
     svg
         +center

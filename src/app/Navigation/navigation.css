@@ -21,7 +21,7 @@
     color: #fff;
     text-decoration: none;
     padding: 0 15px;
-    font-size: 0.688em;
+    font-size: 0.688rem;
     letter-spacing: 4px;
     transition: opacity 0.15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
@@ -33,7 +33,7 @@
         padding-left: 50px; } }
     #Navigation .brand a {
       padding: 0;
-      font-size: 1.125em;
+      font-size: 1.125rem;
       letter-spacing: 8px; }
   #Navigation .links {
     padding-right: 20px; }

@@ -9,37 +9,49 @@
   */
 #Home {
   font-family: "Playfair Display", serif; }
-  #Home .wraper {
+  #Home .wrapper {
     height: 100%;
     width: 100%;
-    padding: 0 50px; }
-    #Home .wraper .column {
-      position: relative;
-      height: 250px; }
+    padding: 0 20px; }
+    @media (min-width: 768px) {
+      #Home .wrapper {
+        justify-content: center;
+        padding: 0 50px; } }
+    #Home .wrapper .column {
+      position: relative; }
+      @media (min-width: 768px) {
+        #Home .wrapper .column {
+          height: 250px; } }
       @media (min-width: 1024px) {
-        #Home .wraper .column {
+        #Home .wrapper .column {
           padding-left: 86px; } }
       @media (min-width: 1300px) {
-        #Home .wraper .column {
+        #Home .wrapper .column {
           padding-left: 150px; } }
       @media (min-width: 1600px) {
-        #Home .wraper .column {
+        #Home .wrapper .column {
           padding-left: 250px; } }
-      #Home .wraper .column .rule {
+      #Home .wrapper .column .rule {
         width: 100%;
         height: 100%;
         max-width: 800px;
         background-color: #fff;
         position: absolute;
         animation: SlideOut .5s ease-in forwards; }
-      #Home .wraper .column h1 {
-        letter-spacing: 1.43px;
-        line-height: 78.3px;
-        font-size: 4.188em;
+      #Home .wrapper .column h1 {
+        letter-spacing: 0.089rem;
+        line-height: 2.4375rem;
+        font-size: 2.094rem;
         font-weight: 400;
-        padding-left: 25px;
+        padding-bottom: 50px;
         margin: 0;
         opacity: 0; }
+        @media (min-width: 768px) {
+          #Home .wrapper .column h1 {
+            padding-bottom: 0;
+            padding-left: 25px;
+            font-size: 4.188rem;
+            line-height: 4.875rem; } }
   #Home svg {
     position: absolute;
     left: 50%;

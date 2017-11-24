@@ -1658,12 +1658,17 @@ html {
 *, *:after, *:before {
   box-sizing: border-box; }
 
+html {
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  font-size: 16px;
   box-sizing: border-box; }
 
 .view {
