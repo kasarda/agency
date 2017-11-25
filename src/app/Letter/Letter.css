@@ -1,0 +1,42 @@
+/**! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  */
+#Letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  animation: FadeIn 0.4s ease-in forwards 0.4s; }
+  @media (min-width: 768px) {
+    #Letter {
+      height: 350px;
+      width: 350px;
+      animation-delay: 0.8s; } }
+  @media (min-width: 1200px) {
+    #Letter {
+      height: 450px;
+      width: 450px; } }
+
+#background-mask .rect {
+  animation: SlideMask 0.5s ease-in forwards 0.44s;
+  x: 0; }
+  @media (min-width: 768px) {
+    #background-mask .rect {
+      animation-delay: 0.88s; } }
+
+@keyframes SlideMask {
+  100% {
+    x: 220px; } }
+
+@keyframes FadeIn {
+  100% {
+    opacity: 1; } }

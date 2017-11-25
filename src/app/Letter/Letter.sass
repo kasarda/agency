@@ -1,0 +1,28 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+
+#Letter
+    +center
+    +dimension(200px, 200px)
+    opacity: 0
+    animation: FadeIn .4s ease-in forwards $short-delay
+    +min(md)
+        +dimension(350px, 350px)
+        animation-delay: $long-delay
+    +min(xl)
+        +dimension(450px, 450px)
+
+#background-mask
+    .rect
+        animation: SlideMask $slide-animation $short-delay * 1.1
+        x: 0
+        +min(md)
+            animation-delay: $long-delay * 1.1
+
+@keyframes SlideMask
+    100%
+        x: 220px
+
+@keyframes FadeIn
+    100%
+        opacity: 1

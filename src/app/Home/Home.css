@@ -32,12 +32,15 @@
         #Home .wrapper .column {
           padding-left: 250px; } }
       #Home .wrapper .column .rule {
-        width: 100%;
+        width: 0px;
         height: 100%;
         max-width: 800px;
-        background-color: #fff;
-        position: absolute;
-        animation: SlideOut .5s ease-in forwards; }
+        background-color: #ffffff;
+        position: absolute; }
+        @media (min-width: 768px) {
+          #Home .wrapper .column .rule {
+            width: 100%;
+            animation: SlideOut 0.5s ease-in forwards; } }
       #Home .wrapper .column h1 {
         letter-spacing: 0.089rem;
         line-height: 2.4375rem;
@@ -52,42 +55,7 @@
             padding-left: 25px;
             font-size: 4.188rem;
             line-height: 4.875rem; } }
-  #Home svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-
-#ScrollButton {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 50px; }
-  #ScrollButton .mouse {
-    width: 15px;
-    height: 30px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: opacity 0.15s ease-in-out; }
-    #ScrollButton .mouse:hover {
-      opacity: .5; }
-    #ScrollButton .mouse .wheel {
-      width: 3px;
-      height: 3px;
-      background-color: #fff;
-      border-radius: 100%;
-      position: relative;
-      top: -2px;
-      animation: Wheel 2s ease infinite; }
-
-@keyframes Wheel {
-  50% {
-    top: 2px; } }
 
 @keyframes SlideOut {
   100% {
     width: 1px; } }
-
-.slideIn {
-  width: 100% !important; }

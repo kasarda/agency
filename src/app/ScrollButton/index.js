@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './ScrollButton.css'
+
 function ScrollButton() {
 
     function onClick() {

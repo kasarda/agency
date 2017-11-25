@@ -1,0 +1,35 @@
+/**! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  */
+#ScrollButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px; }
+  #ScrollButton .mouse {
+    width: 15px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out; }
+    #ScrollButton .mouse:hover {
+      opacity: .5; }
+    #ScrollButton .mouse .wheel {
+      width: 3px;
+      height: 3px;
+      background-color: #ffffff;
+      border-radius: 100%;
+      position: relative;
+      top: -2px;
+      animation: Wheel 2s ease infinite; }
+
+@keyframes Wheel {
+  50% {
+    top: 2px; } }

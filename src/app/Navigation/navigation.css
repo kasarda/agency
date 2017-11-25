@@ -18,7 +18,7 @@
     #Navigation {
       padding-top: 50px; } }
   #Navigation a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 0 15px;
     font-size: 0.688rem;
@@ -45,4 +45,4 @@
     #Navigation .links a:last-child {
       padding-right: 0; }
   #Navigation svg use {
-    fill: #fff; }
+    fill: #ffffff; }

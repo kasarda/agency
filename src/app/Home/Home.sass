@@ -2,7 +2,7 @@
 @import "theme.sass"
 
 #Home
-    font-family: $serif
+    font-family: $secondary-font
 
     .wrapper
         +dimension
@@ -24,12 +24,15 @@
                 padding-left: 250px
 
             .rule
-                width: 100%
+                width: 0px
                 height: 100%
                 max-width: 800px
-                background-color: $font-color
+                background-color: $light-color
                 position: absolute
-                animation: SlideOut .5s ease-in forwards
+                +min(md)
+                    width: 100%
+                    animation: SlideOut $slide-animation
+
 
             h1
                 letter-spacing: 0.089rem
@@ -45,38 +48,9 @@
                     font-size: $heading-size
                     line-height: $heading-line-height
 
-    svg
-        +center
 
-#ScrollButton
-    +center(x)
-    bottom: 50px
-    .mouse
-        width: 15px
-        height: 30px
-        border: 1px solid $font-color
-        border-radius: 10px
-        cursor: pointer
-        transition: opacity $hover-animation
-        &:hover
-            opacity: .5
-        
-        .wheel
-            width: 3px
-            height: 3px
-            background-color: $font-color
-            border-radius: 100%
-            position: relative
-            top: -2px
-            animation: Wheel 2s ease infinite
 
-@keyframes Wheel
-    50%
-        top: 2px
 
 @keyframes SlideOut
     100%
         width: 1px
-
-.slideIn
-    width: 100% !important
