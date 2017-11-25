@@ -12,7 +12,7 @@ class Home extends Component {
     componentDidMount() {
         onMouseWheel(e => {
             if (e.wheelDown) {
-                // ...
+                // TODO: scroll to next page
             }
         })
     }

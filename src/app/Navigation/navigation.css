@@ -22,7 +22,7 @@
     text-decoration: none;
     padding: 0 15px;
     font-size: 0.688rem;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
     transition: opacity 0.15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
@@ -34,7 +34,7 @@
     #Navigation .brand a {
       padding: 0;
       font-size: 1.125rem;
-      letter-spacing: 8px; }
+      letter-spacing: 0.5rem; }
   #Navigation .links {
     padding-right: 20px; }
     @media (min-width: 768px) {
@@ -44,5 +44,5 @@
       padding-left: 0; }
     #Navigation .links a:last-child {
       padding-right: 0; }
-  #Navigation svg use {
+  #Navigation svg .icon {
     fill: #ffffff; }

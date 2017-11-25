@@ -5,6 +5,7 @@ import './ScrollButton.css'
 function ScrollButton() {
 
     function onClick() {
+        // TODO "scroll" to next page
         console.log('Scroll Button clicked')
     }
 

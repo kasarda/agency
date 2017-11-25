@@ -17,7 +17,7 @@
         text-decoration: none
         padding: 0 15px
         font-size: $link-size
-        letter-spacing: 4px
+        letter-spacing: $link-letter-spacing
         transition: opacity $hover-animation
         &:hover, &.active
             opacity: .5
@@ -30,7 +30,7 @@
         a
             padding: 0
             font-size: $logo-size
-            letter-spacing: 8px
+            letter-spacing: $logo-letter-spacing
 
     .links
         padding-right: 20px
@@ -42,5 +42,5 @@
             &:last-child
                 padding-right: 0
     svg
-        use
+        .icon
             fill: $light-color

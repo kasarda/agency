@@ -10,7 +10,7 @@ function Link({ to, name, icon }) {
             <span className="hidden-sm-down">{name}</span>
             <span className="hidden-md-up">
                 <svg width="18" height="18" viewBox="0 0 24 24">
-                    <use xlinkHref={'#' + icon} />
+                    <use className="icon" xlinkHref={'#' + icon} />
                 </svg>
             </span>
         </NavLink>

@@ -28,4 +28,8 @@
     x: 0; }
     @media (min-width: 768px) {
       #Letter .background-mask-rect {
-        animation-delay: 0.88s; } }
+        animation-delay: 0.8s; } }
+  #Letter .fill-light-color {
+    fill: #ffffff; }
+  #Letter .stroke-light-color {
+    stroke: #ffffff; }
