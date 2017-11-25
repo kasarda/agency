@@ -1,4 +1,4 @@
-/**! @license
+/*! @license
   * lib.sass
   *
   * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
@@ -6,7 +6,7 @@
   *
   * Copyright (c) 2017-Present, Filip Kasarda
   *
-  */
+  * */
 #Home {
   font-family: "Playfair Display", serif; }
   #Home .wrapper {
@@ -36,11 +36,13 @@
         height: 100%;
         max-width: 800px;
         background-color: #ffffff;
-        position: absolute; }
+        position: absolute;
+        animation-play-state: paused; }
         @media (min-width: 768px) {
           #Home .wrapper .column .rule {
             width: 100%;
-            animation: SlideOut 0.5s ease-in forwards; } }
+            min-width: 1px;
+            animation-play-state: running; } }
       #Home .wrapper .column h1 {
         letter-spacing: 0.089rem;
         line-height: 2.4375rem;
@@ -55,7 +57,3 @@
             padding-left: 25px;
             font-size: 4.188rem;
             line-height: 4.875rem; } }
-
-@keyframes SlideOut {
-  100% {
-    width: 1px; } }

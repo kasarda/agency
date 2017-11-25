@@ -29,10 +29,11 @@
                 max-width: 800px
                 background-color: $light-color
                 position: absolute
+                animation-play-state: paused
                 +min(md)
                     width: 100%
-                    animation: SlideOut $slide-animation
-
+                    min-width: 1px
+                    animation-play-state: running
 
             h1
                 letter-spacing: 0.089rem
@@ -47,10 +48,3 @@
                     padding-left: 25px
                     font-size: $heading-size
                     line-height: $heading-line-height
-
-
-
-
-@keyframes SlideOut
-    100%
-        width: 1px

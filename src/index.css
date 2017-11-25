@@ -1,4 +1,4 @@
-/**! @license
+/*! @license
   * lib.sass
   *
   * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
@@ -6,7 +6,7 @@
   *
   * Copyright (c) 2017-Present, Filip Kasarda
   *
-  */
+  * */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 button, hr, input {
   overflow: visible; }
@@ -141,7 +141,7 @@ summary {
 [hidden], template {
   display: none; }
 
-/**! @license
+/*! @license
  * visibility.sass
  * Bootstrap Visibility
  * Bootstrap v4.0.0-alpha (https://getbootstrap.com)
@@ -205,69 +205,83 @@ summary {
 .hidden-xl-down {
   display: none !important; }
 
-/**! @license
- * animation.sass
+/*! @license
+ * animation.css
  *
  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
  * LICENSE file in the root directory of this source tree.
  *
  * Copyright (c) 2017-Present, Filip Kasarda */
+.animate, .fill-mode-both {
+  animation-fill-mode: both; }
+
 .animate {
   animation-duration: 1s;
-  animation-fill-mode: both;
   animation-iteration-count: 1;
   animation-timing-function: ease-out; }
 
-.animate.ease {
+.ease {
   animation-timing-function: ease; }
 
-.animate.easeIn {
+.ease-in {
   animation-timing-function: ease-in; }
 
-.animate.easeOut {
+.ease-out {
   animation-timing-function: ease-out; }
 
-.animate.easeInOut {
+.ease-in-out {
   animation-timing-function: ease-in-out; }
 
-.animate.easeInBack {
+.ease-in-back {
   animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
 
-.animate.easeOutBack {
+.ease-out-back {
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.animate.easeInOutBack {
+.ease-in-out-back {
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-.animate.directionAlternate {
+.direction-alternate {
   animation-direction: alternate; }
 
-.animate.directionReverse {
+.direction-reverse {
   animation-direction: reverse; }
 
-.animate.directionAlternateReverse {
+.direction-alternate-reverse {
   animation-direction: alternate-reverse; }
 
-.animate.directionNormal {
+.direction-normal {
   animation-direction: normal; }
 
-.animate.delay {
+.delay {
   animation-delay: .4s; }
 
-.animate.delaySecond {
-  animation-delay: 1s; }
+.long-delay {
+  animation-delay: .8s; }
 
-.animate.play {
+.play {
   animation-play-state: running; }
 
-.animate.stop {
+.stop {
   animation-play-state: paused; }
 
-.animate.fast {
+.fast {
   animation-duration: .4s; }
 
-.animate.slow {
+.slow {
   animation-duration: 1.5s; }
+
+.infinite {
+  animation-iteration-count: infinite; }
+
+.fill-mode-forwards {
+  animation-fill-mode: forwards; }
+
+.fill-mode-backwards {
+  animation-fill-mode: backwards; }
+
+.fill-mode-none {
+  animation-fill-mode: none; }
 
 @keyframes fadeOut {
   to {
@@ -293,25 +307,24 @@ summary {
     opacity: 0;
     transform: translate3d(0, 100%, 0); } }
 
-.fadeOut {
+.fade-out {
   animation-name: fadeOut; }
 
-.fadeOutLeft {
+.fade-out-left {
   animation-name: fadeOutLeft; }
 
-.fadeOutRight {
+.fade-out-right {
   animation-name: fadeOutRight; }
 
-.fadeOutTop {
+.fade-out-top {
   animation-name: fadeOutTop; }
 
-.fadeOutBottom {
+.fade-out-bottom {
   animation-name: fadeOutBottom; }
 
 @keyframes fadeIn {
   to {
-    opacity: 1;
-    transform: none; } }
+    opacity: 1; } }
 
 @keyframes fadeInLeft {
   from {
@@ -341,19 +354,19 @@ summary {
     opacity: 1;
     transform: none; } }
 
-.fadeIn {
+.fade-in {
   animation-name: fadeIn; }
 
-.fadeInLeft {
+.fade-in-left {
   animation-name: fadeInLeft; }
 
-.fadeInRight {
+.fade-in-right {
   animation-name: fadeInRight; }
 
-.fadeInTop {
+.fade-in-top {
   animation-name: fadeInTop; }
 
-.fadeInBottom {
+.fade-in-bottom {
   animation-name: fadeInBottom; }
 
 @keyframes zoomOut {
@@ -370,11 +383,41 @@ summary {
     opacity: 1;
     transform: none; } }
 
-.zoomOut {
+.zoom-out {
   animation-name: zoomOut; }
 
-.zoomIn {
+.zoom-in {
   animation-name: zoomIn; }
+
+@keyframes SlideIn {
+  to {
+    width: 100%; } }
+
+@keyframes SlideOut {
+  to {
+    width: 0; } }
+
+.slide-in {
+  animation-name: SlideIn; }
+
+.slide-out {
+  animation-name: SlideOut; }
+
+@keyframes MoveIn {
+  to {
+    left: 100%;
+    x: 100%; } }
+
+@keyframes MoveOut {
+  to {
+    left: 0;
+    x: 0; } }
+
+.move-in {
+  animation-name: MoveIn; }
+
+.move-out {
+  animation-name: MoveOut; }
 
 /*!
  * Bootstrap Grid v4.0.0-beta.2 (https://getbootstrap.com)
@@ -1571,11 +1614,22 @@ html {
     -ms-flex-item-align: stretch !important;
     align-self: stretch !important; } }
 
+/*! @license
+ * flex.css
+ *
+ * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * Copyright (c) 2017-Present, Filip Kasarda */
 .flex {
   display: flex; }
 
 .inline-flex {
   display: inline-flex; }
+
+.flex-center {
+  justify-content: center;
+  align-items: center; }
 
 .justify-stretch {
   justify-content: stretch; }
@@ -1595,6 +1649,18 @@ html {
 .justify-end {
   justify-content: flex-end; }
 
+.align-stretch {
+  align-items: space-stretch; }
+
+.align-center {
+  align-items: center; }
+
+.align-start {
+  align-items: flex-start; }
+
+.align-end {
+  align-items: flex-end; }
+
 .align-content-stretch {
   align-content: stretch; }
 
@@ -1612,18 +1678,6 @@ html {
 
 .align-content-end {
   align-content: flex-end; }
-
-.align-stretch {
-  align-items: space-stretch; }
-
-.align-center {
-  align-items: center; }
-
-.align-start {
-  align-items: flex-start; }
-
-.align-end {
-  align-items: flex-end; }
 
 .wrap {
   flex-wrap: wrap; }
@@ -1678,5 +1732,5 @@ body {
   top: 0;
   left: 0; }
 
-.blue-background {
+.primary-background {
   background-color: #004bd3; }

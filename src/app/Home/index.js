@@ -25,8 +25,8 @@ class Home extends Component {
                 <Letter />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
-                        <div className="rule" ref="rule"></div>
-                        <h1 ref="heading" className="animate fadeIn delay">Digital <br />
+                        <div className="rule animate slide-out fast ease-in" ref="rule"></div>
+                        <h1 ref="heading" className="animate fade-in delay">Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>

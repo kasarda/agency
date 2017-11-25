@@ -4,7 +4,7 @@ import './Letter.css'
 
 function Letter() {
     return (
-        <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" className="delay">
+        <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" className="animate fade-in delay">
             <defs>
                 <pattern x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" id="dashed-pattern" viewBox="0 0 8 8" fill="#ffffff">
                     <path d="M1.6,5.6l4.1-4.1C6,1.2,6.3,1,6.8,1.5C7.2,1.9,7,2.3,6.7,2.6L2.6,6.7C2.2,7,1.9,7.1,1.5,6.7C1.1,6.3,1.3,5.9,1.6,5.6z" style={{ opacity: 0.5 }}>
@@ -12,7 +12,7 @@ function Letter() {
                 </pattern>
                 <mask maskUnits="userSpaceOnUse" style={{ shapeRendering: "crispEdges" }} id="background-mask">
                     <rect x="0" y="0" width="220" height="440" fill="#ffffff" transform="matrix(1,0,0,1,220,0)"></rect>
-                    <rect x="220" y="0" width="240" height="440" fill="#ffffff" transform="matrix(1,0,0,1,0,0)" className="rect"></rect>
+                    <rect x="220" y="0" width="240" height="440" fill="#ffffff" transform="matrix(1,0,0,1,0,0)" className="background-mask-rect animate move-in ease-in delay"></rect>
                 </mask>
                 <mask maskUnits="userSpaceOnUse" id="c-letter">
                     <g stroke="#ffffff" style={{ strokeWidth: 80, opacity: 1 }}>

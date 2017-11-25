@@ -8,7 +8,7 @@ class AppRouter extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div id="outlet" className="view blue-background">
+                <div id="outlet" className="view primary-background">
                     <Navigation />
                     <Route exact path="/" component={Home} />
                 </div>

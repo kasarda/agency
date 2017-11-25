@@ -1,4 +1,4 @@
-/**! @license
+/*! @license
   * lib.sass
   *
   * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
@@ -6,7 +6,7 @@
   *
   * Copyright (c) 2017-Present, Filip Kasarda
   *
-  */
+  * */
 #Letter {
   position: absolute;
   left: 50%;
@@ -14,8 +14,7 @@
   transform: translate(-50%, -50%);
   height: 200px;
   width: 200px;
-  opacity: 0;
-  animation: FadeIn 0.4s ease-in forwards 0.4s; }
+  opacity: 0; }
   @media (min-width: 768px) {
     #Letter {
       height: 350px;
@@ -25,18 +24,8 @@
     #Letter {
       height: 450px;
       width: 450px; } }
-
-#background-mask .rect {
-  animation: SlideMask 0.5s ease-in forwards 0.44s;
-  x: 0; }
-  @media (min-width: 768px) {
-    #background-mask .rect {
-      animation-delay: 0.88s; } }
-
-@keyframes SlideMask {
-  100% {
-    x: 220px; } }
-
-@keyframes FadeIn {
-  100% {
-    opacity: 1; } }
+  #Letter .background-mask-rect {
+    x: 0; }
+    @media (min-width: 768px) {
+      #Letter .background-mask-rect {
+        animation-delay: 0.88s; } }
