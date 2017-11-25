@@ -6,7 +6,7 @@
     "name": "Filip Kasarda",
     "email": "kasardaafilip@gmail.com"
   },
-  "homepage": "http://kasarda.github.io/digital-agency",
+  "homepage": "http://kasarda.github.io/digital-agency/build",
   "dependencies": {
     "@types/animejs": "^2.0.0",
     "@types/react": "^16.0.25",
@@ -33,6 +33,6 @@
     "eject": "react-scripts eject"
   },
   "todos": [
-    
+
   ]
 }
