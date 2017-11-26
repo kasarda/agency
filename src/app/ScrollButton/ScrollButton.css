@@ -28,7 +28,7 @@
       border-radius: 100%;
       position: relative;
       top: -2px;
-      animation: Wheel 2s ease infinite; }
+      animation: Wheel 2s linear infinite; }
 
 @keyframes Wheel {
   50% {

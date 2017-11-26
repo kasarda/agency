@@ -4,6 +4,7 @@ import './Letter.css'
 
 function Letter() {
     return (
+
         <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" className="animate fade-in delay">
 
 
