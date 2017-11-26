@@ -31,7 +31,21 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "todos": [
-    "letter animation doesnt work in FF"
-  ]
+  "todos": [],
+  "browsers": {
+    "mobile": {
+      "opera-mini": true,
+      "safari": "Safari chrome bar and bottom bar goes into content, so navigation is not visible but its there",
+      "chrome": true,
+      "firefox": true
+    },
+    "desktop": {
+      "chrome": true,
+      "firefox": "letter mask animation doesnt work",
+      "edge14": "letter mask animation doesnt work",
+      "IE11": "letter mask animation doesnt work",
+      "opera": true,
+      "safari": null
+    }
+  }
 }

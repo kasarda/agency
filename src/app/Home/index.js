@@ -14,6 +14,8 @@ class Home extends Component {
             page: 0,
             length: 4,
         }
+
+
     }
 
     setPage(type) {
@@ -36,19 +38,17 @@ class Home extends Component {
     }
 
     componentDidMount() {
-
         onMouseWheel(e => {
             const minOffset = e.wheelOffset >= 50
 
             if (e.wheelDown && minOffset) {
                 this.setPage('down')
-                console.log('down')
             }
             else if (!e.wheelDown && minOffset) {
                 this.setPage('up')
-                console.log('up')
             }
         })
+
     }
 
 

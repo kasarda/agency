@@ -1724,7 +1724,7 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
-  box-sizing: border-box; }
+  overflow: hidden; }
 
 h1 {
   font-family: "Playfair Display", serif;

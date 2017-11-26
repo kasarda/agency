@@ -33,7 +33,11 @@ function Letter() {
                         width="220" height="440"
                         className="fill-light-color"
                         transform="matrix(1,0,0,1,220,0)"></rect>
-                    <rect x="220" y="0" width="240" height="440" transform="matrix(1,0,0,1,0,0)" className="fill-light-color background-mask-rect animate move-in ease-in delay"></rect>
+                    <rect
+                        x="220" y="0"
+                        width="240" height="440"
+                        transform="matrix(1,0,0,1,0,0)"
+                        className="fill-light-color background-mask-rect animate move-in ease-in delay"></rect>
                 </mask>
 
 
