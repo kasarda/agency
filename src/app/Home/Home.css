@@ -7,53 +7,50 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-#Home {
-  font-family: "Playfair Display", serif; }
-  #Home .wrapper {
-    height: 100%;
-    width: 100%;
-    padding: 0 20px; }
+#Home .wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px; }
+  @media (min-width: 768px) {
+    #Home .wrapper {
+      justify-content: center;
+      padding: 0 50px; } }
+  #Home .wrapper .column {
+    position: relative; }
     @media (min-width: 768px) {
-      #Home .wrapper {
-        justify-content: center;
-        padding: 0 50px; } }
-    #Home .wrapper .column {
-      position: relative; }
+      #Home .wrapper .column {
+        height: 250px; } }
+    @media (min-width: 1024px) {
+      #Home .wrapper .column {
+        padding-left: 86px; } }
+    @media (min-width: 1300px) {
+      #Home .wrapper .column {
+        padding-left: 150px; } }
+    @media (min-width: 1600px) {
+      #Home .wrapper .column {
+        padding-left: 250px; } }
+    #Home .wrapper .column .rule {
+      width: 0px;
+      height: 100%;
+      max-width: 800px;
+      background-color: #ffffff;
+      position: absolute;
+      transition: width 0.4s ease-in; }
       @media (min-width: 768px) {
-        #Home .wrapper .column {
-          height: 250px; } }
-      @media (min-width: 1024px) {
-        #Home .wrapper .column {
-          padding-left: 86px; } }
-      @media (min-width: 1300px) {
-        #Home .wrapper .column {
-          padding-left: 150px; } }
-      @media (min-width: 1600px) {
-        #Home .wrapper .column {
-          padding-left: 250px; } }
-      #Home .wrapper .column .rule {
-        width: 0px;
-        height: 100%;
-        max-width: 800px;
-        background-color: #ffffff;
-        position: absolute;
-        animation-play-state: paused; }
-        @media (min-width: 768px) {
-          #Home .wrapper .column .rule {
-            width: 100%;
-            min-width: 1px;
-            animation-play-state: running; } }
-      #Home .wrapper .column h1 {
-        letter-spacing: 0.089rem;
-        line-height: 2.938rem;
-        font-size: 2.5rem;
-        font-weight: 400;
-        padding-bottom: 50px;
-        margin: 0;
-        opacity: 0; }
-        @media (min-width: 768px) {
-          #Home .wrapper .column h1 {
-            padding-bottom: 0;
-            padding-left: 25px;
-            font-size: 4.188rem;
-            line-height: 4.875rem; } }
+        #Home .wrapper .column .rule {
+          width: 1px;
+          animation: SlideInRule 0.4s ease-in; } }
+    #Home .wrapper .column h1 {
+      padding-bottom: 50px;
+      opacity: 0; }
+      @media (min-width: 768px) {
+        #Home .wrapper .column h1 {
+          padding-bottom: 0;
+          padding-left: 25px; } }
+
+[data-transition-to="1"] .rule {
+  width: 100% !important; }
+
+@keyframes SlideInRule {
+  from {
+    width: 100%; } }

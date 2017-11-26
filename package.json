@@ -31,5 +31,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "todos": []
+  "todos": [
+    "letter animation doesnt work in FF"
+  ]
 }

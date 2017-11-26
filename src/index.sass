@@ -24,6 +24,16 @@ body
     color: $light-color
     box-sizing: border-box
 
+h1
+    font-family: $secondary-font
+    letter-spacing: $heading-letter-spacing
+    line-height: $heading-mobile-line-height
+    font-size: $heading-mobile-size
+    font-weight: $regular
+    margin: 0
+    +min(md)
+        font-size: $heading-size
+        line-height: $heading-line-height
 .view
     +dimension(100%, 100vh)
     +position(0, 0, absolute)

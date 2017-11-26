@@ -2,8 +2,6 @@
 @import "theme.sass"
 
 #Home
-    font-family: $secondary-font
-
     .wrapper
         +dimension
         padding: 0 20px
@@ -29,22 +27,24 @@
                 max-width: 800px
                 background-color: $light-color
                 position: absolute
-                animation-play-state: paused
+                transition: width $slide-animation
                 +min(md)
-                    width: 100%
-                    min-width: 1px
-                    animation-play-state: running
+                    width: 1px
+                    animation: SlideInRule $slide-animation
 
             h1
-                letter-spacing: $heading-letter-spacing
-                line-height: $heading-mobile-line-height
-                font-size: $heading-mobile-size
-                font-weight: $regular
                 padding-bottom: 50px
-                margin: 0
                 opacity: 0
                 +min(md)
                     padding-bottom: 0
                     padding-left: 25px
-                    font-size: $heading-size
-                    line-height: $heading-line-height
+
+
+[data-transition-to="1"]
+    .rule
+        width: 100% !important
+
+
+@keyframes SlideInRule
+    from
+        width: 100%
