@@ -6503,9 +6503,9 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
-ts-modules@^3.8.3:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/ts-modules/-/ts-modules-3.8.3.tgz#a7e93aea0358ed3a4fc566854eff58c754a999c4"
+ts-modules@^3.8.4:
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/ts-modules/-/ts-modules-3.8.4.tgz#edca2b84d493d4c0575edf4931b7bd0e6115b98f"
   dependencies:
     chalk "^2.2.0"
     command-exists "^1.2.2"

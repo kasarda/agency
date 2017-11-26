@@ -28,8 +28,10 @@
       border-radius: 100%;
       position: relative;
       top: -2px;
-      animation: Wheel 2s linear infinite; }
+      opacity: 1;
+      animation: Wheel 1s 1s ease-in infinite; }
 
 @keyframes Wheel {
-  50% {
-    top: 2px; } }
+  100% {
+    top: 2px;
+    opacity: 0; } }
