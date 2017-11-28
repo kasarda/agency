@@ -1,0 +1,72 @@
+
+// Navigation, Wheel
+$hover-transition: opacity .15s ease-in-out
+
+
+
+
+// Wheel
+$fade-transition: opacity .4s ease-in
+
+$wheel-animation: WheelAnimation 1s 1s ease-in infinite
+@keyframes WheelAnimation
+    to
+        top: 2px
+        opacity: 0
+
+
+
+
+
+
+// Home
+
+// > rule
+$slide-transition: width .4s .8s ease-in-out
+
+// > side
+$slide-width-transition: width .4s .4s ease-in-out
+
+// > column
+$slide-height-delay: .8s
+$slide-height-transition: height .4s ease-in-out
+
+// > heading
+$long-fade-transition: opacity 1s 1.4s ease-in-out
+
+
+$slide-animation: SlideAnimation .4s .4s ease-in backwards
+@keyframes SlideAnimation
+    from
+        width: 100%
+
+
+
+
+// Letter
+$fade-letter-transition: opacity .4s 1.2s ease-in-out
+$move-transition: 1s 1.2s ease-in-out
+
+$move-in-animation: MoveInAnimation 1s .4s ease-in backwards
+@keyframes MoveInAnimation
+    from
+        x: 0
+
+
+
+// Home, Letter
+$fade-in-animation: FadeInAnimation 1s .4s ease-in backwards
+@keyframes FadeInAnimation
+    from
+        opacity: 0
+
+
+
+
+
+// Prebuilt
+$short-delay: .4s
+$long-delay: .8s
+
+$long: 1s
+$short: .4s

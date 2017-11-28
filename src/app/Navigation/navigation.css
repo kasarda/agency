@@ -7,6 +7,23 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
+    opacity: 0; } }
+
+@keyframes SlideAnimation {
+  from {
+    width: 100%; } }
+
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
+
+@keyframes FadeInAnimation {
+  from {
+    opacity: 0; } }
+
 #Navigation {
   font-family: "Montserrat", sans-serif;
   padding-top: 25px;

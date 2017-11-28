@@ -1,16 +1,19 @@
 @import "ts-modules/lib"
 @import "theme.sass"
+@import "animation.sass"
 
-#ScrollButton
+#Wheel
     +center(x)
     bottom: 50px
+    opacity: 0 // only visible if page is 0
+    transition: $fade-transition
     .mouse
         width: 15px
         height: 30px
         border: 1px solid $light-color
         border-radius: 10px
         cursor: pointer
-        transition: opacity $hover-animation
+        transition: $hover-transition
         &:hover
             opacity: .5
 
@@ -22,9 +25,7 @@
             position: relative
             top: -2px
             opacity: 1
-            animation: Wheel $wheel-animation
+            animation: $wheel-animation
 
-@keyframes Wheel
-    100%
-        top: 2px
-        opacity: 0
+    &[data-page="0"]
+        opacity: 1

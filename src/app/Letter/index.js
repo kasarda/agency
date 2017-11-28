@@ -2,12 +2,10 @@ import React from 'react'
 
 import './Letter.css'
 
-function Letter() {
+function Letter(props) {
     return (
 
-        <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" className="animate fade-in delay">
-
-
+        <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" data-page={props.page}>
             <defs>
                 <pattern
                     viewBox="0 0 8 8"
@@ -37,7 +35,7 @@ function Letter() {
                         x="220" y="0"
                         width="240" height="440"
                         transform="matrix(1,0,0,1,0,0)"
-                        className="fill-light-color background-mask-rect animate move-in ease-in delay"></rect>
+                        className="fill-light-color background-mask-rect"></rect>
                 </mask>
 
 

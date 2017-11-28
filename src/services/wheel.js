@@ -1,3 +1,19 @@
+/**
+ *
+ * Wheel cross platform event with touch devices fallback
+ * On touch devices you just move finger
+ * On mouse devices you just wheel with mouse wheel
+ *
+ * Inside event object will be added wheelDown and wheelOffset property
+ *
+ * onMouseWheel(event => {
+ *
+ *      event.type
+ *      event.wheelDown
+ *      event.wheelOffset
+ * })
+ */
+
 export default cb => {
 
     // for mouse devices

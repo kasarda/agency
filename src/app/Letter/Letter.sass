@@ -1,10 +1,13 @@
 @import "ts-modules/lib"
 @import "theme.sass"
+@import "animation.sass"
 
 #Letter
     +center
     +dimension(200px, 200px)
-    opacity: 0
+    opacity: 1
+    transition: $fade-letter-transition
+    animation: $fade-in-animation
     +min(md)
         +dimension(350px, 350px)
         animation-delay: $long-delay
@@ -16,10 +19,19 @@
         +dimension(200px, 200px)
 
     .background-mask-rect
-        x: 0
+        x: 100%
+        transition: $move-transition
+        animation: $move-in-animation
         +min(md)
             animation-delay: $long-delay
     .fill-light-color
         fill: $light-color
     .stroke-light-color
         stroke: $light-color
+
+    &[data-page="1"]
+        opacity: 0
+        transition-delay: 0s
+        .background-mask-rect
+            x: 0
+            transition-delay: 0s

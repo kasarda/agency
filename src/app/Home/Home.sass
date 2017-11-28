@@ -1,52 +1,69 @@
 @import "ts-modules/lib"
 @import "theme.sass"
+@import "animation.sass"
+
+$padding-from-screen: 50px
+$padding-from-screen-mobile: 20px
 
 #Home
     .wrapper
         +dimension
-        padding: 0 20px
+        padding: 0 $padding-from-screen-mobile
         +min(md)
             justify-content: center
-            padding: 0 50px
+            padding: 0 $padding-from-screen
 
         .column
+            height: auto
+            transition: $slide-height-transition
             position: relative
-            margin-bottom: 25px
+            margin-right: -$padding-from-screen-mobile
             +min(md)
-                margin-bottom: 0
-                height: 250px
+                margin-right: -$padding-from-screen
 
             +min(1024px)
-                padding-left: 86px
+                margin-left: 86px
             +min(1300px)
-                padding-left: 150px
+                margin-left: 150px
             +min(1600px)
-                padding-left: 250px
+                margin-left: 250px
 
-            .rule
-                width: 0px
-                height: 100%
-                max-width: 800px
-                background-color: $light-color
-                position: absolute
-                transition: width $slide-animation
-                +min(md)
-                    width: 1px
-                    animation: SlideInRule $slide-animation
+        .rule
+            position: absolute
+            width: 0px
+            height: 100%
+            background-color: $light-color
+            transition: $slide-transition
+            +min(md)
+                width: 1px
+                animation: $slide-animation
 
-            h1
-                padding-bottom: 50px
-                opacity: 0
-                +min(md)
-                    padding-bottom: 0
-                    padding-left: 25px
+        h1
+            padding-bottom: 50px
+            transition: $long-fade-transition
+            animation: $fade-in-animation
+            opacity: 1
+            +min(md)
+                padding-bottom: 0
+                padding-left: 25px
 
+    .side-content
+        background: #4527a0
+        width: 0
+        z-index: 2
+        transition: $slide-width-transition
 
-[data-transition-to="1"]
-    .rule
-        width: 100% !important
+    &[data-page="1"]
+        .column
+            height: 100%
+            transition-delay: $slide-height-delay
+        .rule
+            width: 100%
+            transition-delay: 0s
+        h1
+            opacity: 0
+            transition-delay: 0s
 
+        .side-content
+            width: 50%
 
-@keyframes SlideInRule
-    from
-        width: 100%

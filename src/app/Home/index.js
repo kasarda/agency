@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import onMouseWheel from '../../services/wheel'
+
 import './Home.css'
 
-import ScrollButton from '../ScrollButton'
+import Wheel from '../Wheel'
 import Letter from '../Letter'
+import onMouseWheel from '../../services/wheel'
 
 class Home extends Component {
 
@@ -18,6 +19,13 @@ class Home extends Component {
 
     }
 
+    /**
+     *
+     * @param {down|up} type
+     * Set current page
+     * 0 is home
+     * 1 - 4 is others page
+     */
     setPage(type) {
         const { page, length } = this.state
 
@@ -37,6 +45,16 @@ class Home extends Component {
         }
     }
 
+    /**
+     *
+     * When wheel button is clicked update page
+     *
+     */
+
+    onWheelClick() {
+        this.setPage('down')
+    }
+
     componentDidMount() {
         onMouseWheel(e => {
             const minOffset = e.wheelOffset >= 50
@@ -54,17 +72,28 @@ class Home extends Component {
 
     render() {
 
+        const { page } = this.state
+
         return (
-            <div id="Home" className="view" ref="home" data-transition-to={this.state.page}>
-                <Letter />
+            <div
+                id="Home"
+                className="view"
+                data-page={page}
+            >
+                <div className="side-content view">
+                </div>
+                <Letter page={page} />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
-                        <div className="rule" ref="rule"></div>
-                        <h1 ref="heading" className="animate fade-in delay">Digital <br />
+                        <div className="rule"></div>
+                        <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
-                <ScrollButton />
+                <Wheel
+                    page={page}
+                    onWheelClick={this.onWheelClick.bind(this)}
+                />
             </div>
         )
     }

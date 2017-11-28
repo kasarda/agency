@@ -7,6 +7,23 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
+    opacity: 0; } }
+
+@keyframes SlideAnimation {
+  from {
+    width: 100%; } }
+
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
+
+@keyframes FadeInAnimation {
+  from {
+    opacity: 0; } }
+
 #Home .wrapper {
   height: 100%;
   width: 100%;
@@ -16,43 +33,59 @@
       justify-content: center;
       padding: 0 50px; } }
   #Home .wrapper .column {
+    height: auto;
+    transition: height 0.4s ease-in-out;
     position: relative;
-    margin-bottom: 25px; }
+    margin-right: -20px; }
     @media (min-width: 768px) {
       #Home .wrapper .column {
-        margin-bottom: 0;
-        height: 250px; } }
+        margin-right: -50px; } }
     @media (min-width: 1024px) {
       #Home .wrapper .column {
-        padding-left: 86px; } }
+        margin-left: 86px; } }
     @media (min-width: 1300px) {
       #Home .wrapper .column {
-        padding-left: 150px; } }
+        margin-left: 150px; } }
     @media (min-width: 1600px) {
       #Home .wrapper .column {
-        padding-left: 250px; } }
-    #Home .wrapper .column .rule {
-      width: 0px;
-      height: 100%;
-      max-width: 800px;
-      background-color: #ffffff;
-      position: absolute;
-      transition: width 0.4s ease-in; }
-      @media (min-width: 768px) {
-        #Home .wrapper .column .rule {
-          width: 1px;
-          animation: SlideInRule 0.4s ease-in; } }
-    #Home .wrapper .column h1 {
-      padding-bottom: 50px;
-      opacity: 0; }
-      @media (min-width: 768px) {
-        #Home .wrapper .column h1 {
-          padding-bottom: 0;
-          padding-left: 25px; } }
+        margin-left: 250px; } }
+  #Home .wrapper .rule {
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 0.4s 0.8s ease-in-out; }
+    @media (min-width: 768px) {
+      #Home .wrapper .rule {
+        width: 1px;
+        animation: SlideAnimation 0.4s 0.4s ease-in backwards; } }
+  #Home .wrapper h1 {
+    padding-bottom: 50px;
+    transition: opacity 1s 1.4s ease-in-out;
+    animation: FadeInAnimation 1s 0.4s ease-in backwards;
+    opacity: 1; }
+    @media (min-width: 768px) {
+      #Home .wrapper h1 {
+        padding-bottom: 0;
+        padding-left: 25px; } }
 
-[data-transition-to="1"] .rule {
-  width: 100% !important; }
+#Home .side-content {
+  background: #4527a0;
+  width: 0;
+  z-index: 2;
+  transition: width 0.4s 0.4s ease-in-out; }
 
-@keyframes SlideInRule {
-  from {
-    width: 100%; } }
+#Home[data-page="1"] .column {
+  height: 100%;
+  transition-delay: 0.8s; }
+
+#Home[data-page="1"] .rule {
+  width: 100%;
+  transition-delay: 0s; }
+
+#Home[data-page="1"] h1 {
+  opacity: 0;
+  transition-delay: 0s; }
+
+#Home[data-page="1"] .side-content {
+  width: 50%; }

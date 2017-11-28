@@ -7,6 +7,23 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
+    opacity: 0; } }
+
+@keyframes SlideAnimation {
+  from {
+    width: 100%; } }
+
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
+
+@keyframes FadeInAnimation {
+  from {
+    opacity: 0; } }
+
 #Letter {
   position: absolute;
   left: 50%;
@@ -14,7 +31,9 @@
   transform: translate(-50%, -50%);
   height: 200px;
   width: 200px;
-  opacity: 0; }
+  opacity: 1;
+  transition: opacity 0.4s 1.2s ease-in-out;
+  animation: FadeInAnimation 1s 0.4s ease-in backwards; }
   @media (min-width: 768px) {
     #Letter {
       height: 350px;
@@ -29,7 +48,9 @@
       height: 200px;
       width: 200px; } }
   #Letter .background-mask-rect {
-    x: 0; }
+    x: 100%;
+    transition: 1s 1.2s ease-in-out;
+    animation: MoveInAnimation 1s 0.4s ease-in backwards; }
     @media (min-width: 768px) {
       #Letter .background-mask-rect {
         animation-delay: 0.8s; } }
@@ -37,3 +58,9 @@
     fill: #ffffff; }
   #Letter .stroke-light-color {
     stroke: #ffffff; }
+  #Letter[data-page="1"] {
+    opacity: 0;
+    transition-delay: 0s; }
+    #Letter[data-page="1"] .background-mask-rect {
+      x: 0;
+      transition-delay: 0s; }

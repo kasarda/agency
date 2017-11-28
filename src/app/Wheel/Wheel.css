@@ -7,21 +7,40 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-#ScrollButton {
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
+    opacity: 0; } }
+
+@keyframes SlideAnimation {
+  from {
+    width: 100%; } }
+
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
+
+@keyframes FadeInAnimation {
+  from {
+    opacity: 0; } }
+
+#Wheel {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 50px; }
-  #ScrollButton .mouse {
+  bottom: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in; }
+  #Wheel .mouse {
     width: 15px;
     height: 30px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
     transition: opacity 0.15s ease-in-out; }
-    #ScrollButton .mouse:hover {
+    #Wheel .mouse:hover {
       opacity: .5; }
-    #ScrollButton .mouse .wheel {
+    #Wheel .mouse .wheel {
       width: 3px;
       height: 3px;
       background-color: #ffffff;
@@ -29,9 +48,6 @@
       position: relative;
       top: -2px;
       opacity: 1;
-      animation: Wheel 1s 1s ease-in infinite; }
-
-@keyframes Wheel {
-  100% {
-    top: 2px;
-    opacity: 0; } }
+      animation: WheelAnimation 1s 1s ease-in infinite; }
+  #Wheel[data-page="0"] {
+    opacity: 1; }
