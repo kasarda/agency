@@ -21,9 +21,9 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-router-dom@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.2.tgz#4d6d71ab98560efde309c6469e1023a70dfa5ea7"
+"@types/react-router-dom@^4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.3.tgz#06e0b67ff536adc0681dffdbe592ae91fb85887d"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
