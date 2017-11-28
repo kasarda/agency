@@ -5,7 +5,13 @@ import './Letter.css'
 function Letter(props) {
     return (
 
-        <svg viewBox="0 0 440 440" preserveAspectRatio="none" id="Letter" data-page={props.page}>
+        <svg
+            viewBox="0 0 440 440"
+            preserveAspectRatio="none"
+            id="Letter"
+            onAnimationEnd={event => props.onReady(event, 'FadeInAnimation', 0)}
+            data-page={props.page}
+        >
             <defs>
                 <pattern
                     viewBox="0 0 8 8"

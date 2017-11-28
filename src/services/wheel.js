@@ -14,7 +14,7 @@
  * })
  */
 
-export default cb => {
+export const fakeScroll = cb => {
 
     // for mouse devices
     document.addEventListener('mousewheel', listener)
@@ -40,7 +40,35 @@ export default cb => {
         start = null
     })
 
-
 }
 
+/**
+ *
+ * Trigger callback when user trigger fake scroll event
+ * @param {number} offset
+ * @param {Function} down
+ * @param {Function} up
+ * @param {Function} always
+ * @return {undefined}
+ *
+ */
+export const onFakeScroll = (offset, down, up, always) => {
+    fakeScroll(function(event) {
+        const minOffset = event.wheelOffset >= offset
 
+        if (
+            (event.type === 'touchend' && !event.wheelDown && minOffset) ||
+            (event.type !== 'touchend' && event.wheelDown && minOffset)
+        ) {
+            down && down.call(this, event)
+        }
+        else if (
+            (event.type === 'touchend' && event.wheelDown && minOffset) ||
+            (event.type !== 'touchend' && !event.wheelDown && minOffset)
+        ) {
+            up && up.call(this, event)
+        }
+
+        always && always.call(this, event)
+    })
+}
