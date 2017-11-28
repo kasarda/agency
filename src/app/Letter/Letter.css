@@ -58,9 +58,9 @@
     fill: #ffffff; }
   #Letter .stroke-light-color {
     stroke: #ffffff; }
-  #Letter[data-page="1"] {
+  #Letter[data-home="false"] {
     opacity: 0;
     transition-delay: 0s; }
-    #Letter[data-page="1"] .background-mask-rect {
+    #Letter[data-home="false"] .background-mask-rect {
       x: 0;
       transition-delay: 0s; }

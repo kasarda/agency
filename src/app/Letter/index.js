@@ -9,8 +9,7 @@ function Letter(props) {
             viewBox="0 0 440 440"
             preserveAspectRatio="none"
             id="Letter"
-            onAnimationEnd={event => props.onReady(event, 'FadeInAnimation', 0)}
-            data-page={props.page}
+            data-home={props.home}
         >
             <defs>
                 <pattern

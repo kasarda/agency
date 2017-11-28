@@ -14,7 +14,7 @@ class Home extends Component {
         this.state = {
             page: 0,
             length: 4,
-            ready: false
+            ready: true
         }
 
 
@@ -31,9 +31,7 @@ class Home extends Component {
         const { page, length } = this.state
 
         if (this.state.ready) {
-            this.setState({
-                ready: false
-            })
+
             if (type === 'down') {
                 const nextPage = page + 1
                 const newPage = nextPage <= length ? nextPage : 0
@@ -94,6 +92,7 @@ class Home extends Component {
     render() {
 
         const { page, ready } = this.state
+        const home = this.state.page === 0
 
         return (
             <div
@@ -101,22 +100,20 @@ class Home extends Component {
                 className="view"
                 data-page={page}
                 data-ready={ready}
+                data-home={home}
             >
                 <div className="side-content view">
                 </div>
-                <Letter
-                    page={page}
-                    onReady={this.setReady.bind(this)}/>
+                <Letter home={home} />
                 <div className="wrapper flex direction-col justify-end">
-                    <div className="column flex"
-                        onTransitionEnd={event => this.setReady.call(this, event, 'height', 1)}>
+                    <div className="column flex">
                         <div className="rule"></div>
-                        <h1 onTransitionEnd={event => this.setReady.call(this, event, 'opacity', 0)}>Digital <br />
+                        <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
                 <Wheel
-                    page={page}
+                    home={home}
                     onWheelClick={this.onWheelClick.bind(this)} />
             </div>
         )

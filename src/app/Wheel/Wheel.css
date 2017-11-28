@@ -49,5 +49,5 @@
       top: -2px;
       opacity: 1;
       animation: WheelAnimation 1s 1s ease-in infinite; }
-  #Wheel[data-page="0"] {
+  #Wheel[data-home="true"] {
     opacity: 1; }
