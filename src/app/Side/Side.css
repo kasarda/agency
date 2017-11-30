@@ -108,9 +108,6 @@
 [data-home="false"] #Side {
   width: 50%; }
 
-[data-home="true"] #Side {
-  width: 0px; }
-
 [data-home="true"][data-from] #Side {
   animation: SlideSideWidthAnimation .4s .4s ease-in backwards;
   transition: none; }
