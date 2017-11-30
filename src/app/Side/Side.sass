@@ -2,9 +2,6 @@
 @import "theme.sass"
 @import "animation.sass"
 
-$padding-from-screen: 50px
-$padding-from-screen-mobile: 20px
-
 #Side
     background: #4527a0
     width: 0px
@@ -12,32 +9,41 @@ $padding-from-screen-mobile: 20px
     z-index: 2
     +slide-width-transition
 
-[data-home="false"] #Side
-    width: 50%
+[data-home="false"]
+    #Side
+        width: 50%
+
+[data-home="true"]
+    #Side
+        width: 0px
 
 
-[data-home="true"][data-from] #Side
-    width: 0px
-    +slide-side-width-animation
+[data-home="true"][data-from]
+    #Side
+        +slide-side-width-animation
+        transition: none // important for bug on mobile devices
+
+[data-down="true"][data-from="1"],
+[data-down="true"][data-from="2"],
+[data-down="true"][data-from="3"],
+[data-down="false"][data-from="2"],
+[data-down="false"][data-from="3"],
+[data-down="false"][data-from="4"]
+    #Side
+        +page-to-page-sequence
+
+[data-down="true"][data-from="2"]
+    #Side
+        +page-to-page-change-sequence
 
 
-[data-down="true"][data-from="1"] #Side,
-[data-down="true"][data-from="2"] #Side,
-[data-down="true"][data-from="3"] #Side,
-[data-down="false"][data-from="2"] #Side,
-[data-down="false"][data-from="3"] #Side,
-[data-down="false"][data-from="4"] #Side
-    +page-to-page-sequence
-
-[data-down="true"][data-from="2"] #Side
-    +page-to-page-change-sequence
+[data-down="false"][data-from="2"],
+[data-down="false"][data-from="3"],
+[data-down="false"][data-from="4"]
+    #Side
+        +page-to-page-back-sequence
 
 
-[data-down="false"][data-from="2"] #Side,
-[data-down="false"][data-from="3"] #Side,
-[data-down="false"][data-from="4"] #Side
-    +page-to-page-back-sequence
-
-
-[data-down="false"][data-from="3"] #Side
-    +page-to-page-back-change-sequence
+[data-down="false"][data-from="3"]
+    #Side
+        +page-to-page-back-change-sequence
