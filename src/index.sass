@@ -13,6 +13,7 @@
 
 html
     font-size: $mobile-size
+    //background-color: $primary-color @prod
     +min(md)
         font-size: $primary-size
 
@@ -21,7 +22,7 @@ body
     padding: 0
     font-family: $primary-font
     color: $light-color
-    //overflow: hidden
+    //overflow: hidden @prod
     overflow-x: hidden //@dev
 
 h1
@@ -39,5 +40,5 @@ h1
     +dimension(100%, 100vh)
     +position(0, 0, absolute)
 
-.primary-background
+.primary-background //@dev
     background-color: $primary-color

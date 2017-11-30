@@ -24,13 +24,6 @@ class Home extends Component {
 
     }
 
-    /**
-     *
-     * @param {down|up} type
-     * Set current page
-     * 0 is home
-     * 1 - 4 is others page
-     */
     setPage(type) {
         const { page, length } = this.state
 
@@ -56,12 +49,6 @@ class Home extends Component {
             }
         }
     }
-
-    /**
-     *
-     * When wheel button is clicked update page
-     *
-     */
 
     onWheelClick() {
         this.setState({
