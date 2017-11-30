@@ -35,7 +35,6 @@
     "CSS will-change property",
     "Code spliting for sub pages"
   ],
-
   "todos": [
     "Create ready functionality for home component",
     "Create Services, Projects, Contacts and 404 components",
@@ -48,11 +47,9 @@
     "Add version for the client to be sure on mobile if site was updated ar not",
     "Change specific easings for animations to be more smooth and better looking"
   ],
-
   "done": [
     "Create faster duration for animation and rewrite to be more stable and flexible"
   ],
-
   "browsers": {
     "mobile": {
       "opera-mini": true,
@@ -62,7 +59,6 @@
       "chrome": true,
       "firefox": true
     },
-
     "desktop": {
       "chrome": true,
       "firefox": [
@@ -78,7 +74,6 @@
       "safari": null
     }
   },
-
   "supports": [
     "ie 11",
     "edge 14+",
