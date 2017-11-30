@@ -4,6 +4,8 @@ import './Home.css'
 
 import Wheel from '../Wheel'
 import Letter from '../Letter'
+import Side from '../Side'
+
 import { onFakeScroll } from '../../services/wheel'
 
 class Home extends Component {
@@ -14,7 +16,9 @@ class Home extends Component {
         this.state = {
             page: 0,
             length: 4,
-            ready: true
+            ready: true,
+            down: undefined,
+            prevPage: undefined
         }
 
 
@@ -36,14 +40,18 @@ class Home extends Component {
                 const nextPage = page + 1
                 const newPage = nextPage <= length ? nextPage : 0
                 this.setState({
-                    page: newPage
+                    page: newPage,
+                    prevPage: page,
+                    down: true
                 })
             }
 
             else if (type === 'up' && page > 0) {
                 const prevPage = page - 1
                 this.setState({
-                    page: prevPage
+                    page: prevPage,
+                    prevPage: page,
+                    down: false
                 })
             }
         }
@@ -56,7 +64,9 @@ class Home extends Component {
      */
 
     onWheelClick() {
-        this.setPage('down')
+        this.setState({
+            page: 1
+        })
     }
 
     scrollDown(event) {
@@ -75,36 +85,22 @@ class Home extends Component {
 
     }
 
-    setReady(event, expectedName, page) {
-
-        const name = event.propertyName || event.animationName
-
-        if (name === expectedName && this.state.page === page) {
-            console.log(name, true)
-            this.setState({
-                ready: true
-            })
-        }
-
-    }
-
-
     render() {
 
-        const { page, ready } = this.state
+        const { page, down, prevPage } = this.state
         const home = this.state.page === 0
 
         return (
             <div
                 id="Home"
                 className="view"
-                data-page={page}
-                data-ready={ready}
                 data-home={home}
+                data-down={down}
+                data-from={prevPage}
+                data-to={page}
             >
-                <div className="side-content view">
-                </div>
-                <Letter home={home} />
+                <Side page={page} />
+                <Letter />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule"></div>
@@ -113,7 +109,6 @@ class Home extends Component {
                     </div>
                 </div>
                 <Wheel
-                    home={home}
                     onWheelClick={this.onWheelClick.bind(this)} />
             </div>
         )

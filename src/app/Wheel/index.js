@@ -8,7 +8,6 @@ function Wheel(props) {
         <div
             id="Wheel"
             className="hidden-sm-down"
-            data-home={props.home}
         >
             <div
                 className="mouse flex justify-center align-center"

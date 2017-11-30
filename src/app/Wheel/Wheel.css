@@ -7,21 +7,95 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-@keyframes WheelAnimation {
-  to {
-    top: 2px;
-    opacity: 0; } }
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
 
 @keyframes SlideAnimation {
   from {
     width: 100%; } }
 
-@keyframes MoveInAnimation {
-  from {
-    x: 0; } }
-
 @keyframes FadeInAnimation {
   from {
+    opacity: 0; } }
+
+@keyframes SlideSideWidthAnimation {
+  from {
+    width: 50%; }
+  to {
+    width: 0px; } }
+
+@keyframes NextPageWidthAnimation1 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation1 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation1 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes NextPageWidthAnimation2 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation2 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation2 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes PrevPageWidthAnimation1 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation1 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation1 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes PrevPageWidthAnimation2 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation2 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation2 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
     opacity: 0; } }
 
 #Wheel {
@@ -30,14 +104,15 @@
   transform: translate(-50%);
   bottom: 50px;
   opacity: 0;
-  transition: opacity 0.4s ease-in; }
+  z-index: 0;
+  transition: opacity .4s 0s ease-in-out; }
   #Wheel .mouse {
     width: 15px;
     height: 30px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
-    transition: opacity 0.15s ease-in-out; }
+    transition: opacity .15s ease-in-out; }
     #Wheel .mouse:hover {
       opacity: .5; }
     #Wheel .mouse .wheel {
@@ -49,5 +124,7 @@
       top: -2px;
       opacity: 1;
       animation: WheelAnimation 1s 1s ease-in infinite; }
-  #Wheel[data-home="true"] {
-    opacity: 1; }
+
+[data-home="true"] #Wheel {
+  opacity: 1;
+  transition-delay: 1.4s; }

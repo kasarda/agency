@@ -15,10 +15,10 @@ $padding-from-screen-mobile: 20px
 
         .column
             height: 150px
-            transition: $slide-height-transition
             position: relative
             margin-right: -$padding-from-screen-mobile
             margin-bottom: 25px
+            +slide-height-transition
             +min(md)
                 height: 250px
                 margin-bottom: 0
@@ -36,38 +36,32 @@ $padding-from-screen-mobile: 20px
             width: 0px
             height: 100%
             background-color: $light-color
-            transition: $slide-transition
+            z-index: 1
+            +slide-transition
             +min(md)
                 width: 1px
-                animation: $slide-animation
+                +slide-animation
 
         h1
             padding-bottom: 50px
-            transition: $long-fade-transition
-            animation: $fade-in-animation
+            +fade-heading-transition
+            +fade-in-animation
             opacity: 1
             +min(md)
                 padding-bottom: 0
                 padding-left: 25px
 
-    .side-content
-        background: #4527a0
-        width: 0
-        z-index: 2
-        transition: $slide-width-transition
-
     &[data-home="false"]
         .column
             height: 100%
-            transition-delay: $slide-height-delay
             margin-bottom: 0
+            margin-left: -20px
+            +slide-height-delay
+            +min(md)
+                margin-left: -50px
         .rule
             width: 100%
-            transition-delay: 0s
+            +delay(0s)
         h1
             opacity: 0
-            transition-delay: 0s
-
-        .side-content
-            width: 50%
-
+            +delay(0s)

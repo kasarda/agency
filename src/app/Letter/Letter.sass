@@ -6,11 +6,11 @@
     +center
     +dimension(200px, 200px)
     opacity: 1
-    transition: $fade-letter-transition
-    animation: $fade-in-animation
+    +fade-letter-transition
+    +fade-in-animation
     +min(md)
         +dimension(350px, 350px)
-        animation-delay: $long-delay
+        +letter-desktop-delay
 
     +min(xl, 700px)
         +dimension(450px, 450px)
@@ -20,18 +20,18 @@
 
     .background-mask-rect
         x: 100%
-        transition: $move-transition
-        animation: $move-in-animation
+        +move-transition
+        +move-in-animation
         +min(md)
-            animation-delay: $long-delay
+            +letter-desktop-delay
     .fill-light-color
         fill: $light-color
     .stroke-light-color
         stroke: $light-color
 
-    &[data-home="false"]
-        opacity: 0
-        transition-delay: 0s
-        .background-mask-rect
-            x: 0
-            transition-delay: 0s
+[data-home="false"] #Letter
+    opacity: 0
+    +delay(0s)
+    .background-mask-rect
+        x: 0
+        +delay(0s)

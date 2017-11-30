@@ -2,14 +2,13 @@ import React from 'react'
 
 import './Letter.css'
 
-function Letter(props) {
+function Letter() {
     return (
 
         <svg
             viewBox="0 0 440 440"
             preserveAspectRatio="none"
             id="Letter"
-            data-home={props.home}
         >
             <defs>
                 <pattern

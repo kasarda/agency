@@ -7,21 +7,95 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-@keyframes WheelAnimation {
-  to {
-    top: 2px;
-    opacity: 0; } }
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
 
 @keyframes SlideAnimation {
   from {
     width: 100%; } }
 
-@keyframes MoveInAnimation {
-  from {
-    x: 0; } }
-
 @keyframes FadeInAnimation {
   from {
+    opacity: 0; } }
+
+@keyframes SlideSideWidthAnimation {
+  from {
+    width: 50%; }
+  to {
+    width: 0px; } }
+
+@keyframes NextPageWidthAnimation1 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation1 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation1 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes NextPageWidthAnimation2 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation2 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation2 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes PrevPageWidthAnimation1 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation1 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation1 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes PrevPageWidthAnimation2 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation2 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation2 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
     opacity: 0; } }
 
 #Home .wrapper {
@@ -34,10 +108,10 @@
       padding: 0 50px; } }
   #Home .wrapper .column {
     height: 150px;
-    transition: height 0.4s ease-in-out , margin-bottom 0.4s ease-in-out;
     position: relative;
     margin-right: -20px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    transition: height .4s ease-in-out, margin .4s ease-in-out; }
     @media (min-width: 768px) {
       #Home .wrapper .column {
         height: 250px;
@@ -57,31 +131,30 @@
     width: 0px;
     height: 100%;
     background-color: #ffffff;
-    transition: width 0.4s 0.8s ease-in-out; }
+    z-index: 1;
+    transition: width .4s .8s ease-in-out; }
     @media (min-width: 768px) {
       #Home .wrapper .rule {
         width: 1px;
-        animation: SlideAnimation 0.4s 0.4s ease-in backwards; } }
+        animation: SlideAnimation .4s .4s ease-in backwards; } }
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.4s ease-in-out;
-    animation: FadeInAnimation 1s 0.4s ease-in backwards;
+    animation: FadeInAnimation 1s .4s ease-in backwards;
     opacity: 1; }
     @media (min-width: 768px) {
       #Home .wrapper h1 {
         padding-bottom: 0;
         padding-left: 25px; } }
 
-#Home .side-content {
-  background: #4527a0;
-  width: 0;
-  z-index: 2;
-  transition: width 0.4s 0.4s ease-in-out; }
-
 #Home[data-home="false"] .column {
   height: 100%;
-  transition-delay: 0.8s;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-left: -20px;
+  transition-delay: .8s; }
+  @media (min-width: 768px) {
+    #Home[data-home="false"] .column {
+      margin-left: -50px; } }
 
 #Home[data-home="false"] .rule {
   width: 100%;
@@ -90,6 +163,3 @@
 #Home[data-home="false"] h1 {
   opacity: 0;
   transition-delay: 0s; }
-
-#Home[data-home="false"] .side-content {
-  width: 50%; }

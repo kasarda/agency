@@ -1,14 +1,189 @@
 
-// Navigation, Wheel
-$hover-transition: opacity .15s ease-in-out
+//? Initialize Animation
+
+// Home > .rule
+=slide-animation
+    animation: SlideAnimation .4s .4s ease-in backwards
+
+// Home > h1 && Home > Letter > svg#Letter
+=fade-in-animation
+    animation: FadeInAnimation 1s .4s ease-in backwards
+
+// Home > Letter > svg#Letter > rect.background-mask
+=move-in-animation
+    animation: MoveInAnimation 1s .4s ease-in backwards
+
+// For svg#Letter and rect.background-mask
+=letter-desktop-delay
+    animation-delay: .8s
+
+
+
+@keyframes MoveInAnimation
+    from
+        x: 0
+
+@keyframes SlideAnimation
+    from
+        width: 100%
+
+@keyframes FadeInAnimation
+    from
+        opacity: 0
 
 
 
 
-// Wheel
-$fade-transition: opacity .4s ease-in
 
-$wheel-animation: WheelAnimation 1s 1s ease-in infinite
+
+//? From Home view to Page view Animation
+
+// Home > .rule
+=slide-transition
+    transition: width .4s .8s ease-in-out
+
+// Home > Letter > svg#Letter
+=fade-letter-transition
+    transition: opacity .4s 1.2s ease-in-out
+
+// Home > Letter > svg#Letter > rect.background-mask
+=move-transition
+    transition: x 1s 1.2s ease-in-out
+
+// Home > h1
+=fade-heading-transition
+    transition: opacity 1s 1.4s ease-in-out
+
+// Home > Side > #Side
+=slide-width-transition
+    transition: width .4s .4s ease-in-out
+
+// Home > .column
+=slide-height-delay
+    transition-delay: .8s
+
+=slide-height-transition
+    transition: height .4s ease-in-out, margin .4s ease-in-out
+
+
+//? From Page view to Home view -> .side-content
+
+// Home > Side > #Side
+=slide-side-width-animation
+    animation: SlideSideWidthAnimation .4s .4s ease-in backwards
+
+@keyframes SlideSideWidthAnimation
+    from
+        width: 50%
+    to
+        width: 0px
+
+
+
+
+
+
+
+
+
+
+//? From Page view to next Page view
+
+// Home > Side > #Side
+=page-to-page-sequence
+    animation-duration: .4s
+    animation-delay: 0s, .6s, 1.2s
+    animation-timing-function: ease-in
+    animation-fill-mode: forwards
+    animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1
+=page-to-page-change-sequence
+    animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2, NextPageBackWidthAnimation2
+
+
+@for $i from 1 through 2
+    @keyframes NextPageWidthAnimation#{$i}
+        to
+            width: 100%
+
+    @keyframes NextPageLeftAnimation#{$i}
+        to
+            left: 100%
+
+    @keyframes NextPageBackWidthAnimation#{$i}
+        from
+            width: 0px
+            left: 0px
+        to
+            width: 50%
+            left: 0px
+
+
+
+
+
+
+
+
+
+//? From Page view to previous Page view
+
+// Home > Side > #Side
+=page-to-page-back-sequence
+    animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1
+
+=page-to-page-back-change-sequence
+    animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2
+
+
+@for $i from 1 through 2
+    @keyframes PrevPageWidthAnimation#{$i}
+        to
+            width: 0px
+
+    @keyframes PrevPageLeftAnimation#{$i}
+        from
+            left: 100%
+            width: 100%
+        to
+            left: 0px
+            width: 100%
+
+    @keyframes PrevPageBackWidthAnimation#{$i}
+        from
+            width: 100%
+        to
+            width: 50%
+
+
+
+
+
+
+
+
+
+
+
+
+//? Always active
+
+// Navigation > Link > a && Home > Wheel > .mouse
+=hover-transition
+    transition: opacity .15s ease-in-out
+
+// Home > Wheel > #Wheel
+=wheel-delay
+    transition-delay: 1.4s
+
+=wheel-transition
+    transition: opacity .4s 0s ease-in-out
+
+// Home > Wheel > #Wheel > .mouse > .wheel
+=wheel-animation
+    animation: WheelAnimation 1s 1s ease-in infinite
+
+
+
 @keyframes WheelAnimation
     to
         top: 2px
@@ -19,54 +194,8 @@ $wheel-animation: WheelAnimation 1s 1s ease-in infinite
 
 
 
-// Home
 
-// > rule
-$slide-transition: width .4s .8s ease-in-out
+//? Prebuild
 
-// > side
-$slide-width-transition: width .4s .4s ease-in-out
-
-// > column
-$slide-height-delay: .8s
-$slide-height-transition: height .4s ease-in-out unquote(',') margin-bottom .4s ease-in-out
-
-// > heading
-$long-fade-transition: opacity 1s 1.4s ease-in-out
-
-
-$slide-animation: SlideAnimation .4s .4s ease-in backwards
-@keyframes SlideAnimation
-    from
-        width: 100%
-
-
-
-
-// Letter
-$fade-letter-transition: opacity .4s 1.2s ease-in-out
-$move-transition: 1s 1.2s ease-in-out
-
-$move-in-animation: MoveInAnimation 1s .4s ease-in backwards
-@keyframes MoveInAnimation
-    from
-        x: 0
-
-
-
-// Home, Letter
-$fade-in-animation: FadeInAnimation 1s .4s ease-in backwards
-@keyframes FadeInAnimation
-    from
-        opacity: 0
-
-
-
-
-
-// Prebuilt
-$short-delay: .4s
-$long-delay: .8s
-
-$long: 1s
-$short: .4s
+=delay($val)
+    transition-delay: $val

@@ -98,44 +98,39 @@
     top: 2px;
     opacity: 0; } }
 
-#Letter {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 200px;
-  width: 200px;
-  opacity: 1;
-  transition: opacity .4s 1.2s ease-in-out;
-  animation: FadeInAnimation 1s .4s ease-in backwards; }
-  @media (min-width: 768px) {
-    #Letter {
-      height: 350px;
-      width: 350px;
-      animation-delay: .8s; } }
-  @media (min-width: 1200px) and (min-height: 700px) {
-    #Letter {
-      height: 450px;
-      width: 450px; } }
-  @media (max-height: 500px) {
-    #Letter {
-      height: 200px;
-      width: 200px; } }
-  #Letter .background-mask-rect {
-    x: 100%;
-    transition: x 1s 1.2s ease-in-out;
-    animation: MoveInAnimation 1s .4s ease-in backwards; }
-    @media (min-width: 768px) {
-      #Letter .background-mask-rect {
-        animation-delay: .8s; } }
-  #Letter .fill-light-color {
-    fill: #ffffff; }
-  #Letter .stroke-light-color {
-    stroke: #ffffff; }
+#Side {
+  background: #4527a0;
+  width: 0px;
+  overflow: hidden;
+  z-index: 2;
+  transition: width .4s .4s ease-in-out; }
 
-[data-home="false"] #Letter {
-  opacity: 0;
-  transition-delay: 0s; }
-  [data-home="false"] #Letter .background-mask-rect {
-    x: 0;
-    transition-delay: 0s; }
+[data-home="false"] #Side {
+  width: 50%; }
+
+[data-home="true"][data-from] #Side {
+  width: 0px;
+  animation: SlideSideWidthAnimation .4s .4s ease-in backwards; }
+
+[data-down="true"][data-from="1"] #Side,
+[data-down="true"][data-from="2"] #Side,
+[data-down="true"][data-from="3"] #Side,
+[data-down="false"][data-from="2"] #Side,
+[data-down="false"][data-from="3"] #Side,
+[data-down="false"][data-from="4"] #Side {
+  animation-duration: .4s;
+  animation-delay: 0s, .6s, 1.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1; }
+
+[data-down="true"][data-from="2"] #Side {
+  animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2, NextPageBackWidthAnimation2; }
+
+[data-down="false"][data-from="2"] #Side,
+[data-down="false"][data-from="3"] #Side,
+[data-down="false"][data-from="4"] #Side {
+  animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1; }
+
+[data-down="false"][data-from="3"] #Side {
+  animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2; }

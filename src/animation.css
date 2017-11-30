@@ -1,16 +1,90 @@
-@keyframes WheelAnimation {
-  to {
-    top: 2px;
-    opacity: 0; } }
+@keyframes MoveInAnimation {
+  from {
+    x: 0; } }
 
 @keyframes SlideAnimation {
   from {
     width: 100%; } }
 
-@keyframes MoveInAnimation {
-  from {
-    x: 0; } }
-
 @keyframes FadeInAnimation {
   from {
+    opacity: 0; } }
+
+@keyframes SlideSideWidthAnimation {
+  from {
+    width: 50%; }
+  to {
+    width: 0px; } }
+
+@keyframes NextPageWidthAnimation1 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation1 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation1 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes NextPageWidthAnimation2 {
+  to {
+    width: 100%; } }
+
+@keyframes NextPageLeftAnimation2 {
+  to {
+    left: 100%; } }
+
+@keyframes NextPageBackWidthAnimation2 {
+  from {
+    width: 0px;
+    left: 0px; }
+  to {
+    width: 50%;
+    left: 0px; } }
+
+@keyframes PrevPageWidthAnimation1 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation1 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation1 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes PrevPageWidthAnimation2 {
+  to {
+    width: 0px; } }
+
+@keyframes PrevPageLeftAnimation2 {
+  from {
+    left: 100%;
+    width: 100%; }
+  to {
+    left: 0px;
+    width: 100%; } }
+
+@keyframes PrevPageBackWidthAnimation2 {
+  from {
+    width: 100%; }
+  to {
+    width: 50%; } }
+
+@keyframes WheelAnimation {
+  to {
+    top: 2px;
     opacity: 0; } }
