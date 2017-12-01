@@ -11,7 +11,7 @@ function Wheel(props) {
         >
             <div
                 className="mouse flex justify-center align-center"
-                onClick={() => props.onWheelClick()}
+                onClick={_ => props.onWheelClick('down')}
             >
                 <div className="wheel"></div>
             </div>

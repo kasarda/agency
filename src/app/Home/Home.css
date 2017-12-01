@@ -19,7 +19,7 @@
   from {
     opacity: 0; } }
 
-@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes HeadingFinish {}@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {
@@ -165,3 +165,6 @@
 #Home[data-home="false"] h1 {
   opacity: 0;
   transition-delay: 0s; }
+
+#Home[data-home="true"][data-from] h1 {
+  animation: HeadingFinish 0s 2.4s; }

@@ -50,47 +50,21 @@ class Home extends Component {
         }
     }
 
-    onWheelClick() {
-        this.setState({
-            page: 1
-        })
-    }
-
-    scrollDown(event) {
-        this.setPage('down')
-    }
-
-    scrollUp(event) {
-        this.setPage('up')
-    }
-
     componentDidMount() {
 
         onFakeScroll(50,
-            this.scrollDown.bind(this),
-            this.scrollUp.bind(this))
+            _ => this.setPage('down'),
+            _ => this.setPage('up'),
+        )
 
     }
 
-    initializeFinish(event) {
-        if (event.animationName === 'InitializeFinish') {
+    setReady(event) {
+        if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(event.animationName)) {
             this.setState({
                 ready: true
             })
         }
-    }
-
-    ruleFinish(event) {
-        if (event.animationName === 'RuleFinish') {
-            this.setState({
-                ready: true
-            })
-        }
-        
-    }
-    
-    sideFinish(event) {
-        console.log(event)
     }
 
     render() {
@@ -108,16 +82,16 @@ class Home extends Component {
                 data-to={page}
                 data-ready={ready}
             >
-                <Side page={page} onSideFinish={this.sideFinish.bind(this)}/>
+                <Side page={page} onSideFinish={this.setReady.bind(this)}/>
                 <Letter />
                 <div className="wrapper flex direction-col justify-end">
-                    <div className="column flex" onAnimationEnd={this.ruleFinish.bind(this)}>
+                    <div className="column flex" onAnimationEnd={this.setReady.bind(this)}>
                         <div className="rule" ></div>
-                        <h1 onAnimationEnd={this.initializeFinish.bind(this)}>Digital <br />
+                        <h1 onAnimationEnd={this.setReady.bind(this)}>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
-                <Wheel onWheelClick={this.onWheelClick.bind(this)} />
+                <Wheel onWheelClick={this.setPage.bind(this)} />
             </div>
         )
     }
