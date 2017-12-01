@@ -10,7 +10,19 @@
   from {
     opacity: 0; } }
 
-@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes HeadingFinish {}@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {
+  to {
+    x: 0; } }
+
+@keyframes RuleFinish {
+  to {
+    x: 0; } }
+
+@keyframes HeadingFinish {
+  to {
+    x: 0; } }
+
+@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {

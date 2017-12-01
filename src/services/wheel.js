@@ -17,8 +17,16 @@
 export const fakeScroll = cb => {
 
     // for mouse devices
-    document.addEventListener('mousewheel', listener)
-    document.addEventListener('DOMMouseScroll', listener)
+    let wheelEvent
+    if ('onwheel' in document)
+        wheelEvent = 'onwheel'
+    else if ('onmousewheel' in document)
+        wheelEvent = 'onmousewheel'
+
+    if (wheelEvent)
+        document[wheelEvent] = listener
+    else
+        document.addEventListener('DOMMouseScroll', listener)
 
     function listener(event) {
         event.wheelDown = !Math.max(0, Math.min(1, (event.wheelDelta || -event.detail)))
@@ -28,18 +36,25 @@ export const fakeScroll = cb => {
 
     // for touch devices
     let start
-    document.addEventListener('touchstart', startEvent => {
+    document.ontouchstart = startEvent => {
         start = startEvent.touches[0].clientY
-    })
+    }
 
-    document.addEventListener('touchend', event => {
+    document.ontouchend = event => {
         const end = event.changedTouches[0].clientY
         event.wheelOffset = Math.abs(start - end)
         event.wheelDown = start > end ? false : true
         cb.call(this, event)
         start = null
-    })
+    }
 
+}
+
+export const resetScrollEvents = () => {
+    document.onwheel = null
+    document.onmousewheel = null
+    document.ontouchstart = null
+    document.ontouchend = null
 }
 
 /**
@@ -53,7 +68,7 @@ export const fakeScroll = cb => {
  *
  */
 export const onFakeScroll = (offset, down, up, always) => {
-    fakeScroll(function(event) {
+    fakeScroll(function (event) {
         const minOffset = event.wheelOffset >= offset
 
         if (

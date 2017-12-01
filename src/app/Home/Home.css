@@ -19,7 +19,19 @@
   from {
     opacity: 0; } }
 
-@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes HeadingFinish {}@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {
+  to {
+    x: 0; } }
+
+@keyframes RuleFinish {
+  to {
+    x: 0; } }
+
+@keyframes HeadingFinish {
+  to {
+    x: 0; } }
+
+@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {
@@ -141,7 +153,7 @@
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.4s ease-in-out;
-    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s;
+    animation: FadeInAnimation 1s .4s ease-in backwards;
     opacity: 1; }
     @media (min-width: 768px) {
       #Home .wrapper h1 {
@@ -165,6 +177,3 @@
 #Home[data-home="false"] h1 {
   opacity: 0;
   transition-delay: 0s; }
-
-#Home[data-home="true"][data-from] h1 {
-  animation: HeadingFinish 0s 2.4s; }

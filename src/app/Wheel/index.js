@@ -7,10 +7,10 @@ function Wheel(props) {
     return (
         <div
             id="Wheel"
-            className="hidden-sm-down"
+            onAnimationEnd={event => props.onHeadingFinish(event)}
         >
             <div
-                className="mouse flex justify-center align-center"
+                className="mouse flex justify-center align-center hidden-sm-down"
                 onClick={_ => props.onWheelClick('down')}
             >
                 <div className="wheel"></div>

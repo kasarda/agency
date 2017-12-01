@@ -6,7 +6,7 @@ import Wheel from '../Wheel'
 import Letter from '../Letter'
 import Side from '../Side'
 
-import { onFakeScroll } from '../../services/wheel'
+import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
 
 class Home extends Component {
 
@@ -29,6 +29,7 @@ class Home extends Component {
             this.setState({
                 ready: false
             })
+
             if (type === 'down') {
                 const nextPage = page + 1
                 const newPage = nextPage <= length ? nextPage : 0
@@ -51,12 +52,14 @@ class Home extends Component {
     }
 
     componentDidMount() {
-
         onFakeScroll(50,
             _ => this.setPage('down'),
             _ => this.setPage('up'),
         )
+    }
 
+    componentWillUnmount() {
+        resetScrollEvents()
     }
 
     setReady(event) {
@@ -68,7 +71,6 @@ class Home extends Component {
     }
 
     render() {
-
         const { page, down, prevPage, ready } = this.state
         const home = this.state.page === 0
 
@@ -82,16 +84,28 @@ class Home extends Component {
                 data-to={page}
                 data-ready={ready}
             >
-                <Side page={page} ready={ready} onSideFinish={this.setReady.bind(this)}/>
-                <Letter />
+                <Side
+                    page={page}
+                    ready={ready}
+                    onSideFinish={this.setReady.bind(this)}
+                />
+                <Letter
+                    onInitializeFinish={this.setReady.bind(this)}
+                />
                 <div className="wrapper flex direction-col justify-end">
-                    <div className="column flex" onAnimationEnd={this.setReady.bind(this)}>
+                    <div
+                        className="column flex"
+                        onAnimationEnd={this.setReady.bind(this)}
+                    >
                         <div className="rule" ></div>
-                        <h1 onAnimationEnd={this.setReady.bind(this)}>Digital <br />
+                        <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
-                <Wheel onWheelClick={this.setPage.bind(this)} />
+                <Wheel
+                    onWheelClick={this.setPage.bind(this)}
+                    onHeadingFinish={this.setReady.bind(this)}
+                />
             </div>
         )
     }

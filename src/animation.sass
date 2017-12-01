@@ -5,9 +5,13 @@
 =slide-animation
     animation: SlideAnimation .4s .4s ease-in backwards
 
-// Home > h1 && Home > Letter > svg#Letter
-=fade-in-animation
+// Letter > svg#Letter
+=fade-in-letter-animation
     animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s
+
+// Home > h1
+=fade-in-animation
+    animation: FadeInAnimation 1s .4s ease-in backwards
 
 // Home > Letter > svg#Letter > rect.background-mask
 =move-in-animation
@@ -32,7 +36,8 @@
         opacity: 0
 
 @keyframes InitializeFinish
-
+    to
+        x: 0
 
 
 //? From Home view to Page view Animation
@@ -72,8 +77,11 @@
 
 
 @keyframes RuleFinish
+    to
+        x: 0
 @keyframes HeadingFinish
-
+    to
+        x: 0
 //? From Page view to Home view -> #Side
 
 // Home > Side > #Side

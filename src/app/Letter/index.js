@@ -2,13 +2,14 @@ import React from 'react'
 
 import './Letter.css'
 
-function Letter() {
+function Letter(props) {
     return (
 
         <svg
             viewBox="0 0 440 440"
             preserveAspectRatio="none"
             id="Letter"
+            onAnimationEnd={event => props.onInitializeFinish(event)}
         >
             <defs>
                 <pattern
