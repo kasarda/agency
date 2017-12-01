@@ -7,7 +7,7 @@
 
 // Home > h1 && Home > Letter > svg#Letter
 =fade-in-animation
-    animation: FadeInAnimation 1s .4s ease-in backwards
+    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s
 
 // Home > Letter > svg#Letter > rect.background-mask
 =move-in-animation
@@ -31,8 +31,7 @@
     from
         opacity: 0
 
-
-
+@keyframes InitializeFinish
 
 
 
@@ -64,6 +63,11 @@
 
 =slide-height-transition
     transition: height .4s ease-in-out, margin .4s ease-in-out
+
+=rule-finish
+    animation: RuleFinish 0s 1.2s
+
+@keyframes RuleFinish
 
 
 //? From Page view to Home view -> #Side
@@ -183,8 +187,6 @@
     to
         top: 2px
         opacity: 0
-
-
 
 
 

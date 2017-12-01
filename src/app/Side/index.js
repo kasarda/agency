@@ -5,7 +5,7 @@ import './Side.css'
 
 function Side(props) {
     return (
-        <div id="Side" className="view flex flex-center">
+        <div id="Side" className="view flex flex-center" onAnimationEnd={event => props.onSideFinish(event)} >
             <h2>{props.page}</h2>
         </div>
     )

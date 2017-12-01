@@ -19,7 +19,7 @@
   from {
     opacity: 0; } }
 
-@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {

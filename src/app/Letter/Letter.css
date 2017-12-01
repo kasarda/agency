@@ -19,7 +19,7 @@
   from {
     opacity: 0; } }
 
-@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {
@@ -107,7 +107,7 @@
   width: 200px;
   opacity: 1;
   transition: opacity .4s 1.2s ease-in-out;
-  animation: FadeInAnimation 1s .4s ease-in backwards; }
+  animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s; }
   @media (min-width: 768px) {
     #Letter {
       height: 350px;

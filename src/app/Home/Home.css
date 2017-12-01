@@ -19,7 +19,7 @@
   from {
     opacity: 0; } }
 
-@keyframes SlideSideWidthAnimation {
+@keyframes InitializeFinish {}@keyframes RuleFinish {}@keyframes SlideSideWidthAnimation {
   from {
     width: 50%; }
   to {
@@ -111,6 +111,7 @@
     position: relative;
     margin-right: -20px;
     margin-bottom: 25px;
+    animation: none;
     transition: height .4s ease-in-out, margin .4s ease-in-out; }
     @media (min-width: 768px) {
       #Home .wrapper .column {
@@ -140,7 +141,7 @@
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.4s ease-in-out;
-    animation: FadeInAnimation 1s .4s ease-in backwards;
+    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s;
     opacity: 1; }
     @media (min-width: 768px) {
       #Home .wrapper h1 {
@@ -151,6 +152,7 @@
   height: 100%;
   margin-bottom: 0;
   margin-left: -20px;
+  animation: RuleFinish 0s 1.2s;
   transition-delay: .8s; }
   @media (min-width: 768px) {
     #Home[data-home="false"] .column {
