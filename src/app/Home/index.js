@@ -82,7 +82,7 @@ class Home extends Component {
                 data-to={page}
                 data-ready={ready}
             >
-                <Side page={page} onSideFinish={this.setReady.bind(this)}/>
+                <Side page={page} ready={ready} onSideFinish={this.setReady.bind(this)}/>
                 <Letter />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex" onAnimationEnd={this.setReady.bind(this)}>
