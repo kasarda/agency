@@ -106,9 +106,12 @@
     width: 50%; } }
 
 @keyframes WheelAnimation {
+  from {
+    top: -3px;
+    opacity: 0; }
   to {
-    top: 2px;
-    opacity: 0; } }
+    top: 3px;
+    opacity: 1; } }
 
 #Home .wrapper {
   height: 100%;
@@ -124,7 +127,7 @@
     margin-right: -20px;
     margin-bottom: 25px;
     animation: none;
-    transition: height .4s ease-in-out, margin .4s ease-in-out; }
+    transition: height 0.4s ease-in-out, margin 0.4s ease-in-out; }
     @media (min-width: 768px) {
       #Home .wrapper .column {
         height: 250px;
@@ -145,15 +148,15 @@
     height: 100%;
     background-color: #ffffff;
     z-index: 1;
-    transition: width .4s .8s ease-in-out; }
+    transition: width 0.4s 0.8s ease-in-out; }
     @media (min-width: 768px) {
       #Home .wrapper .rule {
         width: 1px;
-        animation: SlideAnimation .4s .4s ease-in backwards; } }
+        animation: SlideAnimation 0.4s 0.4s ease-in backwards; } }
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.4s ease-in-out;
-    animation: FadeInAnimation 1s .4s ease-in backwards;
+    animation: FadeInAnimation 1s 0.4s ease-in backwards;
     opacity: 1; }
     @media (min-width: 768px) {
       #Home .wrapper h1 {
@@ -165,7 +168,7 @@
   margin-bottom: 0;
   margin-left: -20px;
   animation: RuleFinish 1.2s 0s;
-  transition-delay: .8s; }
+  transition-delay: 0.8s; }
   @media (min-width: 768px) {
     #Home[data-home="false"] .column {
       margin-left: -50px; } }

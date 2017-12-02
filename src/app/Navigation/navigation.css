@@ -106,9 +106,12 @@
     width: 50%; } }
 
 @keyframes WheelAnimation {
+  from {
+    top: -3px;
+    opacity: 0; }
   to {
-    top: 2px;
-    opacity: 0; } }
+    top: 3px;
+    opacity: 1; } }
 
 #Navigation {
   font-family: "Montserrat", sans-serif;
@@ -126,7 +129,7 @@
     padding: 0 15px;
     font-size: 0.688rem;
     letter-spacing: 0.25rem;
-    transition: opacity .15s ease-in-out; }
+    transition: opacity 0.15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
   #Navigation .brand {

@@ -38,14 +38,15 @@
   "todos": [
     "Create Services, Projects, Contacts and 404 components",
     "Create showcase home page component (4)",
+    "Create better system for 'finish animation hacks'",
+    "Create logo, favicon and name of company",
     "Add some kind of graphic in home page first view",
     "Add some other animations on letter component and add other letter with dynamicly changing letter",
-    "Create logo, favicon and name of company",
-    "Fix problem with safari chrome bar -> navigation is not visible on landscape",
-    "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Add version for the client to be sure on mobile if site was updated ar not",
     "Change specific easings for animations to be more smooth and better looking",
-    "Create better system for 'finish animation hacks'"
+    "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
+    "Fix problem with safari chrome bar -> navigation is not visible on landscape",
+    "Fix problem with css files, becouse animation.sass in build include multiple times same keyframes"
   ],
   "done": [
     "Create faster duration for animation and rewrite to be more stable and flexible",
@@ -63,13 +64,13 @@
     "desktop": {
       "chrome": true,
       "firefox": [
-        "letter mask animation doesnt work"
+        "letter mask animation doesnt work becouse css engine doesnt support x propery"
       ],
       "edge14": [
-        "letter mask animation doesnt work"
+        "letter mask animation doesnt work becouse css engine doesnt support x propery"
       ],
       "IE11": [
-        "letter mask animation doesnt work"
+        "letter mask animation doesnt work becouse css engine doesnt support x propery"
       ],
       "opera": true,
       "safari": null

@@ -97,6 +97,9 @@
     width: 50%; } }
 
 @keyframes WheelAnimation {
+  from {
+    top: -3px;
+    opacity: 0; }
   to {
-    top: 2px;
-    opacity: 0; } }
+    top: 3px;
+    opacity: 1; } }

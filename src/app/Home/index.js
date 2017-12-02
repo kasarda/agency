@@ -90,6 +90,7 @@ class Home extends Component {
                 <Side
                     page={page}
                     ready={ready}
+                    from={prevPage}
                 />
                 <Letter />
                 <div className="wrapper flex direction-col justify-end">

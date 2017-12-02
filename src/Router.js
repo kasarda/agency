@@ -10,7 +10,7 @@ import Home from './app/Home'
 class AppRouter extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename="digital-agency/build">
                 <div id="outlet" className="view primary-background">
                     <Navigation />
                     <Switch>
