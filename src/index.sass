@@ -25,16 +25,44 @@ body
     overflow: hidden //@prod
     //overflow-x: hidden //@dev
 
-h1
+h1,
+h2
     font-family: $secondary-font
-    letter-spacing: $heading-letter-spacing
-    line-height: $heading-mobile-line-height
     font-size: $heading-mobile-size
     font-weight: $regular
     margin: 0
     +min(md)
         font-size: $heading-size
+h1
+    line-height: $heading-mobile-line-height
+    letter-spacing: $heading-letter-spacing
+    +min(md)
         line-height: $heading-line-height
+
+h2
+    letter-spacing: $heading-side-letter-spacing
+    line-height: $heading-side-line-height
+    text-transform: uppercase
+    font-size: $heading-side-mobile-size
+
+p
+    font-family: $secondary-font
+    font-size: $paragraph-size
+    line-height: $paragraph-line-height
+    letter-spacing: $paragraph-letter-spacing
+    margin: 0
+
+.button-primary
+    display: inline-block
+    text-decoration: none
+    color: $light-color
+    text-transform: uppercase
+    font-size: $anchor-size
+    font-weight: $bold
+    letter-spacing: $anchor-letter-spacing
+    text-align: center
+    border: 1px $light-color solid
+    padding: 17px 23px
 
 .view
     +dimension(100%, 100vh)

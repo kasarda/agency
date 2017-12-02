@@ -3,11 +3,48 @@
 @import "animation.sass"
 
 #Side
-    background: #4527a0
     width: 0px
     overflow: hidden
     z-index: 2
     +slide-width-transition
+    align-items: flex-end
+    +min(md)
+        align-items: center
+
+    .content
+        margin: 0 10px 10px 10px
+        +min(350px)
+            margin: 0 25px 100px 25px
+        +min(md)
+           margin: 0 10px 0 10px
+
+    .heading
+        h2
+        hr
+            width: 70px
+            height: 1px
+            display: block
+            margin: 25px 0 0 0
+            background: $light-color
+            border: none
+
+    .description
+        margin: 15px 0 0 0
+        +min(md)
+            margin: 30px 0 0 0
+        +min(xl)
+            margin: 40px 0 0 106px
+
+        .button
+            margin-top: 0px
+            +min(md)
+                margin-top: 35px
+
+
+
+
+
+
 
 [data-home="false"]
     #Side
