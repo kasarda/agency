@@ -44,7 +44,8 @@
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Add version for the client to be sure on mobile if site was updated ar not",
-    "Change specific easings for animations to be more smooth and better looking"
+    "Change specific easings for animations to be more smooth and better looking",
+    "Create better system for 'finish animation hacks'"
   ],
   "done": [
     "Create faster duration for animation and rewrite to be more stable and flexible",
