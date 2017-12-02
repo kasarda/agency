@@ -7,7 +7,7 @@
 
 // Letter > svg#Letter
 =fade-in-letter-animation
-    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s
+    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 1.4s 0s
 
 // Home > h1
 =fade-in-animation
@@ -19,7 +19,8 @@
 
 // For svg#Letter and rect.background-mask
 =letter-desktop-delay
-    animation-delay: .8s
+    animation-duration: 1s, 1.8s
+    animation-delay: .8s, 0s
 
 
 
@@ -35,9 +36,11 @@
     from
         opacity: 0
 
+
+// Hack Animation, content is for other browsers and font-size is for IE
 @keyframes InitializeFinish
     to
-        x: 0
+        font-size: 100%
 
 
 //? From Home view to Page view Animation
@@ -58,7 +61,7 @@
 =fade-heading-transition
     transition: opacity 1s 1.4s ease-in-out
 =heading-finish
-    animation: HeadingFinish 0s 2.4s
+    animation: HeadingFinish 2.4s 0s
 
 // Home > Side > #Side
 =slide-width-transition
@@ -72,16 +75,18 @@
     transition: height .4s ease-in-out, margin .4s ease-in-out
 
 =rule-finish
-    animation: RuleFinish 0s 1.2s
+    animation: RuleFinish 1.2s 0s
 
 
 
 @keyframes RuleFinish
     to
-        x: 0
+        font-size: 100%
 @keyframes HeadingFinish
     to
-        x: 0
+        font-size: 100%
+
+
 //? From Page view to Home view -> #Side
 
 // Home > Side > #Side

@@ -17,20 +17,31 @@
 export const fakeScroll = cb => {
 
     // for mouse devices
-    let wheelEvent
-    if ('onwheel' in document)
-        wheelEvent = 'onwheel'
-    else if ('onmousewheel' in document)
-        wheelEvent = 'onmousewheel'
 
-    if (wheelEvent)
-        document[wheelEvent] = listener
-    else
-        document.addEventListener('DOMMouseScroll', listener)
+    if ('onwheel' in document) {
+        document.onwheel = listener
+    }
+
+    else {
+        document.addEventListener('mousewheel', listener, false)
+        document.addEventListener('DOMMouseScroll', listener, false)
+    }
 
     function listener(event) {
-        event.wheelDown = !Math.max(0, Math.min(1, (event.wheelDelta || -event.detail)))
+
+        if (event.type === 'wheel') {
+            if (event.deltaY < 0)
+                event.wheelDown = false
+            else if (event.deltaY > 0)
+                event.wheelDown = true
+        }
+
+        else {
+            event.wheelDown = !Math.max(0, Math.min(1, (event.wheelDelta || -event.detail)))
+        }
+
         event.wheelOffset = Math.abs(event.wheelDelta || (event.detail * -40))
+
         cb.call(this, event)
     }
 
@@ -51,8 +62,9 @@ export const fakeScroll = cb => {
 }
 
 export const resetScrollEvents = () => {
-    document.onwheel = null
-    document.onmousewheel = null
+    if('onwheel' in document) {
+        document.onwheel = null
+    }
     document.ontouchstart = null
     document.ontouchend = null
 }
@@ -73,13 +85,13 @@ export const onFakeScroll = (offset, down, up, always) => {
 
         if (
             (event.type === 'touchend' && !event.wheelDown && minOffset) ||
-            (event.type !== 'touchend' && event.wheelDown && minOffset)
+            (event.type !== 'touchend' && event.wheelDown)
         ) {
             down && down.call(this, event)
         }
         else if (
             (event.type === 'touchend' && event.wheelDown && minOffset) ||
-            (event.type !== 'touchend' && !event.wheelDown && minOffset)
+            (event.type !== 'touchend' && !event.wheelDown)
         ) {
             up && up.call(this, event)
         }

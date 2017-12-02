@@ -21,15 +21,15 @@
 
 @keyframes InitializeFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes RuleFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes HeadingFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes SlideSideWidthAnimation {
   from {
@@ -164,7 +164,7 @@
   height: 100%;
   margin-bottom: 0;
   margin-left: -20px;
-  animation: RuleFinish 0s 1.2s;
+  animation: RuleFinish 1.2s 0s;
   transition-delay: .8s; }
   @media (min-width: 768px) {
     #Home[data-home="false"] .column {

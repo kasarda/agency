@@ -1,6 +1,6 @@
 {
   "name": "digital-agency",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -36,7 +36,6 @@
     "Code spliting for sub pages"
   ],
   "todos": [
-    "Create ready functionality for home component",
     "Create Services, Projects, Contacts and 404 components",
     "Create showcase home page component (4)",
     "Add some kind of graphic in home page first view",
@@ -48,7 +47,8 @@
     "Change specific easings for animations to be more smooth and better looking"
   ],
   "done": [
-    "Create faster duration for animation and rewrite to be more stable and flexible"
+    "Create faster duration for animation and rewrite to be more stable and flexible",
+    "Create ready functionality for home component"
   ],
   "browsers": {
     "mobile": {

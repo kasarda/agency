@@ -21,15 +21,15 @@
 
 @keyframes InitializeFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes RuleFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes HeadingFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes SlideSideWidthAnimation {
   from {

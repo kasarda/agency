@@ -9,7 +9,6 @@ function Letter(props) {
             viewBox="0 0 440 440"
             preserveAspectRatio="none"
             id="Letter"
-            onAnimationEnd={event => props.onInitializeFinish(event)}
         >
             <defs>
                 <pattern

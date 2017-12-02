@@ -21,15 +21,15 @@
 
 @keyframes InitializeFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes RuleFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes HeadingFinish {
   to {
-    x: 0; } }
+    font-size: 100%; } }
 
 @keyframes SlideSideWidthAnimation {
   from {
@@ -119,12 +119,13 @@
   width: 200px;
   opacity: 1;
   transition: opacity .4s 1.2s ease-in-out;
-  animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 0s 1.4s; }
+  animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish 1.4s 0s; }
   @media (min-width: 768px) {
     #Letter {
       height: 350px;
       width: 350px;
-      animation-delay: .8s; } }
+      animation-duration: 1s, 1.8s;
+      animation-delay: .8s, 0s; } }
   @media (min-width: 1200px) and (min-height: 700px) {
     #Letter {
       height: 450px;
@@ -139,7 +140,8 @@
     animation: MoveInAnimation 1s .4s ease-in backwards; }
     @media (min-width: 768px) {
       #Letter .background-mask-rect {
-        animation-delay: .8s; } }
+        animation-duration: 1s, 1.8s;
+        animation-delay: .8s, 0s; } }
   #Letter .fill-light-color {
     fill: #ffffff; }
   #Letter .stroke-light-color {

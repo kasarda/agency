@@ -7,7 +7,6 @@ function Wheel(props) {
     return (
         <div
             id="Wheel"
-            onAnimationEnd={event => props.onHeadingFinish(event)}
         >
             <div
                 className="mouse flex justify-center align-center hidden-sm-down"
