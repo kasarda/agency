@@ -16,6 +16,7 @@ class Home extends Component {
 
         this.state = {
             page: 0,
+            renderPage: 0,
             length: 4,
             ready: false,
             down: undefined,
@@ -23,11 +24,29 @@ class Home extends Component {
         }
     }
 
-    setPage(type) {
-        const { page, length } = this.state
+    change() {
+        this.toPage(3)
+    }
 
-        if (this.state.ready) {
-            if(!(page === 0 && type === 'up')) {
+
+    toPage(newPage) {
+        const { page, ready } = this.state
+
+        if (ready && page !== newPage) {
+            this.setState({
+                ready: false,
+                page: newPage,
+                prevPage: page,
+                down: page > newPage ? false : true,
+                renderPage: newPage
+            })
+        }
+    }
+    setPage(type) {
+        const { page, length, ready } = this.state
+
+        if (ready) {
+            if (!(page === 0 && type === 'up')) {
                 this.setState({
                     ready: false
                 })
@@ -64,16 +83,24 @@ class Home extends Component {
         resetScrollEvents()
     }
 
-    setReady(event) {
-        if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(event.animationName)) {
+    setReady({ animationName }) {
+        const { page } = this.state
+
+        if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(animationName)) {
             this.setState({
                 ready: true
+            })
+        }
+
+        if (/(NextPageLeftAnimation|PrevPageWidthAnimation|HeadingFinish)/.test(animationName)) {
+            this.setState({
+                renderPage: page === 0 ? 1 : page
             })
         }
     }
 
     render() {
-        const { page, down, prevPage, ready } = this.state
+        const { page, down, prevPage, ready, renderPage } = this.state
         const home = this.state.page === 0
 
         return (
@@ -88,15 +115,13 @@ class Home extends Component {
                 onAnimationEnd={this.setReady.bind(this)}
             >
                 <Side
-                    page={page}
-                    ready={ready}
-                    from={prevPage}
+                    renderPage={renderPage}
                 />
                 <Letter />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule" ></div>
-                        <h1>Digital <br />
+                        <h1 onClick={this.change.bind(this)} >Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>

@@ -15,14 +15,15 @@ class Side extends Component {
                 'app which enables users to',
                 'learn English words.'
             ],
-            link: '/projects'
+            link: '/projects/ewa'
         }
 
     }
 
-    componentWillReceiveProps() {
-        const { page } = this.props
-        let config = [
+    componentWillReceiveProps({ renderPage }) {
+        const index = renderPage - 1
+
+        const config = [
             {
                 theme: '#634ae6',
                 heading: 'Ewa',
@@ -31,7 +32,7 @@ class Side extends Component {
                     'app which enables users to',
                     'learn English words.'
                 ],
-                link: '/projects'
+                link: '/projects/ewa'
             },
             {
                 theme: '#4a93e6',
@@ -65,11 +66,10 @@ class Side extends Component {
                 ],
                 link: '/projects'
             }
-
         ]
 
-        if (config[page - 1])
-            this.setState(config[page-1])
+        if (config[index])
+            this.setState(config[index])
 
     }
 
