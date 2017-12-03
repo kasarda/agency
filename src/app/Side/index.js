@@ -75,6 +75,10 @@ class Side extends Component {
 
     render() {
         const { theme, heading, description, link } = this.state
+        const descriptionList = description.map((text, key) =>
+            (<p key={key} className={`fadeIn fadeIn-${key + 1}`}>{text}</p>)
+        )
+
         return (
             <div
                 id="Side"
@@ -89,9 +93,9 @@ class Side extends Component {
 
                     <div className="description">
                         <div className="hidden-sm-down">
-                            {description.map((text, key) => <p key={key}>{text}</p>)}
+                            {descriptionList}
                         </div>
-                        <div className="button">
+                        <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>
                             <Link to={link} className="button-primary">view case</Link>
                         </div>
                     </div>

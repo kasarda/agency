@@ -166,13 +166,14 @@ $pth-delay: .4s
 //? From Page view to Page view
 $ptp-duration: .4s
 
-$ptp-delay: .6s
-$ptp-long-delay: $ptp-delay * 2
+$ptp-short-delay: .4s
+$ptp-delay: 1s
+$ptp-long-delay: 1.6s
 
 // Home > Side > #Side
 =page-to-page-sequence
     animation-duration: $ptp-duration
-    animation-delay: 0s, $ptp-delay, $ptp-long-delay
+    animation-delay: $ptp-short-delay, $ptp-delay, $ptp-long-delay
     animation-timing-function: ease-in
     animation-fill-mode: forwards
     animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1

@@ -24,10 +24,6 @@ class Home extends Component {
         }
     }
 
-    change() {
-        this.toPage(3)
-    }
-
 
     toPage(newPage) {
         const { page, ready } = this.state
@@ -121,7 +117,7 @@ class Home extends Component {
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule" ></div>
-                        <h1 onClick={this.change.bind(this)} >Digital <br />
+                        <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
