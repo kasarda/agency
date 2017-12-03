@@ -32,8 +32,7 @@
     "eject": "react-scripts eject"
   },
   "snippets": [
-    "CSS will-change property",
-    "Code spliting for sub pages"
+    "CSS will-change property"
   ],
   "todos": [
     "Create Services, Projects, Contacts and 404 components",
