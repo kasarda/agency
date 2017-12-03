@@ -20,12 +20,12 @@ function Link({ to, name, icon }) {
 function Navigation() {
 
     return (
-        <div className="container-fluid" id="Navigation">
-            <div className="row">
-                <div className="col brand">
+        <div id="Navigation">
+            <div className="flex wrap">
+                <div className="column brand">
                     <NavLink to="/" activeClassName="">Digital</NavLink>
                 </div>
-                <div className="col links flex justify-end">
+                <div className="column links flex justify-end">
                     <Link to="/services" name="services" icon="icon-gear" />
                     <Link to="/projects" name="projects" icon="icon-project" />
                     <Link to="/contacts" name="contacts" icon="icon-mail" />

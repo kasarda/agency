@@ -119,7 +119,8 @@
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
-  z-index: 999; }
+  z-index: 999;
+  width: 100%; }
   @media (min-width: 768px) {
     #Navigation {
       padding-top: 50px; } }
@@ -132,6 +133,12 @@
     transition: opacity 0.15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
+  #Navigation .column {
+    width: 100%;
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%; }
   #Navigation .brand {
     padding-left: 20px; }
     @media (min-width: 768px) {
