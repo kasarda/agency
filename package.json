@@ -53,6 +53,12 @@
     "Create better system for 'finish animation hacks'",
     "Replace bootstrap grid with flex"
   ],
+  "changelog": [
+    "content animation lvl 2",
+    "animation.sass lv 3",
+    "new css target"
+  ]
+  ,
   "browsers": {
     "mobile": {
       "opera-mini": true,

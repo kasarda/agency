@@ -9,7 +9,7 @@ class Side extends Component {
 
         this.state = {
             theme: '#634ae6',
-            heading: 'Ewa',
+            heading: 'KFC',
             description: [
                 'Created a clever, high-end',
                 'app which enables users to',
@@ -26,7 +26,7 @@ class Side extends Component {
         const config = [
             {
                 theme: '#634ae6',
-                heading: 'Ewa',
+                heading: 'KFC',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',
@@ -36,7 +36,7 @@ class Side extends Component {
             },
             {
                 theme: '#4a93e6',
-                heading: 'Yola',
+                heading: 'McDonald',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',
@@ -47,7 +47,7 @@ class Side extends Component {
 
             {
                 theme: '#4ae6b8',
-                heading: 'Hyphen',
+                heading: 'Subway',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',
@@ -58,7 +58,7 @@ class Side extends Component {
 
             {
                 theme: '#ccaf86',
-                heading: 'Kasarda',
+                heading: 'Burger',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',

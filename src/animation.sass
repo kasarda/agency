@@ -33,7 +33,6 @@ $init-long-finish-duration: $init-long-delay + $init-duration
     animation-delay: $init-long-delay, 0s
 
 
-
 @keyframes MoveInAnimation
     from
         x: 0
@@ -47,7 +46,6 @@ $init-long-finish-duration: $init-long-delay + $init-duration
         opacity: 0
 
 
-//* Hack Finish Animation
 @keyframes InitializeFinish
     to
         font-size: 100%
@@ -85,33 +83,35 @@ $htp-heading-finish-duration: $htp-heading-delay + $htp-duration
 $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 // Home > .rule
 =slide-transition
-    transition: width $htp-fast-duration $htp-long-delay ease-in-out
-
-// Home > Letter
-=fade-letter-transition
-    transition: opacity $htp-fast-duration $htp-longer-delay ease-in-out
-
-// Home > Letter > rect.background-mask
-=move-transition
-    transition: x $htp-duration $htp-longer-delay ease-in-out
-
-// Home > h1
-=fade-heading-transition
-    transition: opacity $htp-duration $htp-heading-delay ease-in-out
-
-// Home > Side
-=slide-width-transition
-    transition: width $htp-fast-duration $htp-delay ease-in-out
+    transition: width $htp-fast-duration 1.2s ease-in-out
 
 // Home > .column
 =slide-height-delay
-    transition-delay: $htp-long-delay
+    transition-delay: .8s
 
 =slide-height-transition
-    transition: height $htp-fast-duration ease-in-out, margin $htp-fast-duration ease-in-out
+    transition: height $htp-fast-duration .4s ease-in-out, margin $htp-fast-duration .4s ease-in-out
 
 =rule-finish
     animation: RuleFinish $htp-rule-finish-duration 0s
+
+
+// Home > Letter
+=fade-letter-transition
+    transition: opacity $htp-fast-duration 1.6s ease-in-out
+
+// Home > Letter > rect.background-mask
+=move-transition
+    transition: x $htp-duration 1.6s ease-in-out
+
+// Home > h1
+=fade-heading-transition
+    transition: opacity $htp-duration 1.8s ease-in-out
+
+// Home > Side
+=slide-width-transition
+    transition: width $htp-fast-duration .4s ease-in-out
+
 
 // Home > Wheel
 =heading-finish
@@ -137,7 +137,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 //? From Page view to Home view -> #Side
 
 $pth-duration: .4s
-$pth-delay: .4s
+$pth-delay: .8s
 
 // Home > Side > #Side
 =slide-side-width-animation
@@ -166,9 +166,9 @@ $pth-delay: .4s
 //? From Page view to Page view
 $ptp-duration: .4s
 
-$ptp-short-delay: .4s
-$ptp-delay: 1s
-$ptp-long-delay: 1.6s
+$ptp-short-delay: .6s
+$ptp-delay: 1.2s
+$ptp-long-delay: 1.8s
 
 // Home > Side > #Side
 =page-to-page-sequence
@@ -278,6 +278,129 @@ $active-long-delay: 1.4s
     to
         top: 3px
         opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//? Page Content
+
+// Home > Side > .heading > h2
+=fadeIn-left-render
+    animation: FadeIn-Left-Render .6s ease-in-out forwards
+
+=left-fadeOut
+    animation: Left-FadeOut .4s ease-in-out forwards
+
+=right-fadeOut
+    animation: Right-FadeOut .6s ease-in-out forwards
+
+=fadeIn-right-render
+    animation: FadeIn-Right-Render .4s ease-in-out forwards
+
+
+
+
+@keyframes FadeIn-Left-Render
+    from
+        opacity: 0
+        transform: translateX(-100%)
+    75%
+        transform: translateX(0%)
+    to
+        opacity: 1
+
+@keyframes Left-FadeOut
+    from
+        transform: translateX(0%)
+        opacity: 1
+    to
+        transform: translateX(50%)
+        opacity: 0
+
+@keyframes Right-FadeOut
+    from
+        transform: translateX(0%)
+        opacity: 1
+    to
+        transform: translateX(-100%)
+        opacity: 0
+
+
+@keyframes FadeIn-Right-Render
+    from
+        opacity: 0
+        transform: translateX(50%)
+    to
+        transform: translateX(0%)
+        opacity: 1
+
+
+
+// Home > Side > .heading > hr
+
+=hr-slideIn
+    animation: hr-slideIn 1s ease-in-out forwards
+
+=hr-slideOut
+    animation: hr-slideOut .6s ease-in-out forwards
+
+=hr-slideIn-slideOut
+    animation: hr-slideIn-slideOut .6s ease-in-out forwards
+
+@keyframes hr-slideIn
+    25%
+        transform: translateX(-50px)
+        width: 120px
+    75%
+        width: 200px
+        transform: translateX(-50px)
+    to
+        width: 70px
+        transform: translateX(0px)
+
+@keyframes hr-slideOut
+    from
+        width: 70px
+        transform: translateX(0px)
+    25%
+        width: 150px
+        transform: translateX(0px)
+    to
+        width: 0
+        transform: translateX(0px)
+
+@keyframes hr-slideIn-slideOut
+    from
+        width: 70px
+        transform: translateX(0px)
+    75%
+        width: 150px
+        transform: translateX(0px)
+    to
+        width: 0
+        transform: translateX(0px)
+
 
 
 
