@@ -18,10 +18,10 @@ class Home extends Component {
             page: 0,
             renderPage: 0,
             length: 4,
-            slideReady: false,
+            sideReady: false,
             ready: true,
             down: undefined,
-            prevPage: undefined
+            from: undefined
         }
     }
 
@@ -32,9 +32,9 @@ class Home extends Component {
         if (ready && page !== newPage) {
             this.setState({
                 ready: false,
-                slideReady: false,
+                sideReady: false,
                 page: newPage,
-                prevPage: page,
+                from: page,
                 down: page > newPage ? false : true,
                 renderPage: newPage
             })
@@ -46,7 +46,7 @@ class Home extends Component {
         if (ready) {
             if (!(page === 0 && type === 'up')) {
                 this.setState({
-                    slideReady: false,
+                    sideReady: false,
                     ready: false
                 })
             }
@@ -55,7 +55,7 @@ class Home extends Component {
                 const newPage = nextPage <= length ? nextPage : 0
                 this.setState({
                     page: newPage,
-                    prevPage: page,
+                    from: page,
                     down: true
                 })
             }
@@ -64,7 +64,7 @@ class Home extends Component {
                 const prevPage = page - 1
                 this.setState({
                     page: prevPage,
-                    prevPage: page,
+                    from: page,
                     down: false
                 })
             }
@@ -87,7 +87,7 @@ class Home extends Component {
 
         if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(animationName)) {
             this.setState({
-                slideReady: true
+                sideReady: true
             })
         }
 
@@ -105,7 +105,7 @@ class Home extends Component {
     }
 
     render() {
-        const { page, down, prevPage, slideReady, ready, renderPage } = this.state
+        const { page, down, from, sideReady, ready, renderPage } = this.state
         const home = this.state.page === 0
 
         return (
@@ -114,9 +114,9 @@ class Home extends Component {
                 className="view"
                 data-home={home}
                 data-down={down}
-                data-from={prevPage}
+                data-from={from}
                 data-to={page}
-                data-slide-ready={slideReady}
+                data-side-ready={sideReady}
                 data-ready={ready}
                 onAnimationEnd={this.setReady.bind(this)}
             >
