@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import './navigation.css'
-
+import './Navigation.css'
 
 function Link({ to, name, icon }) {
     return (

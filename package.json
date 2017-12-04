@@ -56,8 +56,8 @@
   ],
   "changelog": [
     "content animation lvl 2",
-    "animation.sass lv 3",
-    "new css target"
+    "animation.sass lvl 3",
+    "multiple @keyframes bugs fixed"
   ]
   ,
   "browsers": {

@@ -31,22 +31,23 @@ $init-long-finish-duration: $init-long-delay + $init-duration
     animation-delay: .8s, 0s
 
 
-@keyframes MoveInAnimation
-    from
-        x: 0
+=InitializeKeyframes
+    @keyframes MoveInAnimation
+        from
+            x: 0
 
-@keyframes SlideAnimation
-    from
-        width: 100%
+    @keyframes SlideAnimation
+        from
+            width: 100%
 
-@keyframes FadeInAnimation
-    from
-        opacity: 0
+    @keyframes FadeInAnimation
+        from
+            opacity: 0
 
 
-@keyframes InitializeFinish
-    to
-        font-size: 100%
+    @keyframes InitializeFinish
+        to
+            font-size: 100%
 
 
 
@@ -112,13 +113,13 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     animation: HeadingFinish $htp-heading-finish-duration 0s
 
 
-//* Hack Finish Animation
-@keyframes RuleFinish
-    to
-        font-size: 100%
-@keyframes HeadingFinish
-    to
-        font-size: 100%
+=HomeToPageKeyframes
+    @keyframes RuleFinish
+        to
+            font-size: 100%
+    @keyframes HeadingFinish
+        to
+            font-size: 100%
 
 
 
@@ -134,11 +135,12 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 =slide-side-width-animation
     animation: SlideSideWidthAnimation .4s .8s ease-in backwards
 
-@keyframes SlideSideWidthAnimation
-    from
-        width: 50%
-    to
-        width: 0px
+=PageToHomeKeyframes
+    @keyframes SlideSideWidthAnimation
+        from
+            width: 50%
+        to
+            width: 0px
 
 
 
@@ -166,23 +168,23 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 =page-to-page-change-sequence
     animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2, NextPageBackWidthAnimation2
 
+=PageToNextPageKeyframes
+    @for $i from 1 through 2
+        @keyframes NextPageWidthAnimation#{$i}
+            to
+                width: 100%
 
-@for $i from 1 through 2
-    @keyframes NextPageWidthAnimation#{$i}
-        to
-            width: 100%
+        @keyframes NextPageLeftAnimation#{$i}
+            to
+                left: 100%
 
-    @keyframes NextPageLeftAnimation#{$i}
-        to
-            left: 100%
-
-    @keyframes NextPageBackWidthAnimation#{$i}
-        from
-            width: 0px
-            left: 0px
-        to
-            width: 50%
-            left: 0px
+        @keyframes NextPageBackWidthAnimation#{$i}
+            from
+                width: 0px
+                left: 0px
+            to
+                width: 50%
+                left: 0px
 
 
 
@@ -194,27 +196,25 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 =page-to-page-back-change-sequence
     animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2
 
+=PageToPrevPageKeyframes
+    @for $i from 1 through 2
+        @keyframes PrevPageWidthAnimation#{$i}
+            to
+                width: 0px
 
-@for $i from 1 through 2
-    @keyframes PrevPageWidthAnimation#{$i}
-        to
-            width: 0px
+        @keyframes PrevPageLeftAnimation#{$i}
+            from
+                left: 100%
+                width: 100%
+            to
+                left: 0px
+                width: 100%
 
-    @keyframes PrevPageLeftAnimation#{$i}
-        from
-            left: 100%
-            width: 100%
-        to
-            left: 0px
-            width: 100%
-
-    @keyframes PrevPageBackWidthAnimation#{$i}
-        from
-            width: 100%
-        to
-            width: 50%
-
-
+        @keyframes PrevPageBackWidthAnimation#{$i}
+            from
+                width: 100%
+            to
+                width: 50%
 
 
 
@@ -229,32 +229,6 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 
 
-//? Always active
-
-// Navigation > Link > a && Home > Wheel > .mouse
-=hover-transition
-    transition: opacity .15s ease-in-out
-
-// Home > Wheel > #Wheel
-=wheel-delay
-    transition-delay: 1.4s
-
-=wheel-transition
-    transition: opacity .4s 0s ease-in-out
-
-// Home > Wheel > #Wheel > .mouse > .wheel
-=wheel-animation
-    animation: WheelAnimation 1s 1s ease-in infinite
-
-
-
-@keyframes WheelAnimation
-    from
-        top: -3px
-        opacity: 0
-    to
-        top: 3px
-        opacity: 1
 
 
 
@@ -301,44 +275,6 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     animation: FadeIn-Right-Render .4s ease-in-out forwards
 
 
-
-
-@keyframes FadeIn-Left-Render
-    from
-        opacity: 0
-        transform: translateX(-100%)
-    75%
-        transform: translateX(0%)
-    to
-        opacity: 1
-
-@keyframes Left-FadeOut
-    from
-        transform: translateX(0%)
-        opacity: 1
-    to
-        transform: translateX(50%)
-        opacity: 0
-
-@keyframes Right-FadeOut
-    from
-        transform: translateX(0%)
-        opacity: 1
-    to
-        transform: translateX(-100%)
-        opacity: 0
-
-
-@keyframes FadeIn-Right-Render
-    from
-        opacity: 0
-        transform: translateX(50%)
-    to
-        transform: translateX(0%)
-        opacity: 1
-
-
-
 // Home > Side > .heading > hr
 
 =hr-slideIn
@@ -350,40 +286,119 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 =hr-slideIn-slideOut
     animation: hr-slideIn-slideOut .6s ease-in-out forwards
 
-@keyframes hr-slideIn
-    25%
-        transform: translateX(-50px)
-        width: 120px
-    75%
-        width: 200px
-        transform: translateX(-50px)
-    to
-        width: 70px
-        transform: translateX(0px)
-
-@keyframes hr-slideOut
-    from
-        width: 70px
-        transform: translateX(0px)
-    25%
-        width: 150px
-        transform: translateX(0px)
-    to
-        width: 0
-        transform: translateX(0px)
-
-@keyframes hr-slideIn-slideOut
-    from
-        width: 70px
-        transform: translateX(0px)
-    75%
-        width: 150px
-        transform: translateX(0px)
-    to
-        width: 0
-        transform: translateX(0px)
 
 
+=PageContentKeyframes
+    @keyframes FadeIn-Left-Render
+        from
+            opacity: 0
+            transform: translateX(-100%)
+        75%
+            transform: translateX(0%)
+        to
+            opacity: 1
+
+    @keyframes Left-FadeOut
+        from
+            transform: translateX(0%)
+            opacity: 1
+        to
+            transform: translateX(50%)
+            opacity: 0
+
+    @keyframes Right-FadeOut
+        from
+            transform: translateX(0%)
+            opacity: 1
+        to
+            transform: translateX(-100%)
+            opacity: 0
+
+
+    @keyframes FadeIn-Right-Render
+        from
+            opacity: 0
+            transform: translateX(50%)
+        to
+            transform: translateX(0%)
+            opacity: 1
+
+
+    @keyframes hr-slideIn
+        25%
+            transform: translateX(-50px)
+            width: 120px
+        75%
+            width: 200px
+            transform: translateX(-50px)
+        to
+            width: 70px
+            transform: translateX(0px)
+
+    @keyframes hr-slideOut
+        from
+            width: 70px
+            transform: translateX(0px)
+        25%
+            width: 150px
+            transform: translateX(0px)
+        to
+            width: 0
+            transform: translateX(0px)
+
+    @keyframes hr-slideIn-slideOut
+        from
+            width: 70px
+            transform: translateX(0px)
+        75%
+            width: 150px
+            transform: translateX(0px)
+        to
+            width: 0
+            transform: translateX(0px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//? Always active
+
+// Navigation > Link > a && Home > Wheel > .mouse
+=hover-transition
+    transition: opacity .15s ease-in-out
+
+// Home > Wheel > #Wheel
+=wheel-delay
+    transition-delay: 1.4s
+
+=wheel-transition
+    transition: opacity .4s 0s ease-in-out
+
+// Home > Wheel > #Wheel > .mouse > .wheel
+=wheel-animation
+    animation: WheelAnimation 1s 1s ease-in infinite
+
+
+=WheelKeyframes
+    @keyframes WheelAnimation
+        from
+            top: -3px
+            opacity: 0
+        to
+            top: 3px
+            opacity: 1
 
 
 

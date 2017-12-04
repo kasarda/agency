@@ -2,6 +2,7 @@ import React from 'react'
 
 import './Wheel.css'
 
+
 function Wheel(props) {
 
     return (

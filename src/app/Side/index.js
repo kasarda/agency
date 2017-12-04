@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './Side.css'
 
+import './Side.css'
 
 class Side extends Component {
     constructor(props) {
