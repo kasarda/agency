@@ -55,7 +55,7 @@
     "Rename digital-agency to agency"
   ],
   "changelog": [
-
+    "Renamed slideReady to sideReady and prevPage to from"
   ]
   ,
   "browsers": {
