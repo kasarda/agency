@@ -218,11 +218,11 @@
     @media (min-width: 768px) {
       #Home .wrapper .rule {
         width: 1px;
-        animation: SlideAnimation 0.4s 0.4s ease-in backwards; } }
+        animation: SlideAnimation .4s .4s ease-in backwards; } }
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.8s ease-in-out;
-    animation: FadeInAnimation 1s 0.4s ease-in backwards;
+    animation: FadeInAnimation 1s .4s ease-in backwards;
     opacity: 1; }
     @media (min-width: 768px) {
       #Home .wrapper h1 {

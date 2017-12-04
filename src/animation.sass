@@ -2,8 +2,6 @@
 //? Initialize Animation
 
 $init-duration: 1s
-$init-fast-duration: .4s
-
 $init-delay: .4s
 $init-long-delay: .8s
 
@@ -13,24 +11,24 @@ $init-long-finish-duration: $init-long-delay + $init-duration
 
 // Home > .rule
 =slide-animation
-    animation: SlideAnimation $init-fast-duration $init-delay ease-in backwards
+    animation: SlideAnimation .4s .4s ease-in backwards
 
 // Home > Letter
 =fade-in-letter-animation
-    animation: FadeInAnimation $init-duration $init-delay ease-in backwards, InitializeFinish $init-finish-duration 0s
+    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish $init-finish-duration 0s
 
 // Home > h1
 =fade-in-animation
-    animation: FadeInAnimation $init-duration $init-delay ease-in backwards
+    animation: FadeInAnimation 1s .4s ease-in backwards
 
 // Home > Letter > rect.background-mask
 =move-in-animation
-    animation: MoveInAnimation $init-duration $init-delay ease-in backwards
+    animation: MoveInAnimation 1s .4s ease-in backwards
 
 // For Letter and rect.background-mask
 =letter-desktop-delay
-    animation-duration: $init-duration, $init-long-finish-duration
-    animation-delay: $init-long-delay, 0s
+    animation-duration: 1s, $init-long-finish-duration
+    animation-delay: .8s, 0s
 
 
 @keyframes MoveInAnimation
@@ -72,11 +70,7 @@ $init-long-finish-duration: $init-long-delay + $init-duration
 
 $htp-duration: 1s
 $htp-fast-duration: .4s
-$htp-slow-duration: 1.2s
-
-$htp-delay: .4s
 $htp-long-delay: .8s
-$htp-longer-delay: 1.2s
 $htp-heading-delay: 1.4s
 
 $htp-heading-finish-duration: $htp-heading-delay + $htp-duration
@@ -136,12 +130,9 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 //? From Page view to Home view -> #Side
 
-$pth-duration: .4s
-$pth-delay: .8s
-
 // Home > Side > #Side
 =slide-side-width-animation
-    animation: SlideSideWidthAnimation $pth-duration $pth-delay ease-in backwards
+    animation: SlideSideWidthAnimation .4s .8s ease-in backwards
 
 @keyframes SlideSideWidthAnimation
     from
@@ -164,16 +155,11 @@ $pth-delay: .8s
 
 
 //? From Page view to Page view
-$ptp-duration: .4s
-
-$ptp-short-delay: .6s
-$ptp-delay: 1.2s
-$ptp-long-delay: 1.8s
 
 // Home > Side > #Side
 =page-to-page-sequence
-    animation-duration: $ptp-duration
-    animation-delay: $ptp-short-delay, $ptp-delay, $ptp-long-delay
+    animation-duration: .4s
+    animation-delay: .6s, 1.2s, 1.8s
     animation-timing-function: ease-in
     animation-fill-mode: forwards
     animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1
@@ -201,7 +187,7 @@ $ptp-long-delay: 1.8s
 
 
 
-// Home > Side > #Side
+// Home > Side
 =page-to-page-back-sequence
     animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1
 
@@ -243,31 +229,22 @@ $ptp-long-delay: 1.8s
 
 
 
-
-
-
 //? Always active
-$active-duration: 1s
-$active-fast-duration: .4s
-$active-hover-duration: .15s
-
-$active-delay: 1s
-$active-long-delay: 1.4s
 
 // Navigation > Link > a && Home > Wheel > .mouse
 =hover-transition
-    transition: opacity $active-hover-duration ease-in-out
+    transition: opacity .15s ease-in-out
 
 // Home > Wheel > #Wheel
 =wheel-delay
-    transition-delay: $active-long-delay
+    transition-delay: 1.4s
 
 =wheel-transition
-    transition: opacity $active-fast-duration 0s ease-in-out
+    transition: opacity .4s 0s ease-in-out
 
 // Home > Wheel > #Wheel > .mouse > .wheel
 =wheel-animation
-    animation: WheelAnimation $active-duration $active-delay ease-in infinite
+    animation: WheelAnimation 1s 1s ease-in infinite
 
 
 
@@ -304,6 +281,11 @@ $active-long-delay: 1.4s
 
 
 //? Page Content
+
+// Home > Side > .description > p, .button
+=fadeIn-left-transition
+    transition: opacity .6s ease, transform .4s ease
+
 
 // Home > Side > .heading > h2
 =fadeIn-left-render
@@ -400,8 +382,6 @@ $active-long-delay: 1.4s
     to
         width: 0
         transform: translateX(0px)
-
-
 
 
 

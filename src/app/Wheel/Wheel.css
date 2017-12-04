@@ -186,7 +186,7 @@
   bottom: 50px;
   opacity: 0;
   z-index: 0;
-  transition: opacity 0.4s 0s ease-in-out;
+  transition: opacity .4s 0s ease-in-out;
   animation: none; }
   #Wheel .mouse {
     width: 15px;
@@ -194,7 +194,7 @@
     border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
-    transition: opacity 0.15s ease-in-out; }
+    transition: opacity .15s ease-in-out; }
     #Wheel .mouse:hover {
       opacity: .5; }
     #Wheel .mouse .wheel {

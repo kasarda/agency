@@ -196,7 +196,7 @@
     padding: 0 15px;
     font-size: 0.688rem;
     letter-spacing: 0.25rem;
-    transition: opacity 0.15s ease-in-out; }
+    transition: opacity .15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
   #Navigation .column {

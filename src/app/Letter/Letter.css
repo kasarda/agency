@@ -194,7 +194,7 @@
       height: 350px;
       width: 350px;
       animation-duration: 1s, 1.8s;
-      animation-delay: 0.8s, 0s; } }
+      animation-delay: .8s, 0s; } }
   @media (min-width: 1200px) and (min-height: 700px) {
     #Letter {
       height: 450px;
@@ -206,11 +206,11 @@
   #Letter .background-mask-rect {
     x: 100%;
     transition: x 1s 1.6s ease-in-out;
-    animation: MoveInAnimation 1s 0.4s ease-in backwards; }
+    animation: MoveInAnimation 1s .4s ease-in backwards; }
     @media (min-width: 768px) {
       #Letter .background-mask-rect {
         animation-duration: 1s, 1.8s;
-        animation-delay: 0.8s, 0s; } }
+        animation-delay: .8s, 0s; } }
   #Letter .fill-light-color {
     fill: #ffffff; }
   #Letter .stroke-light-color {

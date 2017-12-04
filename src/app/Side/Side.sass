@@ -50,7 +50,7 @@
             .fadeIn
                 transform: translateY(100px)
                 opacity: 0
-                transition: opacity .6s ease, transform .4s ease
+                +fadeIn-left-transition
             .fadeIn-1
                 +delay(.1s)
             .fadeIn-2
@@ -89,9 +89,6 @@
 [data-down="false"][data-slide-ready="false"]
     #Side
         .description
-            .fadeIn
-                transform: translateY(100px)
-                opacity: 0
             .fadeIn-1
                 +delay(.4s)
             .fadeIn-2
@@ -117,9 +114,6 @@
 
 
 
-
-
-
 [data-down="true"][data-slide-ready="true"]
     #Side
         .heading
@@ -127,6 +121,7 @@
                 transform: translateX(0)
                 opacity: 1
                 +fadeIn-left-render
+
 [data-down="true"][data-slide-ready="false"]:not([data-from="0"])
     #Side
         overflow: hidden
@@ -149,9 +144,6 @@
         .heading
             h2
                 +fadeIn-right-render
-
-
-
 
 
 
