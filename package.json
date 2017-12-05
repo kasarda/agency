@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "1.4.1",
+  "version": "1.4.1-next.1",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -58,7 +58,7 @@
     "Rename digital-agency to agency"
   ],
   "changelog": [
-    "Fixed build, because routing doesnt match"
+
   ],
   "browsers": {
     "mobile": {
