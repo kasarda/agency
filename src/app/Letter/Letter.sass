@@ -2,21 +2,26 @@
 @import "theme.sass"
 @import "animation.sass"
 
-#Letter
-    +center
+.Letter
     +dimension(200px, 200px)
-    opacity: 1
-    +fade-letter-transition
-    +fade-in-letter-animation
+
     +min(md)
         +dimension(350px, 350px)
-        +letter-desktop-delay
 
     +min(xl, 700px)
         +dimension(450px, 450px)
 
     +maxHeight(500px)
         +dimension(200px, 200px)
+
+
+#Letter
+    +center
+    opacity: 1
+    +fade-letter-transition
+    +fade-in-letter-animation
+    +min(md)
+        +letter-desktop-delay
 
     .background-mask-rect
         x: 100%
@@ -35,3 +40,32 @@
     .background-mask-rect
         x: 0
         +delay(0s)
+
+
+
+
+#ContentLetter
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(50%, -50%)
+    opacity: 0
+    +fade-page-letter-transition
+
+    .background-mask-rect
+        x: 0
+        +move-page-letter-transition
+        +min(md)
+            +letter-desktop-delay
+
+[data-side-ready="true"]
+    #ContentLetter
+        opacity: 1
+        .background-mask-rect
+            x: 100%
+
+[data-side-ready="false"]
+    #ContentLetter
+        .background-mask-rect
+            +delay(.8s)
+            +duration(0s)

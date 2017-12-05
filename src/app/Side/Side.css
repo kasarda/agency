@@ -75,7 +75,7 @@
   animation: SlideSideWidthAnimation .4s .8s ease-in backwards;
   transition: none; }
 
-[data-home="true"] #Side,
+[data-home="true"][data-side-ready="true"] #Side,
 [data-side-ready="false"][data-from="0"] #Side {
   overflow: hidden; }
 
@@ -117,12 +117,11 @@
   opacity: 1;
   animation: FadeIn-Left-Render .6s ease-in-out forwards; }
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side {
-  overflow: hidden; }
-  [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading h2 {
-    animation: Left-FadeOut .4s ease-in-out forwards; }
-  [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading hr {
-    animation: hr-slideOut .6s ease-in-out forwards; }
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading h2 {
+  animation: Left-FadeOut .4s ease-in-out forwards; }
+
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading hr {
+  animation: hr-slideOut .6s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="false"] #Side .heading h2 {
   animation: Right-FadeOut .6s ease-in-out forwards; }

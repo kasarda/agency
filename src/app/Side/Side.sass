@@ -76,7 +76,7 @@
         +slide-side-width-animation
         transition: none // important for bug on mobile devices
 
-[data-home="true"],
+[data-home="true"][data-side-ready="true"],
 [data-side-ready="false"][data-from="0"]
     #Side
         overflow: hidden
@@ -118,7 +118,6 @@
                 +hr-slideIn
 
 
-
 [data-down="true"][data-side-ready="true"]
     #Side
         .heading
@@ -129,7 +128,6 @@
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"])
     #Side
-        overflow: hidden
         .heading
             h2
                 +left-fadeOut

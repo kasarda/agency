@@ -7,30 +7,34 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+.Letter {
+  height: 200px;
+  width: 200px; }
+  @media (min-width: 768px) {
+    .Letter {
+      height: 350px;
+      width: 350px; } }
+  @media (min-width: 1200px) and (min-height: 700px) {
+    .Letter {
+      height: 450px;
+      width: 450px; } }
+  @media (max-height: 500px) {
+    .Letter {
+      height: 200px;
+      width: 200px; } }
+
 #Letter {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 200px;
-  width: 200px;
   opacity: 1;
   transition: opacity 0.4s 1.6s ease-in-out;
   animation: FadeInAnimation 1s 0.4s ease-in backwards, InitializeFinish 1.4s 0s; }
   @media (min-width: 768px) {
     #Letter {
-      height: 350px;
-      width: 350px;
       animation-duration: 1s, 1.8s;
       animation-delay: .8s, 0s; } }
-  @media (min-width: 1200px) and (min-height: 700px) {
-    #Letter {
-      height: 450px;
-      width: 450px; } }
-  @media (max-height: 500px) {
-    #Letter {
-      height: 200px;
-      width: 200px; } }
   #Letter .background-mask-rect {
     x: 100%;
     transition: x 1s 1.6s ease-in-out;
@@ -50,3 +54,27 @@
   [data-home="false"] #Letter .background-mask-rect {
     x: 0;
     transition-delay: 0s; }
+
+#ContentLetter {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  opacity: 0;
+  transition: opacity .8s ease-in-out; }
+  #ContentLetter .background-mask-rect {
+    x: 0;
+    transition: x 1s ease-in-out; }
+    @media (min-width: 768px) {
+      #ContentLetter .background-mask-rect {
+        animation-duration: 1s, 1.8s;
+        animation-delay: .8s, 0s; } }
+
+[data-side-ready="true"] #ContentLetter {
+  opacity: 1; }
+  [data-side-ready="true"] #ContentLetter .background-mask-rect {
+    x: 100%; }
+
+[data-side-ready="false"] #ContentLetter .background-mask-rect {
+  transition-delay: 0.8s;
+  transition-duration: 0s; }

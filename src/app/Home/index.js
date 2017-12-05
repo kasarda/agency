@@ -35,8 +35,7 @@ class Home extends Component {
                 sideReady: false,
                 page: newPage,
                 from: page,
-                down: page > newPage ? false : true,
-                renderPage: newPage
+                down: page > newPage ? false : true
             })
         }
     }
@@ -84,14 +83,13 @@ class Home extends Component {
 
     setReady({ animationName }) {
         const { page } = this.state
-
         if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(animationName)) {
             this.setState({
                 sideReady: true
             })
         }
 
-        if(/Render/.test(animationName)) {
+        if (/Render/.test(animationName)) {
             this.setState({
                 ready: true
             })
@@ -99,7 +97,7 @@ class Home extends Component {
 
         if (/(NextPageLeftAnimation|PrevPageWidthAnimation|HeadingFinish)/.test(animationName)) {
             this.setState({
-                renderPage: page === 0 ? 1 : page
+                renderPage: page
             })
         }
     }
@@ -107,7 +105,6 @@ class Home extends Component {
     render() {
         const { page, down, from, sideReady, ready, renderPage } = this.state
         const home = this.state.page === 0
-
         return (
             <div
                 id="Home"
@@ -123,7 +120,7 @@ class Home extends Component {
                 <Side
                     renderPage={renderPage}
                 />
-                <Letter />
+                <Letter letter="C" id="Letter"/>
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule" ></div>
