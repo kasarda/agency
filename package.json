@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "1.4.1",
+  "version": "1.4.1-next.1",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -47,7 +47,8 @@
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Fix problem with css files, becouse animation.sass in build include multiple times same keyframes",
-    "Update svgs letters to have one pattern and have new classNames"
+    "Update svgs letters to have one pattern and have new classNames",
+    "!!Ready doesnt work on init"
   ],
   "done": [
     "Create faster duration for animation and rewrite to be more stable and flexible",
