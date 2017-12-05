@@ -48,9 +48,12 @@
                 +min(md)
                     margin-top: 35px
             .fadeIn
-                transform: translateY(100px)
+                transform: translateY(0px)
                 opacity: 0
                 +fadeIn-left-transition
+                +min(md)
+                    transform: translateY(100px)
+
             .fadeIn-1
                 +delay(.1s)
             .fadeIn-2
@@ -97,7 +100,9 @@
                 +delay(.2s)
             .fadeIn-4
                 +delay(.1s)
-
+                +duration(.6s)
+                +min(md)
+                   +duration(.4s)
 
 
 

@@ -53,9 +53,12 @@
           #Side .content .description .button {
             margin-top: 35px; } }
       #Side .content .description .fadeIn {
-        transform: translateY(100px);
+        transform: translateY(0px);
         opacity: 0;
         transition: opacity .6s ease, transform .4s ease; }
+        @media (min-width: 768px) {
+          #Side .content .description .fadeIn {
+            transform: translateY(100px); } }
       #Side .content .description .fadeIn-1 {
         transition-delay: 0.1s; }
       #Side .content .description .fadeIn-2 {
@@ -93,7 +96,12 @@
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .description .fadeIn-4,
 [data-down="false"][data-side-ready="false"] #Side .description .fadeIn-4 {
-  transition-delay: 0.1s; }
+  transition-delay: 0.1s;
+  transition-duration: 0.6s; }
+  @media (min-width: 768px) {
+    [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .description .fadeIn-4,
+    [data-down="false"][data-side-ready="false"] #Side .description .fadeIn-4 {
+      transition-duration: 0.4s; } }
 
 [data-down="true"][data-side-ready="true"] #Side .description .fadeIn,
 [data-down="false"][data-side-ready="true"] #Side .description .fadeIn {
