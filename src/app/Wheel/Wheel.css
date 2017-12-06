@@ -40,4 +40,4 @@
   transition-delay: 1.4s; }
 
 [data-home="true"][data-from] #Wheel {
-  animation: HeadingFinish 2.4s 0s; }
+  animation: HeadingFinish-SideReady-Render 2.4s 0s; }

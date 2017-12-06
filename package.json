@@ -46,7 +46,6 @@
     "Change specific easings for animations to be more smooth and better looking",
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
-    "Fix problem with css files, becouse animation.sass in build include multiple times same keyframes",
     "Update svgs letters to have one pattern and have new classNames"
   ],
   "done": [

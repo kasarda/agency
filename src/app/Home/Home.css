@@ -61,7 +61,7 @@
   height: 100%;
   margin-bottom: 0;
   margin-left: -20px;
-  animation: RuleFinish 1.2s 0s;
+  animation: RuleFinish-SideReady 1.2s 0s;
   transition-delay: .8s; }
   @media (min-width: 768px) {
     #Home[data-home="false"] .column {

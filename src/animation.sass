@@ -15,7 +15,7 @@ $init-long-finish-duration: $init-long-delay + $init-duration
 
 // Home > Letter
 =fade-in-letter-animation
-    animation: FadeInAnimation 1s .4s ease-in backwards, InitializeFinish $init-finish-duration 0s
+    animation: FadeInAnimation 1s .4s ease-in backwards, Initialize-Ready $init-finish-duration 0s
 
 // Home > h1
 =fade-in-animation
@@ -45,7 +45,7 @@ $init-long-finish-duration: $init-long-delay + $init-duration
             opacity: 0
 
 
-    @keyframes InitializeFinish
+    @keyframes Initialize-Ready
         to
             font-size: 100%
 
@@ -88,7 +88,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     transition: height $htp-fast-duration .4s ease-in-out, margin $htp-fast-duration .4s ease-in-out
 
 =rule-finish
-    animation: RuleFinish $htp-rule-finish-duration 0s
+    animation: RuleFinish-SideReady $htp-rule-finish-duration 0s
 
 
 // Home > Letter
@@ -110,14 +110,14 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 // Home > Wheel
 =heading-finish
-    animation: HeadingFinish $htp-heading-finish-duration 0s
+    animation: HeadingFinish-SideReady-Render $htp-heading-finish-duration 0s
 
 
 =HomeToPageKeyframes
-    @keyframes RuleFinish
+    @keyframes RuleFinish-SideReady
         to
             font-size: 100%
-    @keyframes HeadingFinish
+    @keyframes HeadingFinish-SideReady-Render
         to
             font-size: 100%
 
@@ -164,9 +164,9 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     animation-delay: .6s, 1.2s, 1.8s
     animation-timing-function: ease-in
     animation-fill-mode: forwards
-    animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1
+    animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1-Render, NextPageBackWidthAnimation1-SideReady
 =page-to-page-change-sequence
-    animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2, NextPageBackWidthAnimation2
+    animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2-Render, NextPageBackWidthAnimation2-SideReady
 
 =PageToNextPageKeyframes
     @for $i from 1 through 2
@@ -174,11 +174,11 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
             to
                 width: 100%
 
-        @keyframes NextPageLeftAnimation#{$i}
+        @keyframes NextPageLeftAnimation#{$i}#{unquote('-Render')}
             to
                 left: 100%
 
-        @keyframes NextPageBackWidthAnimation#{$i}
+        @keyframes NextPageBackWidthAnimation#{$i}#{unquote('-SideReady')}
             from
                 width: 0px
                 left: 0px
@@ -191,10 +191,10 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 // Home > Side
 =page-to-page-back-sequence
-    animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1
+    animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1-Render, PrevPageBackWidthAnimation1-SideReady
 
 =page-to-page-back-change-sequence
-    animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2
+    animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2-Render, PrevPageBackWidthAnimation2-SideReady
 
 =PageToPrevPageKeyframes
     @for $i from 1 through 2
@@ -202,7 +202,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
             to
                 width: 0px
 
-        @keyframes PrevPageLeftAnimation#{$i}
+        @keyframes PrevPageLeftAnimation#{$i}#{unquote('-Render')}
             from
                 left: 100%
                 width: 100%
@@ -210,7 +210,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
                 left: 0px
                 width: 100%
 
-        @keyframes PrevPageBackWidthAnimation#{$i}
+        @keyframes PrevPageBackWidthAnimation#{$i}#{unquote('-SideReady')}
             from
                 width: 100%
             to
@@ -268,7 +268,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 // Home > Side > .heading > h2
 =fadeIn-left-render
-    animation: FadeIn-Left-Render .6s ease-in-out forwards
+    animation: FadeIn-Left-Ready .6s ease-in-out forwards
 
 =left-fadeOut
     animation: Left-FadeOut .4s ease-in-out forwards
@@ -277,7 +277,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     animation: Right-FadeOut .6s ease-in-out forwards
 
 =fadeIn-right-render
-    animation: FadeIn-Right-Render .4s ease-in-out forwards
+    animation: FadeIn-Right-Ready .4s ease-in-out forwards
 
 
 // Home > Side > .heading > hr
@@ -294,7 +294,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 
 =PageContentKeyframes
-    @keyframes FadeIn-Left-Render
+    @keyframes FadeIn-Left-Ready
         from
             opacity: 0
             transform: translateX(-100%)
@@ -320,7 +320,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
             opacity: 0
 
 
-    @keyframes FadeIn-Right-Render
+    @keyframes FadeIn-Right-Ready
         from
             opacity: 0
             transform: translateX(50%)

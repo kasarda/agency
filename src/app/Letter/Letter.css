@@ -30,7 +30,7 @@
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity 0.4s 1.6s ease-in-out;
-  animation: FadeInAnimation 1s 0.4s ease-in backwards, InitializeFinish 1.4s 0s; }
+  animation: FadeInAnimation 1s 0.4s ease-in backwards, Initialize-Ready 1.4s 0s; }
   @media (min-width: 768px) {
     #Letter {
       animation-duration: 1s, 1.8s;

@@ -70,6 +70,21 @@ class Home extends Component {
         }
     }
 
+
+    setReady({ animationName }) {
+        const { page } = this.state
+
+        if (/-SideReady/.test(animationName))
+            this.setState({ sideReady: true })
+
+        if (/-Ready/.test(animationName))
+            this.setState({ ready: true })
+
+        if (/-Render/.test(animationName))
+            this.setState({ renderPage: page })
+
+    }
+
     componentDidMount() {
         onFakeScroll(50,
             _ => this.setPage('down'),
@@ -79,28 +94,6 @@ class Home extends Component {
 
     componentWillUnmount() {
         resetScrollEvents()
-    }
-
-    setReady({ animationName }) {
-        const { page } = this.state
-
-        if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(animationName)) {
-            this.setState({
-                sideReady: true
-            })
-        }
-
-        if (/Render|InitializeFinish/.test(animationName)) {
-            this.setState({
-                ready: true
-            })
-        }
-
-        if (/(NextPageLeftAnimation|PrevPageWidthAnimation|HeadingFinish)/.test(animationName)) {
-            this.setState({
-                renderPage: page
-            })
-        }
     }
 
     render() {
@@ -121,7 +114,7 @@ class Home extends Component {
                 <Side
                     renderPage={renderPage}
                 />
-                <Letter letter="C" id="Letter"/>
+                <Letter letter="C" id="Letter" />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule" ></div>

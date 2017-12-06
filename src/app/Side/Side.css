@@ -115,7 +115,7 @@
 [data-down="true"][data-side-ready="true"] #Side .heading h2 {
   transform: translateX(0);
   opacity: 1;
-  animation: FadeIn-Left-Render .6s ease-in-out forwards; }
+  animation: FadeIn-Left-Ready .6s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading h2 {
   animation: Left-FadeOut .4s ease-in-out forwards; }
@@ -130,7 +130,7 @@
   animation: hr-slideIn-slideOut .6s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="true"] #Side .heading h2 {
-  animation: FadeIn-Right-Render .4s ease-in-out forwards; }
+  animation: FadeIn-Right-Ready .4s ease-in-out forwards; }
 
 [data-down="true"][data-from="1"] #Side,
 [data-down="true"][data-from="2"] #Side,
@@ -142,15 +142,15 @@
   animation-delay: .6s, 1.2s, 1.8s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1, NextPageBackWidthAnimation1; }
+  animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1-Render, NextPageBackWidthAnimation1-SideReady; }
 
 [data-down="true"][data-from="2"] #Side {
-  animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2, NextPageBackWidthAnimation2; }
+  animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2-Render, NextPageBackWidthAnimation2-SideReady; }
 
 [data-down="false"][data-from="2"] #Side,
 [data-down="false"][data-from="3"] #Side,
 [data-down="false"][data-from="4"] #Side {
-  animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1; }
+  animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1-Render, PrevPageBackWidthAnimation1-SideReady; }
 
 [data-down="false"][data-from="3"] #Side {
-  animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2; }
+  animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2-Render, PrevPageBackWidthAnimation2-SideReady; }

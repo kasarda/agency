@@ -381,15 +381,15 @@ p {
   from {
     opacity: 0; } }
 
-@keyframes InitializeFinish {
+@keyframes Initialize-Ready {
   to {
     font-size: 100%; } }
 
-@keyframes RuleFinish {
+@keyframes RuleFinish-SideReady {
   to {
     font-size: 100%; } }
 
-@keyframes HeadingFinish {
+@keyframes HeadingFinish-SideReady-Render {
   to {
     font-size: 100%; } }
 
@@ -403,11 +403,11 @@ p {
   to {
     width: 100%; } }
 
-@keyframes NextPageLeftAnimation1 {
+@keyframes NextPageLeftAnimation1-Render {
   to {
     left: 100%; } }
 
-@keyframes NextPageBackWidthAnimation1 {
+@keyframes NextPageBackWidthAnimation1-SideReady {
   from {
     width: 0px;
     left: 0px; }
@@ -419,11 +419,11 @@ p {
   to {
     width: 100%; } }
 
-@keyframes NextPageLeftAnimation2 {
+@keyframes NextPageLeftAnimation2-Render {
   to {
     left: 100%; } }
 
-@keyframes NextPageBackWidthAnimation2 {
+@keyframes NextPageBackWidthAnimation2-SideReady {
   from {
     width: 0px;
     left: 0px; }
@@ -435,7 +435,7 @@ p {
   to {
     width: 0px; } }
 
-@keyframes PrevPageLeftAnimation1 {
+@keyframes PrevPageLeftAnimation1-Render {
   from {
     left: 100%;
     width: 100%; }
@@ -443,7 +443,7 @@ p {
     left: 0px;
     width: 100%; } }
 
-@keyframes PrevPageBackWidthAnimation1 {
+@keyframes PrevPageBackWidthAnimation1-SideReady {
   from {
     width: 100%; }
   to {
@@ -453,7 +453,7 @@ p {
   to {
     width: 0px; } }
 
-@keyframes PrevPageLeftAnimation2 {
+@keyframes PrevPageLeftAnimation2-Render {
   from {
     left: 100%;
     width: 100%; }
@@ -461,13 +461,13 @@ p {
     left: 0px;
     width: 100%; } }
 
-@keyframes PrevPageBackWidthAnimation2 {
+@keyframes PrevPageBackWidthAnimation2-SideReady {
   from {
     width: 100%; }
   to {
     width: 50%; } }
 
-@keyframes FadeIn-Left-Render {
+@keyframes FadeIn-Left-Ready {
   from {
     opacity: 0;
     transform: translateX(-100%); }
@@ -492,7 +492,7 @@ p {
     transform: translateX(-100%);
     opacity: 0; } }
 
-@keyframes FadeIn-Right-Render {
+@keyframes FadeIn-Right-Ready {
   from {
     opacity: 0;
     transform: translateX(50%); }
