@@ -13,25 +13,33 @@ $init-long-finish-duration: $init-long-delay + $init-duration
 =slide-animation
     animation: SlideAnimation .4s .4s ease-in backwards
 
-// Home > Letter
-=fade-in-letter-animation
-    animation: FadeInAnimation 1s .4s ease-in backwards, Initialize-Ready $init-finish-duration 0s
-
 // Home > h1
 =fade-in-animation
-    animation: FadeInAnimation 1s .4s ease-in backwards
+    animation: FadeInAnimation 1s 1.4s ease-in backwards
 
 // Home > Letter > rect.background-mask
 =move-in-animation
-    animation: MoveInAnimation 1s .4s ease-in backwards
+    animation: MoveInAnimation 1s 1s ease-in backwards, Initialize-Ready $init-finish-duration 0s
 
 // For Letter and rect.background-mask
 =letter-desktop-delay
     animation-duration: 1s, $init-long-finish-duration
-    animation-delay: .8s, 0s
+    animation-delay: 1.4s, 0s
+
+
+
+=letter-c-animation
+    animation: Dash .8s .6s ease-in backwards
+
 
 
 =InitializeKeyframes
+    @keyframes Dash
+        from
+            stroke-dashoffset: 901.397
+        to
+            stroke-dashoffset: 0
+
     @keyframes MoveInAnimation
         from
             x: 0
@@ -75,14 +83,14 @@ $htp-long-delay: .8s
 $htp-heading-delay: 1.4s
 
 $htp-heading-finish-duration: $htp-heading-delay + $htp-duration
-$htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
+$htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
 // Home > .rule
 =slide-transition
-    transition: width $htp-fast-duration 1.2s ease-in-out
+    transition: width $htp-fast-duration 1.4s ease-in-out
 
 // Home > .column
 =slide-height-delay
-    transition-delay: .8s
+    transition-delay: 1.6s
 
 =slide-height-transition
     transition: height $htp-fast-duration .4s ease-in-out, margin $htp-fast-duration .4s ease-in-out
@@ -91,13 +99,9 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
     animation: RuleFinish-SideReady $htp-rule-finish-duration 0s
 
 
-// Home > Letter
-=fade-letter-transition
-    transition: opacity $htp-fast-duration 1.6s ease-in-out
-
-// Home > Letter > rect.background-mask
-=move-transition
-    transition: x $htp-duration 1.6s ease-in-out
+// Home > Letter > #letter-c > .shape
+=dash-letter-c-transition
+    transition: stroke-dashoffset .8s 1.6s ease-in-out
 
 // Home > h1
 =fade-heading-transition
@@ -105,8 +109,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 // Home > Side
 =slide-width-transition
-    transition: width $htp-fast-duration .4s ease-in-out
-
+    transition: width $htp-fast-duration 1.2s ease-in-out
 
 // Home > Wheel
 =heading-finish
@@ -191,18 +194,18 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration
 
 // Home > Side
 =page-to-page-back-sequence
-    animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1-Render, PrevPageBackWidthAnimation1-SideReady
+    animation-name: PrevPageWidthAnimation1-Render, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1-SideReady
 
 =page-to-page-back-change-sequence
-    animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2-Render, PrevPageBackWidthAnimation2-SideReady
+    animation-name: PrevPageWidthAnimation2-Render, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2-SideReady
 
 =PageToPrevPageKeyframes
     @for $i from 1 through 2
-        @keyframes PrevPageWidthAnimation#{$i}
+        @keyframes PrevPageWidthAnimation#{$i}#{unquote('-Render')}
             to
                 width: 0px
 
-        @keyframes PrevPageLeftAnimation#{$i}#{unquote('-Render')}
+        @keyframes PrevPageLeftAnimation#{$i}
             from
                 left: 100%
                 width: 100%

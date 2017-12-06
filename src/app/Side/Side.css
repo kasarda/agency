@@ -10,7 +10,7 @@
 #Side {
   width: 0px;
   z-index: 2;
-  transition: width 0.4s 0.4s ease-in-out;
+  transition: width 0.4s 1.2s ease-in-out;
   align-items: flex-end; }
   @media (min-width: 768px) {
     #Side {
@@ -150,7 +150,7 @@
 [data-down="false"][data-from="2"] #Side,
 [data-down="false"][data-from="3"] #Side,
 [data-down="false"][data-from="4"] #Side {
-  animation-name: PrevPageWidthAnimation1, PrevPageLeftAnimation1-Render, PrevPageBackWidthAnimation1-SideReady; }
+  animation-name: PrevPageWidthAnimation1-Render, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1-SideReady; }
 
 [data-down="false"][data-from="3"] #Side {
-  animation-name: PrevPageWidthAnimation2, PrevPageLeftAnimation2-Render, PrevPageBackWidthAnimation2-SideReady; }
+  animation-name: PrevPageWidthAnimation2-Render, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2-SideReady; }

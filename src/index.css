@@ -369,6 +369,12 @@ p {
 .primary-background {
   background-color: #004bd3; }
 
+@keyframes Dash {
+  from {
+    stroke-dashoffset: 901.397; }
+  to {
+    stroke-dashoffset: 0; } }
+
 @keyframes MoveInAnimation {
   from {
     x: 0; } }
@@ -431,11 +437,11 @@ p {
     width: 50%;
     left: 0px; } }
 
-@keyframes PrevPageWidthAnimation1 {
+@keyframes PrevPageWidthAnimation1-Render {
   to {
     width: 0px; } }
 
-@keyframes PrevPageLeftAnimation1-Render {
+@keyframes PrevPageLeftAnimation1 {
   from {
     left: 100%;
     width: 100%; }
@@ -449,11 +455,11 @@ p {
   to {
     width: 50%; } }
 
-@keyframes PrevPageWidthAnimation2 {
+@keyframes PrevPageWidthAnimation2-Render {
   to {
     width: 0px; } }
 
-@keyframes PrevPageLeftAnimation2-Render {
+@keyframes PrevPageLeftAnimation2 {
   from {
     left: 100%;
     width: 100%; }

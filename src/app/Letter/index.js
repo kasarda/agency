@@ -5,6 +5,7 @@ import E from './letters/e.letter'
 import T from './letters/t.letter'
 import Y from './letters/y.letter'
 import H from './letters/h.letter'
+import Definition from './letters/Definition'
 
 import './Letter.css'
 
@@ -18,7 +19,9 @@ function Letter({ letter, id }) {
             preserveAspectRatio="none"
             className="Letter"
             id={id}
+            data-letter={letter}
         >
+            <Definition letter={letter}/>
             {letters[letter] || null}
         </svg>
     )

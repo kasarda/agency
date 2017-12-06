@@ -114,6 +114,7 @@ class Home extends Component {
                 <Side
                     renderPage={renderPage}
                 />
+
                 <Letter letter="C" id="Letter" />
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
