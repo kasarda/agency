@@ -19,7 +19,7 @@ class Home extends Component {
             renderPage: 0,
             length: 4,
             sideReady: false,
-            ready: true,
+            ready: false,
             down: undefined,
             from: undefined
         }
@@ -83,13 +83,14 @@ class Home extends Component {
 
     setReady({ animationName }) {
         const { page } = this.state
+
         if (/(Finish|(Next|Prev)PageBackWidthAnimation)/.test(animationName)) {
             this.setState({
                 sideReady: true
             })
         }
 
-        if (/Render/.test(animationName)) {
+        if (/Render|InitializeFinish/.test(animationName)) {
             this.setState({
                 ready: true
             })

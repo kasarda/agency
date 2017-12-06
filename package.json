@@ -47,8 +47,7 @@
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Fix problem with css files, becouse animation.sass in build include multiple times same keyframes",
-    "Update svgs letters to have one pattern and have new classNames",
-    "!!Ready doesnt work on init"
+    "Update svgs letters to have one pattern and have new classNames"
   ],
   "done": [
     "Create faster duration for animation and rewrite to be more stable and flexible",
@@ -58,7 +57,7 @@
     "Rename digital-agency to agency"
   ],
   "changelog": [
-
+    "Fixed bug with state 'ready' when ready doesn't work on init"
   ],
   "browsers": {
     "mobile": {
