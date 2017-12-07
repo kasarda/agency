@@ -61,7 +61,8 @@
     "Modify svgs and created new init animation",
     "hover on button",
     "animation.sass lvl 4",
-    "cross browser issues fixed"
+    "cross browser issues fixed",
+    "Modify SVGS"
   ],
   "browsers": {
     "mobile": {

@@ -1,29 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import C from './letters/c.letter'
+import C from './letters/C.letter'
 import Definition from './letters/Definition'
 
 import './Letter.css'
 
-class Letter extends Component {
+function Letter({ id, letter }) {
 
-    render() {
-        const { id, letter } = this.props
-        const letterShape = letter === 'C' ? <C /> : <use xlinkHref={`#letter-${letter}`} />
-        return (
-            <svg
-                viewBox="0 0 440 440"
-                preserveAspectRatio="none"
-                className="Letter"
-                id={id}
-                data-letter={letter}
-            >
-                <Definition letter={letter} />
-                {letterShape}
+    const letterShape = letter === 'C' ? <C /> : <use xlinkHref={`#letter-${letter}`} />
+    return (
+        <svg
+            viewBox="0 0 440 440"
+            preserveAspectRatio="none"
+            className="Letter"
+            id={id}
+            data-letter={letter}
+        >
+            <Definition letter={letter} />
+            {letterShape}
 
-            </svg>
-        )
-    }
+        </svg>
+    )
 }
 
 export default Letter

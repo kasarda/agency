@@ -13,10 +13,12 @@
 
     +maxHeight(500px)
         +dimension(200px, 200px)
+
     +ie
         opacity: 1
         +fade-in-ie-anim
         +fade-ie-tran
+
     .fill-pattern
         fill: $black-color
     &[data-letter="C"]
@@ -26,14 +28,11 @@
 
 #Letter
     +center
-
     .background-mask-rect
         x: 100%
         +move-in-anim
         +min(md)
             +letter-desktop-delay
-
-
 
 
 #ContentLetter
@@ -61,7 +60,6 @@
         .background-mask-rect
             +delay(.8s)
             +duration(0s)
-
 
 
 

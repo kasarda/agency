@@ -1,7 +1,5 @@
 
 //? Initialize Animation
-
-
 // Home > .rule
 =slide-anim
     animation: SlideAnim .4s .4s ease-in backwards
@@ -65,18 +63,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 //? From Home view to Page view Animation
-
 // Home > Letter > #letter-c > .shape
 =dash-letter-c-tran
     transition: stroke-dashoffset .8s 1.6s ease-in-out
@@ -141,10 +128,7 @@
 
 
 
-
-
 //? From Page view to Home view -> #Side
-
 // Home > Side
 =slide-side-width-anim
     animation: SlideSideWidthAnim .4s .8s ease-in backwards
@@ -164,14 +148,7 @@
 
 
 
-
-
-
-
-
-
 //? From Page view to Page view
-
 // Home > Side > #Side
 =page-to-page-sequence
     animation-duration: .4s
@@ -240,37 +217,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //? Page Content
-
-
 // Home > Side > .heading > h2
 =fadeIn-left-anim
     animation: FadeInLeftAnim-Ready .6s ease-in-out forwards
@@ -386,18 +333,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
 //? Always active
-
-// Navigation > Link > && Home > Wheel > .mouse
+// Navigation > Link >
+   Home > Wheel > .mouse
 =hover-tran
     transition: opacity .15s ease-in-out
 
@@ -418,12 +356,7 @@
 
 
 
-
-
-
-
 //? Prebuild
-
 =delay($val)
     transition-delay: $val
 
