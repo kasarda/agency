@@ -19,7 +19,7 @@ $padding-from-screen-mobile: 20px
             margin-right: -$padding-from-screen-mobile
             margin-bottom: 25px
             animation: none
-            +slide-height-transition
+            +slide-height-tran
             +min(md)
                 height: 250px
                 margin-bottom: 0
@@ -38,19 +38,21 @@ $padding-from-screen-mobile: 20px
             height: 100%
             background-color: $light-color
             z-index: 1
-            +slide-transition
+            +slide-tran
             +min(md)
                 width: 1px
-                +slide-animation
+                +slide-anim
 
         h1
             padding-bottom: 50px
-            +fade-heading-transition
-            +fade-in-animation
+            +fade-heading-tran
+            +fade-in-anim
             opacity: 1
             +min(md)
                 padding-bottom: 0
                 padding-left: 25px
+            +ie
+                animation-delay: .6s
 
     &[data-home="false"]
         .column

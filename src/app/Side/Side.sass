@@ -5,7 +5,7 @@
 #Side
     width: 0px
     z-index: 2
-    +slide-width-transition
+    +slide-width-tran
     align-items: flex-end
     +min(md)
         align-items: center
@@ -25,7 +25,7 @@
                 opacity: 0
                 animation: none
 
-            hr
+            .hr
                 width: 0px
                 transform: translateX(-50px)
                 height: 1px
@@ -34,7 +34,6 @@
                 background: $light-color
                 border: none
                 animation: none
-
 
         .description
             margin: 15px 0 0 0
@@ -47,13 +46,30 @@
                 margin-top: 0px
                 +min(md)
                     margin-top: 35px
+                .button-container
+                    position: relative
+                    overflow: hidden
+                    display: inline-block
+                a::after
+                    content: ''
+                    +position(0, -100%, absolute)
+                    z-index: -1
+                    +dimension
+                    background-color: $light-color
+                    transition: left .4s ease-in-out
+                a:hover::after
+                    left: 0
+                a
+                    transition: color .4s .3s ease-in
+                a:hover
+                    color: currentColor
+                    delay(0s)
             .fadeIn
                 transform: translateY(0px)
                 opacity: 0
-                +fadeIn-left-transition
+                +fade-vertical-tran
                 +min(md)
                     transform: translateY(100px)
-
             .fadeIn-1
                 +delay(.1s)
             .fadeIn-2
@@ -65,27 +81,20 @@
 
 
 
+[data-home="false"] #Side
+    width: 50%
 
-
-[data-home="false"]
-    #Side
-        width: 50%
-
-[data-home="true"][data-from]
-    #Side
-        +slide-side-width-animation
-        transition: none // important for bug on mobile devices
+[data-home="true"][data-from] #Side
+    +slide-side-width-anim
+    transition: none // important for bug on mobile devices
 
 [data-home="true"][data-side-ready="true"],
 [data-side-ready="false"][data-from="0"]
     #Side
         overflow: hidden
 
-[data-side-ready="false"][data-from="0"]
-    #Side
-        .description
-            .fadeIn
-                transition: none
+[data-side-ready="false"][data-from="0"] #Side .description .fadeIn
+    transition: none
 
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]),
@@ -114,41 +123,30 @@
                 transform: translateY(0px)
                 opacity: 1
         .heading
-            hr
-                +hr-slideIn
+            .hr
+                +hr-slideIn-anim
 
 
-[data-down="true"][data-side-ready="true"]
-    #Side
-        .heading
-            h2
-                transform: translateX(0)
-                opacity: 1
-                +fadeIn-left-render
+[data-down="true"][data-side-ready="true"] #Side .heading
+    h2
+        transform: translateX(0)
+        opacity: 1
+        +fadeIn-left-anim
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"])
-    #Side
-        .heading
-            h2
-                +left-fadeOut
-            hr
-                +hr-slideOut
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading
+    h2
+        +left-fadeOut-anim
+    .hr
+        +hr-slideOut-anim
 
-[data-down="false"][data-side-ready="false"]
-    #Side
-        .heading
-            h2
-                +right-fadeOut
-            hr
-                +hr-slideIn-slideOut
+[data-down="false"][data-side-ready="false"] #Side .heading
+    h2
+        +right-fadeOut-anim
+    .hr
+        +hr-slideIn-slideOut-anim
 
-[data-down="false"][data-side-ready="true"]
-    #Side
-        .heading
-            h2
-                +fadeIn-right-render
-
-
+[data-down="false"][data-side-ready="true"] #Side .heading h2
+    +fadeIn-right-anim
 
 
 

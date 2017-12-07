@@ -1,11 +1,17 @@
 import React from 'react'
 
-export default (
+export default () => (
     <g>
         <defs>
-            <mask maskUnits="userSpaceOnUse" id="letter-shape-Y">
-                <g fill="#ffffff">
-                    <rect x="0" y="0" width="440" height="440" transform="matrix(1,0,0,1,0,0)" style={{ opacity: 1 }}></rect>
+            <mask
+                maskUnits="userSpaceOnUse"
+                id="letter-shape-Y"
+            >
+                <g className="fill-light-color">
+                    <rect
+                        x="0" y="0"
+                        width="440" height="440"
+                    ></rect>
                 </g>
             </mask>
         </defs>

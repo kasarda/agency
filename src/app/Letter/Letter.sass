@@ -13,15 +13,15 @@
 
     +maxHeight(500px)
         +dimension(200px, 200px)
+    +ie
+        opacity: 1
+        +fade-in-ie-anim
+        +fade-ie-tran
     .fill-pattern
         fill: $black-color
     &[data-letter="C"]
         .fill-pattern
             fill: $light-color
-    .fill-light-color
-        fill: $light-color
-    .stroke-light-color
-        stroke: $light-color
 
 
 #Letter
@@ -29,10 +29,9 @@
 
     .background-mask-rect
         x: 100%
-        +move-in-animation
+        +move-in-anim
         +min(md)
             +letter-desktop-delay
-
 
 
 
@@ -43,11 +42,11 @@
     right: 0
     transform: translate(50%, -50%)
     opacity: 0
-    +fade-page-letter-transition
+    +fade-page-letter-tran
 
     .background-mask-rect
-        x: 0
-        +move-page-letter-transition
+        x: 0px
+        +move-page-letter-tran
         +min(md)
             +letter-desktop-delay
 
@@ -66,17 +65,21 @@
 
 
 
-
-#letter-shape-C
-    .shape
-        stroke-dasharray: 901.397
-        stroke-dashoffset: 0
-        +letter-c-animation
-        +dash-letter-c-transition
+#letter-shape-C .shape
+    stroke-dasharray: 901.397px
+    stroke-dashoffset: 0px
+    +letter-c-anim
+    +dash-letter-c-tran
 
 
 [data-home="false"]
-    #letter-shape-C
-        .shape
-            stroke-dashoffset: 901.397
+    #letter-shape-C .shape
+        stroke-dashoffset: 901.397px
+        +delay(0s)
+    +ie
+        #Letter
+            opacity: 0
             +delay(0s)
+        #letter-shape-C .shape
+            stroke-dashoffset: 0
+

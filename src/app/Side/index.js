@@ -97,7 +97,7 @@ class Side extends Component {
 
                     <div className="heading">
                         <h2>{heading}</h2>
-                        <hr className="hidden-sm-down" />
+                        <div className="hidden-sm-down hr"></div>
                     </div>
 
                     <div className="description">
@@ -105,7 +105,9 @@ class Side extends Component {
                             {descriptionList}
                         </div>
                         <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>
-                            <Link to={link} className="button-primary">view case</Link>
+                            <div className="button-container" style={{color: theme}}>
+                                <Link to={link} className="button-primary">view case</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

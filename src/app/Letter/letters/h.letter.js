@@ -1,15 +1,27 @@
 import React from 'react'
 
-export default (
+export default () => (
     <g>
         <defs>
-            <mask maskUnits="userSpaceOnUse" id="letter-shape-H">
+            <mask
+                maskUnits="userSpaceOnUse"
+                id="letter-shape-H"
+            >
                 <g fill="#ffffff" >
-                    <rect x="46" y="0" width="80" height="440" transform="matrix(1,0,0,1,0,0)">
+                    <rect
+                        x="46" y="0"
+                        width="80" height="440"
+                    >
                     </rect>
-                    <rect x="124" y="187" width="194" height="80" transform="matrix(1,0,0,1,0,0)" style={{ opacity: 1 }}>
+                    <rect
+                        x="124" y="187"
+                        width="194" height="80"
+                    >
                     </rect>
-                    <rect x="315" y="0" width="80" height="440" transform="matrix(1,0,0,1,0,0)">
+                    <rect
+                        x="315" y="0"
+                        width="80" height="440"
+                    >
                     </rect>
                 </g>
             </mask>

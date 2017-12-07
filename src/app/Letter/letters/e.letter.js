@@ -1,14 +1,20 @@
 import React from 'react'
 
-export default (
+export default () => (
     <g>
         <defs>
-            <mask maskUnits="userSpaceOnUse" id="letter-shape-E">
-                <g style={{ strokeWidth: 80 }} className="stroke-light-color">
-                    <path d="M99,2v436" transform="matrix(1,0,0,1,0,0)" transform-origin="center center" style={{ opacity: 1 }}></path>
-                    <path d="M99,218h240" transform="matrix(1,0,0,1,0,0)" transform-origin="left center"></path>
-                    <path d="M99,42h281" transform="matrix(1,0,0,1,0,0)" transform-origin="left center"></path>
-                    <path d="M99,398h281" transform="matrix(1,0,0,1,0,0)" transform-origin="left center"></path>
+            <mask
+                maskUnits="userSpaceOnUse"
+                id="letter-shape-E"
+            >
+                <g
+                    style={{ strokeWidth: 80 }}
+                    className="stroke-light-color"
+                >
+                    <path d="M99,2v436"></path>
+                    <path d="M99,218h240"></path>
+                    <path d="M99,42h281"></path>
+                    <path d="M99,398h281"></path>
                 </g>
             </mask>
         </defs>

@@ -10,7 +10,6 @@ function Definition({letter}) {
                 patternUnits="userSpaceOnUse"
                 id={`dashed-pattern-${letter}`}
             >
-
                 <path
                     style={{ opacity: 0.5 }}
                     className="fill-pattern"
@@ -36,11 +35,8 @@ function Definition({letter}) {
                     transform="matrix(1,0,0,1,0,0)"
                     className="fill-light-color background-mask-rect"></rect>
             </mask>
-
-
-
-
         </defs>
     )
 }
+
 export default Definition

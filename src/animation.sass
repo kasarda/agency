@@ -1,61 +1,61 @@
 
 //? Initialize Animation
 
-$init-duration: 1s
-$init-delay: .4s
-$init-long-delay: .8s
-
-$init-finish-duration: $init-delay + $init-duration
-$init-long-finish-duration: $init-long-delay + $init-duration
-
 
 // Home > .rule
-=slide-animation
-    animation: SlideAnimation .4s .4s ease-in backwards
+=slide-anim
+    animation: SlideAnim .4s .4s ease-in backwards
 
-// Home > h1
-=fade-in-animation
-    animation: FadeInAnimation 1s 1.4s ease-in backwards
+
+// Home > Letter > #c-letter > .shape
+=letter-c-anim
+    animation: DashAnim .8s .6s ease-in backwards
+
 
 // Home > Letter > rect.background-mask
-=move-in-animation
-    animation: MoveInAnimation 1s 1s ease-in backwards, Initialize-Ready $init-finish-duration 0s
+=move-in-anim
+    animation: MoveInAnim 1s 1s ease-in backwards
 
-// For Letter and rect.background-mask
+
 =letter-desktop-delay
-    animation-duration: 1s, $init-long-finish-duration
-    animation-delay: 1.4s, 0s
+    animation-delay: 1.4s
 
 
+// Home > Letter -> only IE
+=fade-in-ie-anim
+    animation: FadeInAnim 1s .4s ease-in backwards
 
-=letter-c-animation
-    animation: Dash .8s .6s ease-in backwards
+
+// Home > h1
+=fade-in-anim
+    animation: FadeInAnim-Ready 1s 1.4s ease-in backwards
+
 
 
 
 =InitializeKeyframes
-    @keyframes Dash
+    @keyframes DashAnim
         from
-            stroke-dashoffset: 901.397
+            stroke-dashoffset: 901.397px
         to
-            stroke-dashoffset: 0
+            stroke-dashoffset: 0px
 
-    @keyframes MoveInAnimation
+    @keyframes MoveInAnim
         from
-            x: 0
+            x: 0px
 
-    @keyframes SlideAnimation
+    @keyframes SlideAnim
         from
             width: 100%
 
-    @keyframes FadeInAnimation
+    @keyframes FadeInAnim
         from
             opacity: 0
 
 
-    @keyframes Initialize-Ready
-        to
-            font-size: 100%
+    @keyframes FadeInAnim-Ready
+        from
+            opacity: 0
 
 
 
@@ -77,43 +77,54 @@ $init-long-finish-duration: $init-long-delay + $init-duration
 
 //? From Home view to Page view Animation
 
-$htp-duration: 1s
-$htp-fast-duration: .4s
-$htp-long-delay: .8s
-$htp-heading-delay: 1.4s
-
-$htp-heading-finish-duration: $htp-heading-delay + $htp-duration
-$htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
-// Home > .rule
-=slide-transition
-    transition: width $htp-fast-duration 1.4s ease-in-out
-
-// Home > .column
-=slide-height-delay
-    transition-delay: 1.6s
-
-=slide-height-transition
-    transition: height $htp-fast-duration .4s ease-in-out, margin $htp-fast-duration .4s ease-in-out
-
-=rule-finish
-    animation: RuleFinish-SideReady $htp-rule-finish-duration 0s
-
-
 // Home > Letter > #letter-c > .shape
-=dash-letter-c-transition
+=dash-letter-c-tran
     transition: stroke-dashoffset .8s 1.6s ease-in-out
 
-// Home > h1
-=fade-heading-transition
-    transition: opacity $htp-duration 1.8s ease-in-out
 
-// Home > Side
-=slide-width-transition
-    transition: width $htp-fast-duration 1.2s ease-in-out
+// Home > Letter -> Only IE
+=fade-ie-tran
+    transition: opacity .4s 1.6s ease-in-out
+
+
+// Home > h1
+=fade-heading-tran
+    transition: opacity 1s 1.8s ease-in-out
+
+
+// Home > Wheel
+=wheel-tran
+    transition: opacity .4s 0s ease-in-out
+
+=wheel-delay
+    transition-delay: 1.4s
+
 
 // Home > Wheel
 =heading-finish
-    animation: HeadingFinish-SideReady-Render $htp-heading-finish-duration 0s
+    animation: HeadingFinish-SideReady-Render 2.8s // fade-heading-transition.delay + fade-heading-transition.duration
+
+
+// Home > .rule
+=slide-tran
+    transition: width .4s 1.4s ease-in-out
+
+
+// Home > Side
+=slide-width-tran
+    transition: width .4s 1.2s ease-in-out
+
+
+// Home > .column
+=slide-height-tran
+    transition: height .4s .4s ease-in-out, margin .4s .4s ease-in-out
+
+=slide-height-delay
+    transition-delay: 1.6s
+
+=rule-finish
+    animation: RuleFinish-SideReady 2s // slide-height-delay +  slide-height-transition.duration
+
 
 
 =HomeToPageKeyframes
@@ -134,12 +145,12 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
 
 //? From Page view to Home view -> #Side
 
-// Home > Side > #Side
-=slide-side-width-animation
-    animation: SlideSideWidthAnimation .4s .8s ease-in backwards
+// Home > Side
+=slide-side-width-anim
+    animation: SlideSideWidthAnim .4s .8s ease-in backwards
 
 =PageToHomeKeyframes
-    @keyframes SlideSideWidthAnimation
+    @keyframes SlideSideWidthAnim
         from
             width: 50%
         to
@@ -167,21 +178,21 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
     animation-delay: .6s, 1.2s, 1.8s
     animation-timing-function: ease-in
     animation-fill-mode: forwards
-    animation-name: NextPageWidthAnimation1, NextPageLeftAnimation1-Render, NextPageBackWidthAnimation1-SideReady
+    animation-name: NextWidthAnim1, NextLeftAnim1-Render, NextNewWidthAnim1-SideReady
 =page-to-page-change-sequence
-    animation-name: NextPageWidthAnimation2, NextPageLeftAnimation2-Render, NextPageBackWidthAnimation2-SideReady
+    animation-name: NextWidthAnim2, NextLeftAnim2-Render, NextNewWidthAnim2-SideReady
 
 =PageToNextPageKeyframes
     @for $i from 1 through 2
-        @keyframes NextPageWidthAnimation#{$i}
+        @keyframes NextWidthAnim#{$i}
             to
                 width: 100%
 
-        @keyframes NextPageLeftAnimation#{$i}#{unquote('-Render')}
+        @keyframes NextLeftAnim#{$i}#{unquote('-Render')}
             to
                 left: 100%
 
-        @keyframes NextPageBackWidthAnimation#{$i}#{unquote('-SideReady')}
+        @keyframes NextNewWidthAnim#{$i}#{unquote('-SideReady')}
             from
                 width: 0px
                 left: 0px
@@ -194,18 +205,18 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
 
 // Home > Side
 =page-to-page-back-sequence
-    animation-name: PrevPageWidthAnimation1-Render, PrevPageLeftAnimation1, PrevPageBackWidthAnimation1-SideReady
+    animation-name: PrevWidthAnim1-Render, PrevLeftAnim1, PrevNewWidthAnim1-SideReady
 
 =page-to-page-back-change-sequence
-    animation-name: PrevPageWidthAnimation2-Render, PrevPageLeftAnimation2, PrevPageBackWidthAnimation2-SideReady
+    animation-name: PrevWidthAnim2-Render, PrevLeftAnim2, PrevNewWidthAnim2-SideReady
 
 =PageToPrevPageKeyframes
     @for $i from 1 through 2
-        @keyframes PrevPageWidthAnimation#{$i}#{unquote('-Render')}
+        @keyframes PrevWidthAnim#{$i}#{unquote('-Render')}
             to
                 width: 0px
 
-        @keyframes PrevPageLeftAnimation#{$i}
+        @keyframes PrevLeftAnim#{$i}
             from
                 left: 100%
                 width: 100%
@@ -213,7 +224,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
                 left: 0px
                 width: 100%
 
-        @keyframes PrevPageBackWidthAnimation#{$i}#{unquote('-SideReady')}
+        @keyframes PrevNewWidthAnim#{$i}#{unquote('-SideReady')}
             from
                 width: 100%
             to
@@ -259,45 +270,48 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
 
 //? Page Content
 
-// Home > Side > .description > p, .button
-=fadeIn-left-transition
-    transition: opacity .6s ease, transform .4s ease
-
-// Home > Side > Letter
-=fade-page-letter-transition
-    transition: opacity .8s ease-in-out
-=move-page-letter-transition
-    transition: x 1s ease-in-out
 
 // Home > Side > .heading > h2
-=fadeIn-left-render
-    animation: FadeIn-Left-Ready .6s ease-in-out forwards
+=fadeIn-left-anim
+    animation: FadeInLeftAnim-Ready .6s ease-in-out forwards
 
-=left-fadeOut
-    animation: Left-FadeOut .4s ease-in-out forwards
+=left-fadeOut-anim
+    animation: LeftFadeOutAnim .4s ease-in-out forwards
 
-=right-fadeOut
-    animation: Right-FadeOut .6s ease-in-out forwards
+=right-fadeOut-anim
+    animation: RightFadeOutAnim .6s ease-in-out forwards
 
-=fadeIn-right-render
-    animation: FadeIn-Right-Ready .4s ease-in-out forwards
+=fadeIn-right-anim
+    animation: FadeInRightAnim-Ready .4s ease-in-out forwards
 
 
 // Home > Side > .heading > hr
 
-=hr-slideIn
-    animation: hr-slideIn 1s ease-in-out forwards
+=hr-slideIn-anim
+    animation: HrSlideInAnim 1s ease-in-out forwards
 
-=hr-slideOut
-    animation: hr-slideOut .6s ease-in-out forwards
+=hr-slideOut-anim
+    animation: HrSlideOutAnim .6s ease-in-out forwards
 
-=hr-slideIn-slideOut
-    animation: hr-slideIn-slideOut .6s ease-in-out forwards
+=hr-slideIn-slideOut-anim
+    animation: HrSlideInOutAnim .6s ease-in-out forwards
+
+
+
+// Home > Side > .description > .fadeIn
+=fade-vertical-tran
+    transition: opacity .6s ease, transform .4s ease
+
+// Home > Side > Letter
+=fade-page-letter-tran
+    transition: opacity .8s ease-in-out
+=move-page-letter-tran
+    transition: x 1s ease-in-out
 
 
 
 =PageContentKeyframes
-    @keyframes FadeIn-Left-Ready
+    @keyframes FadeInLeftAnim-Ready
         from
             opacity: 0
             transform: translateX(-100%)
@@ -306,7 +320,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
         to
             opacity: 1
 
-    @keyframes Left-FadeOut
+    @keyframes LeftFadeOutAnim
         from
             transform: translateX(0%)
             opacity: 1
@@ -314,7 +328,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
             transform: translateX(50%)
             opacity: 0
 
-    @keyframes Right-FadeOut
+    @keyframes RightFadeOutAnim
         from
             transform: translateX(0%)
             opacity: 1
@@ -323,7 +337,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
             opacity: 0
 
 
-    @keyframes FadeIn-Right-Ready
+    @keyframes FadeInRightAnim-Ready
         from
             opacity: 0
             transform: translateX(50%)
@@ -332,7 +346,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
             opacity: 1
 
 
-    @keyframes hr-slideIn
+    @keyframes HrSlideInAnim
         25%
             transform: translateX(-50px)
             width: 120px
@@ -343,7 +357,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
             width: 70px
             transform: translateX(0px)
 
-    @keyframes hr-slideOut
+    @keyframes HrSlideOutAnim
         from
             width: 70px
             transform: translateX(0px)
@@ -354,7 +368,7 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
             width: 0
             transform: translateX(0px)
 
-    @keyframes hr-slideIn-slideOut
+    @keyframes HrSlideInOutAnim
         from
             width: 70px
             transform: translateX(0px)
@@ -383,24 +397,17 @@ $htp-rule-finish-duration: $htp-long-delay + $htp-fast-duration + .8s
 
 //? Always active
 
-// Navigation > Link > a && Home > Wheel > .mouse
-=hover-transition
+// Navigation > Link > && Home > Wheel > .mouse
+=hover-tran
     transition: opacity .15s ease-in-out
 
-// Home > Wheel > #Wheel
-=wheel-delay
-    transition-delay: 1.4s
-
-=wheel-transition
-    transition: opacity .4s 0s ease-in-out
-
-// Home > Wheel > #Wheel > .mouse > .wheel
-=wheel-animation
-    animation: WheelAnimation 1s 1s ease-in infinite
+// Home > Wheel > .mouse > .wheel
+=wheel-anim
+    animation: WheelAnim 1s 1s ease-in infinite
 
 
 =WheelKeyframes
-    @keyframes WheelAnimation
+    @keyframes WheelAnim
         from
             top: -3px
             opacity: 0

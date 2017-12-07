@@ -22,14 +22,15 @@
     .Letter {
       height: 200px;
       width: 200px; } }
+  @media all and (-ms-high-contrast: none) {
+    .Letter {
+      opacity: 1;
+      animation: FadeInAnim 1s .4s ease-in backwards;
+      transition: opacity .4s 1.6s ease-in-out; } }
   .Letter .fill-pattern {
     fill: #000; }
   .Letter[data-letter="C"] .fill-pattern {
     fill: #ffffff; }
-  .Letter .fill-light-color {
-    fill: #ffffff; }
-  .Letter .stroke-light-color {
-    stroke: #ffffff; }
 
 #Letter {
   position: absolute;
@@ -38,11 +39,10 @@
   transform: translate(-50%, -50%); }
   #Letter .background-mask-rect {
     x: 100%;
-    animation: MoveInAnimation 1s 1s ease-in backwards, Initialize-Ready 1.4s 0s; }
+    animation: MoveInAnim 1s 1s ease-in backwards; }
     @media (min-width: 768px) {
       #Letter .background-mask-rect {
-        animation-duration: 1s, 1.8s;
-        animation-delay: 1.4s, 0s; } }
+        animation-delay: 1.4s; } }
 
 #ContentLetter {
   position: absolute;
@@ -52,12 +52,11 @@
   opacity: 0;
   transition: opacity .8s ease-in-out; }
   #ContentLetter .background-mask-rect {
-    x: 0;
+    x: 0px;
     transition: x 1s ease-in-out; }
     @media (min-width: 768px) {
       #ContentLetter .background-mask-rect {
-        animation-duration: 1s, 1.8s;
-        animation-delay: 1.4s, 0s; } }
+        animation-delay: 1.4s; } }
 
 [data-side-ready="true"] #ContentLetter {
   opacity: 1; }
@@ -69,11 +68,18 @@
   transition-duration: 0s; }
 
 #letter-shape-C .shape {
-  stroke-dasharray: 901.397;
-  stroke-dashoffset: 0;
-  animation: Dash .8s .6s ease-in backwards;
+  stroke-dasharray: 901.397px;
+  stroke-dashoffset: 0px;
+  animation: DashAnim .8s .6s ease-in backwards;
   transition: stroke-dashoffset .8s 1.6s ease-in-out; }
 
 [data-home="false"] #letter-shape-C .shape {
-  stroke-dashoffset: 901.397;
+  stroke-dashoffset: 901.397px;
   transition-delay: 0s; }
+
+@media all and (-ms-high-contrast: none) {
+  [data-home="false"] #Letter {
+    opacity: 0;
+    transition-delay: 0s; }
+  [data-home="false"] #letter-shape-C .shape {
+    stroke-dashoffset: 0; } }
