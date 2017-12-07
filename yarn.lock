@@ -1481,7 +1481,11 @@ commander@2.11.x, commander@~2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
-commander@^2.11.0, commander@^2.9.0:
+commander@^2.11.0:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
+
+commander@^2.9.0:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.1.tgz#468635c4168d06145b9323356d1da84d14ac4a7a"
 
@@ -3299,8 +3303,8 @@ internal-ip@1.2.0:
     meow "^3.3.0"
 
 interpret@^1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.4.tgz#820cdd588b868ffb191a809506d6c9c8f212b1b0"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
 invariant@^2.2.1, invariant@^2.2.2:
   version "2.2.2"
@@ -6507,9 +6511,9 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
-ts-modules@^3.8.4:
-  version "3.8.4"
-  resolved "https://registry.yarnpkg.com/ts-modules/-/ts-modules-3.8.4.tgz#edca2b84d493d4c0575edf4931b7bd0e6115b98f"
+ts-modules@^3.8.5:
+  version "3.8.5"
+  resolved "https://registry.yarnpkg.com/ts-modules/-/ts-modules-3.8.5.tgz#c47a17f060e63709b93f2d56c51a8427a2d3deb6"
   dependencies:
     chalk "^2.2.0"
     command-exists "^1.2.2"

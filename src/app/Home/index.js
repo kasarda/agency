@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
-import './Home.css'
-
 import Wheel from '../Wheel'
 import Letter from '../Letter'
 import Side from '../Side'
 
-import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
+import {
+    onFakeScroll,
+    resetScrollEvents
+} from '../../services/wheel'
 
+import './Home.css'
 
 class Home extends Component {
 
@@ -82,7 +84,6 @@ class Home extends Component {
 
         if (/-Render/.test(animationName))
             this.setState({ renderPage: page })
-
     }
 
     componentDidMount() {
@@ -111,11 +112,9 @@ class Home extends Component {
                 data-ready={ready}
                 onAnimationEnd={this.setReady.bind(this)}
             >
-                <Side
-                    renderPage={renderPage}
-                />
-
+                <Side renderPage={renderPage} />
                 <Letter letter="C" id="Letter" />
+
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule" ></div>
@@ -123,9 +122,8 @@ class Home extends Component {
                             Creative Agency</h1>
                     </div>
                 </div>
-                <Wheel
-                    onWheelClick={this.setPage.bind(this)}
-                />
+
+                <Wheel onWheelClick={this.setPage.bind(this)} />
             </div>
         )
     }

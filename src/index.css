@@ -241,7 +241,7 @@ summary {
   justify-content: flex-end; }
 
 .align-stretch {
-  align-items: space-stretch; }
+  align-items: stretch; }
 
 .align-center {
   align-items: center; }

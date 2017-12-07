@@ -19,7 +19,7 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "ts-modules": "^3.8.4"
+    "ts-modules": "^3.8.5"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -38,7 +38,6 @@
     "Create Services, Projects, Contacts and 404 components",
     "Create logo, favicon and name of company",
     "Add some kind of graphic in home page first view",
-    "Add some other animations on letter component and add other letter with dynamicly changing letter",
     "Add version for the client to be sure on mobile if site was updated ar not",
     "Change specific easings for animations to be more smooth and better looking",
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
@@ -50,10 +49,11 @@
     "Create faster duration for animation and rewrite to be more stable and flexible",
     "Create ready functionality for home component",
     "Create better system for 'finish animation hacks'",
+    "Create Faster Content Page Animation on mobile devices",
+    "Add some other animations on letter component and add other letter with dynamicly changing letter",
+    "Add hover animation on pages button 'view case'",
     "Replace bootstrap grid with flex",
     "Rename digital-agency to agency",
-    "Create Faster Content Page Animation on mobile devices",
-    "Add hover animation on pages button 'view case'",
     "Update svgs letters to have one pattern and have new classNames"
   ],
   "changelog": [
@@ -62,7 +62,9 @@
     "hover on button",
     "animation.sass lvl 4",
     "cross browser issues fixed",
-    "Modify SVGS"
+    "Optimize SVGS",
+    "Optimize files",
+    "ts-modules 3.8.5"
   ],
   "browsers": {
     "mobile": {
