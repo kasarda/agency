@@ -397,7 +397,7 @@ p {
   from {
     opacity: 0; } }
 
-@keyframes RuleFinish-SideReady {
+@keyframes RuleFinish-SideReady-StartRender {
   to {
     font-size: 100%; } }
 
@@ -411,15 +411,15 @@ p {
   to {
     width: 0px; } }
 
-@keyframes NextWidthAnim1 {
+@keyframes NextWidthAnim {
   to {
     width: 100%; } }
 
-@keyframes NextLeftAnim1-Render {
+@keyframes NextLeftAnim-Render {
   to {
     left: 100%; } }
 
-@keyframes NextNewWidthAnim1-SideReady {
+@keyframes NextNewWidthAnim-SideReady {
   from {
     width: 0px;
     left: 0px; }
@@ -427,27 +427,11 @@ p {
     width: 50%;
     left: 0px; } }
 
-@keyframes NextWidthAnim2 {
-  to {
-    width: 100%; } }
-
-@keyframes NextLeftAnim2-Render {
-  to {
-    left: 100%; } }
-
-@keyframes NextNewWidthAnim2-SideReady {
-  from {
-    width: 0px;
-    left: 0px; }
-  to {
-    width: 50%;
-    left: 0px; } }
-
-@keyframes PrevWidthAnim1-Render {
+@keyframes PrevWidthAnim-Render {
   to {
     width: 0px; } }
 
-@keyframes PrevLeftAnim1 {
+@keyframes PrevRightAnim {
   from {
     left: 100%;
     width: 100%; }
@@ -455,25 +439,7 @@ p {
     left: 0px;
     width: 100%; } }
 
-@keyframes PrevNewWidthAnim1-SideReady {
-  from {
-    width: 100%; }
-  to {
-    width: 50%; } }
-
-@keyframes PrevWidthAnim2-Render {
-  to {
-    width: 0px; } }
-
-@keyframes PrevLeftAnim2 {
-  from {
-    left: 100%;
-    width: 100%; }
-  to {
-    left: 0px;
-    width: 100%; } }
-
-@keyframes PrevNewWidthAnim2-SideReady {
+@keyframes PrevNewWidthAnim-SideReady {
   from {
     width: 100%; }
   to {
@@ -481,8 +447,8 @@ p {
 
 @keyframes FadeInLeftAnim-Ready {
   from {
-    opacity: 0;
-    transform: translateX(-100%); }
+    transform: translateX(-100%);
+    opacity: 0; }
   75% {
     transform: translateX(0%); }
   to {
@@ -506,8 +472,8 @@ p {
 
 @keyframes FadeInRightAnim-Ready {
   from {
-    opacity: 0;
-    transform: translateX(50%); }
+    transform: translateX(50%);
+    opacity: 0; }
   to {
     transform: translateX(0%);
     opacity: 1; } }

@@ -152,25 +152,16 @@
 [data-down="false"][data-side-ready="true"] #Side .heading h2 {
   animation: FadeInRightAnim-Ready .6s ease-in-out forwards; }
 
-[data-down="true"][data-from="1"] #Side,
-[data-down="true"][data-from="2"] #Side,
-[data-down="true"][data-from="3"] #Side,
-[data-down="false"][data-from="2"] #Side,
-[data-down="false"][data-from="3"] #Side,
-[data-down="false"][data-from="4"] #Side {
+[data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]) #Side,
+[data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
   animation-duration: .4s;
   animation-delay: .6s, 1.2s, 1.8s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-name: NextWidthAnim1, NextLeftAnim1-Render, NextNewWidthAnim1-SideReady; }
+  animation-name: NextWidthAnim, NextLeftAnim-Render, NextNewWidthAnim-SideReady; }
 
-[data-down="true"][data-from="2"] #Side {
-  animation-name: NextWidthAnim2, NextLeftAnim2-Render, NextNewWidthAnim2-SideReady; }
+[data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
+  animation-name: PrevWidthAnim-Render, PrevRightAnim, PrevNewWidthAnim-SideReady; }
 
-[data-down="false"][data-from="2"] #Side,
-[data-down="false"][data-from="3"] #Side,
-[data-down="false"][data-from="4"] #Side {
-  animation-name: PrevWidthAnim1-Render, PrevLeftAnim1, PrevNewWidthAnim1-SideReady; }
-
-[data-down="false"][data-from="3"] #Side {
-  animation-name: PrevWidthAnim2-Render, PrevLeftAnim2, PrevNewWidthAnim2-SideReady; }
+[data-side-ready="true"] #Side {
+  animation: none !important; }

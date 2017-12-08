@@ -23,7 +23,6 @@ class Side extends Component {
 
     componentWillReceiveProps({ renderPage }) {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
-
         const config = [
             {
                 theme: '#634ae6',

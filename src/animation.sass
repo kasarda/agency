@@ -72,9 +72,6 @@
     transition: opacity .4s 1.6s ease-in-out
 
 
-// Home > h1
-=fade-heading-tran
-    transition: opacity 1s 1.8s ease-in-out
 
 
 // Home > Wheel
@@ -85,9 +82,14 @@
     transition-delay: 1.4s
 
 
+// Home > h1
+=fade-heading-tran
+    transition: opacity 1s 1.8s ease-in-out
+
+
 // Home > Wheel
 =heading-finish
-    animation: HeadingFinish-SideReady-Render 2.8s // fade-heading-transition.delay + fade-heading-transition.duration
+    animation: HeadingFinish-SideReady-Render 2.8s // fade-heading-tran.del + fade-heading-tran.dur
 
 
 // Home > .rule
@@ -108,12 +110,12 @@
     transition-delay: 1.6s
 
 =rule-finish
-    animation: RuleFinish-SideReady 2s // slide-height-delay +  slide-height-transition.duration
+    animation: RuleFinish-SideReady-StartRender 2s // slide-height-delay +  slide-height-transition.duration
 
 
 
 =HomeToPageKeyframes
-    @keyframes RuleFinish-SideReady
+    @keyframes RuleFinish-SideReady-StartRender
         to
             font-size: 100%
     @keyframes HeadingFinish-SideReady-Render
@@ -126,7 +128,7 @@
 
 
 
-//? From Page view to Home view -> #Side
+//? From Page view to Home view -> Side
 // Home > Side
 =slide-side-width-anim
     animation: SlideSideWidthAnim .4s .8s ease-in backwards
@@ -144,63 +146,52 @@
 
 
 //? From Page view to Page view
-// Home > Side > #Side
-=page-to-page-sequence
+// Home > Side
+=page-seq
     animation-duration: .4s
     animation-delay: .6s, 1.2s, 1.8s
     animation-timing-function: ease-in
     animation-fill-mode: forwards
-    animation-name: NextWidthAnim1, NextLeftAnim1-Render, NextNewWidthAnim1-SideReady
-=page-to-page-change-sequence
-    animation-name: NextWidthAnim2, NextLeftAnim2-Render, NextNewWidthAnim2-SideReady
+    animation-name: NextWidthAnim, NextLeftAnim-Render, NextNewWidthAnim-SideReady
 
-=PageToNextPageKeyframes
-    @for $i from 1 through 2
-        @keyframes NextWidthAnim#{$i}
-            to
-                width: 100%
-
-        @keyframes NextLeftAnim#{$i}#{unquote('-Render')}
-            to
-                left: 100%
-
-        @keyframes NextNewWidthAnim#{$i}#{unquote('-SideReady')}
-            from
-                width: 0px
-                left: 0px
-            to
-                width: 50%
-                left: 0px
+=prev-page-seq
+    animation-name: PrevWidthAnim-Render, PrevRightAnim, PrevNewWidthAnim-SideReady
 
 
+=PageSeqKeyframes
+    @keyframes NextWidthAnim
+        to
+            width: 100%
 
+    @keyframes NextLeftAnim-Render
+        to
+            left: 100%
 
-// Home > Side
-=page-to-page-back-sequence
-    animation-name: PrevWidthAnim1-Render, PrevLeftAnim1, PrevNewWidthAnim1-SideReady
+    @keyframes NextNewWidthAnim-SideReady
+        from
+            width: 0px
+            left: 0px
+        to
+            width: 50%
+            left: 0px
 
-=page-to-page-back-change-sequence
-    animation-name: PrevWidthAnim2-Render, PrevLeftAnim2, PrevNewWidthAnim2-SideReady
+    @keyframes PrevWidthAnim-Render
+        to
+            width: 0px
 
-=PageToPrevPageKeyframes
-    @for $i from 1 through 2
-        @keyframes PrevWidthAnim#{$i}#{unquote('-Render')}
-            to
-                width: 0px
+    @keyframes PrevRightAnim
+        from
+            left: 100%
+            width: 100%
+        to
+            left: 0px
+            width: 100%
 
-        @keyframes PrevLeftAnim#{$i}
-            from
-                left: 100%
-                width: 100%
-            to
-                left: 0px
-                width: 100%
-
-        @keyframes PrevNewWidthAnim#{$i}#{unquote('-SideReady')}
-            from
-                width: 100%
-            to
-                width: 50%
+    @keyframes PrevNewWidthAnim-SideReady
+        from
+            width: 100%
+        to
+            width: 50%
 
 
 
@@ -224,7 +215,6 @@
 
 
 // Home > Side > .heading > hr
-
 =hr-slideIn-anim
     animation: HrSlideInAnim 1s ease-in-out forwards
 
@@ -243,6 +233,7 @@
 // Home > Side > Letter
 =fade-page-letter-tran
     transition: opacity .8s ease-in-out
+
 =move-page-letter-tran
     transition: x 1s ease-in-out
 
@@ -251,8 +242,8 @@
 =PageContentKeyframes
     @keyframes FadeInLeftAnim-Ready
         from
-            opacity: 0
             transform: translateX(-100%)
+            opacity: 0
         75%
             transform: translateX(0%)
         to
@@ -277,8 +268,8 @@
 
     @keyframes FadeInRightAnim-Ready
         from
-            opacity: 0
             transform: translateX(50%)
+            opacity: 0
         to
             transform: translateX(0%)
             opacity: 1

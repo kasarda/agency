@@ -1,0 +1,23 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+#Navigator
+    +center(x)
+    bottom: 50px
+    z-index: 100
+    opacity: 0
+    +wheel-tran
+    .links
+        width: 170px
+        div
+            cursor: pointer
+            user-select: none
+
+[data-ready="true"]
+    #Navigator
+        opacity: 1
+
+[data-home="true"][data-from]
+    #Navigator
+        +heading-finish

@@ -150,27 +150,18 @@
 
 
 
-[data-down="true"][data-from="1"],
-[data-down="true"][data-from="2"],
-[data-down="true"][data-from="3"],
-[data-down="false"][data-from="2"],
-[data-down="false"][data-from="3"],
-[data-down="false"][data-from="4"]
+[data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]),
+[data-home="false"][data-down="false"]:not([data-from="1"])
     #Side
-        +page-to-page-sequence
+        +page-seq
 
-[data-down="true"][data-from="2"]
+
+[data-home="false"][data-down="false"]:not([data-from="1"])
     #Side
-        +page-to-page-change-sequence
+        +prev-page-seq
 
 
-[data-down="false"][data-from="2"],
-[data-down="false"][data-from="3"],
-[data-down="false"][data-from="4"]
+
+[data-side-ready="true"]
     #Side
-        +page-to-page-back-sequence
-
-
-[data-down="false"][data-from="3"]
-    #Side
-        +page-to-page-back-change-sequence
+        animation: none !important

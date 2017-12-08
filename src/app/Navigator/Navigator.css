@@ -1,0 +1,28 @@
+/*! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  * */
+#Navigator {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity .4s 0s ease-in-out; }
+  #Navigator .links {
+    width: 170px; }
+    #Navigator .links div {
+      cursor: pointer;
+      user-select: none; }
+
+[data-ready="true"] #Navigator {
+  opacity: 1; }
+
+[data-home="true"][data-from] #Navigator {
+  animation: HeadingFinish-SideReady-Render 2.8s; }

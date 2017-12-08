@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
-import Wheel from '../Wheel'
+//import Wheel from '../Wheel'
 import Letter from '../Letter'
 import Side from '../Side'
+import Navigator from '../Navigator'
 
 import {
     onFakeScroll,
@@ -37,7 +38,7 @@ class Home extends Component {
                 sideReady: false,
                 page: newPage,
                 from: page,
-                down: page > newPage ? false : true
+                down: !(page > newPage)
             })
         }
     }
@@ -84,6 +85,13 @@ class Home extends Component {
 
         if (/-Render/.test(animationName))
             this.setState({ renderPage: page })
+
+    }
+    setRenderPage({ animationName }) {
+        const { page } = this.state
+
+        if (/-StartRender/.test(animationName))
+            this.setState({ renderPage: page })
     }
 
     componentDidMount() {
@@ -110,20 +118,22 @@ class Home extends Component {
                 data-to={page}
                 data-side-ready={sideReady}
                 data-ready={ready}
+                data-render-page={renderPage}
                 onAnimationEnd={this.setReady.bind(this)}
+                onAnimationStart={this.setRenderPage.bind(this)}
             >
                 <Side renderPage={renderPage} />
                 <Letter letter="C" id="Letter" />
 
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
-                        <div className="rule" ></div>
+                        <div className="rule"></div>
                         <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
                 </div>
 
-                <Wheel onWheelClick={this.setPage.bind(this)} />
+                <Navigator onPage={id => this.toPage(id)} />
             </div>
         )
     }
