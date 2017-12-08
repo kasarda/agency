@@ -18,7 +18,7 @@ class Home extends Component {
         super()
 
         this.state = {
-            page: 0,
+            to: 0,
             renderPage: 0,
             length: 4,
             sideReady: false,
@@ -30,43 +30,43 @@ class Home extends Component {
 
 
     toPage(newPage) {
-        const { page, ready } = this.state
+        const { to, ready } = this.state
 
-        if (ready && page !== newPage) {
+        if (ready && to !== newPage) {
             this.setState({
                 ready: false,
                 sideReady: false,
-                page: newPage,
-                from: page,
-                down: !(page > newPage)
+                to: newPage,
+                from: to,
+                down: !(to > newPage)
             })
         }
     }
     setPage(type) {
-        const { page, length, ready } = this.state
+        const { to, length, ready } = this.state
 
         if (ready) {
-            if (!(page === 0 && type === 'up')) {
+            if (!(to === 0 && type === 'up')) {
                 this.setState({
                     sideReady: false,
                     ready: false
                 })
             }
             if (type === 'down') {
-                const nextPage = page + 1
+                const nextPage = to + 1
                 const newPage = nextPage <= length ? nextPage : 0
                 this.setState({
-                    page: newPage,
-                    from: page,
+                    to: newPage,
+                    from: to,
                     down: true
                 })
             }
 
-            else if (type === 'up' && page > 0) {
-                const prevPage = page - 1
+            else if (type === 'up' && to > 0) {
+                const prevPage = to - 1
                 this.setState({
-                    page: prevPage,
-                    from: page,
+                    to: prevPage,
+                    from: to,
                     down: false
                 })
             }
@@ -75,7 +75,7 @@ class Home extends Component {
 
 
     setReady({ animationName }) {
-        const { page } = this.state
+        const { to } = this.state
 
         if (/-SideReady/.test(animationName))
             this.setState({ sideReady: true })
@@ -84,14 +84,14 @@ class Home extends Component {
             this.setState({ ready: true })
 
         if (/-Render/.test(animationName))
-            this.setState({ renderPage: page })
+            this.setState({ renderPage: to })
 
     }
     setRenderPage({ animationName }) {
-        const { page } = this.state
+        const { to } = this.state
 
         if (/-StartRender/.test(animationName))
-            this.setState({ renderPage: page })
+            this.setState({ renderPage: to })
     }
 
     componentDidMount() {
@@ -106,8 +106,8 @@ class Home extends Component {
     }
 
     render() {
-        const { page, down, from, sideReady, ready, renderPage } = this.state
-        const home = this.state.page === 0
+        const { to, down, from, sideReady, ready, renderPage } = this.state
+        const home = this.state.to === 0
         return (
             <div
                 id="Home"
@@ -115,10 +115,9 @@ class Home extends Component {
                 data-home={home}
                 data-down={down}
                 data-from={from}
-                data-to={page}
+                data-to={to}
                 data-side-ready={sideReady}
                 data-ready={ready}
-                data-render-page={renderPage}
                 onAnimationEnd={this.setReady.bind(this)}
                 onAnimationStart={this.setRenderPage.bind(this)}
             >
@@ -133,7 +132,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <Navigator onPage={id => this.toPage(id)} />
+                <Navigator onPage={id => this.toPage(id)} to={to} />
             </div>
         )
     }

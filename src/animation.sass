@@ -61,7 +61,7 @@
 
 
 
-//? From Home view to Page view Animation
+//? Home <=> Page
 // Home > Letter > #letter-c > .shape
 =dash-letter-c-tran
     transition: stroke-dashoffset .8s 1.6s ease-in-out
@@ -76,7 +76,7 @@
 
 // Home > Wheel
 =wheel-tran
-    transition: opacity .4s 0s ease-in-out
+    transition: opacity .4s ease-in-out
 
 =wheel-delay
     transition-delay: 1.4s
@@ -89,7 +89,7 @@
 
 // Home > Wheel
 =heading-finish
-    animation: HeadingFinish-SideReady-Render 2.8s // fade-heading-tran.del + fade-heading-tran.dur
+    animation: HeadingFinish-Render-Ready 2.4s // (fade-heading-tran.del + fade-heading-tran.dur) - .4
 
 
 // Home > .rule
@@ -118,7 +118,7 @@
     @keyframes RuleFinish-SideReady-StartRender
         to
             font-size: 100%
-    @keyframes HeadingFinish-SideReady-Render
+    @keyframes HeadingFinish-Render-Ready
         to
             font-size: 100%
 

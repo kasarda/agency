@@ -14,7 +14,7 @@
   bottom: 50px;
   opacity: 0;
   z-index: 0;
-  transition: opacity .4s 0s ease-in-out;
+  transition: opacity .4s ease-in-out;
   animation: none; }
   #Wheel .mouse {
     width: 15px;
@@ -40,4 +40,4 @@
   transition-delay: 1.4s; }
 
 [data-home="true"][data-from] #Wheel {
-  animation: HeadingFinish-SideReady-Render 2.8s; }
+  animation: HeadingFinish-Render-Ready 2.4s; }

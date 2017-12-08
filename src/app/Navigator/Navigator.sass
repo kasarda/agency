@@ -13,10 +13,33 @@
         div
             cursor: pointer
             user-select: none
+            transition: opacity 0s .4s
+            position: relative
+            span
+                +hover-tran
+                position: relative
+                &:hover
+                    opacity: 1
 
 [data-ready="true"]
     #Navigator
         opacity: 1
+        div
+            +delay(0s)
+            &.active
+                opacity: 1
+                span
+                    opacity: 1
+                span::after
+                    content: ''
+                    +center
+                    width: 3px
+                    height: 1px
+                    background-color: $light-color
+                span
+                    opacity: 1
+            span
+                opacity: .5
 
 [data-home="true"][data-from]
     #Navigator
