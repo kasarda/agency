@@ -510,11 +510,3 @@ p {
   to {
     width: 0;
     transform: translateX(0px); } }
-
-@keyframes WheelAnim {
-  from {
-    top: -3px;
-    opacity: 0; }
-  to {
-    top: 3px;
-    opacity: 1; } }

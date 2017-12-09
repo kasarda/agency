@@ -11,10 +11,13 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 50px;
+  bottom: 25px;
   z-index: 100;
   opacity: 0;
   transition: opacity .4s ease-in-out; }
+  @media (min-width: 768px) {
+    #Navigator {
+      bottom: 50px; } }
   #Navigator .links {
     width: 170px; }
     #Navigator .links div {
