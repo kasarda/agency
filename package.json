@@ -62,13 +62,6 @@
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon"
   ],
   "changelog": [
-    "Optimize animations",
-    "Created Navigator",
-    "Fixed bugs with states",
-    "Registred or renamed animations in side content",
-    "Replaced Wheel component with Navigator",
-    "Created Description component for Side",
-    "Updated packages"
   ],
   "browsers": {
     "mobile": {
