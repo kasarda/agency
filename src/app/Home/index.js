@@ -4,15 +4,10 @@ import Letter from '../Letter'
 import Side from '../Side'
 import Navigator from '../Navigator'
 
-import {
-    onFakeScroll,
-    resetScrollEvents
-} from '../../services/wheel'
-
+import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
 import './Home.css'
 
 class Home extends Component {
-
     constructor() {
         super()
 
@@ -52,6 +47,7 @@ class Home extends Component {
                     ready: false
                 })
             }
+
             if (type === 'down') {
                 const nextPage = to + 1
                 const newPage = nextPage <= length ? nextPage : 0
