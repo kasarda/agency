@@ -35,51 +35,6 @@
                 border: none
                 animation: none
 
-        .description
-            margin: 15px 0 0 0
-            +min(md)
-                margin: 30px 0 0 0
-            +min(xl)
-                margin: 40px 0 0 106px
-
-            .button
-                margin-top: 0px
-                +min(md)
-                    margin-top: 35px
-                .button-container
-                    position: relative
-                    overflow: hidden
-                    display: inline-block
-                a::after
-                    content: ''
-                    +dimension
-                    +position(0, -100%, absolute)
-                    z-index: -1
-                    background-color: $light-color
-                    +move-button-tran
-                a:hover::after
-                    left: 0
-                a
-                    +color-button-tran
-                a:hover
-                    color: currentColor
-                    delay(0s)
-            .fadeIn
-                transform: translateY(0px)
-                opacity: 0
-                +fade-vertical-tran
-                +min(md)
-                    transform: translateY(100px)
-            .fadeIn-1
-                +delay(.1s)
-            .fadeIn-2
-                +delay(.2s)
-            .fadeIn-3
-                +delay(.3s)
-            .fadeIn-4
-                +delay(.4s)
-
-
 
 [data-home="false"] #Side
     width: 50%
@@ -93,57 +48,37 @@
     #Side
         overflow: hidden
 
-[data-side-ready="false"][data-from="0"] #Side .description .fadeIn
-    transition: none
 
-
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]),
-[data-down="false"][data-side-ready="false"]
-    #Side
-        .description
-            .fadeIn-1
-                +delay(.4s)
-            .fadeIn-2
-                +delay(.3s)
-            .fadeIn-3
-                +delay(.2s)
-            .fadeIn-4
-                +delay(.1s)
-                +duration(.6s)
-                +min(md)
-                   +duration(.4s)
 
 
 
 [data-down="true"][data-side-ready="true"],
 [data-down="false"][data-side-ready="true"]
     #Side
-        .description
-            .fadeIn
-                transform: translateY(0px)
-                opacity: 1
         .heading
             .hr
                 +hr-slideIn-anim
 
 
-[data-down="true"][data-side-ready="true"] #Side .heading
-    h2
+[data-down="true"][data-side-ready="true"]
+    #Side .heading h2
         transform: translateX(0)
         opacity: 1
         +fadeIn-left-anim
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading
-    h2
-        +left-fadeOut-anim
-    .hr
-        +hr-slideOut-anim
+[data-down="true"][data-side-ready="false"]:not([data-from="0"])
+    #Side .heading
+        h2
+            +left-fadeOut-anim
+        .hr
+            +hr-slideOut-anim
 
-[data-down="false"][data-side-ready="false"] #Side .heading
-    h2
-        +right-fadeOut-anim
-    .hr
-        +hr-slideIn-slideOut-anim
+[data-down="false"][data-side-ready="false"]
+    #Side .heading
+        h2
+            +right-fadeOut-anim
+        .hr
+            +hr-slideIn-slideOut-anim
 
 [data-home="false"][data-down="false"][data-side-ready="true"]
     #Side .heading h2

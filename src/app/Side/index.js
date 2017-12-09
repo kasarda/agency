@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
+import Description from '../Description'
 import Letter from '../Letter'
 
 import './Side.css'
@@ -79,9 +80,6 @@ class Side extends Component {
 
     render() {
         const { theme, heading, description, link, letter } = this.state
-        const descriptionList = description.map((text, key) =>
-            (<p key={key} className={`fadeIn fadeIn-${key + 1}`}>{text}</p>)
-        )
 
         return (
             <div
@@ -99,16 +97,7 @@ class Side extends Component {
                         <div className="hidden-sm-down hr"></div>
                     </div>
 
-                    <div className="description">
-                        <div className="hidden-sm-down">
-                            {descriptionList}
-                        </div>
-                        <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>
-                            <div className="button-container" style={{color: theme}}>
-                                <Link to={link} className="button-primary">view case</Link>
-                            </div>
-                        </div>
-                    </div>
+                    <Description link={link} theme={theme} description={description}/>
                 </div>
             </div>
         )

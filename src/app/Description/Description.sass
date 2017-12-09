@@ -1,0 +1,78 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+#Description
+    margin: 15px 0 0 0
+    +min(md)
+        margin: 30px 0 0 0
+    +min(xl)
+        margin: 40px 0 0 106px
+
+    .button
+        margin-top: 0px
+        +min(md)
+            margin-top: 35px
+        .button-container
+            position: relative
+            overflow: hidden
+            display: inline-block
+        a::after
+            content: ''
+            +dimension
+            +position(0, -100%, absolute)
+            z-index: -1
+            background-color: $light-color
+            +move-button-tran
+        a:hover::after
+            left: 0
+        a
+            +color-button-tran
+        a:hover
+            color: currentColor
+            delay(0s)
+    .fadeIn
+        transform: translateY(0px)
+        opacity: 0
+        +fade-vertical-tran
+        +min(md)
+            transform: translateY(100px)
+    .fadeIn-1
+        +delay(.1s)
+    .fadeIn-2
+        +delay(.2s)
+    .fadeIn-3
+        +delay(.3s)
+    .fadeIn-4
+        +delay(.4s)
+
+
+
+[data-side-ready="false"][data-from="0"]
+    #Description .fadeIn
+        transition: none
+
+
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]),
+[data-down="false"][data-side-ready="false"]
+    #Description
+        .fadeIn-1
+            +delay(.4s)
+        .fadeIn-2
+            +delay(.3s)
+        .fadeIn-3
+            +delay(.2s)
+        .fadeIn-4
+            +delay(.1s)
+            +duration(.6s)
+            +min(md)
+                +duration(.4s)
+
+
+
+[data-down="true"][data-side-ready="true"],
+[data-down="false"][data-side-ready="true"]
+    #Description
+        .fadeIn
+            transform: translateY(0px)
+            opacity: 1
