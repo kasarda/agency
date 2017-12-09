@@ -58,12 +58,12 @@
           display: inline-block; }
         #Side .content .description .button a::after {
           content: '';
+          height: 100%;
+          width: 100%;
           position: absolute;
           top: 0;
           left: -100%;
           z-index: -1;
-          height: 100%;
-          width: 100%;
           background-color: #ffffff;
           transition: left .4s ease-in-out; }
         #Side .content .description .button a:hover::after {

@@ -52,15 +52,15 @@
                     display: inline-block
                 a::after
                     content: ''
+                    +dimension
                     +position(0, -100%, absolute)
                     z-index: -1
-                    +dimension
                     background-color: $light-color
-                    transition: left .4s ease-in-out
+                    +move-button-tran
                 a:hover::after
                     left: 0
                 a
-                    transition: color .4s .3s ease-in
+                    +color-button-tran
                 a:hover
                     color: currentColor
                     delay(0s)
