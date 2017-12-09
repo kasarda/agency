@@ -20,35 +20,16 @@
     #Navigator .links div {
       cursor: pointer;
       user-select: none;
-      transition: opacity 0s .4s;
-      position: relative; }
-      #Navigator .links div span {
-        transition: opacity .15s ease-in-out;
-        position: relative; }
-        #Navigator .links div span:hover {
-          opacity: 1; }
+      position: relative;
+      opacity: .5;
+      transition: opacity .15s ease-in-out; }
+      #Navigator .links div.active {
+        opacity: 1; }
+      #Navigator .links div:not(.active):hover {
+        opacity: 1; }
 
 [data-ready="true"] #Navigator {
   opacity: 1; }
-  [data-ready="true"] #Navigator div {
-    transition-delay: 0s; }
-    [data-ready="true"] #Navigator div.active {
-      opacity: 1; }
-      [data-ready="true"] #Navigator div.active span {
-        opacity: 1; }
-      [data-ready="true"] #Navigator div.active span::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 3px;
-        height: 1px;
-        background-color: #ffffff; }
-      [data-ready="true"] #Navigator div.active span {
-        opacity: 1; }
-    [data-ready="true"] #Navigator div span {
-      opacity: .5; }
 
 [data-home="true"][data-from] #Navigator {
   animation: HeadingFinish-Render-Ready 2.4s; }

@@ -18,6 +18,7 @@ class Home extends Component {
 
         this.state = {
             to: 0,
+            currentPage: 0,
             renderPage: 0,
             length: 4,
             sideReady: false,
@@ -80,7 +81,7 @@ class Home extends Component {
             this.setState({ sideReady: true })
 
         if (/-Ready/.test(animationName))
-            this.setState({ ready: true })
+            this.setState({ ready: true, currentPage: to })
 
         if (/-Render/.test(animationName))
             this.setState({ renderPage: to })
@@ -105,13 +106,21 @@ class Home extends Component {
     }
 
     render() {
-        const { to, down, from, sideReady, ready, renderPage } = this.state
-        const home = this.state.to === 0
+        const {
+            to,
+            down,
+            from,
+            sideReady,
+            ready,
+            renderPage,
+            currentPage
+        } = this.state
+
         return (
             <div
                 id="Home"
                 className="view"
-                data-home={home}
+                data-home={to === 0}
                 data-down={down}
                 data-from={from}
                 data-to={to}
@@ -131,7 +140,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <Navigator onPage={id => this.toPage(id)} to={to} />
+                <Navigator onPage={id => this.toPage(id)} currentPage={currentPage} />
             </div>
         )
     }
