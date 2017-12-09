@@ -75,7 +75,7 @@
 
 // Home > Navigator
 =heading-finish
-    animation: HeadingFinish-Render-Ready 2.4s // (fade-heading-tran.del + fade-heading-tran.dur) - .4
+    animation: HeadingFinish-RenderPage-RenderImage-Ready 2.4s // (fade-heading-tran.del + fade-heading-tran.dur) - .4
 
 // Home > .rule
 =slide-tran
@@ -101,7 +101,7 @@
     @keyframes RuleFinish-SideReady-StartRender
         to
             font-size: 100%
-    @keyframes HeadingFinish-Render-Ready
+    @keyframes HeadingFinish-RenderPage-RenderImage-Ready
         to
             font-size: 100%
 
@@ -135,18 +135,18 @@
     animation-delay: .6s, 1.2s, 1.8s
     animation-timing-function: ease-in
     animation-fill-mode: forwards
-    animation-name: NextWidthAnim, NextLeftAnim-Render, NextNewWidthAnim-SideReady
+    animation-name: NextWidthAnim-RenderImage, NextLeftAnim-RenderPage, NextNewWidthAnim-SideReady
 
 =prev-page-seq
-    animation-name: PrevWidthAnim-Render, PrevRightAnim, PrevNewWidthAnim-SideReady
+    animation-name: PrevWidthAnim-RenderPage, PrevRightAnim-RenderImage, PrevNewWidthAnim-SideReady
 
 
 =PageSeqKeyframes
-    @keyframes NextWidthAnim
+    @keyframes NextWidthAnim-RenderImage
         to
             width: 100%
 
-    @keyframes NextLeftAnim-Render
+    @keyframes NextLeftAnim-RenderPage
         to
             left: 100%
 
@@ -158,11 +158,11 @@
             width: 50%
             left: 0px
 
-    @keyframes PrevWidthAnim-Render
+    @keyframes PrevWidthAnim-RenderPage
         to
             width: 0px
 
-    @keyframes PrevRightAnim
+    @keyframes PrevRightAnim-RenderImage
         from
             left: 100%
             width: 100%

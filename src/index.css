@@ -401,7 +401,7 @@ p {
   to {
     font-size: 100%; } }
 
-@keyframes HeadingFinish-Render-Ready {
+@keyframes HeadingFinish-RenderPage-RenderImage-Ready {
   to {
     font-size: 100%; } }
 
@@ -411,11 +411,11 @@ p {
   to {
     width: 0px; } }
 
-@keyframes NextWidthAnim {
+@keyframes NextWidthAnim-RenderImage {
   to {
     width: 100%; } }
 
-@keyframes NextLeftAnim-Render {
+@keyframes NextLeftAnim-RenderPage {
   to {
     left: 100%; } }
 
@@ -427,11 +427,11 @@ p {
     width: 50%;
     left: 0px; } }
 
-@keyframes PrevWidthAnim-Render {
+@keyframes PrevWidthAnim-RenderPage {
   to {
     width: 0px; } }
 
-@keyframes PrevRightAnim {
+@keyframes PrevRightAnim-RenderImage {
   from {
     left: 100%;
     width: 100%; }

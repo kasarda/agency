@@ -81,10 +81,10 @@
   animation-delay: .6s, 1.2s, 1.8s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-name: NextWidthAnim, NextLeftAnim-Render, NextNewWidthAnim-SideReady; }
+  animation-name: NextWidthAnim-RenderImage, NextLeftAnim-RenderPage, NextNewWidthAnim-SideReady; }
 
 [data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
-  animation-name: PrevWidthAnim-Render, PrevRightAnim, PrevNewWidthAnim-SideReady; }
+  animation-name: PrevWidthAnim-RenderPage, PrevRightAnim-RenderImage, PrevNewWidthAnim-SideReady; }
 
 [data-side-ready="true"] #Side {
   animation: none !important; }

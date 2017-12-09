@@ -7,6 +7,8 @@ import Navigator from '../Navigator'
 import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
 import './Home.css'
 
+
+
 class Home extends Component {
     constructor() {
         super()
@@ -15,6 +17,7 @@ class Home extends Component {
             to: 0,
             currentPage: 0,
             renderPage: 0,
+            renderImage: 0,
             length: 4,
             sideReady: false,
             ready: false,
@@ -79,15 +82,26 @@ class Home extends Component {
         if (/-Ready/.test(animationName))
             this.setState({ ready: true, currentPage: to })
 
-        if (/-Render/.test(animationName))
+        if (/-RenderPage/.test(animationName))
             this.setState({ renderPage: to })
 
+        if (/-RenderImage/.test(animationName))
+            this.setState({ renderImage: to })
     }
+
     setRenderPage({ animationName }) {
         const { to } = this.state
 
         if (/-StartRender/.test(animationName))
             this.setState({ renderPage: to })
+    }
+
+
+    shouldComponentUpdate(_, { to, renderImage }) {
+        if (renderImage === 0 && to !== 0)
+            this.setState({ renderImage: to })
+
+        return true
     }
 
     componentDidMount() {
@@ -109,8 +123,11 @@ class Home extends Component {
             sideReady,
             ready,
             renderPage,
-            currentPage
+            currentPage,
+            renderImage
         } = this.state
+
+        const url = renderImage > 0 ? `url(${require(`./bg${renderImage}.jpg`)})` : null
 
         return (
             <div
@@ -130,7 +147,11 @@ class Home extends Component {
 
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
-                        <div className="rule"></div>
+                        <div className="rule">
+                            <div
+                                className="background"
+                                style={{ backgroundImage: url }}></div>
+                        </div>
                         <h1>Digital <br />
                             Creative Agency</h1>
                     </div>
