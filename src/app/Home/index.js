@@ -131,14 +131,13 @@ class Home extends Component {
 
         return (
             <div
-                id="Home"
-                className="view"
+                id="Home" className="view"
                 data-home={to === 0}
                 data-down={down}
-                data-from={from}
-                data-to={to}
                 data-side-ready={sideReady}
                 data-ready={ready}
+                data-from={from}
+                data-to={to}
                 onAnimationEnd={this.setReady.bind(this)}
                 onAnimationStart={this.setRenderPage.bind(this)}
             >
