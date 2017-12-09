@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-//import Wheel from '../Wheel'
 import Letter from '../Letter'
 import Side from '../Side'
 import Navigator from '../Navigator'
