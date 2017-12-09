@@ -61,7 +61,10 @@
   "changelog": [
     "Optimize animations",
     "Created Navigator",
-    "Fixed bugs with states"
+    "Fixed bugs with states",
+    "Registred or renamed animations in side content",
+    "Replaced Wheel component with Navigator",
+    "Created Description component for Side"
   ],
   "browsers": {
     "mobile": {
