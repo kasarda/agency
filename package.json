@@ -67,7 +67,8 @@
     "Fixed bugs with states",
     "Registred or renamed animations in side content",
     "Replaced Wheel component with Navigator",
-    "Created Description component for Side"
+    "Created Description component for Side",
+    "Updated packages"
   ],
   "browsers": {
     "mobile": {
