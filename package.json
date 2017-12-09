@@ -59,6 +59,9 @@
     "Update svgs letters to have one pattern and have new classNames"
   ],
   "changelog": [
+    "Optimize animations",
+    "Created Navigator",
+    "Fixed bugs with states"
   ],
   "browsers": {
     "mobile": {
