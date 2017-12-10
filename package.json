@@ -41,7 +41,6 @@
   "todos": [
     "Create Services, Projects, Contacts and 404 components",
     "Create logo, favicon and name of company",
-    "Create BG images for pages -> .e.g. mobile, desktop or web app",
     "Add some kind of graphic in home page first view",
     "Add version for the client to be sure on mobile if site was updated ar not",
     "Add selection",
@@ -58,6 +57,7 @@
     "Create ready functionality for home component",
     "Create better system for 'finish animation hacks'",
     "Create Faster Content Page Animation on mobile devices",
+    "Create BG images for pages -> .e.g. mobile, desktop or web app",
     "Add some other animations on letter component and add other letter with dynamicly changing letter",
     "Add hover animation on pages button 'view case'",
     "Replace bootstrap grid with flex",
@@ -68,6 +68,9 @@
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon"
   ],
   "changelog": [
+    "Created BG logic",
+    "Created BG images",
+    "Modify some animations"
   ],
   "browsers": {
     "mobile": {
