@@ -8,8 +8,8 @@
   *
   * */
 .Letter {
-  height: 200px;
-  width: 200px; }
+  height: 150px;
+  width: 150px; }
   @media (min-width: 768px) {
     .Letter {
       height: 350px;
@@ -20,8 +20,8 @@
       width: 450px; } }
   @media (max-height: 500px) {
     .Letter {
-      height: 200px;
-      width: 200px; } }
+      height: 150px;
+      width: 150px; } }
   @media all and (-ms-high-contrast: none) {
     .Letter {
       opacity: 1;
@@ -50,7 +50,7 @@
   right: 0;
   transform: translate(50%, -50%);
   opacity: 0;
-  transition: opacity .8s ease-in-out; }
+  transition: opacity .4s ease-in-out; }
   #ContentLetter .background-mask-rect {
     x: 0px;
     transition: x 1s ease-in-out; }
@@ -59,7 +59,8 @@
         animation-delay: 1.4s; } }
 
 [data-side-ready="true"] #ContentLetter {
-  opacity: 1; }
+  opacity: 1;
+  transition-duration: 0.8s; }
   [data-side-ready="true"] #ContentLetter .background-mask-rect {
     x: 100%; }
 

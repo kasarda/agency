@@ -3,7 +3,7 @@
 @import "animation.sass"
 
 .Letter
-    +dimension(200px, 200px)
+    +dimension(150px, 150px)
 
     +min(md)
         +dimension(350px, 350px)
@@ -12,7 +12,7 @@
         +dimension(450px, 450px)
 
     +maxHeight(500px)
-        +dimension(200px, 200px)
+        +dimension(150px, 150px)
 
     +ie
         opacity: 1
@@ -52,6 +52,7 @@
 [data-side-ready="true"]
     #ContentLetter
         opacity: 1
+        +duration(.8s)
         .background-mask-rect
             x: 100%
 

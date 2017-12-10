@@ -10,15 +10,15 @@ class Side extends Component {
         super(props)
 
         this.state = {
-            theme: '#634ae6',
+            theme: '#757d7f',
             letter: 'E',
-            heading: 'KFC',
+            heading: 'Post',
             description: [
                 'Created a clever, high-end',
                 'app which enables users to',
                 'learn English words.'
             ],
-            link: '/projects/ewa'
+            link: '/projects/social'
         }
     }
 
@@ -26,32 +26,20 @@ class Side extends Component {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
         const config = [
             {
-                theme: '#634ae6',
-                letter: 'E',
-                heading: 'KFC',
+                theme: '#757d7f',
+                letter: 'P',
+                heading: 'Post',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',
                     'learn English words.'
                 ],
-                link: '/projects/ewa'
+                link: '/projects/social'
             },
             {
-                theme: '#4a93e6',
-                letter: 'Y',
-                heading: 'McDonald',
-                description: [
-                    'Created a clever, high-end',
-                    'app which enables users to',
-                    'learn English words.'
-                ],
-                link: '/projects'
-            },
-
-            {
-                theme: '#4ae6b8',
-                letter: 'H',
-                heading: 'Subway',
+                theme: '#5f646a',
+                letter: 'R',
+                heading: 'Portfolio',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',
@@ -61,9 +49,21 @@ class Side extends Component {
             },
 
             {
-                theme: '#ccaf86',
+                theme: '#676767',
                 letter: 'T',
-                heading: 'Burger',
+                heading: 'Artech',
+                description: [
+                    'Created a clever, high-end',
+                    'app which enables users to',
+                    'learn English words.'
+                ],
+                link: '/projects/artech'
+            },
+
+            {
+                theme: '#b29992',
+                letter: 'H',
+                heading: 'HeadPhones',
                 description: [
                     'Created a clever, high-end',
                     'app which enables users to',

@@ -316,17 +316,6 @@ body {
   color: #ffffff;
   overflow: hidden; }
 
-h1,
-h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0; }
-  @media (min-width: 768px) {
-    h1,
-    h2 {
-      font-size: 4.188rem; } }
-
 h1 {
   line-height: 2.938rem;
   letter-spacing: 0.089rem; }
@@ -339,6 +328,17 @@ h2 {
   line-height: 4.188rem;
   text-transform: uppercase;
   font-size: 3.5rem; }
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0; }
+  @media (min-width: 768px) {
+    h1,
+    h2 {
+      font-size: 4.188rem; } }
 
 p {
   font-family: "Playfair Display", serif;
@@ -357,7 +357,10 @@ p {
   letter-spacing: 0.138rem;
   text-align: center;
   border: 1px #ffffff solid;
-  padding: 17px 23px; }
+  padding: 14px 17px; }
+  @media (min-width: 768px) {
+    .button-primary {
+      padding: 17px 23px; } }
 
 .view {
   height: 100vh;

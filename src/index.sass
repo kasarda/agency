@@ -25,14 +25,6 @@ body
     overflow: hidden //@prod
     //overflow-x: hidden //@dev
 
-h1,
-h2
-    font-family: $secondary-font
-    font-size: $heading-mobile-size
-    font-weight: $regular
-    margin: 0
-    +min(md)
-        font-size: $heading-size
 h1
     line-height: $heading-mobile-line-height
     letter-spacing: $heading-letter-spacing
@@ -45,6 +37,14 @@ h2
     text-transform: uppercase
     font-size: $heading-side-mobile-size
 
+h1,
+h2
+    font-family: $secondary-font
+    font-size: $heading-mobile-size
+    font-weight: $regular
+    margin: 0
+    +min(md)
+        font-size: $heading-size
 p
     font-family: $secondary-font
     font-size: $paragraph-size
@@ -62,7 +62,9 @@ p
     letter-spacing: $anchor-letter-spacing
     text-align: center
     border: 1px $light-color solid
-    padding: 17px 23px
+    padding: 14px 17px
+    +min(md)
+        padding: 17px 23px
 
 .view
     +dimension(100%, 100vh)
