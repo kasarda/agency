@@ -58,22 +58,22 @@
 [data-down="true"][data-side-ready="true"] #Side .heading h2 {
   transform: translateX(0);
   opacity: 1;
-  animation: FadeInLeftAnim-Ready .4s ease-in-out forwards; }
+  animation: FadeInLeftAnim-Ready .6s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading h2 {
-  animation: LeftFadeOutAnim .4s ease-in-out forwards; }
+  animation: LeftFadeOutAnim .6s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading .hr {
   animation: HrSlideOutAnim .6s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="false"] #Side .heading h2 {
-  animation: RightFadeOutAnim .4s ease-in-out forwards; }
+  animation: RightFadeOutAnim .6s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="false"] #Side .heading .hr {
   animation: HrSlideInOutAnim .6s ease-in-out forwards; }
 
 [data-home="false"][data-down="false"][data-side-ready="true"] #Side .heading h2 {
-  animation: FadeInRightAnim-Ready .4s ease-in-out forwards; }
+  animation: FadeInRightAnim-Ready .6s ease-in-out forwards; }
 
 [data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]) #Side,
 [data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
