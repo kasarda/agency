@@ -32,7 +32,11 @@
     "eject": "react-scripts eject"
   },
   "snippets": [
-    "CSS will-change property"
+    "CSS will-change property",
+    "flip technique",
+    "60fps scrolling",
+    "transform3d(0,0,0) hack for ie, edge - fallback for will-change, use @support will-change if needed",
+    "Animation only on transform and opacity not left, top ..."
   ],
   "todos": [
     "Create Services, Projects, Contacts and 404 components",
@@ -40,11 +44,13 @@
     "Create BG images for pages -> .e.g. mobile, desktop or web app",
     "Add some kind of graphic in home page first view",
     "Add version for the client to be sure on mobile if site was updated ar not",
+    "Add selection",
     "Change specific easings for animations to be more smooth and better looking",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Fix bug with letters when pattern goes where should not go",
     "Add sooner ready state on mobile devices",
-    "Create navigator for pages"
+    "Create navigator for pages",
+    "Optimize animation, analyze performance, alternative for slow devices"
   ],
   "done": [
     "Create showcase home page component (4)",
