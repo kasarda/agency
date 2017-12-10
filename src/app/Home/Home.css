@@ -54,7 +54,11 @@
       opacity: 0;
       background-repeat: no-repeat;
       background-size: cover;
+      background-position-x: left;
       transition: opacity .4s .8s; }
+      @media (min-width: 768px) {
+        #Home .wrapper .rule .background {
+          background-position-x: right; } }
   #Home .wrapper h1 {
     padding-bottom: 50px;
     transition: opacity 1s 1.8s ease-in-out;
