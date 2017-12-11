@@ -20,12 +20,14 @@
         a::after
             content: ''
             +dimension
-            +position(0, -100%, absolute)
+            +position(0, 0, absolute)
+            transform: translateX(-100%)
             z-index: -1
             background-color: $light-color
             +move-button-tran
+            will-change: transform
         a:hover::after
-            left: 0
+            transform: translateX(0px)
         a
             +color-button-tran
         a:hover

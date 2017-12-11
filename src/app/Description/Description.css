@@ -30,12 +30,14 @@
       width: 100%;
       position: absolute;
       top: 0;
-      left: -100%;
+      left: 0;
+      transform: translateX(-100%);
       z-index: -1;
       background-color: #ffffff;
-      transition: left .4s ease-in-out; }
+      transition: transform .4s ease-in-out;
+      will-change: transform; }
     #Description .button a:hover::after {
-      left: 0; }
+      transform: translateX(0px); }
     #Description .button a {
       transition: color .4s .3s ease-in; }
     #Description .button a:hover {

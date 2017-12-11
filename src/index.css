@@ -427,15 +427,15 @@ p {
 
 @keyframes NextLeftAnim-RenderPage {
   to {
-    left: 100%; } }
+    transform: translateX(100%); } }
 
 @keyframes NextNewWidthAnim-SideReady {
   from {
     width: 0px;
-    left: 0px; }
+    transform: translateX(0px); }
   to {
     width: 50%;
-    left: 0px; } }
+    transform: translateX(0px); } }
 
 @keyframes PrevWidthAnim-RenderPage {
   to {
@@ -443,10 +443,10 @@ p {
 
 @keyframes PrevRightAnim-RenderImage {
   from {
-    left: 100%;
+    transform: translateX(100%);
     width: 100%; }
   to {
-    left: 0px;
+    transform: translateX(0px);
     width: 100%; } }
 
 @keyframes PrevNewWidthAnim-SideReady {

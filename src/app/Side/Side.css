@@ -11,7 +11,8 @@
   width: 0px;
   z-index: 2;
   transition: width .4s 1.2s ease-in-out;
-  align-items: flex-end; }
+  align-items: flex-end;
+  will-change: transform, width; }
   @media (min-width: 768px) {
     #Side {
       align-items: center; } }
