@@ -25,32 +25,40 @@ body
     overflow: hidden //@prod
     //overflow-x: hidden //@dev
 
+h1,
+h2
+    font-family: $secondary-font
+    font-weight: $regular
+    margin: 0
 h1
     line-height: $heading-mobile-line-height
     letter-spacing: $heading-letter-spacing
+    font-size: $heading-mobile-size
+
     +min(md)
         line-height: $heading-line-height
+        font-size: $heading-size
 
 h2
     letter-spacing: $heading-side-letter-spacing
     line-height: $heading-side-line-height
     text-transform: uppercase
-    font-size: $heading-side-mobile-size
-
-h1,
-h2
-    font-family: $secondary-font
     font-size: $heading-mobile-size
-    font-weight: $regular
-    margin: 0
     +min(md)
+        font-size: $heading-side-small-size
+    +min(lg)
         font-size: $heading-size
+
+
 p
     font-family: $secondary-font
-    font-size: $paragraph-size
-    line-height: $paragraph-line-height
+    font-size: $paragraph-small-size
+    line-height: $paragraph-small-line-height
     letter-spacing: $paragraph-letter-spacing
     margin: 0
+    +min(lg)
+        font-size: $paragraph-size
+        line-height: $paragraph-line-height
 
 .button-primary
     display: inline-block

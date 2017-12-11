@@ -12,8 +12,8 @@
   width: 150px; }
   @media (min-width: 768px) {
     .Letter {
-      height: 350px;
-      width: 350px; } }
+      height: 250px;
+      width: 250px; } }
   @media (min-width: 1200px) and (min-height: 700px) {
     .Letter {
       height: 450px;

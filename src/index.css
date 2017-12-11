@@ -316,36 +316,43 @@ body {
   color: #ffffff;
   overflow: hidden; }
 
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin: 0; }
+
 h1 {
   line-height: 2.938rem;
-  letter-spacing: 0.089rem; }
+  letter-spacing: 0.089rem;
+  font-size: 2.5rem; }
   @media (min-width: 768px) {
     h1 {
-      line-height: 4.875rem; } }
+      line-height: 4.875rem;
+      font-size: 4.188rem; } }
 
 h2 {
   letter-spacing: 0.009rem;
   line-height: 4.188rem;
   text-transform: uppercase;
-  font-size: 3.5rem; }
-
-h1,
-h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0; }
+  font-size: 2.5rem; }
   @media (min-width: 768px) {
-    h1,
+    h2 {
+      font-size: 3rem; } }
+  @media (min-width: 992px) {
     h2 {
       font-size: 4.188rem; } }
 
 p {
   font-family: "Playfair Display", serif;
-  font-size: 1.3rem;
-  line-height: 2.15rem;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
   letter-spacing: 0.09rem;
   margin: 0; }
+  @media (min-width: 992px) {
+    p {
+      font-size: 1.3rem;
+      line-height: 2.15rem; } }
 
 .button-primary {
   display: inline-block;
