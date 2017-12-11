@@ -10,15 +10,15 @@ class Side extends Component {
         super(props)
 
         this.state = {
-            theme: '#757d7f',
-            letter: 'E',
-            heading: 'Post',
+            theme: '#b29992',
+            letter: 'H',
+            heading: 'Headphones',
             description: [
-                'Created a clever, high-end',
-                'app which enables users to',
-                'learn English words.'
+                'Created fast E-shop',
+                'which provide quality',
+                'headphones and speakers.'
             ],
-            link: '/projects/social'
+            link: '/projects/headphnones'
         }
     }
 
@@ -26,26 +26,37 @@ class Side extends Component {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
         const config = [
             {
-                theme: '#757d7f',
-                letter: 'P',
-                heading: 'Post',
+                theme: '#b29992',
+                letter: 'H',
+                heading: 'Headphones',
                 description: [
-                    'Created a clever, high-end',
-                    'app which enables users to',
-                    'learn English words.'
+                    'Created a fast E-shop',
+                    'which provide quality',
+                    'headphones and speakers.'
                 ],
-                link: '/projects/social'
+                link: '/projects/headphnones'
             },
             {
                 theme: '#5f646a',
                 letter: 'R',
                 heading: 'Portfolio',
                 description: [
-                    'Created a clever, high-end',
-                    'app which enables users to',
-                    'learn English words.'
+                    'Created a portfolio',
+                    'side for the designer',
+                    'and photographer.'
                 ],
-                link: '/projects'
+                link: '/projects/portfolio'
+            },
+            {
+                theme: '#757d7f',
+                letter: 'P',
+                heading: 'Post',
+                description: [
+                    'Created a clever, social',
+                    'network for sharing',
+                    'posts, images or videos.'
+                ],
+                link: '/projects/post'
             },
 
             {
@@ -53,23 +64,11 @@ class Side extends Component {
                 letter: 'T',
                 heading: 'Artech',
                 description: [
-                    'Created a clever, high-end',
-                    'app which enables users to',
-                    'learn English words.'
+                    'Created business webside',
+                    'for architect company',
+                    'called Artech'
                 ],
                 link: '/projects/artech'
-            },
-
-            {
-                theme: '#b29992',
-                letter: 'H',
-                heading: 'HeadPhones',
-                description: [
-                    'Created a clever, high-end',
-                    'app which enables users to',
-                    'learn English words.'
-                ],
-                link: '/projects'
             }
         ]
 

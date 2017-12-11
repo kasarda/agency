@@ -20,7 +20,7 @@ function Item({ id, letter, currentPage, onPage }) {
 function Navigator({ onPage, currentPage }) {
 
 
-    const letters = ['C', 'P', 'R', 'T', 'H']
+    const letters = ['C', 'H', 'R', 'P', 'T']
     const items = letters.map((letter, key) => (
         <Item
             id={key} key={key}
