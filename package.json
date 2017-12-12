@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "1.7.0",
+  "version": "1.7.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -70,9 +70,7 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
-    "Created BG logic",
-    "Created BG images",
-    "Modify and Optimize animations"
+
   ],
   "browsers": {
     "mobile": {
