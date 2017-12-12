@@ -9,9 +9,10 @@
   * */
 #Side {
   width: 0px;
+  align-items: flex-end;
   z-index: 2;
   transition: width .4s 1.2s ease-in-out;
-  align-items: flex-end;
+  transform: translateX(0px);
   will-change: transform, width; }
   @media (min-width: 768px) {
     #Side {
