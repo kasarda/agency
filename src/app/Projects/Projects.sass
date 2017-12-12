@@ -1,0 +1,46 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+#Projects
+    width: 100%
+    height: 100vh
+    +position(0, 0, absolute)
+    & > div
+        width: 50%
+        height: 100%
+        position: relative
+
+    .content
+        padding-left: 20px
+        +min(md)
+            padding-left: 50px
+        h2
+            margin: 10px 0
+            cursor: pointer
+            position: relative
+            padding-left: 0px
+            transition: padding-left .25s ease-in
+            &:hover
+                padding-left: 50px
+
+            &::before
+                content: ''
+                display: block
+                +center(y)
+                left: 0
+                width: 0px
+                height: 2px
+                background-color: $light-color
+                transition: width .25s ease-in
+            &:hover::before
+                width: 40px
+
+    .letter
+        padding-right: 20px
+        +min(md)
+            padding-right: 50px
+
+    .Letter
+        .fill-pattern
+            fill: $light-color
