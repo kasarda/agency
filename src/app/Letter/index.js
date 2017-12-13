@@ -5,7 +5,7 @@ import Definition from './letters/Definition'
 
 import './Letter.css'
 
-function Letter({ id, letter }) {
+function Letter({ id, letter, style }) {
 
     const letterShape = letter === 'C' ? <C /> : <use xlinkHref={`#letter-${letter}`} />
     return (
@@ -14,6 +14,7 @@ function Letter({ id, letter }) {
             preserveAspectRatio="none"
             className="Letter"
             id={id}
+            style={style}
             data-letter={letter}
         >
             <Definition letter={letter} />

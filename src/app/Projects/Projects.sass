@@ -9,10 +9,8 @@
     & > div
         +dimension
         position: relative
-        align-items: center
         +min(md)
-                width: 50%
-                align-items: flex-start
+            width: 50%
 
     .content
         padding: 0 20px
@@ -49,22 +47,23 @@
             padding-right: 50px
 
         .Letter
-            opacity: 0
-            +center
-            animation: fadeOutLetter-Back .4s ease-in backwards, fadeInLetter2 .4s .4s ease-in forwards
+            //opacity: 0
+            //animation: fadeOutLetter-Back .4s ease-in backwards, fadeInLetter2 .4s .4s ease-in forwards
             .fill-pattern
                 fill: $light-color
             .shape
                 animation: none
 
     &[data-enter="true"]
-        .content
-            h2:not([data-active="true"])
-                opacity: .5
         .letter
             .Letter
-                opacity: 0
-                animation: fadeOutLetter-Render .4s ease-in backwards, fadeInLetter .4s .4s ease-in forwards
+                //opacity: 0
+                //animation: fadeOutLetter-Render .4s ease-in backwards, fadeInLetter .4s .4s ease-in forwards
+
+    &[data-active="true"]
+        .content
+            h2:not([data-active-link="true"])
+                opacity: .5
 
 
 @keyframes fadeInLetter

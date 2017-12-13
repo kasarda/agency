@@ -11,7 +11,8 @@ class Project extends Component {
     constructor() {
         super()
         this.state = {
-            activeLink: false
+            activeLink: false,
+            active: false
         }
 
 
@@ -20,17 +21,15 @@ class Project extends Component {
 
     enter() {
         const { letter, onMouse } = this.props
-        this.setState({
-            activeLink: true,
-        })
+
+        this.setState({ activeLink: true })
         onMouse(true, letter)
     }
 
     leave() {
         const { letter, onMouse } = this.props
-        this.setState({
-            activeLink: false,
-        })
+
+        this.setState({ activeLink: false })
         onMouse(false, letter)
     }
 
@@ -40,7 +39,7 @@ class Project extends Component {
 
         return (
             <h2
-                data-active={activeLink}
+                data-active-link={activeLink}
                 onMouseEnter={this.enter.bind(this)}
                 onMouseLeave={this.leave.bind(this)}
             >
@@ -62,21 +61,21 @@ class Projects extends Component {
         this.state = {
             contentActive: false,
             letter: 'C',
-            showLetter: false
+            showLetter: false,
+            active: false
         }
     }
 
-    changeContentActive(contentActive, letterName) {
-        console.log(letterName)
+    changeContentActive(contentActive, letterName, letterName2) {
         this.setState({
             contentActive,
-            letterName
+            letter: letterName
         })
 
 
     }
 
-    animationEnd({animationName}) {
+    animationEnd({ animationName }) {
         const { letterName } = this.state
         if (/-Render/.test(animationName))
             this.setState({ letter: letterName })
@@ -84,8 +83,29 @@ class Projects extends Component {
             this.setState({ letter: 'C' })
     }
 
+    enterLinks() {
+        this.setState({
+            active: true
+        })
+    }
+    leaveLinks() {
+        this.setState({
+            active: false,
+            letter: 'C'
+        })
+    }
     render() {
-        const { contentActive, letter, showLetter } = this.state
+
+        const { contentActive, letter, active } = this.state
+
+        const projectList = [
+            ['headphones', 'H'],
+            ['portfolio', 'R'],
+            ['post', 'P'],
+            ['artech', 'T']
+        ].map(([name, lett], key) => (
+            <Project key={key} name={name} letter={lett} onMouse={this.changeContentActive.bind(this)} />
+        ))
 
 
 
@@ -94,32 +114,16 @@ class Projects extends Component {
                 id="Projects"
                 className="flex"
                 data-enter={contentActive}
-                data-show={showLetter}
+                data-active={active}
                 onAnimationEnd={this.animationEnd.bind(this)}
             >
-                <div
-                    className="content flex justify-center direction-col">
-                    <Project
-                        onMouse={this.changeContentActive.bind(this)}
-                        name="headphones"
-                        letter="H"
-                    />
-
-                    <Project
-                        onMouse={this.changeContentActive.bind(this)}
-                        name="portfolio"
-                        letter="R"
-                    />
-                    <Project
-                        onMouse={this.changeContentActive.bind(this)}
-                        name="post"
-                        letter="P"
-                    />
-                    <Project
-                        onMouse={this.changeContentActive.bind(this)}
-                        name="artech"
-                        letter="T"
-                    />
+                <div className="content flex align-center">
+                    <div
+                        onMouseEnter={this.enterLinks.bind(this)}
+                        onMouseLeave={this.leaveLinks.bind(this)}
+                        className="links flex direction-col">
+                        {projectList}
+                    </div>
                 </div>
                 <div className="letter flex flex-center hidden-xs-down">
                     <Letter letter={letter} />

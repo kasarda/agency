@@ -16,12 +16,10 @@
   #Projects > div {
     height: 100%;
     width: 100%;
-    position: relative;
-    align-items: center; }
+    position: relative; }
     @media (min-width: 768px) {
       #Projects > div {
-        width: 50%;
-        align-items: flex-start; } }
+        width: 50%; } }
   #Projects .content {
     padding: 0 20px; }
     @media (min-width: 768px) {
@@ -59,22 +57,12 @@
     @media (min-width: 768px) {
       #Projects .letter {
         padding-right: 50px; } }
-    #Projects .letter .Letter {
-      opacity: 0;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      animation: fadeOutLetter-Back .4s ease-in backwards, fadeInLetter2 .4s .4s ease-in forwards; }
-      #Projects .letter .Letter .fill-pattern {
-        fill: #ffffff; }
-      #Projects .letter .Letter .shape {
-        animation: none; }
-  #Projects[data-enter="true"] .content h2:not([data-active="true"]) {
+    #Projects .letter .Letter .fill-pattern {
+      fill: #ffffff; }
+    #Projects .letter .Letter .shape {
+      animation: none; }
+  #Projects[data-active="true"] .content h2:not([data-active-link="true"]) {
     opacity: .5; }
-  #Projects[data-enter="true"] .letter .Letter {
-    opacity: 0;
-    animation: fadeOutLetter-Render .4s ease-in backwards, fadeInLetter .4s .4s ease-in forwards; }
 
 @keyframes fadeInLetter {
   to {
