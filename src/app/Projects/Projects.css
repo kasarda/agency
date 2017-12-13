@@ -57,29 +57,17 @@
     @media (min-width: 768px) {
       #Projects .letter {
         padding-right: 50px; } }
-    #Projects .letter .Letter .fill-pattern {
-      fill: #ffffff; }
-    #Projects .letter .Letter .shape {
-      animation: none; }
+    #Projects .letter .Letter {
+      opacity: 0; }
+      #Projects .letter .Letter .fill-pattern {
+        fill: #ffffff; }
+      #Projects .letter .Letter .shape {
+        animation: none; }
+  #Projects[data-active="false"] .letter .Letter {
+    opacity: 1;
+    transition: opacity .4s ease-in; }
+  #Projects[data-enter="true"] .letter .Letter {
+    opacity: 1;
+    transition: opacity .4s ease-in; }
   #Projects[data-active="true"] .content h2:not([data-active-link="true"]) {
     opacity: .5; }
-
-@keyframes fadeInLetter {
-  to {
-    opacity: 1; } }
-
-@keyframes fadeInLetter2 {
-  to {
-    opacity: 1; } }
-
-@keyframes fadeOutLetter-Render {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-
-@keyframes fadeOutLetter-Back {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
