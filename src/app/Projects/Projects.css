@@ -14,20 +14,31 @@
   top: 0;
   left: 0; }
   #Projects > div {
-    width: 50%;
     height: 100%;
-    position: relative; }
+    width: 100%;
+    position: relative;
+    align-items: center; }
+    @media (min-width: 768px) {
+      #Projects > div {
+        width: 50%;
+        align-items: flex-start; } }
   #Projects .content {
-    padding-left: 20px; }
+    padding: 0 20px; }
     @media (min-width: 768px) {
       #Projects .content {
         padding-left: 50px; } }
     #Projects .content h2 {
-      margin: 10px 0;
+      margin: 5px 0;
       cursor: pointer;
       position: relative;
       padding-left: 0px;
-      transition: padding-left .25s ease-in; }
+      transition: padding-left .25s ease-in, opacity .2s ease-in; }
+      @media (min-width: 768px) {
+        #Projects .content h2 {
+          margin: 10px 0; } }
+      @media (min-width: 992px) {
+        #Projects .content h2 {
+          margin: 20px 0; } }
       #Projects .content h2:hover {
         padding-left: 50px; }
       #Projects .content h2::before {
@@ -48,5 +59,39 @@
     @media (min-width: 768px) {
       #Projects .letter {
         padding-right: 50px; } }
-  #Projects .Letter .fill-pattern {
-    fill: #ffffff; }
+    #Projects .letter .Letter {
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: fadeOutLetter-Back .4s ease-in backwards, fadeInLetter2 .4s .4s ease-in forwards; }
+      #Projects .letter .Letter .fill-pattern {
+        fill: #ffffff; }
+      #Projects .letter .Letter .shape {
+        animation: none; }
+  #Projects[data-enter="true"] .content h2:not([data-active="true"]) {
+    opacity: .5; }
+  #Projects[data-enter="true"] .letter .Letter {
+    opacity: 0;
+    animation: fadeOutLetter-Render .4s ease-in backwards, fadeInLetter .4s .4s ease-in forwards; }
+
+@keyframes fadeInLetter {
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInLetter2 {
+  to {
+    opacity: 1; } }
+
+@keyframes fadeOutLetter-Render {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOutLetter-Back {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }

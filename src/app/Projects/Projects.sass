@@ -7,20 +7,27 @@
     height: 100vh
     +position(0, 0, absolute)
     & > div
-        width: 50%
-        height: 100%
+        +dimension
         position: relative
+        align-items: center
+        +min(md)
+                width: 50%
+                align-items: flex-start
 
     .content
-        padding-left: 20px
+        padding: 0 20px
         +min(md)
             padding-left: 50px
         h2
-            margin: 10px 0
+            margin: 5px 0
             cursor: pointer
             position: relative
             padding-left: 0px
-            transition: padding-left .25s ease-in
+            transition: padding-left .25s ease-in, opacity .2s ease-in
+            +min(md)
+                margin: 10px 0
+            +min(lg)
+                margin: 20px 0
             &:hover
                 padding-left: 50px
 
@@ -41,6 +48,42 @@
         +min(md)
             padding-right: 50px
 
-    .Letter
-        .fill-pattern
-            fill: $light-color
+        .Letter
+            opacity: 0
+            +center
+            animation: fadeOutLetter-Back .4s ease-in backwards, fadeInLetter2 .4s .4s ease-in forwards
+            .fill-pattern
+                fill: $light-color
+            .shape
+                animation: none
+
+    &[data-enter="true"]
+        .content
+            h2:not([data-active="true"])
+                opacity: .5
+        .letter
+            .Letter
+                opacity: 0
+                animation: fadeOutLetter-Render .4s ease-in backwards, fadeInLetter .4s .4s ease-in forwards
+
+
+@keyframes fadeInLetter
+    to
+        opacity: 1
+
+@keyframes fadeInLetter2
+    to
+        opacity: 1
+
+@keyframes fadeOutLetter-Render
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+
+@keyframes fadeOutLetter-Back
+    from
+        opacity: 1
+    to
+        opacity: 0
