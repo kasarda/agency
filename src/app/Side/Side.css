@@ -11,10 +11,9 @@
   width: 0px;
   align-items: flex-end;
   z-index: 2;
-  transition: width .4s 1.2s ease-in-out, padding .4s 1.2s ease-in-out;
+  transition: width .4s 1.2s ease-in-out;
   transform: translateX(0px);
-  will-change: transform, width;
-  padding-left: 0px; }
+  will-change: transform, width; }
   @media (min-width: 768px) {
     #Side {
       align-items: center; } }
@@ -22,13 +21,15 @@
     #Side {
       align-items: flex-end; } }
   #Side .content {
-    margin-bottom: 55px; }
+    margin-bottom: 55px;
+    padding-left: 20px; }
     @media (min-width: 350px) {
       #Side .content {
         margin-bottom: 150px; } }
     @media (min-width: 768px) {
       #Side .content {
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        padding-left: 50px; } }
     @media (max-height: 500px) {
       #Side .content {
         margin-bottom: 55px; } }
@@ -50,11 +51,7 @@
           display: none; } }
 
 [data-home="false"] #Side {
-  width: 50%;
-  padding-left: 20px; }
-  @media (min-width: 768px) {
-    [data-home="false"] #Side {
-      padding-left: 50px; } }
+  width: 50%; }
 
 [data-home="true"][data-from] #Side {
   animation: SlideSideWidthAnim .4s .8s ease-in backwards;
