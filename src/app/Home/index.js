@@ -138,6 +138,7 @@ class Home extends Component {
                 data-ready={ready}
                 data-from={from}
                 data-to={to}
+                data-current-page={currentPage}
                 onAnimationEnd={this.setReady.bind(this)}
                 onAnimationStart={this.setRenderPage.bind(this)}
             >
