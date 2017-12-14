@@ -36,7 +36,9 @@
     "flip technique",
     "60fps scrolling",
     "transform3d(0,0,0) hack for edge - fallback for will-change, use @support will-change if needed",
-    "Animation only on transform and opacity not left, top ..."
+    "Animation only on transform and opacity not left, top ...",
+    "Aria-",
+    "preload"
   ],
   "todos": [
     "Create Services, Projects, Contacts and 404 components",

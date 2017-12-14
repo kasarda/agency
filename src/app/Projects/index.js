@@ -1,55 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 
 import Letter from '../Letter'
+import Anchor from '../Anchor'
 
 import './Projects.css'
 
 
-class Project extends Component {
-    constructor() {
-        super()
-        this.state = {
-            activeLink: false,
-            active: false
-        }
-
-
-    }
-
-
-    enter() {
-        const { letter, onMouse } = this.props
-
-        this.setState({ activeLink: true })
-        onMouse(true, letter)
-    }
-
-    leave() {
-        const { letter, onMouse } = this.props
-
-        this.setState({ activeLink: false })
-        onMouse(false, letter)
-    }
-
-    render() {
-        const { name } = this.props
-        const { activeLink } = this.state
-
-        return (
-            <h2
-                data-active-link={activeLink}
-                onMouseEnter={this.enter.bind(this)}
-                onMouseLeave={this.leave.bind(this)}
-            >
-                <Link to={`projects/${name}`}>
-                    {name}
-                </Link>
-            </h2>
-        )
-    }
-}
 
 
 
@@ -59,52 +16,53 @@ class Projects extends Component {
         super()
 
         this.state = {
-            contentActive: false,
-            letter: 'C',
-            showLetter: false,
-            active: false
+            enter: false, //* true if some of link is entered
+            active: false, //* true if .links element is entered
+            letter: 'C'
         }
     }
 
-    changeContentActive(contentActive, letterName, letterName2) {
+    updateLetter(enter, letter) {
         this.setState({
-            contentActive,
-            letter: letterName
+            enter,
+            letter
         })
 
 
     }
 
-    animationEnd({ animationName }) {
-        const { letterName } = this.state
-        if (/-Render/.test(animationName))
-            this.setState({ letter: letterName })
-        if (/-Back/.test(animationName))
-            this.setState({ letter: 'C' })
-    }
 
-    enterLinks() {
+    setActive() {
         this.setState({
             active: true
         })
     }
-    leaveLinks() {
+
+    setDefault() {
         this.setState({
             active: false,
             letter: 'C'
         })
     }
+
+
     render() {
 
-        const { contentActive, letter, active } = this.state
+        const { enter, letter, active } = this.state
 
-        const projectList = [
+        const list = [
             ['headphones', 'H'],
             ['portfolio', 'R'],
             ['post', 'P'],
             ['artech', 'T']
-        ].map(([name, lett], key) => (
-            <Project key={key} name={name} letter={lett} onMouse={this.changeContentActive.bind(this)} />
+        ]
+
+        const projectList = list.map(([name, lett], key) => (
+            <Anchor
+                key={key} name={name}
+                letter={lett}
+                onMouse={this.updateLetter.bind(this)}
+            />
         ))
 
 
@@ -113,14 +71,13 @@ class Projects extends Component {
             <div
                 id="Projects"
                 className="flex"
-                data-enter={contentActive}
+                data-enter={enter}
                 data-active={active}
-                onAnimationEnd={this.animationEnd.bind(this)}
             >
                 <div className="content flex align-center">
                     <div
-                        onMouseEnter={this.enterLinks.bind(this)}
-                        onMouseLeave={this.leaveLinks.bind(this)}
+                        onMouseEnter={this.setActive.bind(this)}
+                        onMouseLeave={this.setDefault.bind(this)}
                         className="links flex direction-col">
                         {projectList}
                     </div>
