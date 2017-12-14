@@ -9,7 +9,7 @@
   "homepage": "http://kasarda.github.io/agency/build",
   "dependencies": {
     "@types/animejs": "^2.0.0",
-    "@types/react": "^16.0.28",
+    "@types/react": "^16.0.30",
     "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.3",
     "animejs": "^2.2.0",
@@ -74,7 +74,11 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
-
+    "Init Projects",
+    "New Responsivity and flexibility",
+    "Fixed safari bug",
+    "Updated packages",
+    "ts-modules 3.8.7 -> repeat-delay, minor, maxor"
   ],
   "browsers": {
     "mobile": {
