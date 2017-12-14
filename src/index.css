@@ -300,7 +300,7 @@ summary {
 .align-self-end {
   align-self: flex-end; }
 
-*, *:after, *:before {
+*, *::after, *::before {
   box-sizing: border-box; }
 
 html {
