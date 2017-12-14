@@ -18,6 +18,9 @@
         +min(md)
             padding-left: 50px
             justify-content: flex-start
+        +maxHeight(500px)
+            align-items: flex-end
+            padding-bottom: 25px
 
         h2
             margin: 5px 0
@@ -30,7 +33,9 @@
             +min(md)
                 margin: 10px 0
             +min(lg)
-                margin: 20px 0
+                margin: 15px 0
+            +maxHeight(500px)
+                margin: 0
             &:hover
                 padding-left: 50px
 
@@ -48,13 +53,25 @@
 
     .letter
         padding-right: 20px
-        width: 0px
         display: none
         +min(md)
             padding-right: 50px
             display: flex
+        +maxHeight(500px)
+            align-items: flex-end
+            padding-bottom: 25px
         .Letter
             opacity: 0
+            +dimension(150px)
+            +min(sm)
+                +dimension(300px)
+            +min(md)
+                +dimension(350px)
+            +min(xl, 700px)
+                +dimension(450px)
+            +maxHeight(500px)
+                +dimension(150px)
+
             .fill-pattern
                 fill: $light-color
 

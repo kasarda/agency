@@ -27,6 +27,10 @@
       #Projects .content {
         padding-left: 50px;
         justify-content: flex-start; } }
+    @media (max-height: 500px) {
+      #Projects .content {
+        align-items: flex-end;
+        padding-bottom: 25px; } }
     #Projects .content h2 {
       margin: 5px 0;
       cursor: pointer;
@@ -47,7 +51,10 @@
           margin: 10px 0; } }
       @media (min-width: 992px) {
         #Projects .content h2 {
-          margin: 20px 0; } }
+          margin: 15px 0; } }
+      @media (max-height: 500px) {
+        #Projects .content h2 {
+          margin: 0; } }
       #Projects .content h2:hover {
         padding-left: 50px; }
       #Projects .content h2::before {
@@ -65,14 +72,35 @@
         width: 40px; }
   #Projects .letter {
     padding-right: 20px;
-    width: 0px;
     display: none; }
     @media (min-width: 768px) {
       #Projects .letter {
         padding-right: 50px;
         display: flex; } }
+    @media (max-height: 500px) {
+      #Projects .letter {
+        align-items: flex-end;
+        padding-bottom: 25px; } }
     #Projects .letter .Letter {
-      opacity: 0; }
+      opacity: 0;
+      height: 150px;
+      width: 150px; }
+      @media (min-width: 576px) {
+        #Projects .letter .Letter {
+          height: 300px;
+          width: 300px; } }
+      @media (min-width: 768px) {
+        #Projects .letter .Letter {
+          height: 350px;
+          width: 350px; } }
+      @media (min-width: 1200px) and (min-height: 700px) {
+        #Projects .letter .Letter {
+          height: 450px;
+          width: 450px; } }
+      @media (max-height: 500px) {
+        #Projects .letter .Letter {
+          height: 150px;
+          width: 150px; } }
       #Projects .letter .Letter .fill-pattern {
         fill: #ffffff; }
   #Projects[data-active="false"] .letter .Letter {
