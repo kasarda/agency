@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "1.8.0",
+  "version": "1.8.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -47,7 +47,8 @@
     "Add selection",
     "Change specific easings for animations to be more smooth and better looking",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
-    "Optimize animation, analyze performance, alternative for slow devices"
+    "Optimize animation, analyze performance, alternative for slow devices",
+    "Remove animejs and @types/animejs from dependencies"
   ],
   "done": [
     "Create showcase home page component (4)",
@@ -74,11 +75,6 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
-    "Init Projects",
-    "New Responsivity and flexibility",
-    "Fixed safari bug",
-    "Updated packages",
-    "ts-modules 3.8.7 -> repeat-delay, minor, maxor"
   ],
   "browsers": {
     "mobile": {
