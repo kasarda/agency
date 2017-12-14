@@ -3,16 +3,18 @@
 @import "animation.sass"
 
 .Letter
-    +dimension(150px, 150px)
-
+    +dimension(150px)
+    +min(sm)
+        +dimension(300px)
+    +
     +min(md)
-        +dimension(250px, 250px)
+        +dimension(250px)
 
     +min(xl, 700px)
-        +dimension(450px, 450px)
+        +dimension(450px)
 
     +maxHeight(500px)
-        +dimension(150px, 150px)
+        +dimension(150px)
 
     +ie
         opacity: 1

@@ -18,6 +18,9 @@
   @media (min-width: 768px) {
     #Navigator {
       bottom: 50px; } }
+  @media (max-height: 500px) {
+    #Navigator {
+      bottom: 25px; } }
   #Navigator .links {
     width: 170px; }
     #Navigator .links div {

@@ -10,6 +10,10 @@
 .Letter {
   height: 150px;
   width: 150px; }
+  @media (min-width: 576px) {
+    .Letter {
+      height: 300px;
+      width: 300px; } }
   @media (min-width: 768px) {
     .Letter {
       height: 250px;

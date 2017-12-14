@@ -17,15 +17,18 @@
   @media (min-width: 768px) {
     #Side {
       align-items: center; } }
+  @media (max-height: 500px) {
+    #Side {
+      align-items: flex-end; } }
   #Side .content {
     margin: 0 10px 55px 10px; }
     @media (min-width: 350px) {
       #Side .content {
-        margin: 0 25px 100px 25px; } }
+        margin: 0 25px 150px 25px; } }
     @media (min-width: 768px) {
       #Side .content {
         margin: 0 50px 0 50px; } }
-    @media (max-height: 300px) {
+    @media (max-height: 500px) {
       #Side .content {
         margin: 0 10px 55px 10px; } }
     #Side .content .heading h2 {
@@ -41,6 +44,12 @@
       background: #ffffff;
       border: none;
       animation: none; }
+      @media (max-height: 500px) {
+        #Side .content .heading .hr {
+          display: none; } }
+
+[data-currentPage="0"] #Side {
+  display: none; }
 
 [data-home="false"] #Side {
   width: 50%; }

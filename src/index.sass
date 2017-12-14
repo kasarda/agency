@@ -31,13 +31,12 @@ h2
     font-weight: $regular
     margin: 0
 h1
+    font-size: $heading-mobile-size
     line-height: $heading-mobile-line-height
     letter-spacing: $heading-letter-spacing
-    font-size: $heading-mobile-size
-
-    +min(md)
-        line-height: $heading-line-height
+    +min(sm, 500px)
         font-size: $heading-size
+        line-height: $heading-line-height
 
 h2
     letter-spacing: $heading-side-letter-spacing
@@ -48,6 +47,8 @@ h2
         font-size: $heading-side-small-size
     +min(lg)
         font-size: $heading-size
+    +maxHeight(500px)
+        font-size: $heading-mobile-size
 
 
 p

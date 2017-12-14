@@ -11,14 +11,16 @@
     will-change: transform, width
     +min(md)
         align-items: center
+    +maxHeight(500px)
+        align-items: flex-end
 
     .content
         margin: 0 10px 55px 10px
         +min(350px)
-            margin: 0 25px 100px 25px
+            margin: 0 25px 150px 25px
         +min(md)
-           margin: 0 50px 0 50px
-        +maxHeight(300px)
+            margin: 0 50px 0 50px
+        +maxHeight(500px)
             margin: 0 10px 55px 10px
 
         .heading
@@ -36,7 +38,12 @@
                 background: $light-color
                 border: none
                 animation: none
+                +maxHeight(500px)
+                    display: none
 
+
+[data-currentPage="0"] #Side
+    display: none
 
 [data-home="false"] #Side
     width: 50%

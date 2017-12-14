@@ -11,7 +11,7 @@ function Description({ description, theme, link}) {
 
     return (
         <div id="Description">
-            <div className="hidden-sm-down">
+            <div className="paragraphs hidden-sm-down">
                 {descriptionList}
             </div>
             <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>

@@ -9,9 +9,9 @@ $padding-from-screen-mobile: 20px
     .wrapper
         +dimension
         padding: 0 $padding-from-screen-mobile
-        +min(md)
+        justify-content: flex-end
+        +min(md, 500px)
             justify-content: center
-            padding: 0 $padding-from-screen
 
         .column
             height: 150px
@@ -24,6 +24,11 @@ $padding-from-screen-mobile: 20px
                 height: 250px
                 margin-bottom: 0
                 margin-right: -$padding-from-screen
+            +only(sm)
+                margin-bottom: 50px
+            +maxHeight(500px)
+                margin-bottom: 25px
+                height: 150px
 
             +min(1024px)
                 margin-left: 86px
@@ -43,15 +48,15 @@ $padding-from-screen-mobile: 20px
             +min(md)
                 width: 1px
                 +slide-anim
+            +maxHeight(500px)
+                width: 0px
             .background
                 +dimension
                 opacity: 0
                 background-repeat: no-repeat
                 background-size: cover
-                background-position-x: left
                 +fade-background-tran
-                +min(md)
-                    background-position-x: right
+
 
         h1
             padding-bottom: 50px

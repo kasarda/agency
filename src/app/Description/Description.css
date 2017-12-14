@@ -15,11 +15,17 @@
   @media (min-width: 1200px) {
     #Description {
       margin: 40px 0 0 106px; } }
+  @media (max-height: 500px) {
+    #Description {
+      margin: 15px 0 0 0; } }
   #Description .button {
     margin-top: 0px; }
     @media (min-width: 768px) {
       #Description .button {
         margin-top: 35px; } }
+    @media (max-height: 500px) {
+      #Description .button {
+        margin-top: 0px; } }
     #Description .button .button-container {
       position: relative;
       overflow: hidden;
@@ -42,6 +48,9 @@
       transition: color .4s .3s ease-in; }
     #Description .button a:hover {
       color: currentColor; }
+  @media (max-height: 500px) {
+    #Description .paragraphs {
+      display: none; } }
   #Description .fadeIn {
     transform: translateY(0px);
     opacity: 0;
