@@ -13,6 +13,7 @@
 
 html
     font-size: $mobile-size
+    height: 100%
     //background-color: $primary-color @prod
     +min(md)
         font-size: $primary-size
@@ -78,7 +79,7 @@ a
         padding: 17px 23px
 
 .view
-    +dimension(100%, 100vh)
+    +dimension
     +position(0, 0, absolute)
 
 .primary-background //@dev

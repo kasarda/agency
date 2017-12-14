@@ -33,9 +33,7 @@ class Projects extends Component {
 
 
     setActive() {
-        this.setState({
-            active: true
-        })
+        this.setState({ active: true })
     }
 
     setDefault() {
@@ -60,6 +58,7 @@ class Projects extends Component {
         const projectList = list.map(([name, lett], key) => (
             <Anchor
                 key={key} name={name}
+                className={`link-${key + 1}`}
                 letter={lett}
                 onMouse={this.updateLetter.bind(this)}
             />
@@ -82,7 +81,7 @@ class Projects extends Component {
                         {projectList}
                     </div>
                 </div>
-                <div className="letter flex flex-center hidden-xs-down">
+                <div className="letter flex flex-center">
                     <Letter letter={letter} />
                 </div>
             </div>

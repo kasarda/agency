@@ -21,16 +21,27 @@
       #Projects > div {
         width: 50%; } }
   #Projects .content {
-    padding: 0 20px; }
+    padding: 0 20px;
+    justify-content: center; }
     @media (min-width: 768px) {
       #Projects .content {
-        padding-left: 50px; } }
+        padding-left: 50px;
+        justify-content: flex-start; } }
     #Projects .content h2 {
       margin: 5px 0;
       cursor: pointer;
       position: relative;
       padding-left: 0px;
-      transition: padding-left .25s ease-in, opacity .2s ease-in; }
+      transition: padding-left .25s ease-in, opacity .2s ease-in;
+      animation: InitLinks .4s ease-in backwards; }
+      #Projects .content h2.link-1 {
+        animation-delay: 0.2s; }
+      #Projects .content h2.link-2 {
+        animation-delay: 0.3s; }
+      #Projects .content h2.link-3 {
+        animation-delay: 0.4s; }
+      #Projects .content h2.link-4 {
+        animation-delay: 0.5s; }
       @media (min-width: 768px) {
         #Projects .content h2 {
           margin: 10px 0; } }
@@ -53,16 +64,17 @@
       #Projects .content h2:hover::before {
         width: 40px; }
   #Projects .letter {
-    padding-right: 20px; }
+    padding-right: 20px;
+    width: 0px;
+    display: none; }
     @media (min-width: 768px) {
       #Projects .letter {
-        padding-right: 50px; } }
+        padding-right: 50px;
+        display: flex; } }
     #Projects .letter .Letter {
       opacity: 0; }
       #Projects .letter .Letter .fill-pattern {
         fill: #ffffff; }
-      #Projects .letter .Letter .shape {
-        animation: none; }
   #Projects[data-active="false"] .letter .Letter {
     opacity: 1;
     transition: opacity .4s ease-in; }
@@ -71,3 +83,11 @@
     transition: opacity .4s ease-in; }
   #Projects[data-active="true"] .content h2:not([data-active-link="true"]) {
     opacity: .5; }
+
+@keyframes InitLinks {
+  from {
+    opacity: 0;
+    transform: translateY(200%); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }

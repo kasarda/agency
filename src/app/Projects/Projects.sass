@@ -14,14 +14,19 @@
 
     .content
         padding: 0 20px
+        justify-content: center
         +min(md)
             padding-left: 50px
+            justify-content: flex-start
+
         h2
             margin: 5px 0
             cursor: pointer
             position: relative
             padding-left: 0px
             transition: padding-left .25s ease-in, opacity .2s ease-in
+            animation: InitLinks .4s ease-in backwards
+            +repeat-delay('.link-', (1: .2, 2: .3, 3: .4, 4: .5))
             +min(md)
                 margin: 10px 0
             +min(lg)
@@ -43,17 +48,15 @@
 
     .letter
         padding-right: 20px
+        width: 0px
+        display: none
         +min(md)
             padding-right: 50px
-
+            display: flex
         .Letter
             opacity: 0
             .fill-pattern
                 fill: $light-color
-            .shape
-                animation: none
-
-
 
     &[data-active="false"]
         .letter
@@ -72,3 +75,12 @@
         .content
             h2:not([data-active-link="true"])
                 opacity: .5
+
+@keyframes InitLinks
+    from
+        opacity: 0
+        transform: translateY(200%)
+    to
+        opacity: 1
+        transform: translateY(0)
+
