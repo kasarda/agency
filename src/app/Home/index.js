@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import Letter from '../Letter'
 import Side from '../Side'
@@ -22,7 +23,9 @@ class Home extends Component {
             sideReady: false,
             ready: false,
             down: undefined,
-            from: undefined
+            from: undefined,
+            redirect: false,
+            canRedirect: false
         }
     }
 
@@ -87,6 +90,9 @@ class Home extends Component {
 
         if (/-RenderImage/.test(animationName))
             this.setState({ renderImage: to })
+
+        if (/-Redirect/.test(animationName))
+            this.setState({ canRedirect: true })
     }
 
     setRenderPage({ animationName }) {
@@ -96,13 +102,16 @@ class Home extends Component {
             this.setState({ renderPage: to })
     }
 
-
+    onCanRedirect(link) {
+        this.setState({ redirect: true, link })
+    }
     shouldComponentUpdate(_, { to, renderImage }) {
         if (renderImage === 0 && to !== 0)
             this.setState({ renderImage: to })
 
         return true
     }
+
 
     componentDidMount() {
         onFakeScroll(50,
@@ -124,7 +133,10 @@ class Home extends Component {
             ready,
             renderPage,
             currentPage,
-            renderImage
+            renderImage,
+            redirect,
+            canRedirect,
+            link
         } = this.state
 
         const url = renderImage > 0 ? `url(${require(`./bg${renderImage}.jpg`)})` : null
@@ -138,13 +150,14 @@ class Home extends Component {
                 data-ready={ready}
                 data-from={from}
                 data-to={to}
+                data-redirect={redirect}
                 data-current-page={currentPage}
                 onAnimationEnd={this.setReady.bind(this)}
                 onAnimationStart={this.setRenderPage.bind(this)}
             >
-                <Side renderPage={renderPage} />
+                <Side renderPage={renderPage} onCanRedirect={this.onCanRedirect.bind(this)} />
                 <Letter letter="C" id="Letter" />
-
+                {canRedirect ? <Redirect to={link} /> : null}
                 <div className="wrapper flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule">

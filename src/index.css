@@ -535,3 +535,7 @@ a {
   to {
     width: 0;
     transform: translateX(0px); } }
+
+@keyframes ColumnFadeOutAnim-Redirect {
+  90%, to {
+    opacity: 0; } }

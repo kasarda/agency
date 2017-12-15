@@ -44,7 +44,6 @@
                     display: none
 
 
-
 [data-home="false"] #Side
     width: 50%
 
@@ -105,6 +104,16 @@
     #Side
         +prev-page-seq
 
+
+[data-side-ready="true"][data-redirect="true"]
+    #Side
+        width: 0px
+        +delay(.8s)
+        .heading
+            h2
+                +left-fadeOut-anim
+            .hr
+                +hr-slideOut-anim
 
 
 [data-side-ready="true"]

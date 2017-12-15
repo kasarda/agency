@@ -96,5 +96,13 @@
 [data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
   animation-name: PrevWidthAnim-RenderPage, PrevRightAnim-RenderImage, PrevNewWidthAnim-SideReady; }
 
+[data-side-ready="true"][data-redirect="true"] #Side {
+  width: 0px;
+  transition-delay: 0.8s; }
+  [data-side-ready="true"][data-redirect="true"] #Side .heading h2 {
+    animation: LeftFadeOutAnim .6s ease-in-out forwards; }
+  [data-side-ready="true"][data-redirect="true"] #Side .heading .hr {
+    animation: HrSlideOutAnim .6s ease-in-out forwards; }
+
 [data-side-ready="true"] #Side {
   animation: none !important; }

@@ -99,3 +99,6 @@
 #Home[data-home="false"] h1 {
   opacity: 0;
   transition-delay: 0s; }
+
+#Home[data-redirect="true"] .column {
+  animation: ColumnFadeOutAnim-Redirect .4s 1.1s ease-in forwards; }

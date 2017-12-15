@@ -6,8 +6,8 @@ import Letter from '../Letter'
 import './Side.css'
 
 class Side extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
 
         this.state = {
             theme: '#b29992',
@@ -18,9 +18,14 @@ class Side extends Component {
                 'which provide quality',
                 'headphones and speakers.'
             ],
-            link: '/projects/headphnones'
+            link: '/projects/headphnones',
+            redirect: false,
         }
     }
+    onRedirect() {
+        this.props.onCanRedirect(this.state.link)
+    }
+
 
     componentWillReceiveProps({ renderPage }) {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
@@ -78,8 +83,7 @@ class Side extends Component {
     }
 
     render() {
-        const { theme, heading, description, link, letter } = this.state
-
+        const { theme, heading, description, letter } = this.state
         return (
             <div
                 id="Side"
@@ -96,7 +100,11 @@ class Side extends Component {
                         <div className="hidden-sm-down hr"></div>
                     </div>
 
-                    <Description link={link} theme={theme} description={description}/>
+                    <Description
+                        theme={theme}
+                        description={description}
+                        onRedirect={this.onRedirect.bind(this)}
+                    />
                 </div>
             </div>
         )
