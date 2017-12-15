@@ -48,7 +48,8 @@
     "Change specific easings for animations to be more smooth and better looking",
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Optimize animation, analyze performance, alternative for slow devices",
-    "Remove animejs and @types/animejs from dependencies"
+    "Remove animejs and @types/animejs from dependencies",
+    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin"
   ],
   "done": [
     "Create showcase home page component (4)",
