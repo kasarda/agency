@@ -26,7 +26,7 @@ body
     overflow: hidden
 
 h1,
-h2
+h2,
     font-family: $secondary-font
     font-weight: $regular
     margin: 0
@@ -53,10 +53,19 @@ h2
 h3
     color: $black-color
     font-family: $secondary-font
-    font-size: 3rem
+    font-size: $heading-3-mobile-size
     text-transform: capitalize
     +min(md)
-        font-size: 4.375rem
+        font-size: $heading-3-size
+
+h4
+    margin: 0
+    font-weight: $bold
+    font-family: $primary-font
+    font-size: $heading-4-mobile-size
+    text-transform: capitalize
+    +min(md)
+        font-size: $heading-4-size
 
 
 p
@@ -102,6 +111,9 @@ img
     fill: $light-color
 .stroke-light-color
     stroke: $light-color
+
+.inline-block
+    display: inline-block
 
 +InitializeKeyframes
 +HomeToPageKeyframes

@@ -81,14 +81,14 @@ section {
   margin: 50px auto 0 auto;
   background: url("./bg1.jpg") no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   color: #ffffff;
   overflow: hidden;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2); }
   @media (min-width: 768px) {
     #first-section .mobile-showcase {
       height: 700px;
-      margin: 100px auto 0 auto; } }
+      margin: 100px auto 0 auto;
+      background-attachment: fixed; } }
   #first-section .mobile-showcase img {
     height: 90%; }
 
@@ -139,12 +139,6 @@ section {
   @media (min-width: 1200px) {
     #third-section .consulation {
       margin: 150px auto 50px auto; } }
-  #third-section .consulation h4 {
-    margin: 0;
-    font-size: 1.5rem; }
-    @media (min-width: 768px) {
-      #third-section .consulation h4 {
-        font-size: 2rem; } }
   #third-section .consulation a:hover {
     color: #00328e; }
     #third-section .consulation a:hover h4 {
