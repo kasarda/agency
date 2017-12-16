@@ -48,7 +48,17 @@ class Showcase extends Component {
                                 <img src={require('./desktop1-1.jpg')} alt="" />
                             </div>
                         </div>
-                        <div className="desktop-showcase flex justify-center right">
+                        <div className="description between-showcases">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora non magni beatae et voluptates! Quae incidunt eum sint corporis tempora! Soluta eum aspernatur at earum possimus expedita iste officiis.
+                            </p>
+                        </div>
+                        <div className="desktop-showcase rect-after flex justify-center right">
+                            <div className="row">
+                                <img src={require('./desktop1-4.jpg')} alt="" />
+                            </div>
+                        </div>
+                        <div className="desktop-showcase flex justify-center left">
                             <div className="row">
                                 <img src={require('./desktop1-2.jpg')} alt="" />
                             </div>
