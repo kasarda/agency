@@ -82,7 +82,7 @@
 [data-down="false"][data-side-ready="false"] #Side .heading .hr {
   animation: HrSlideInOutAnim .6s ease-in-out forwards; }
 
-[data-home="false"][data-down="false"][data-side-ready="true"] #Side .heading h2 {
+[data-home="false"][data-down="false"][data-side-ready="true"][data-redirect="false"] #Side .heading h2 {
   animation: FadeInRightAnim-Ready .6s ease-in-out forwards; }
 
 [data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]) #Side,
@@ -105,4 +105,9 @@
     animation: HrSlideOutAnim .6s ease-in-out forwards; }
 
 [data-side-ready="true"] #Side {
+  animation: none !important; }
+
+[data-ready="true"][data-home="false"][data-redirect="false"] #Side .heading h2 {
+  opacity: 1;
+  transform: none;
   animation: none !important; }
