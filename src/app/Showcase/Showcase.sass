@@ -16,14 +16,22 @@
             animation: FadeInLett-Overflow .4s .8s ease-in backwards
             .fill-pattern
                 fill: $light-color
-    [data-animate]
-        opacity: 0
-        transform: translateY(200px)
-        transition: opacity .8s ease-in, transform .6s ease-in
-        &.inView
-            opacity: 1
-            transform: translateY(0px)
+    +min(md)
+        [data-animate]
+            opacity: 0
+            transition: opacity .8s ease-in, transform .6s ease-in
 
+        [data-animate="fadeUp"]
+            transform: translateY(200px)
+            &.fadeUp
+                opacity: 1
+                transform: translateY(0px)
+
+        [data-animate="fadeLeft"]
+            transform: translateX(200px)
+            &.fadeLeft
+                opacity: 1
+                transform: translateX(0px)
 
 @keyframes SlideUp
     from

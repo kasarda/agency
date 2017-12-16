@@ -25,14 +25,20 @@ class Showcase extends Component {
         console.log('hey')
 
         elems.forEach(elem => {
-            const visible = inView(elem)
+            const { animate, offset } = elem.dataset
+            const offsetY = parseFloat(offset) || 0
+            const visible = inView(elem, offsetY)
+
             if (visible)
-               elem.classList.add('inView')
+                elem.classList.add(animate)
 
         })
     }
     scrollUp() {
         window.scrollTo(0, 0)
+        const elems = document.querySelectorAll('[data-animate]')
+        elems.forEach(elem => elem.classList.remove(elem.dataset.animate))
+        this.activeNavigation.call(this)
     }
 
     animationEnd({ animationName }) {
@@ -75,46 +81,46 @@ class Showcase extends Component {
                 </div>
 
                 <section id="first-section">
-                    <div data-animate className="description">
-                        <h3>{title}</h3>
-                        <p>
+                    <div className="description">
+                        <h3 data-animate="fadeUp" data-offset="200">{title}</h3>
+                        <p data-animate="fadeUp" data-offset="100">
                             {paragraphs[0]}
                         </p>
                     </div>
-                    <div data-animate className="mobile-showcase flex flex-center">
+                    <div data-animate="fadeLeft" data-offset="-200" className="mobile-showcase flex flex-center">
                         <img src={require('./mobile1.png')} alt="" />
                     </div>
                 </section>
 
                 <section id="second-section">
-                    <div className="description" data-animate>
-                        <h3>Challenge</h3>
-                        <p>
+                    <div className="description">
+                        <h3 data-animate="fadeUp">Challenge</h3>
+                        <p data-animate="fadeUp" data-offset="100">
                             {paragraphs[1]}
                         </p>
                     </div>
                     <div className="showcases">
-                        <div data-animate className="desktop-showcase rect-after flex justify-center right">
+                        <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
                                 <img src={require('./desktop1-3.jpg')} alt="" />
                             </div>
                         </div>
-                        <div data-animate className="desktop-showcase flex justify-center left">
+                        <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
                                 <img src={require('./desktop1-1.jpg')} alt="" />
                             </div>
                         </div>
-                        <div data-animate className="description between-showcases">
+                        <div data-animate="fadeUp" data-offset="100" className="description between-showcases">
                             <p>
                                 {paragraphs[2]}
                             </p>
                         </div>
-                        <div data-animate className="desktop-showcase rect-after flex justify-center right">
+                        <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
                                 <img src={require('./desktop1-4.jpg')} alt="" />
                             </div>
                         </div>
-                        <div data-animate className="desktop-showcase flex justify-center left">
+                        <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
                                 <img src={require('./desktop1-2.jpg')} alt="" />
                             </div>
@@ -129,7 +135,7 @@ class Showcase extends Component {
                         </a>
                         <div className="container flex">
                             <div className="column next flex justify-end">
-                                <div className="content" onClick={this.scrollUp}>
+                                <div className="content" onClick={this.scrollUp.bind(this)}>
                                     <Link to={prev ? prev : ''}>
                                         <span>previously</span>
                                         <h4>{prev}</h4>
@@ -137,7 +143,7 @@ class Showcase extends Component {
                                 </div>
                             </div>
                             <div className="column prev flex justify-start">
-                                <div className="content" onClick={this.scrollUp}>
+                                <div className="content" onClick={this.scrollUp.bind(this)}>
                                     <Link to={next ? next : ''}>
                                         <span>next</span>
                                         <h4>{next}</h4>
