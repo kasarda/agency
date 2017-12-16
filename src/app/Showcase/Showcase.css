@@ -10,15 +10,26 @@
 #Showcase .wrapper {
   height: 250px;
   width: 100%;
-  background-color: #004bd3; }
+  background-color: #004bd3;
+  animation: SlideUp .4s .4s ease-in backwards; }
   @media (min-width: 576px) {
     #Showcase .wrapper {
       height: 50vh; } }
   @media (min-width: 1200px) {
     #Showcase .wrapper {
       height: 70vh; } }
-  #Showcase .wrapper .Letter .fill-pattern {
-    fill: #ffffff; }
+  #Showcase .wrapper .Letter {
+    animation: FadeInLett-Overflow .4s .8s ease-in backwards; }
+    #Showcase .wrapper .Letter .fill-pattern {
+      fill: #ffffff; }
+
+@keyframes SlideUp {
+  from {
+    height: 100vh; } }
+
+@keyframes FadeInLett-Overflow {
+  from {
+    opacity: 0; } }
 
 section {
   text-align: center;

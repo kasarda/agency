@@ -6,86 +6,6 @@ import './Showcase.css'
 
 class Showcase extends Component {
 
-    constructor() {
-        super()
-        this.state = {
-            title: undefined,
-            id: undefined,
-            paragraphs: [],
-            mobileImages: [],
-            desktopImages: [],
-            next: undefined,
-            prev: undefined,
-            letter: undefined
-        }
-    }
-
-    getContent(name) {
-
-        let state = {
-            title: name,
-        }
-
-        switch (name) {
-            case 'headphones':
-                state.id = 1
-                state.letter = 'H'
-                state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
-                ]
-                state.next = 'portfolio'
-                state.prev = 'artech'
-
-                break
-            case 'portfolio':
-                state.id = 2
-                state.letter = 'R'
-                state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
-                ]
-                state.next = 'post'
-                state.prev = 'headphones'
-
-                break
-
-            case 'post':
-                state.id = 3
-                state.letter = 'P'
-                state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
-                ]
-                state.next = 'artech'
-                state.prev = 'portfolio'
-                break
-
-            case 'artech':
-                state.id = 4
-                state.letter = 'T'
-                state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
-                ]
-                state.next = 'headphones'
-                state.prev = 'post'
-                break
-            default:
-                state = {}
-
-
-        }
-        this.setState(state)
-
-
-
-    }
-
     activeNavigation() {
         const { nav } = this.props
 
@@ -98,22 +18,31 @@ class Showcase extends Component {
             else
                 nav.classList.remove('black-color')
         }
+
+        const elems = document.querySelectorAll('[data-animate]')
+        console.log(elems)
+    }
+    scrollUp() {
+        window.scrollTo(0, 0)
+    }
+
+    animationEnd({ animationName }) {
+        if (/-Overflow/.test(animationName)) {
+            document.body.style.overflowY = 'visible'
+            document.documentElement.style.height = 'auto'
+        }
+
     }
     componentDidMount() {
-        document.body.style.overflowY = 'visible'
-        document.documentElement.style.height = 'auto'
         this.activeNavigation.call(this)
         document.body.onscroll = this.activeNavigation.bind(this)
-
     }
     componentWillUnmount() {
         document.body.onscroll = null
+        document.body.style.overflowY = 'hidden'
+        document.documentElement.style.height = '100%'
     }
-    componentWillReceiveProps() {
-        const { name } = this.props.router.match.params
-        this.getContent.call(this, name)
 
-    }
 
     render() {
         const {
@@ -123,10 +52,10 @@ class Showcase extends Component {
             next,
             prev,
             letter
-        } = this.state
+        } = this.props.data
 
         return (
-            <div id="Showcase">
+            <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
                 <div
                     className="wrapper flex justify-center align-end"
                     ref="wrapper"
@@ -136,46 +65,46 @@ class Showcase extends Component {
                 </div>
 
                 <section id="first-section">
-                    <div className="description">
+                    <div className="description" data-animate>
                         <h3>{title}</h3>
                         <p>
                             {paragraphs[0]}
                         </p>
                     </div>
-                    <div className="mobile-showcase flex flex-center">
+                    <div data-animate className="mobile-showcase flex flex-center">
                         <img src={require('./mobile1.png')} alt="" />
                     </div>
                 </section>
 
                 <section id="second-section">
-                    <div className="description">
+                    <div className="description" data-animate>
                         <h3>Challenge</h3>
                         <p>
                             {paragraphs[1]}
                         </p>
                     </div>
                     <div className="showcases">
-                        <div className="desktop-showcase rect-after flex justify-center right">
+                        <div data-animate className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
                                 <img src={require('./desktop1-3.jpg')} alt="" />
                             </div>
                         </div>
-                        <div className="desktop-showcase flex justify-center left">
+                        <div data-animate className="desktop-showcase flex justify-center left">
                             <div className="row">
                                 <img src={require('./desktop1-1.jpg')} alt="" />
                             </div>
                         </div>
-                        <div className="description between-showcases">
+                        <div data-animate className="description between-showcases">
                             <p>
                                 {paragraphs[2]}
                             </p>
                         </div>
-                        <div className="desktop-showcase rect-after flex justify-center right">
+                        <div data-animate className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
                                 <img src={require('./desktop1-4.jpg')} alt="" />
                             </div>
                         </div>
-                        <div className="desktop-showcase flex justify-center left">
+                        <div data-animate className="desktop-showcase flex justify-center left">
                             <div className="row">
                                 <img src={require('./desktop1-2.jpg')} alt="" />
                             </div>
@@ -190,16 +119,16 @@ class Showcase extends Component {
                         </a>
                         <div className="container flex">
                             <div className="column next flex justify-end">
-                                <div className="content">
-                                    <Link to={prev ? prev: ''}>
+                                <div className="content" onClick={this.scrollUp}>
+                                    <Link to={prev ? prev : ''}>
                                         <span>previously</span>
                                         <h4>{prev}</h4>
                                     </Link>
                                 </div>
                             </div>
                             <div className="column prev flex justify-start">
-                                <div className="content">
-                                    <Link to={next ? next: ''}>
+                                <div className="content" onClick={this.scrollUp}>
+                                    <Link to={next ? next : ''}>
                                         <span>next</span>
                                         <h4>{next}</h4>
                                     </Link>

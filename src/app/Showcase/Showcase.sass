@@ -7,13 +7,24 @@
     .wrapper
         +dimension(100%, 250px)
         background-color: $primary-color
+        animation: SlideUp .4s .4s ease-in backwards
         +min(sm)
             height: 50vh
         +min(xl)
             height: 70vh
         .Letter
+            animation: FadeInLett-Overflow .4s .8s ease-in backwards
             .fill-pattern
                 fill: $light-color
+
+
+@keyframes SlideUp
+    from
+        height: 100vh
+
+@keyframes FadeInLett-Overflow
+    from
+        opacity: 0
 
 section
     text-align: center
