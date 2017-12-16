@@ -14,34 +14,44 @@ class Showcase extends Component {
 
         return (
             <div id="Showcase">
-                <div className="wrapper">
+                <div className="wrapper flex justify-center align-end">
                     <Letter letter="H" />
                 </div>
 
                 <section id="first-section">
-                    <h3>Headphones</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!
-                    </p>
+                    <div className="description">
+                        <h3>Headphones</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!
+                        </p>
+                    </div>
                     <div className="mobile-showcase flex flex-center">
                         <img src={require('./mobile1.png')} alt="" />
                     </div>
                 </section>
 
                 <section id="second-section">
-                    <h3>Challenge</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora non magni beatae et voluptates! Quae incidunt eum sint corporis tempora! Soluta eum aspernatur at earum possimus expedita iste officiis.
+                    <div className="description">
+                        <h3>Challenge</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora non magni beatae et voluptates! Quae incidunt eum sint corporis tempora! Soluta eum aspernatur at earum possimus expedita iste officiis.
                     </p>
+                    </div>
                     <div className="showcases">
-                        <div className="desktop-showcase rect-after flex justify-end">
-                            <img src={require('./desktop1-3.jpg')} alt="" />
+                        <div className="desktop-showcase rect-after flex justify-center right">
+                            <div className="row">
+                                <img src={require('./desktop1-3.jpg')} alt="" />
+                            </div>
                         </div>
-                        <div className="desktop-showcase flex">
-                            <img src={require('./desktop1-1.jpg')} alt="" />
+                        <div className="desktop-showcase flex justify-center left">
+                            <div className="row">
+                                <img src={require('./desktop1-1.jpg')} alt="" />
+                            </div>
                         </div>
-                        <div className="desktop-showcase flex justify-end">
-                            <img src={require('./desktop1-2.jpg')} alt="" />
+                        <div className="desktop-showcase flex justify-center right">
+                            <div className="row">
+                                <img src={require('./desktop1-2.jpg')} alt="" />
+                            </div>
                         </div>
                     </div>
                 </section>

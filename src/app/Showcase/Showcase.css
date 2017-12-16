@@ -10,84 +10,135 @@
 #Showcase .wrapper {
   height: 250px;
   width: 100%;
-  background-color: #004bd3;
-  position: relative; }
+  background-color: #004bd3; }
   @media (min-width: 576px) {
     #Showcase .wrapper {
       height: 50vh; } }
   @media (min-width: 1200px) {
     #Showcase .wrapper {
       height: 70vh; } }
-  #Showcase .wrapper .Letter {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 0; }
-    #Showcase .wrapper .Letter .fill-pattern {
-      fill: #ffffff; }
+  #Showcase .wrapper .Letter .fill-pattern {
+    fill: #ffffff; }
 
 section {
   text-align: center;
   color: #000; }
   section p {
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto; }
+    @media (min-width: 768px) {
+      section p {
+        max-width: 700px; } }
   section .rect-after::after {
     content: '';
-    width: 1200px;
     height: 700px;
+    width: 1000px;
+    max-width: 70%;
     background: #f5f5f5;
     position: absolute;
-    z-index: -1;
     top: 300px;
-    left: 306px; }
+    left: 306px;
+    z-index: -1;
+    display: none; }
+    @media (min-width: 1200px) {
+      section .rect-after::after {
+        display: block; } }
+  section .description {
+    width: 90%;
+    margin: 0 auto; }
+    section .description p {
+      text-align: left; }
 
 #first-section .mobile-showcase {
   width: 90%;
-  height: 700px;
-  margin: 0 auto;
+  height: 500px;
+  margin: 50px auto 0 auto;
   background: url("./bg1.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  margin-top: 150px;
   color: #ffffff;
   overflow: hidden;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 768px) {
+    #first-section .mobile-showcase {
+      height: 700px;
+      margin: 100px auto 0 auto; } }
   #first-section .mobile-showcase img {
     height: 90%; }
 
 #second-section .desktop-showcase {
-  height: 600px;
   width: 100%;
-  padding-right: 150px;
-  margin-top: 150px;
+  margin-top: 50px;
+  padding-right: 0px;
   position: relative; }
+  @media (min-width: 768px) {
+    #second-section .desktop-showcase {
+      margin-top: 100px; } }
+  @media (min-width: 1200px) {
+    #second-section .desktop-showcase {
+      padding-right: 150px;
+      margin-top: 150px; }
+      #second-section .desktop-showcase.right {
+        justify-content: flex-end; }
+      #second-section .desktop-showcase.left {
+        justify-content: flex-start; } }
+  #second-section .desktop-showcase .row {
+    width: 90%;
+    max-width: 1000px; }
+    @media (min-width: 1200px) {
+      #second-section .desktop-showcase .row {
+        width: 100%; } }
   #second-section .desktop-showcase img {
-    height: 100%;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2); }
 
 #third-section .consulation {
   width: 90%;
   background-color: #004bd3;
   color: #ffffff;
-  margin: 150px auto 50px auto;
-  padding: 25px; }
+  margin: 50px auto 25px auto;
+  padding: 10px; }
+  @media (min-width: 768px) {
+    #third-section .consulation {
+      margin: 100px auto 25px auto;
+      padding: 25px; } }
+  @media (min-width: 1200px) {
+    #third-section .consulation {
+      margin: 150px auto 50px auto; } }
   #third-section .consulation h4 {
     margin: 0;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
+    @media (min-width: 768px) {
+      #third-section .consulation h4 {
+        font-size: 2rem; } }
   #third-section .consulation a:hover {
     color: #00328e; }
     #third-section .consulation a:hover h4 {
       text-decoration: underline; }
   #third-section .consulation .container {
     width: 100%;
-    margin-top: 50px; }
+    margin-top: 25px; }
+    @media (min-width: 768px) {
+      #third-section .consulation .container {
+        margin-top: 50px; } }
     #third-section .consulation .container .column {
-      width: 50%;
-      padding: 0 100px; }
+      width: 50%; }
     #third-section .consulation .container .next {
-      text-align: right; }
+      text-align: right;
+      padding-right: 20px; }
+      @media (min-width: 576px) {
+        #third-section .consulation .container .next {
+          padding-right: 50px; } }
+      @media (min-width: 992px) {
+        #third-section .consulation .container .next {
+          padding-right: 100px; } }
     #third-section .consulation .container .prev {
-      text-align: left; }
+      text-align: left;
+      padding-left: 20px; }
+      @media (min-width: 576px) {
+        #third-section .consulation .container .prev {
+          padding-left: 50px; } }
+      @media (min-width: 992px) {
+        #third-section .consulation .container .prev {
+          padding-left: 100px; } }
     #third-section .consulation .container .content {
       display: inline-block; }

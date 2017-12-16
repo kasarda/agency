@@ -350,7 +350,10 @@ h2 {
 h3 {
   color: #000;
   font-family: "Playfair Display", serif;
-  font-size: 4.375rem; }
+  font-size: 3rem; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 4.375rem; } }
 
 p {
   font-family: "Playfair Display", serif;
