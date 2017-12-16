@@ -1,1 +1,90 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+
 #Showcase
+    .wrapper
+        +dimension(100%, 250px)
+        background-color: $primary-color
+        position: relative
+        +min(sm)
+            height: 50vh
+        +min(xl)
+            height: 70vh
+        .Letter
+            +center(x)
+            bottom: 0
+            .fill-pattern
+                fill: $light-color
+
+section
+    text-align: center
+    color: $black-color
+    p
+        max-width: 700px
+        margin: 0 auto
+    .rect-after::after
+        content: ''
+        width: 1200px
+        height: 700px
+        background: #f5f5f5
+        position: absolute
+        z-index: -1
+        top: 300px
+        left: 306px
+
+#first-section
+    .mobile-showcase
+        width: 90%
+        height: 700px
+        margin: 0 auto
+        background: url('./bg1.jpg') no-repeat
+        background-size: cover
+        background-attachment: fixed
+        margin-top: 150px
+        color: $light-color
+        overflow: hidden
+        box-shadow: 0 0 80px rgba(0, 0, 0, .20)
+        img
+            height: 90%
+
+#second-section
+    .desktop-showcase
+        +dimension(100%, 600px)
+        padding-right: 150px
+        margin-top: 150px
+        position: relative
+        img
+            height: 100%
+            box-shadow: 0 0 80px rgba(0, 0, 0, .20)
+
+#third-section
+    .consulation
+        width: 90%
+        background-color: $primary-color
+        color: $light-color
+        margin: 150px auto 50px auto
+        padding: 25px
+        h4
+            margin: 0
+            font-size: 2rem
+
+        a
+            &:hover
+                color: #00328e
+                h4
+                    text-decoration: underline
+
+        .container
+            width: 100%
+            margin-top: 50px
+            .column
+                width: 50%
+                padding: 0 100px
+            .next
+                text-align: right
+            .prev
+                text-align: left
+            .content
+                display: inline-block

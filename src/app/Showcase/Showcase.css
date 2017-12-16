@@ -1,0 +1,93 @@
+/*! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  * */
+#Showcase .wrapper {
+  height: 250px;
+  width: 100%;
+  background-color: #004bd3;
+  position: relative; }
+  @media (min-width: 576px) {
+    #Showcase .wrapper {
+      height: 50vh; } }
+  @media (min-width: 1200px) {
+    #Showcase .wrapper {
+      height: 70vh; } }
+  #Showcase .wrapper .Letter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0; }
+    #Showcase .wrapper .Letter .fill-pattern {
+      fill: #ffffff; }
+
+section {
+  text-align: center;
+  color: #000; }
+  section p {
+    max-width: 700px;
+    margin: 0 auto; }
+  section .rect-after::after {
+    content: '';
+    width: 1200px;
+    height: 700px;
+    background: #f5f5f5;
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    left: 306px; }
+
+#first-section .mobile-showcase {
+  width: 90%;
+  height: 700px;
+  margin: 0 auto;
+  background: url("./bg1.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 150px;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2); }
+  #first-section .mobile-showcase img {
+    height: 90%; }
+
+#second-section .desktop-showcase {
+  height: 600px;
+  width: 100%;
+  padding-right: 150px;
+  margin-top: 150px;
+  position: relative; }
+  #second-section .desktop-showcase img {
+    height: 100%;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2); }
+
+#third-section .consulation {
+  width: 90%;
+  background-color: #004bd3;
+  color: #ffffff;
+  margin: 150px auto 50px auto;
+  padding: 25px; }
+  #third-section .consulation h4 {
+    margin: 0;
+    font-size: 2rem; }
+  #third-section .consulation a:hover {
+    color: #00328e; }
+    #third-section .consulation a:hover h4 {
+      text-decoration: underline; }
+  #third-section .consulation .container {
+    width: 100%;
+    margin-top: 50px; }
+    #third-section .consulation .container .column {
+      width: 50%;
+      padding: 0 100px; }
+    #third-section .consulation .container .next {
+      text-align: right; }
+    #third-section .consulation .container .prev {
+      text-align: left; }
+    #third-section .consulation .container .content {
+      display: inline-block; }

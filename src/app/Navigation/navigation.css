@@ -18,6 +18,8 @@
   @media (min-width: 768px) {
     #Navigation {
       padding-top: 50px; } }
+  #Navigation.fixed {
+    position: fixed; }
   #Navigation a {
     color: #ffffff;
     text-decoration: none;

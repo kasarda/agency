@@ -11,7 +11,7 @@ class AppRouter extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div id="outlet" className="view primary-background">
+                <div id="outlet">
                     <Navigation />
                     <Switch>
                         <Route exact path="/" component={Home} />

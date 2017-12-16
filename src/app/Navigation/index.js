@@ -17,14 +17,14 @@ function Link({ to, name, icon }) {
 }
 
 function Navigation() {
-
+    const isProjectPage = /\/projects\/.{1,}/.test(window.location.pathname)
     return (
-        <div id="Navigation">
+        <div id="Navigation" className={isProjectPage ? 'fixed' : ''}>
             <div className="flex wrap">
-                <div className="column brand">
+                <div className="column brand flex align-center">
                     <NavLink to="/" activeClassName="">Digital</NavLink>
                 </div>
-                <div className="column links flex justify-end">
+                <div className="column links flex justify-end align-center">
                     <Link to="/services" name="services" icon="icon-gear" />
                     <Link to="/projects" name="projects" icon="icon-project" />
                     <Link to="/contacts" name="contacts" icon="icon-mail" />
