@@ -23,6 +23,14 @@
     #Showcase .wrapper .Letter .fill-pattern {
       fill: #ffffff; }
 
+#Showcase [data-animate] {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity .8s ease-in, transform .6s ease-in; }
+  #Showcase [data-animate].inView {
+    opacity: 1;
+    transform: translateY(0px); }
+
 @keyframes SlideUp {
   from {
     height: 100vh; } }

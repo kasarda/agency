@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import Letter from '../Letter'
 import './Showcase.css'
 
+import inView from '../../services/view'
+
 class Showcase extends Component {
 
     activeNavigation() {
@@ -20,7 +22,14 @@ class Showcase extends Component {
         }
 
         const elems = document.querySelectorAll('[data-animate]')
-        console.log(elems)
+        console.log('hey')
+
+        elems.forEach(elem => {
+            const visible = inView(elem)
+            if (visible)
+               elem.classList.add('inView')
+
+        })
     }
     scrollUp() {
         window.scrollTo(0, 0)
@@ -28,6 +37,7 @@ class Showcase extends Component {
 
     animationEnd({ animationName }) {
         if (/-Overflow/.test(animationName)) {
+            this.activeNavigation.call(this)
             document.body.style.overflowY = 'visible'
             document.documentElement.style.height = 'auto'
         }
@@ -65,7 +75,7 @@ class Showcase extends Component {
                 </div>
 
                 <section id="first-section">
-                    <div className="description" data-animate>
+                    <div data-animate className="description">
                         <h3>{title}</h3>
                         <p>
                             {paragraphs[0]}

@@ -49,7 +49,10 @@
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Optimize animation, analyze performance, alternative for slow devices",
     "Remove animejs and @types/animejs from dependencies",
-    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin"
+    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
+    "Changed Animation in button in  Page => Project page ",
+    "State black-color on navigation doesnt work on mobile",
+    "Add black color on icons in navigation if navigation is on top of content"
   ],
   "done": [
     "Create showcase home page component (4)",
@@ -76,6 +79,11 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
+    "Created Project Page",
+    "Created new Background Images",
+    "Modified Router, index.js, and index.sass",
+    "Added h3, h4 styles and changed some others",
+    "Added service view"
   ],
   "browsers": {
     "mobile": {
