@@ -8,21 +8,33 @@ import Showcase from './app/Showcase'
 
 
 class AppRouter extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            nav: undefined
+        }
+    }
+    getNavRef(nav) {
+        this.setState({ nav })
+    }
+
     render() {
+        const { nav } = this.state
         return (
-            <BrowserRouter>
-                <div id="outlet">
-                    <Navigation />
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route exact path="/services" render={() => <h1>Services</h1>} />
-                        <Route exact path="/projects" component={Projects} />
-                        <Route exact path="/projects/:name" component={Showcase} />
-                        <Route exact path="/contacts" render={() => <h1>Contacts</h1>} />
-                        <Route path="**" render={() => <h1>404</h1>} />
-                    </Switch>
-                </div>
-            </BrowserRouter>
+            < BrowserRouter >
+            <div id="outlet">
+                <Navigation onMount={this.getNavRef.bind(this)} />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/services" render={() => <h1>Services</h1>} />
+                    <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/projects/:name" render={props => <Showcase name={props.match.params.name} nav={nav}/>} />
+                    <Route exact path="/contacts" render={() => <h1>Contacts</h1>} />
+                    <Route path="**" render={() => <h1>404</h1>} />
+                </Switch>
+            </div>
+            </BrowserRouter >
         )
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import './Navigation.css'
@@ -16,22 +16,31 @@ function Link({ to, name, icon }) {
     )
 }
 
-function Navigation() {
-    const isProjectPage = /\/projects\/.{1,}/.test(window.location.pathname)
-    return (
-        <div id="Navigation" className={isProjectPage ? 'fixed' : ''}>
-            <div className="flex wrap">
-                <div className="column brand flex align-center">
-                    <NavLink to="/" activeClassName="">Digital</NavLink>
+class Navigation extends Component {
+    componentDidMount() {
+        this.props.onMount(this.refs.nav)
+    }
+    render() {
+        const isProjectPage = /\/projects\/.{1,}/.test(window.location.pathname)
+        return (
+            <div
+                id="Navigation"
+                className={isProjectPage ? 'fixed' : ''}
+                ref="nav"
+            >
+                <div className="flex wrap">
+                    <div className="column brand flex align-center">
+                        <NavLink to="/" activeClassName="">Digital</NavLink>
+                    </div>
+                    <div className="column links flex justify-end align-center">
+                        <Link to="/services" name="services" icon="icon-gear" />
+                        <Link to="/projects" name="projects" icon="icon-project" />
+                        <Link to="/contacts" name="contacts" icon="icon-mail" />
+                    </div>
                 </div>
-                <div className="column links flex justify-end align-center">
-                    <Link to="/services" name="services" icon="icon-gear" />
-                    <Link to="/projects" name="projects" icon="icon-project" />
-                    <Link to="/contacts" name="contacts" icon="icon-mail" />
-                </div>
-            </div>
-        </div >
-    )
+            </div >
+        )
+    }
 }
 
 export default Navigation

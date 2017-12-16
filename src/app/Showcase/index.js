@@ -4,17 +4,37 @@ import Letter from '../Letter'
 import './Showcase.css'
 
 class Showcase extends Component {
+    activeNavigation() {
+        const { nav } = this.props
+
+        if(nav) {
+            const position = document.documentElement.scrollTop
+            const { offsetHeight } = this.refs.wrapper
+            const marginTop = parseFloat(getComputedStyle(nav).marginTop) || 0
+            if (position >= offsetHeight - marginTop)
+                nav.classList.add('black-color')
+            else
+                nav.classList.remove('black-color')
+        }
+    }
     componentDidMount() {
         document.body.style.overflowY = 'visible'
         document.documentElement.style.height = 'auto'
+        this.activeNavigation.call(this)
+        document.body.onscroll = this.activeNavigation.bind(this)
 
     }
+    componentWillUnmount() {
+        document.body.onscroll = null
+    }
     render() {
-        const { name } = this.props.match.params
-
         return (
             <div id="Showcase">
-                <div className="wrapper flex justify-center align-end">
+                <div
+                    className="wrapper flex justify-center align-end"
+                    ref="wrapper"
+                >
+
                     <Letter letter="H" />
                 </div>
 

@@ -9,7 +9,7 @@
   * */
 #Navigation {
   font-family: "Montserrat", sans-serif;
-  padding-top: 25px;
+  margin-top: 25px;
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
@@ -17,9 +17,11 @@
   width: 100%; }
   @media (min-width: 768px) {
     #Navigation {
-      padding-top: 50px; } }
+      margin-top: 50px; } }
   #Navigation.fixed {
     position: fixed; }
+  #Navigation.black-color * {
+    color: #000; }
   #Navigation a {
     color: #ffffff;
     text-decoration: none;

@@ -4,16 +4,18 @@
 
 #Navigation
     font-family: $primary-font
-    padding-top: 25px
+    margin-top: 25px
     text-transform: uppercase
     font-weight: $bold
     position: relative
     z-index: 999
     width: 100%
     +min(md)
-        padding-top: 50px
+        margin-top: 50px
     &.fixed
         position: fixed
+    &.black-color *
+        color: $black-color
     a
         color: $light-color
         text-decoration: none
