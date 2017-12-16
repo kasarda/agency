@@ -96,7 +96,7 @@
   transform: translateY(0px);
   opacity: 1; }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn {
+[data-side-ready="true"][data-redirect="true"] #Description .fadeIn:not(.fadeIn-4) {
   transform: translateY(100px);
   opacity: 0; }
 
@@ -110,4 +110,5 @@
   transition-delay: 0.2s; }
 
 [data-side-ready="true"][data-redirect="true"] #Description .fadeIn-4 {
-  transition-delay: 0.1s; }
+  opacity: 0;
+  transition-delay: 0s; }
