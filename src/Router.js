@@ -29,7 +29,7 @@ class AppRouter extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/services" render={() => <h1>Services</h1>} />
                     <Route exact path="/projects" component={Projects} />
-                    <Route exact path="/projects/:name" render={props => <Showcase name={props.match.params.name} nav={nav}/>} />
+                    <Route exact path="/projects/:name" render={props => <Showcase router={props} nav={nav}/>} />
                     <Route exact path="/contacts" render={() => <h1>Contacts</h1>} />
                     <Route path="**" render={() => <h1>404</h1>} />
                 </Switch>

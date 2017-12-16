@@ -39,7 +39,7 @@ class Side extends Component {
                     'which provide quality',
                     'headphones and speakers.'
                 ],
-                link: '/projects/headphnones'
+                link: '/projects/headphones'
             },
             {
                 theme: '#5f646a',

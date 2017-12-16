@@ -350,7 +350,8 @@ h2 {
 h3 {
   color: #000;
   font-family: "Playfair Display", serif;
-  font-size: 3rem; }
+  font-size: 3rem;
+  text-transform: capitalize; }
   @media (min-width: 768px) {
     h3 {
       font-size: 4.375rem; } }
