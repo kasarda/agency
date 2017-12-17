@@ -57,3 +57,5 @@
       padding-right: 0; }
   #Navigation svg .icon {
     fill: #ffffff; }
+  #Navigation.black-color svg .icon {
+    fill: #000; }
