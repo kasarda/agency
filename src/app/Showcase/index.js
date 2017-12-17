@@ -25,11 +25,13 @@ class Showcase extends Component {
         const { nav } = this.props
 
         if (nav) {
-            const position = document.documentElement.scrollTop
+            const position = document.documentElement.scrollTop || document.body.scrollTop
             const { offsetHeight } = this.refs.wrapper
             const marginTop = parseFloat(getComputedStyle(nav).marginTop) || 0
-            if (position >= offsetHeight - marginTop)
+
+            if (position >= offsetHeight - marginTop) {
                 nav.classList.add('black-color')
+            }
             else
                 nav.classList.remove('black-color')
         }
