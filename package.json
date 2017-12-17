@@ -37,7 +37,8 @@
     "Animation only on transform and opacity not left, top ...",
     "Aria-",
     "replace some animation on mobiles for performance",
-    "preload"
+    "preload",
+    "Logger for mobile devices :D"
   ],
   "todos": [
     "Create Services, Projects, Contacts and 404 components",
