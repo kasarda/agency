@@ -565,3 +565,11 @@ img {
 @keyframes ColumnFadeOutAnim-Redirect {
   90%, to {
     opacity: 0; } }
+
+@keyframes SlideUpAnim {
+  from {
+    height: 100vh; } }
+
+@keyframes FadeInLetterAnim-Overflow {
+  from {
+    opacity: 0; } }
