@@ -95,8 +95,11 @@ class Showcase extends Component {
                             {paragraphs[0]}
                         </p>
                     </div>
-                    <div data-animate="fadeLeft" data-offset="-200" className="mobile-showcase flex flex-center">
-                        <img src={require('./mobile1.png')} alt="website on mobile" />
+                    <div
+                        data-animate="fadeLeft" data-offset="-200"
+                        className="mobile-showcase flex flex-center"
+                        style={{ backgroundImage: `url(${require('./images/bg1.jpg')})`}}>
+                        <img src={require('./images/mobile1.png')} alt="website on mobile" />
                     </div>
                 </section>
 
@@ -110,12 +113,12 @@ class Showcase extends Component {
                     <div className="showcases">
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
-                                <img src={require('./desktop1-3.jpg')} alt="website on dekstop" />
+                                <img src={require('./images/desktop1-3.jpg')} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
-                                <img src={require('./desktop1-1.jpg')} alt="website on dekstop" />
+                                <img src={require('./images/desktop1-1.jpg')} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" data-offset="100" className="description between-showcases">
@@ -125,12 +128,12 @@ class Showcase extends Component {
                         </div>
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
-                                <img src={require('./desktop1-4.jpg')} alt="website on dekstop" />
+                                <img src={require('./images/desktop1-4.jpg')} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
-                                <img src={require('./desktop1-2.jpg')} alt="website on dekstop" />
+                                <img src={require('./images/desktop1-2.jpg')} alt="website on dekstop" />
                             </div>
                         </div>
                     </div>
