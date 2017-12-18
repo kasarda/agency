@@ -21,6 +21,7 @@ class Showcase extends Component {
 
         })
     }
+
     scrollHandler() {
         const { nav } = this.props
 
@@ -39,6 +40,7 @@ class Showcase extends Component {
         if(window.innerWidth >= 768)
             this.scrollAnimation()
     }
+
     scrollUp() {
         window.scrollTo(0, 0)
         const elems = document.querySelectorAll('[data-animate]')
@@ -54,10 +56,12 @@ class Showcase extends Component {
         }
 
     }
+
     componentDidMount() {
         this.scrollHandler.call(this)
         document.body.onscroll = this.scrollHandler.bind(this)
     }
+
     componentWillUnmount() {
         document.body.onscroll = null
         document.body.style.overflowY = 'hidden'
@@ -68,7 +72,6 @@ class Showcase extends Component {
     render() {
         const {
             title,
-            id,
             paragraphs,
             next,
             prev,
