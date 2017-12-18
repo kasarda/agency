@@ -7,13 +7,13 @@
     .wrapper
         +dimension(100%, 250px)
         background-color: $primary-color
-        animation: SlideUp .4s .4s ease-in backwards
+        +slideUp-anim
         +min(sm)
             height: 50vh
         +min(xl)
             height: 70vh
         .Letter
-            animation: FadeInLett-Overflow .4s .8s ease-in backwards
+            +fadeIn-letter-anim
             .fill-pattern
                 fill: $light-color
     +min(md)
@@ -23,44 +23,37 @@
             &.fadeLeft
                 opacity: 1
                 transform: translate(0px)
-                transition: opacity .8s ease-in, transform .6s ease-in
-
+                +scroll-tran
         [data-animate="fadeUp"]
             transform: translateY(200px)
         [data-animate="fadeLeft"]
             transform: translateX(200px)
 
-@keyframes SlideUp
-    from
-        height: 100vh
 
-@keyframes FadeInLett-Overflow
-    from
-        opacity: 0
 
-section
-    text-align: center
-    color: $black-color
-    p
-        max-width: 500px
-        margin: 0 auto
-        +min(md)
-            max-width: 700px
-    .rect-after::after
-        content: ''
-        +dimension(1000px, 700px)
-        max-width: 70%
-        background: #f5f5f5
-        +position(300px, 306px, absolute)
-        z-index: -1
-        display: none
-        +min(xl)
-            display: block
-    .description
-        width: 90%
-        margin: 0 auto
+    section
+        text-align: center
+        color: $black-color
         p
-            text-align: left
+            max-width: 500px
+            margin: 0 auto
+            +min(md)
+                max-width: 700px
+        .rect-after::after
+            content: ''
+            +position(300px, 306px, absolute)
+            +dimension(1000px, 700px)
+            max-width: 70%
+            background: #f6f6f6
+            z-index: -1
+            display: none
+            +min(xl)
+                display: block
+        .description
+            width: 90%
+            margin: 0 auto
+            p
+                text-align: left
 
 #first-section
     .mobile-showcase
@@ -71,7 +64,7 @@ section
         background-size: cover
         color: $light-color
         overflow: hidden
-        box-shadow: 0 0 80px rgba(0, 0, 0, .20)
+        box-shadow: 0 0 60px rgba(0, 0, 0, .20)
         +min(md)
             height: 700px
             margin: 100px auto 0 auto
@@ -103,7 +96,7 @@ section
                 width: 100%
 
         img
-            box-shadow: 0 0 80px rgba(0, 0, 0, .20)
+            box-shadow: 0 0 60px rgba(0, 0, 0, .20)
     .between-showcases
         margin-top: 50px
         +min(md)
