@@ -45,7 +45,6 @@
     "Create logo, favicon and name of company",
     "Add selection",
     "Change specific easings for animations to be more smooth and better looking",
-    "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Optimize animation, analyze performance, alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "Set navigation to be fixed by default"
@@ -68,9 +67,10 @@
     "Safari chrome bar and bottom bar goes into content, so navigation is not visible but its there",
     "Update svgs letters to have one pattern and have new classNames",
     "State black-color on navigation doesnt work on mobile",
-    "Add black color on icons in navigation if navigation is on top of content",
+    "Add black color on icons in navigation if navigation is on top of content"
   ],
   "cancel": [
+    "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Add version for the client to be sure on mobile if site was updated ar not",
     "Add some kind of graphic in home page first view",
