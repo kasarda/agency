@@ -106,13 +106,13 @@
   #second-section .desktop-showcase img {
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.2); }
 
-#second-section .between-showcases {
+#second-section .description.between-showcases {
   margin-top: 50px; }
   @media (min-width: 768px) {
-    #second-section .between-showcases {
+    #second-section .description.between-showcases {
       margin-top: 100px; } }
   @media (min-width: 1200px) {
-    #second-section .between-showcases {
+    #second-section .description.between-showcases {
       margin-top: 150px; } }
 
 #third-section .consulation {
