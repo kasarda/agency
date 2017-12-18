@@ -40,3 +40,6 @@
 
 [data-home="true"][data-from] #Navigator {
   animation: HeadingFinish-RenderPage-RenderImage-Ready 2.4s; }
+
+[data-ready="true"][data-redirect="true"] #Navigator {
+  opacity: 0; }
