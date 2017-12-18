@@ -48,8 +48,7 @@
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Optimize animation, analyze performance, alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
-    "State black-color on navigation doesnt work on mobile",
-    "Add black color on icons in navigation if navigation is on top of content"
+    "Set navigation to be fixed by default"
   ],
   "done": [
     "Create showcase home page component (4)",
@@ -67,7 +66,9 @@
     "Remove animejs and @types/animejs from dependencies",
     "Changed Animation in button in  Page => Project page ",
     "Safari chrome bar and bottom bar goes into content, so navigation is not visible but its there",
-    "Update svgs letters to have one pattern and have new classNames"
+    "Update svgs letters to have one pattern and have new classNames",
+    "State black-color on navigation doesnt work on mobile",
+    "Add black color on icons in navigation if navigation is on top of content",
   ],
   "cancel": [
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
