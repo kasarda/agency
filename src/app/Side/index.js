@@ -42,7 +42,7 @@ class Side extends Component {
                 link: '/projects/headphones'
             },
             {
-                theme: '#c8b18f',
+                theme: '#a0978a',
                 letter: 'R',
                 heading: 'Portfolio',
                 description: [

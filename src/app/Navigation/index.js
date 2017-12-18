@@ -21,11 +21,9 @@ class Navigation extends Component {
         this.props.onMount(this.refs.nav)
     }
     render() {
-        const isProjectPage = /\/projects\/.{1,}/.test(window.location.pathname)
         return (
             <div
                 id="Navigation"
-                className={isProjectPage ? 'fixed' : ''}
                 ref="nav"
             >
                 <div className="flex wrap">

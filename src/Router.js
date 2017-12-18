@@ -5,21 +5,14 @@ import Navigation from './app/Navigation'
 import Home from './app/Home'
 import Projects from './app/Projects'
 import Showcase from './app/Showcase'
+import Services from './app/Services'
+import Contacts from './app/Contacts'
+import NotFound from './app/NotFound'
 
 
-class AppRouter extends Component {
-    constructor() {
-        super()
+function RenderShowCase(name, nav) {
 
-        this.state = {
-            nav: undefined
-        }
-    }
-    getNavRef(nav) {
-        this.setState({ nav })
-    }
-
-    getContent(name) {
+    function getContent(name) {
 
         let state = {
             title: name,
@@ -83,6 +76,29 @@ class AppRouter extends Component {
 
     }
 
+    return () => (
+        <Showcase
+            data={getContent(name)}
+            nav={nav}
+        />
+    )
+}
+
+
+
+
+class AppRouter extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            nav: undefined
+        }
+    }
+    getNavRef(nav) {
+        this.setState({ nav })
+    }
+
     render() {
         const { nav } = this.state
         return (
@@ -91,35 +107,14 @@ class AppRouter extends Component {
                     <Navigation onMount={this.getNavRef.bind(this)} />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/services" render={() => <h1>Services</h1>} />
+                        <Route exact path="/services" component={Services} />
                         <Route exact path="/projects" component={Projects} />
-
-                        <Route exact path="/projects/headphones" render={props => (
-                            <Showcase
-                                data={this.getContent('headphones')}
-                                nav={nav} />
-                        )} />
-
-                        <Route exact path="/projects/artech" render={props =>
-                            (<Showcase
-                                data={this.getContent('artech')}
-                                nav={nav} />
-                            )} />
-
-                        <Route exact path="/projects/portfolio" render={props =>
-                            (<Showcase
-                                data={this.getContent('portfolio')}
-                                nav={nav} />
-                            )} />
-
-                        <Route exact path="/projects/post" render={props =>
-                            (<Showcase
-                                data={this.getContent('post')}
-                                nav={nav} />
-                            )} />
-
-                        <Route exact path="/contacts" render={() => <h1>Contacts</h1>} />
-                        <Route path="**" render={() => <h1>404</h1>} />
+                        <Route exact path="/projects/headphones" render={RenderShowCase('headphones', nav)} />
+                        <Route exact path="/projects/portfolio" render={RenderShowCase('portfolio', nav)} />
+                        <Route exact path="/projects/post" render={RenderShowCase('post', nav)} />
+                        <Route exact path="/projects/artech" render={RenderShowCase('artech', nav)} />
+                        <Route exact path="/contacts" component={Contacts} />
+                        <Route path="**" component={NotFound} />
                     </Switch>
                 </div>
             </BrowserRouter >
