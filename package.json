@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.0.0",
+  "version": "2.0.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -83,18 +83,6 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
-    "Created Showcase component",
-    "Created new Background Images",
-    "Modified Router, index.js, and index.sass",
-    "Added h3, h4 styles and changed some others",
-    "Added service view",
-    "Removed animejs",
-    "Updated packages",
-    "ts-modules 4.0.0",
-    "Fixed some bugs with animations in Home component",
-    "Created Images lvl 2",
-    "Set navigation to be always fixed",
-    "Initialize Services, Contacts and 404 components"
   ],
   "browsers": {
     "mobile": {
