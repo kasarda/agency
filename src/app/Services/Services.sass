@@ -6,11 +6,16 @@
     .wrapper
         background-color: $primary-color
         +dimension(100%, 250px)
-        +slideUp-anim
+        padding: 0 20px
         +min(sm)
             height: 50vh
+        +min(md)
+            padding: 0 50px
         +min(xl)
             height: 70vh
+        h1
+            max-width: 700px
+            text-align: center
     section
         margin-left: auto
         margin-right: auto

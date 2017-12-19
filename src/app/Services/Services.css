@@ -11,13 +11,19 @@
   background-color: #004bd3;
   height: 250px;
   width: 100%;
-  animation: SlideUpAnim .4s .4s ease-in backwards; }
+  padding: 0 20px; }
   @media (min-width: 576px) {
     #Services .wrapper {
       height: 50vh; } }
+  @media (min-width: 768px) {
+    #Services .wrapper {
+      padding: 0 50px; } }
   @media (min-width: 1200px) {
     #Services .wrapper {
       height: 70vh; } }
+  #Services .wrapper h1 {
+    max-width: 700px;
+    text-align: center; }
 
 #Services section {
   margin-left: auto;

@@ -46,6 +46,7 @@ class Showcase extends Component {
     }
 
     componentWillUnmount() {
+        window.scrollTo(0, 0)
         document.body.onscroll = null
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'

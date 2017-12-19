@@ -47,7 +47,8 @@
     "Change specific easings for animations to be more smooth and better looking",
     "Optimize animation, analyze performance, alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
-    "Optimize SVG"
+    "Optimize SVG",
+    "Clean and optimize code, create better and readable environment"
   ],
   "done": [
     "Create Services, Contacts and 404 components",

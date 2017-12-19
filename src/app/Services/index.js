@@ -10,6 +10,7 @@ class Services extends Component {
         document.documentElement.style.height = 'auto'
     }
     componentWillUnmount() {
+        window.scrollTo(0, 0)
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
         document.querySelector('#Navigation').classList.remove('black-color')
@@ -19,8 +20,9 @@ class Services extends Component {
         return (
             <div id="Services">
                 <div className="wrapper flex flex-center" data-active-navigation>
-                    <h1>We are creating apps for <br />
-                        <span>mobile</span> and <span>web</span> </h1>
+                    <h1>
+                        We are creating mobile a web apps
+                    </h1>
                 </div>
                 <section className="flex wrap" id="mobile-showcase">
                     <div className="column flex justify-start align-center direction-col">
