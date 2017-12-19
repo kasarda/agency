@@ -21,7 +21,7 @@ class Services extends Component {
             <div id="Services">
                 <div className="wrapper flex flex-center" data-active-navigation>
                     <h1>
-                        We are creating mobile a web apps
+                        We are creating mobile and web apps
                     </h1>
                 </div>
                 <section className="flex wrap" id="mobile-showcase">

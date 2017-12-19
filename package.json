@@ -43,13 +43,17 @@
   "todos": [
     "Create logo, favicon and name of company",
     "Create custom scrollbar",
+    "Create service for scroll animation",
     "Add selection",
     "Change specific easings for animations to be more smooth and better looking",
     "Optimize animation, analyze performance, alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "Optimize SVG",
     "Clean and optimize code, create better and readable environment",
-    "Create better images"
+    "Create better images",
+    "Fill lorem ipsum",
+    "Try to get wheel service inside Home component with removeEventListener",
+    "Initialize contacts and notFound component"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
