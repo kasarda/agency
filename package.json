@@ -41,7 +41,6 @@
     "Logger for mobile devices"
   ],
   "todos": [
-    "Create Services, Contacts and 404 components",
     "Create logo, favicon and name of company",
     "Create custom scrollbar",
     "Add selection",
@@ -51,6 +50,7 @@
     "Optimize SVG"
   ],
   "done": [
+    "Create Services, Contacts and 404 components",
     "Create showcase home page component (4)",
     "Create faster duration for animation and rewrite to be more stable and flexible",
     "Create ready functionality for home component",
@@ -93,7 +93,8 @@
     "ts-modules 4.0.0",
     "Fixed some bugs with animations in Home component",
     "Created Images lvl 2",
-    "Set navigation to be always fixed"
+    "Set navigation to be always fixed",
+    "Initialize Services, Contacts and 404 components"
   ],
   "browsers": {
     "mobile": {
