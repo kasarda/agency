@@ -7,50 +7,33 @@ import './Showcase.css'
 import inView from '../../services/view'
 
 class Showcase extends Component {
-
     scrollAnimation() {
-        const elems = document.querySelectorAll('[data-animate]')
 
-        elems.forEach(elem => {
-            const { animate, offset } = elem.dataset
-            const offsetY = parseFloat(offset) || 0
-            const visible = inView(elem, offsetY)
+        if (window.innerWidth >= 768) {
+            const elems = document.querySelectorAll('[data-animate]')
 
-            if (visible)
-                elem.classList.add(animate)
+            elems.forEach(elem => {
+                const { animate, offset } = elem.dataset
+                const offsetY = parseFloat(offset) || 0
+                const visible = inView(elem, offsetY)
 
-        })
-    }
+                if (visible)
+                    elem.classList.add(animate)
 
-    scrollHandler() {
-        const { nav } = this.props
-
-        if (nav) {
-            const position = document.documentElement.scrollTop || document.body.scrollTop
-            const { offsetHeight } = this.refs.wrapper
-            const marginTop = parseFloat(getComputedStyle(nav).marginTop) || 0
-
-            if (position >= offsetHeight - marginTop)
-                nav.classList.add('black-color')
-
-            else
-                nav.classList.remove('black-color')
+            })
         }
-
-        if (window.innerWidth >= 768)
-            this.scrollAnimation()
     }
 
     scrollUp() {
         window.scrollTo(0, 0)
         const elems = document.querySelectorAll('[data-animate]')
         elems.forEach(elem => elem.classList.remove(elem.dataset.animate))
-        this.scrollHandler.call(this)
+        this.scrollAnimation.call(this)
     }
 
     animationEnd({ animationName }) {
         if (/-Overflow/.test(animationName)) {
-            this.scrollHandler.call(this)
+            this.scrollAnimation.call(this)
             document.body.style.overflowY = 'visible'
             document.documentElement.style.height = 'auto'
         }
@@ -58,15 +41,15 @@ class Showcase extends Component {
     }
 
     componentDidMount() {
-        this.scrollHandler.call(this)
-        document.body.onscroll = this.scrollHandler.bind(this)
+        this.scrollAnimation.call(this)
+        document.body.onscroll = this.scrollAnimation.bind(this)
     }
 
     componentWillUnmount() {
         document.body.onscroll = null
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
-        this.props.nav.classList.remove('black-color')
+        document.querySelector('#Navigation').classList.remove('black-color')
     }
 
 
@@ -84,7 +67,7 @@ class Showcase extends Component {
             <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
                 <div
                     className="wrapper flex justify-center align-end"
-                    ref="wrapper"
+                    data-active-navigation
                 >
 
                     <Letter letter={letter} />

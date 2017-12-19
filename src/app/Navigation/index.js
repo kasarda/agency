@@ -17,15 +17,9 @@ function Link({ to, name, icon }) {
 }
 
 class Navigation extends Component {
-    componentDidMount() {
-        this.props.onMount(this.refs.nav)
-    }
     render() {
         return (
-            <div
-                id="Navigation"
-                ref="nav"
-            >
+            <div id="Navigation">
                 <div className="flex wrap">
                     <div className="column brand flex align-center">
                         <NavLink to="/" activeClassName="">Digital</NavLink>

@@ -10,7 +10,7 @@ import Contacts from './app/Contacts'
 import NotFound from './app/NotFound'
 
 
-function RenderShowCase(name, nav) {
+function RenderShowCase(name) {
 
     function getContent(name) {
 
@@ -76,43 +76,27 @@ function RenderShowCase(name, nav) {
 
     }
 
-    return () => (
-        <Showcase
-            data={getContent(name)}
-            nav={nav}
-        />
-    )
+    return () => (<Showcase data={getContent(name)} />)
 }
 
 
 
 
 class AppRouter extends Component {
-    constructor() {
-        super()
-
-        this.state = {
-            nav: undefined
-        }
-    }
-    getNavRef(nav) {
-        this.setState({ nav })
-    }
 
     render() {
-        const { nav } = this.state
         return (
-             <BrowserRouter>
+            <BrowserRouter>
                 <div id="outlet">
-                    <Navigation onMount={this.getNavRef.bind(this)} />
+                    <Navigation />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/services" component={Services} />
                         <Route exact path="/projects" component={Projects} />
-                        <Route exact path="/projects/headphones" render={RenderShowCase('headphones', nav)} />
-                        <Route exact path="/projects/portfolio" render={RenderShowCase('portfolio', nav)} />
-                        <Route exact path="/projects/post" render={RenderShowCase('post', nav)} />
-                        <Route exact path="/projects/artech" render={RenderShowCase('artech', nav)} />
+                        <Route exact path="/projects/headphones" render={RenderShowCase('headphones')} />
+                        <Route exact path="/projects/portfolio" render={RenderShowCase('portfolio')} />
+                        <Route exact path="/projects/post" render={RenderShowCase('post')} />
+                        <Route exact path="/projects/artech" render={RenderShowCase('artech')} />
                         <Route exact path="/contacts" component={Contacts} />
                         <Route path="**" component={NotFound} />
                     </Switch>

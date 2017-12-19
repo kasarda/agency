@@ -4,6 +4,7 @@ import './Services.css'
 
 
 class Services extends Component {
+
     componentDidMount() {
         document.body.style.overflowY = 'visible'
         document.documentElement.style.height = 'auto'
@@ -11,12 +12,13 @@ class Services extends Component {
     componentWillUnmount() {
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
+        document.querySelector('#Navigation').classList.remove('black-color')
     }
     render() {
 
         return (
             <div id="Services">
-                <div className="wrapper flex flex-center">
+                <div className="wrapper flex flex-center" data-active-navigation>
                     <h1>We are creating apps for <br />
                         <span>mobile</span> and <span>web</span> </h1>
                 </div>
