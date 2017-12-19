@@ -48,7 +48,8 @@
     "Optimize animation, analyze performance, alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "Optimize SVG",
-    "Clean and optimize code, create better and readable environment"
+    "Clean and optimize code, create better and readable environment",
+    "Create better images"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
