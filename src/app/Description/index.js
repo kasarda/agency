@@ -4,6 +4,7 @@ import './Description.css'
 
 
 class Description extends Component {
+
     redirect(event) {
         event.preventDefault()
         this.props.onRedirect()

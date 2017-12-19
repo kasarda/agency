@@ -4,9 +4,15 @@ import './index.css'
 import AppRouter from './Router'
 import registerSW from './sw'
 
+
+/**
+ *
+ * Prevent default behavior of scrolling on touch devices,
+ * but only for components that are no scrollabel
+ *
+ */
 document.addEventListener('touchmove', e => {
     const canPrevent = document.body.dataset.preventTouch === 'true'
-
     if (canPrevent)
         e.preventDefault()
 }, {
@@ -14,6 +20,11 @@ document.addEventListener('touchmove', e => {
 })
 
 
+/**
+ *
+ * Set to navigation black color on scrollable component
+ *
+ */
 window.addEventListener('scroll', () => {
 
     const nav = document.querySelector('#Navigation')
@@ -33,5 +44,11 @@ window.addEventListener('scroll', () => {
 
 })
 
+
+/**
+ *
+ * Render Main Component
+ *
+ */
 ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()

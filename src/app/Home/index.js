@@ -43,6 +43,8 @@ class Home extends Component {
             })
         }
     }
+
+
     setPage(type) {
         const { to, length, ready } = this.state
 
@@ -76,7 +78,7 @@ class Home extends Component {
     }
 
 
-    setReady({ animationName }) {
+    animationEnd({ animationName }) {
         const { to } = this.state
 
         if (/-SideReady/.test(animationName))
@@ -95,7 +97,7 @@ class Home extends Component {
             this.setState({ canRedirect: true })
     }
 
-    setRenderPage({ animationName }) {
+    animationStart({ animationName }) {
         const { to } = this.state
 
         if (/-StartRender/.test(animationName))
@@ -105,6 +107,7 @@ class Home extends Component {
     onCanRedirect(link) {
         this.setState({ redirect: true, link })
     }
+
     shouldComponentUpdate(_, { to, renderImage }) {
         if (renderImage === 0 && to !== 0)
             this.setState({ renderImage: to })
@@ -129,20 +132,16 @@ class Home extends Component {
 
     render() {
         const {
-            to,
-            down,
-            from,
-            sideReady,
-            ready,
-            renderPage,
-            currentPage,
-            renderImage,
-            redirect,
-            canRedirect,
-            link
+            to, down, from,
+            sideReady, ready,
+            renderPage, currentPage, renderImage,
+            redirect, canRedirect, link
         } = this.state
 
-        const url = renderImage > 0 ? `url(${require(`./bg${renderImage}.jpg`)})` : null
+        const url = renderImage > 0 ? `url(${require(`./images/bg${renderImage}.jpg`)})` : null
+
+        if (canRedirect)
+            return <Redirect to={link} />
 
         return (
             <div
@@ -155,13 +154,13 @@ class Home extends Component {
                 data-to={to}
                 data-redirect={redirect}
                 data-current-page={currentPage}
-                onAnimationEnd={this.setReady.bind(this)}
-                onAnimationStart={this.setRenderPage.bind(this)}
+                onAnimationEnd={this.animationEnd.bind(this)}
+                onAnimationStart={this.animationStart.bind(this)}
             >
                 <Side renderPage={renderPage} onCanRedirect={this.onCanRedirect.bind(this)} />
                 <Letter letter="C" id="Letter" />
-                {canRedirect ? <Redirect to={link} /> : null}
-                <div className="wrapper flex direction-col justify-end">
+
+                <div className="camera flex direction-col justify-end">
                     <div className="column flex">
                         <div className="rule">
                             <div

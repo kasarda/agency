@@ -9,15 +9,15 @@
   * */
 #Home {
   background-color: #004bd3; }
-  #Home .wrapper {
+  #Home .camera {
     height: 100%;
     width: 100%;
     padding: 0 20px;
     justify-content: flex-end; }
     @media (min-width: 768px) and (min-height: 500px) {
-      #Home .wrapper {
+      #Home .camera {
         justify-content: center; } }
-    #Home .wrapper .column {
+    #Home .camera .column {
       height: 150px;
       position: relative;
       margin-right: -20px;
@@ -25,27 +25,27 @@
       animation: none;
       transition: height .4s .4s ease-in-out, margin .4s .4s ease-in-out; }
       @media (min-width: 768px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           height: 250px;
           margin-bottom: 0;
           margin-right: -50px; } }
       @media (min-width: 576px) and (max-width: 767px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           margin-bottom: 50px; } }
       @media (max-height: 500px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           margin-bottom: 25px;
           height: 150px; } }
       @media (min-width: 1024px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           margin-left: 86px; } }
       @media (min-width: 1300px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           margin-left: 150px; } }
       @media (min-width: 1600px) {
-        #Home .wrapper .column {
+        #Home .camera .column {
           margin-left: 250px; } }
-    #Home .wrapper .rule {
+    #Home .camera .rule {
       position: absolute;
       width: 0px;
       height: 100%;
@@ -54,32 +54,32 @@
       transition: width .4s 1.4s ease-in-out;
       overflow: hidden; }
       @media (min-width: 768px) {
-        #Home .wrapper .rule {
+        #Home .camera .rule {
           width: 1px;
           animation: SlideAnim .4s .4s ease-in backwards; } }
       @media (max-height: 500px) {
-        #Home .wrapper .rule {
+        #Home .camera .rule {
           width: 0px; } }
-      #Home .wrapper .rule .background {
+      #Home .camera .rule .background {
         height: 100%;
         width: 100%;
         opacity: 0;
         background-repeat: no-repeat;
         background-size: cover;
         transition: opacity .4s .4s; }
-    #Home .wrapper h1 {
+    #Home .camera h1 {
       padding-bottom: 50px;
       transition: opacity 1s 1.8s ease-in-out;
       animation: FadeInAnim-Ready 1s 1.4s ease-in backwards;
       opacity: 1; }
       @media (min-width: 768px) {
-        #Home .wrapper h1 {
+        #Home .camera h1 {
           padding-bottom: 0;
           padding-left: 25px; } }
       @media all and (-ms-high-contrast: none) {
-        #Home .wrapper h1 {
+        #Home .camera h1 {
           animation-delay: .6s; } }
-  #Home[data-from]:not([data-home="true"]) .wrapper .rule .background {
+  #Home[data-from]:not([data-home="true"]) .camera .rule .background {
     opacity: 1;
     transition-delay: 1.8s; }
   #Home[data-home="false"] .column {
