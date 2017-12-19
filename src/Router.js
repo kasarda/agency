@@ -102,7 +102,7 @@ class AppRouter extends Component {
     render() {
         const { nav } = this.state
         return (
-            < BrowserRouter >
+             < BrowserRouter >
                 <div id="outlet">
                     <Navigation onMount={this.getNavRef.bind(this)} />
                     <Switch>
