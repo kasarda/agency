@@ -38,16 +38,19 @@ h1
         line-height: $heading-line-height
 
 h2
-    letter-spacing: $heading-side-letter-spacing
-    line-height: $heading-side-line-height
+    letter-spacing: $heading-2-letter-spacing
+    line-height: $heading-2-line-height
     text-transform: uppercase
     font-size: $heading-mobile-size
     +min(md)
-        font-size: $heading-side-small-size
+        font-size: $heading-2-small-size
     +min(lg)
         font-size: $heading-size
     +maxHeight(500px)
         font-size: $heading-mobile-size
+    +maxHeight(300px)
+        font-size: $heading-2-tiny-size
+        line-height: normal
 
 h3
     color: $black-color
