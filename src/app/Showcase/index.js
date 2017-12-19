@@ -66,6 +66,7 @@ class Showcase extends Component {
         document.body.onscroll = null
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
+        this.props.nav.classList.remove('black-color')
     }
 
 
