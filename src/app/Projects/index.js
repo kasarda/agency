@@ -43,6 +43,12 @@ class Projects extends Component {
         })
     }
 
+    componentDidMount() {
+        document.body.dataset.preventTouch = "true"
+    }
+    componentWillUnmount() {
+        document.body.dataset.preventTouch = "false"
+    }
 
     render() {
 

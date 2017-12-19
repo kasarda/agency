@@ -5,8 +5,9 @@ import AppRouter from './Router'
 import registerSW from './sw'
 
 document.addEventListener('touchmove', e => {
-    const isProjectPage = /\/projects\/.{1,}/.test(window.location.pathname)
-    if (!isProjectPage)
+    const canPrevent = document.body.dataset.preventTouch === 'true'
+
+    if (canPrevent)
         e.preventDefault()
 }, {
     passive: false

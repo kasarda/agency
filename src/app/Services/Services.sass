@@ -3,6 +3,57 @@
 @import "animation.sass"
 
 #Services
-    +dimension
-    +position(0, 0, absolute)
-    background-color: $primary-color
+    .wrapper
+        background-color: $primary-color
+        +dimension(100%, 250px)
+        +slideUp-anim
+        +min(sm)
+            height: 50vh
+        +min(xl)
+            height: 70vh
+    section
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+        color: $black-color
+        padding: 0 20px
+        +min(md)
+            padding:  0 50px
+        p
+            text-align: left
+            max-width: 500px
+            margin: 0 auto
+            +min(md)
+                max-width: 700px
+
+    .column
+        width: 100%
+        +min(lg)
+            width: 50%
+    .showcase
+        padding: 0 15px
+        height: 300px
+        margin-top: 50px
+        +min(md)
+            height: 500px
+        +min(lg)
+            margin-top: 0px
+        img
+            max-height: 100%
+    .web-description
+        order: -1
+        +min(lg)
+            order: 0
+
+#mobile-showcase
+    .showcase
+        padding-top: 0px
+        +min(lg)
+            padding-top: 50px
+
+#web-showcase
+    margin-bottom: 50px
+    .showcase
+        order: 1
+        +min(lg)
+            order: 0

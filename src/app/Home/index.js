@@ -114,6 +114,8 @@ class Home extends Component {
 
 
     componentDidMount() {
+        document.body.dataset.preventTouch = "true"
+
         onFakeScroll(50,
             _ => this.setPage('down'),
             _ => this.setPage('up')
@@ -121,6 +123,7 @@ class Home extends Component {
     }
 
     componentWillUnmount() {
+        document.body.dataset.preventTouch = "false"
         resetScrollEvents()
     }
 

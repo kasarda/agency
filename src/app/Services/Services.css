@@ -7,10 +7,70 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-#Services {
-  height: 100%;
+#Services .wrapper {
+  background-color: #004bd3;
+  height: 250px;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #004bd3; }
+  animation: SlideUpAnim .4s .4s ease-in backwards; }
+  @media (min-width: 576px) {
+    #Services .wrapper {
+      height: 50vh; } }
+  @media (min-width: 1200px) {
+    #Services .wrapper {
+      height: 70vh; } }
+
+#Services section {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #000;
+  padding: 0 20px; }
+  @media (min-width: 768px) {
+    #Services section {
+      padding: 0 50px; } }
+  #Services section p {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      #Services section p {
+        max-width: 700px; } }
+
+#Services .column {
+  width: 100%; }
+  @media (min-width: 992px) {
+    #Services .column {
+      width: 50%; } }
+
+#Services .showcase {
+  padding: 0 15px;
+  height: 300px;
+  margin-top: 50px; }
+  @media (min-width: 768px) {
+    #Services .showcase {
+      height: 500px; } }
+  @media (min-width: 992px) {
+    #Services .showcase {
+      margin-top: 0px; } }
+  #Services .showcase img {
+    max-height: 100%; }
+
+#Services .web-description {
+  order: -1; }
+  @media (min-width: 992px) {
+    #Services .web-description {
+      order: 0; } }
+
+#mobile-showcase .showcase {
+  padding-top: 0px; }
+  @media (min-width: 992px) {
+    #mobile-showcase .showcase {
+      padding-top: 50px; } }
+
+#web-showcase {
+  margin-bottom: 50px; }
+  #web-showcase .showcase {
+    order: 1; }
+    @media (min-width: 992px) {
+      #web-showcase .showcase {
+        order: 0; } }
