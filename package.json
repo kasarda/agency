@@ -53,7 +53,8 @@
     "Create better images",
     "Fill lorem ipsum",
     "Try to get wheel service inside Home component with removeEventListener",
-    "Initialize contacts and notFound component"
+    "Initialize contacts and notFound component",
+    "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
