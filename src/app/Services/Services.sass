@@ -49,6 +49,18 @@
         order: -1
         +min(lg)
             order: 0
+    [data-animate]
+        opacity: 0
+        &.animate-active
+            +scroll-tran
+            opacity: 1
+            transform: translate(0px, 0px)
+    [data-animate="fadeUp"]
+        transform: translateY(200px)
+    [data-animate="fadeLeft"]
+        transform: translateX(200px)
+    [data-animate="fadeRight"]
+        transform: translateX(-200px)
 
 #mobile-showcase
     .showcase

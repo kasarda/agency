@@ -4,36 +4,17 @@ import { Link } from 'react-router-dom'
 import Letter from '../Letter'
 import './Showcase.css'
 
-import inView from '../../services/view'
+import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 
 class Showcase extends Component {
-    scrollAnimation() {
-
-        if (window.innerWidth >= 768) {
-            const elems = document.querySelectorAll('[data-animate]')
-
-            elems.forEach(elem => {
-                const { animate, offset } = elem.dataset
-                const offsetY = parseFloat(offset) || 0
-                const visible = inView(elem, offsetY)
-
-                if (visible)
-                    elem.classList.add(animate)
-
-            })
-        }
-    }
-
     scrollUp() {
         window.scrollTo(0, 0)
-        const elems = document.querySelectorAll('[data-animate]')
-        elems.forEach(elem => elem.classList.remove(elem.dataset.animate))
-        this.scrollAnimation.call(this)
-    }
+        resetScrollAnimation()
+   }
 
     animationEnd({ animationName }) {
         if (/-Overflow/.test(animationName)) {
-            this.scrollAnimation.call(this)
+            scrollAnimation()
             document.body.style.overflowY = 'visible'
             document.documentElement.style.height = 'auto'
         }
@@ -41,13 +22,11 @@ class Showcase extends Component {
     }
 
     componentDidMount() {
-        this.scrollAnimation.call(this)
-        document.body.onscroll = this.scrollAnimation.bind(this)
+        scrollAnimation()
     }
 
     componentWillUnmount() {
         window.scrollTo(0, 0)
-        document.body.onscroll = null
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
         document.querySelector('#Navigation').classList.remove('black-color')

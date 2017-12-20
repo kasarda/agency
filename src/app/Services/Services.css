@@ -67,6 +67,22 @@
     #Services .web-description {
       order: 0; } }
 
+#Services [data-animate] {
+  opacity: 0; }
+  #Services [data-animate].animate-active {
+    transition: opacity .8s ease-in, transform .6s ease-in;
+    opacity: 1;
+    transform: translate(0px, 0px); }
+
+#Services [data-animate="fadeUp"] {
+  transform: translateY(200px); }
+
+#Services [data-animate="fadeLeft"] {
+  transform: translateX(200px); }
+
+#Services [data-animate="fadeRight"] {
+  transform: translateX(-200px); }
+
 #mobile-showcase .showcase {
   padding-top: 0px; }
   @media (min-width: 992px) {

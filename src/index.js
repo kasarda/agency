@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import AppRouter from './Router'
 import registerSW from './sw'
-
+import { scrollAnimation } from './services/animation'
 
 /**
  *
@@ -23,7 +23,7 @@ document.addEventListener('touchmove', e => {
 /**
  *
  * Set to navigation black color on scrollable component
- *
+ * And activated scroll animation
  */
 window.addEventListener('scroll', () => {
 
@@ -42,7 +42,12 @@ window.addEventListener('scroll', () => {
             nav.classList.remove('black-color')
     }
 
+    scrollAnimation()
+
 })
+
+
+
 
 
 /**
