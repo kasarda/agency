@@ -89,7 +89,11 @@
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
   ],
   "changelog": [
-    "ts-modules 4.1.0 -> flexbox order- classes"
+    "ts-modules 4.1.0 -> flexbox order- classes",
+    "Created Services component",
+    "Rewrite view service",
+    "new animation service",
+    "scroll animation is register in index.js"
   ],
   "browsers": {
     "mobile": {
