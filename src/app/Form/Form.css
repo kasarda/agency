@@ -1,0 +1,54 @@
+/*! @license
+  * lib.sass
+  *
+  * This source code is licensed under the GNU GENERAL PUBLIC LICENSE found in the
+  * LICENSE file in the root directory of this source tree.
+  *
+  * Copyright (c) 2017-Present, Filip Kasarda
+  *
+  * */
+#Form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  height: 100%;
+  width: 70%;
+  background-color: #ffffff;
+  padding: 0 50px;
+  transform: translateX(100%);
+  animation: SlideLeft .4s ease-in forwards;
+  color: #000; }
+  #Form h3 {
+    font-weight: 100; }
+  #Form .button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1; }
+    #Form .button button {
+      background-color: #004bd3;
+      position: relative;
+      z-index: 1; }
+      #Form .button button:focus {
+        outline: none; }
+  #Form form input, #Form form textarea {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin: 25px 0;
+    resize: vertical;
+    font-family: "Montserrat", sans-serif;
+    width: 50%;
+    min-height: 50px; }
+    #Form form input:focus, #Form form textarea:focus {
+      outline: none; }
+    #Form form input::placeholder, #Form form textarea::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+      text-transform: uppercase; }
+  #Form form textarea:focus {
+    height: 200px; }
+
+@keyframes SlideLeft {
+  to {
+    transform: translateX(0px); } }

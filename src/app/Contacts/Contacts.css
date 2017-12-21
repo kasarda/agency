@@ -33,25 +33,6 @@
       color: #004bd3;
       z-index: 1;
       margin-top: 25px; }
-      #Contacts .container .button a::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        background-color: #ffffff;
-        z-index: -1;
-        transition: transform .4s ease-in-out;
-        will-change: transform; }
-      #Contacts .container .button a:hover::after {
-        transform: translateX(0px); }
-      #Contacts .container .button a {
-        transition: color .4s .3s ease-in;
-        color: #ffffff; }
-      #Contacts .container .button a:hover {
-        color: currentColor; }
     #Contacts .container .icons {
       margin-top: 25px;
       width: 100px; }

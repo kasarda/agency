@@ -21,22 +21,6 @@
             position: relative
             overflow: hidden
             display: inline-block
-        a::after
-            content: ''
-            +dimension
-            +position(0, 0, absolute)
-            transform: translateX(-100%)
-            z-index: -1
-            background-color: $light-color
-            +move-button-tran
-            will-change: transform
-        a:hover::after
-            transform: translateX(0px)
-        a
-            +color-button-tran
-        a:hover
-            color: currentColor
-            delay(0s)
     .paragraphs
         +maxHeight(500px)
             display: none

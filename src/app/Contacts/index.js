@@ -3,7 +3,17 @@ import React, { Component } from 'react'
 import './Contacts.css'
 
 import Letter from '../Letter'
+import Form from '../Form'
+
 class Contacts extends Component {
+
+    constructor() {
+        super()
+
+        this.state = {
+            active: false
+        }
+    }
 
     componentDidMount() {
         document.body.dataset.preventTouch = "true"
@@ -13,7 +23,14 @@ class Contacts extends Component {
         document.body.dataset.preventTouch = "false"
     }
 
+    toggleForm(value) {
+        this.setState({
+            active: value
+        })
+    }
+
     render() {
+        const { active } = this.state
         return (
             <div id="Contacts" className="flex flex-center">
                 <div className="hidden-sm-down">
@@ -32,7 +49,10 @@ class Contacts extends Component {
                         (067) 85 000
                     </div>
                     <div className="button">
-                        <a className="button-primary">Contact Us</a>
+                        <a
+                            className="button-primary"
+                            onClick={this.toggleForm.bind(this)}
+                        >Contact Us</a>
                     </div>
 
                     <div className="icons flex justify-between">
@@ -55,6 +75,8 @@ class Contacts extends Component {
                         </a>
                     </div>
                 </div>
+
+                {active ? <Form /> : null}
             </div>
         )
     }

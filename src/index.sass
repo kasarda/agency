@@ -100,8 +100,28 @@ img
     text-align: center
     border: 1px $light-color solid
     padding: 14px 17px
+    cursor: pointer
     +min(md)
         padding: 17px 23px
+    &::after
+        content: ''
+        +dimension
+        +position(0, 0, absolute)
+        transform: translateX(-100%)
+        background-color: $light-color
+        z-index: -1
+        +move-button-tran
+        will-change: transform
+    &:hover::after
+        transform: translateX(0px)
+    &
+        +color-button-tran
+        color: $light-color
+
+    &:hover
+        color: currentColor
+        border-color: currentColor
+        delay(0s)
 
 .view
     +dimension

@@ -1,0 +1,54 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+#Form
+    +position(0, null, null, 0, absolute)
+    z-index: 999
+    +dimension(70%, 100%)
+    background-color: $light-color
+    padding: 0 50px
+    transform: translateX(100%)
+    animation: SlideLeft .4s ease-in forwards
+    color: $black-color
+    h3
+        font-weight: $light
+    .button
+        position: relative
+        display: inline-block
+        overflow: hidden
+        z-index: 1
+        button
+            background-color: $primary-color
+            position: relative
+            z-index: 1
+            &:focus
+                outline: none
+    form
+        input, textarea
+            border: none
+            border-bottom: 1px solid rgba(0,0,0,.5)
+            padding: 15px
+            margin: 25px 0
+            resize: vertical
+            font-family: $primary-font
+            width: 50%
+            min-height: 50px
+            &:focus
+                outline: none
+            &::placeholder
+                color: rgba(0,0,0,.5)
+                text-transform: uppercase
+        textarea:focus
+            height: 200px
+
+
+
+
+
+
+@keyframes SlideLeft
+    to
+        transform: translateX(0px)
+
+

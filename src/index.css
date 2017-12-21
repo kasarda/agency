@@ -427,10 +427,31 @@ img {
   letter-spacing: 0.138rem;
   text-align: center;
   border: 1px #ffffff solid;
-  padding: 14px 17px; }
+  padding: 14px 17px;
+  cursor: pointer; }
   @media (min-width: 768px) {
     .button-primary {
       padding: 17px 23px; } }
+  .button-primary::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: transform .4s ease-in-out;
+    will-change: transform; }
+  .button-primary:hover::after {
+    transform: translateX(0px); }
+  .button-primary {
+    transition: color .4s .3s ease-in;
+    color: #ffffff; }
+  .button-primary:hover {
+    color: currentColor;
+    border-color: currentColor; }
 
 .view {
   height: 100%;
