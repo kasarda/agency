@@ -22,7 +22,8 @@
     #Navigator {
       bottom: 25px; } }
   #Navigator .links {
-    width: 170px; }
+    width: 170px;
+    font-weight: 700; }
     #Navigator .links div {
       cursor: pointer;
       user-select: none;

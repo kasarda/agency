@@ -6,3 +6,48 @@
     +dimension
     +position(0, 0, absolute)
     background-color: $primary-color
+    .typography
+        font-family: $primary-font
+        font-weight: 300
+        font-style: normal
+    .container
+        margin-left: 50px
+        address
+            margin: 25px 0
+            line-height: 1.5rem
+        h4:hover
+            color: #00328e
+            text-decoration: underline
+        .button
+            position: relative
+            overflow: hidden
+            display: inline-block
+            color: $primary-color
+            z-index: 1
+            margin-top: 25px
+            a::after
+                content: ''
+                +dimension
+                +position(0, 0, absolute)
+                transform: translateX(-100%)
+                background-color: $light-color
+                z-index: -1
+                +move-button-tran
+                will-change: transform
+            a:hover::after
+                transform: translateX(0px)
+            a
+                +color-button-tran
+                color: $light-color
+
+            a:hover
+                color: currentColor
+                delay(0s)
+        .icons
+            margin-top: 25px
+            width: 100px
+            a
+                cursor: pointer
+                +hover-tran
+                &:hover
+                    opacity: .5

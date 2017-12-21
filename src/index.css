@@ -353,7 +353,8 @@ h2 {
 h1 {
   font-size: 2.5rem;
   line-height: 2.938rem;
-  letter-spacing: 0.089rem; }
+  letter-spacing: 0.089rem;
+  text-transform: capitalize; }
   @media (min-width: 576px) and (min-height: 500px) {
     h1 {
       font-size: 4.188rem;

@@ -14,3 +14,49 @@
   top: 0;
   left: 0;
   background-color: #004bd3; }
+  #Contacts .typography {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal; }
+  #Contacts .container {
+    margin-left: 50px; }
+    #Contacts .container address {
+      margin: 25px 0;
+      line-height: 1.5rem; }
+    #Contacts .container h4:hover {
+      color: #00328e;
+      text-decoration: underline; }
+    #Contacts .container .button {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      color: #004bd3;
+      z-index: 1;
+      margin-top: 25px; }
+      #Contacts .container .button a::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-color: #ffffff;
+        z-index: -1;
+        transition: transform .4s ease-in-out;
+        will-change: transform; }
+      #Contacts .container .button a:hover::after {
+        transform: translateX(0px); }
+      #Contacts .container .button a {
+        transition: color .4s .3s ease-in;
+        color: #ffffff; }
+      #Contacts .container .button a:hover {
+        color: currentColor; }
+    #Contacts .container .icons {
+      margin-top: 25px;
+      width: 100px; }
+      #Contacts .container .icons a {
+        cursor: pointer;
+        transition: opacity .15s ease-in-out; }
+        #Contacts .container .icons a:hover {
+          opacity: .5; }
