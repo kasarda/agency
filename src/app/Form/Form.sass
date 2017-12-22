@@ -3,14 +3,31 @@
 @import "animation.sass"
 
 #Form
-    +position(0, null, null, 0, absolute)
     z-index: 999
-    +dimension(70%, 100%)
-    background-color: $light-color
-    padding: 0 50px
+    +position(0, null, null, 0, absolute)
+    +dimension
     transform: translateX(100%)
     animation: SlideLeft .4s ease-in forwards
+    transition: .4s ease-in
     color: $black-color
+    .form
+        +dimension(100%, 100%)
+        background-color: $light-color
+        padding: 0 50px
+        +min(sm)
+            width: 70%
+        +min(xl)
+            width: 38%
+    .disabled-container
+        +dimension(0%, 100%)
+        background: rgba(0, 0, 0, 0)
+        animation: FadeDisabled .4s .4s ease-in forwards
+        +min(sm)
+            width: 30%
+        +min(xl)
+            width: 62%
+
+
     h3
         font-weight: $light
     .button
@@ -32,23 +49,42 @@
             margin: 25px 0
             resize: vertical
             font-family: $primary-font
-            width: 50%
+            width: 100%
             min-height: 50px
+            transition: border-color .15s ease-in
+            &:invalid
+                border-color: red
             &:focus
                 outline: none
+                border-color: $primary-color
             &::placeholder
                 color: rgba(0,0,0,.5)
                 text-transform: uppercase
-        textarea:focus
-            height: 200px
+            +min(md)
+                width: 50%
+
+    &[data-close="true"]
+        animation: SlideRight-CloseForm .4s .4s ease-in both
+        .disabled-container
+            animation: FadeDisabledClose .4s ease-in forwards
+
+@keyframes FadeDisabledClose
+    from
+        background-color: rgba(0, 0, 0, .5)
+    to
+        background-color: rgba(0, 0, 0, 0)
 
 
-
-
-
+@keyframes FadeDisabled
+    to
+        background-color: rgba(0, 0, 0, .5)
 
 @keyframes SlideLeft
     to
         transform: translateX(0px)
 
-
+@keyframes SlideRight-CloseForm
+    from
+        transform: translateX(0)
+    to
+        transform: translateX(100%)

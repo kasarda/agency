@@ -8,17 +8,38 @@
   *
   * */
 #Form {
+  z-index: 999;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 999;
   height: 100%;
-  width: 70%;
-  background-color: #ffffff;
-  padding: 0 50px;
+  width: 100%;
   transform: translateX(100%);
   animation: SlideLeft .4s ease-in forwards;
+  transition: .4s ease-in;
   color: #000; }
+  #Form .form {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 50px; }
+    @media (min-width: 576px) {
+      #Form .form {
+        width: 70%; } }
+    @media (min-width: 1200px) {
+      #Form .form {
+        width: 38%; } }
+  #Form .disabled-container {
+    height: 100%;
+    width: 0%;
+    background: transparent;
+    animation: FadeDisabled .4s .4s ease-in forwards; }
+    @media (min-width: 576px) {
+      #Form .disabled-container {
+        width: 30%; } }
+    @media (min-width: 1200px) {
+      #Form .disabled-container {
+        width: 62%; } }
   #Form h3 {
     font-weight: 100; }
   #Form .button {
@@ -39,16 +60,41 @@
     margin: 25px 0;
     resize: vertical;
     font-family: "Montserrat", sans-serif;
-    width: 50%;
-    min-height: 50px; }
+    width: 100%;
+    min-height: 50px;
+    transition: border-color .15s ease-in; }
+    #Form form input:invalid, #Form form textarea:invalid {
+      border-color: red; }
     #Form form input:focus, #Form form textarea:focus {
-      outline: none; }
+      outline: none;
+      border-color: #004bd3; }
     #Form form input::placeholder, #Form form textarea::placeholder {
       color: rgba(0, 0, 0, 0.5);
       text-transform: uppercase; }
-  #Form form textarea:focus {
-    height: 200px; }
+    @media (min-width: 768px) {
+      #Form form input, #Form form textarea {
+        width: 50%; } }
+  #Form[data-close="true"] {
+    animation: SlideRight-CloseForm .4s .4s ease-in both; }
+    #Form[data-close="true"] .disabled-container {
+      animation: FadeDisabledClose .4s ease-in forwards; }
+
+@keyframes FadeDisabledClose {
+  from {
+    background-color: rgba(0, 0, 0, 0.5); }
+  to {
+    background-color: transparent; } }
+
+@keyframes FadeDisabled {
+  to {
+    background-color: rgba(0, 0, 0, 0.5); } }
 
 @keyframes SlideLeft {
   to {
     transform: translateX(0px); } }
+
+@keyframes SlideRight-CloseForm {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(100%); } }

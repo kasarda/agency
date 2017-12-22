@@ -18,26 +18,27 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-style: normal; }
-  #Contacts .container {
-    margin-left: 50px; }
-    #Contacts .container address {
-      margin: 25px 0;
-      line-height: 1.5rem; }
-    #Contacts .container h4:hover {
-      color: #00328e;
-      text-decoration: underline; }
-    #Contacts .container .button {
-      position: relative;
-      overflow: hidden;
-      display: inline-block;
-      color: #004bd3;
-      z-index: 1;
-      margin-top: 25px; }
-    #Contacts .container .icons {
-      margin-top: 25px;
-      width: 100px; }
-      #Contacts .container .icons a {
-        cursor: pointer;
-        transition: opacity .15s ease-in-out; }
-        #Contacts .container .icons a:hover {
-          opacity: .5; }
+  @media (min-width: 768px) {
+    #Contacts .container {
+      margin-left: 50px; } }
+  #Contacts .container address {
+    margin: 25px 0;
+    line-height: 1.5rem; }
+  #Contacts .container h4:hover {
+    color: #00328e;
+    text-decoration: underline; }
+  #Contacts .container .button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    color: #004bd3;
+    z-index: 1;
+    margin-top: 25px; }
+  #Contacts .container .icons {
+    margin-top: 25px;
+    width: 100px; }
+    #Contacts .container .icons a {
+      cursor: pointer;
+      transition: opacity .15s ease-in-out; }
+      #Contacts .container .icons a:hover {
+        opacity: .5; }

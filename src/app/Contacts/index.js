@@ -51,7 +51,7 @@ class Contacts extends Component {
                     <div className="button">
                         <a
                             className="button-primary"
-                            onClick={this.toggleForm.bind(this)}
+                            onClick={this.toggleForm.bind(this, true)}
                         >Contact Us</a>
                     </div>
 
@@ -76,7 +76,7 @@ class Contacts extends Component {
                     </div>
                 </div>
 
-                {active ? <Form /> : null}
+                {active ? <Form onToggleForm={this.toggleForm.bind(this, false)}/> : null}
             </div>
         )
     }
