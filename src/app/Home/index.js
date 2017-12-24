@@ -134,7 +134,7 @@ class Home extends Component {
             redirect, canRedirect, link
         } = this.state
 
-        const url = renderImage > 0 ? `url(${require(`./images/bg${renderImage}.jpg`)})` : null
+        const url = renderImage > 0 ? `url(${require(`../../images/project${renderImage}.jpg`)})` : null
 
         if (canRedirect)
             return <Redirect to={link} />
