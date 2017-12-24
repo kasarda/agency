@@ -49,14 +49,14 @@ class Home extends Component {
         const { to, length, ready } = this.state
 
         if (ready) {
-            if (!(to === 0 && type === 'up')) {
+            if (!(to === 0 && type === 'prev')) {
                 this.setState({
                     sideReady: false,
                     ready: false
                 })
             }
 
-            if (type === 'down') {
+            if (type === 'next') {
                 const nextPage = to + 1
                 const newPage = nextPage <= length ? nextPage : 0
                 this.setState({
@@ -66,7 +66,7 @@ class Home extends Component {
                 })
             }
 
-            else if (type === 'up' && to > 0) {
+            else if (type === 'prev' && to > 0) {
                 const prevPage = to - 1
                 this.setState({
                     to: prevPage,
@@ -120,8 +120,8 @@ class Home extends Component {
         document.body.dataset.preventTouch = "true"
 
         onFakeScroll(50,
-            _ => this.setPage('down'),
-            _ => this.setPage('up')
+            _ => this.setPage('next'),
+            _ => this.setPage('prev')
         )
     }
 

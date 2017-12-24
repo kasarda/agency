@@ -1,9 +1,10 @@
+import './polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
+import './index.css'
 
 /**
  *
