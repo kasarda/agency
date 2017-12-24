@@ -2,47 +2,16 @@ import React from 'react'
 
 import './Letter.css'
 
-function CLetter() {
-    return (
-        <g>
-            <defs>
-                <mask
-                    maskUnits="userSpaceOnUse"
-                    id="letter-shape-C">
-                    <g
-                        className="stroke-light-color"
-                        style={{ strokeWidth: 80, opacity: 1 }}>
-                        <path
-                            className="shape"
-                            d="M364.575874,112.753201 C331.772822,68.6049929 279.226938,40 220,40 C120.588745,40 40,120.588745 40,220 C40,319.411255 120.588745,400 220,400 L220,400 C279.2513,400 331.816049,371.37147 364.616343,327.192313"></path>
-                    </g>
-                </mask>
-            </defs>
-            <g mask="url('#letter-shape-C')">
-                <g fill="url('#dashed-pattern-C')">
-                    <path d="M219.3,359.5C142.7,359.2,80.5,296.7,80.5,220c0-76.7,62.2-139.2,138.8-139.5c44.4,0.1,85.1,20.8,111.6,56.6l64.3-47.6c-20-27-46.3-49.4-76-64.7C288.7,9,254.4,0.7,219.8,0.5v0c-0.2,0-0.4,0-0.6,0c-0.1,0-0.3,0-0.4,0v0C160.6,0.8,105.9,23.6,64.7,64.8C23.3,106.3,0.5,161.4,0.5,220s22.8,113.7,64.2,155.2c41.2,41.2,95.9,64,154.1,64.3v0c0.1,0,0.3,0,0.4,0c0.2,0,0.4,0,0.6,0v0c34.5-0.2,68.7-8.5,99.2-24.2c29.7-15.3,56-37.6,76-64.5l-64.2-47.7C304.3,338.8,263.7,359.4,219.3,359.5z"></path>
-                </g>
-                <g
-                    className="fill-light-color"
-                    mask="url('#background-mask-C')">
-                    <path d="M219.3,359.5C142.7,359.2,80.5,296.7,80.5,220c0-76.7,62.2-139.2,138.8-139.5c44.4,0.1,85.1,20.8,111.6,56.6l64.3-47.6c-20-27-46.3-49.4-76-64.7C288.7,9,254.4,0.7,219.8,0.5v0c-0.2,0-0.4,0-0.6,0c-0.1,0-0.3,0-0.4,0v0C160.6,0.8,105.9,23.6,64.7,64.8C23.3,106.3,0.5,161.4,0.5,220s22.8,113.7,64.2,155.2c41.2,41.2,95.9,64,154.1,64.3v0c0.1,0,0.3,0,0.4,0c0.2,0,0.4,0,0.6,0v0c34.5-0.2,68.7-8.5,99.2-24.2c29.7-15.3,56-37.6,76-64.5l-64.2-47.7C304.3,338.8,263.7,359.4,219.3,359.5z"></path>
-                </g>
-            </g>
-        </g>
-    )
-}
+function Letter({ id, letter }) {
 
+    const mask = letter === 'C' ? 'url(\'#letter-shape-C\')' : null
 
-function Letter({ id, letter, style }) {
-
-    const letterShape = letter === 'C' ? <CLetter /> : <use xlinkHref={`#letter-${letter}`} />
     return (
         <svg
             viewBox="0 0 440 440"
             preserveAspectRatio="none"
             className="Letter"
             id={id}
-            style={style}
             data-letter={letter}
         >
             <defs>
@@ -78,9 +47,30 @@ function Letter({ id, letter, style }) {
                         transform="matrix(1,0,0,1,0,0)"
                         className="fill-light-color background-mask-rect"></rect>
                 </mask>
+
+                <mask
+                    maskUnits="userSpaceOnUse"
+                    id="letter-shape-C">
+                    <g
+                        className="stroke-light-color"
+                        style={{ strokeWidth: 80, opacity: 1 }}>
+                        <path
+                            className="shape"
+                            d="M364.575874,112.753201 C331.772822,68.6049929 279.226938,40 220,40 C120.588745,40 40,120.588745 40,220 C40,319.411255 120.588745,400 220,400 L220,400 C279.2513,400 331.816049,371.37147 364.616343,327.192313"></path>
+                    </g>
+                </mask>
+
             </defs>
 
-            {letterShape}
+
+            <g mask={mask}>
+                <g fill={`url('#dashed-pattern-${letter}')`}>
+                    <use xlinkHref={`#letter-${letter}`} />
+                </g>
+                <g className="fill-light-color" mask={`url('#background-mask-${letter}')`}>
+                    <use xlinkHref={`#letter-${letter}`} />
+                </g>
+            </g>
 
         </svg>
     )
