@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import './Form.css'
 
 class Form extends Component {
@@ -9,15 +8,18 @@ class Form extends Component {
             close: false
         }
     }
+
     close() {
         this.setState({
             close: true
         })
     }
+
     animationEnd({ animationName }) {
         if(/-CloseForm/.test(animationName))
             this.props.onToggleForm()
     }
+
     render() {
         const { close } = this.state
         return (

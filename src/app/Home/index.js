@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-
 import Letter from '../Letter'
 import Side from '../Side'
 import Navigator from '../Navigator'
-
 import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
 import './Home.css'
-
-
 
 class Home extends Component {
     constructor() {

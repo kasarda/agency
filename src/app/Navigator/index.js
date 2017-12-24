@@ -1,7 +1,5 @@
 import React from 'react'
-
 import './Navigator.css'
-
 
 function Item({ id, letter, currentPage, onPage }) {
     const setActive = page => currentPage === page ? 'active' : ''
@@ -14,7 +12,6 @@ function Item({ id, letter, currentPage, onPage }) {
         </div>
     )
 }
-
 
 
 function Navigator({ onPage, currentPage }) {

@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
 import Letter from '../Letter'
 import './Showcase.css'
-
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 
 class Showcase extends Component {
@@ -18,7 +16,6 @@ class Showcase extends Component {
             document.body.style.overflowY = 'visible'
             document.documentElement.style.height = 'auto'
         }
-
     }
 
     componentDidMount() {
@@ -133,7 +130,6 @@ class Showcase extends Component {
             </div>
         )
     }
-
 }
 
 export default Showcase

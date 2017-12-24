@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
-
-
 import Letter from '../Letter'
 import Anchor from '../Anchor'
-
 import './Projects.css'
-
-
-
-
 
 
 class Projects extends Component {
@@ -27,10 +20,7 @@ class Projects extends Component {
             enter,
             letter
         })
-
-
     }
-
 
     setActive() {
         this.setState({ active: true })
@@ -46,6 +36,7 @@ class Projects extends Component {
     componentDidMount() {
         document.body.dataset.preventTouch = "true"
     }
+
     componentWillUnmount() {
         document.body.dataset.preventTouch = "false"
     }
@@ -69,8 +60,6 @@ class Projects extends Component {
                 onMouse={this.updateLetter.bind(this)}
             />
         ))
-
-
 
         return (
             <div

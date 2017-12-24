@@ -9,7 +9,6 @@ class Contacts extends Component {
 
     constructor() {
         super()
-
         this.state = {
             active: false
         }
@@ -75,7 +74,6 @@ class Contacts extends Component {
                         </a>
                     </div>
                 </div>
-
                 {active ? <Form onToggleForm={this.toggleForm.bind(this, false)}/> : null}
             </div>
         )

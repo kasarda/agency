@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './Letter.css'
 
 function Letter({ id, letter }) {

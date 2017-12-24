@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-
 import Description from '../Description'
 import Letter from '../Letter'
-
 import './Side.css'
 
 class Side extends Component {
@@ -22,10 +20,10 @@ class Side extends Component {
             redirect: false,
         }
     }
+
     onRedirect() {
         this.props.onCanRedirect(this.state.link)
     }
-
 
     componentWillReceiveProps({ renderPage }) {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
@@ -90,11 +88,8 @@ class Side extends Component {
                 className="view flex"
                 style={{ backgroundColor: theme }}
             >
-
                 <Letter letter={letter} id="ContentLetter" />
-
                 <div className="content">
-
                     <div className="heading">
                         <h2>{heading}</h2>
                         <div className="hidden-sm-down hr"></div>

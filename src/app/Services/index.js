@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
 import './Services.css'
-
 import { scrollAnimation } from '../../services/animation'
 
 class Services extends Component {
@@ -11,12 +9,14 @@ class Services extends Component {
         document.body.style.overflowY = 'visible'
         document.documentElement.style.height = 'auto'
     }
+
     componentWillUnmount() {
         window.scrollTo(0, 0)
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.height = '100%'
         document.querySelector('#Navigation').classList.remove('black-color')
     }
+
     render() {
 
         return (
