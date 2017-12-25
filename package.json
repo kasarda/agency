@@ -59,7 +59,8 @@
     "Change naming of classes and structure to be more clear what this doing",
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Add Aria-* attributes",
-    "Add preload on main images"
+    "Add preload on main images",
+    "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
