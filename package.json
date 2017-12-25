@@ -61,6 +61,8 @@
     "Fixe problem with resizing bg image in Home component inside .rule element",
     "Replace .wrapper class with .camera",
     "Recreate design of contacts",
+    "Added support for large device using max-width on content",
+    "Change naming of classes and structure to be more clear what this doing",
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build"
   ],
   "done": [
