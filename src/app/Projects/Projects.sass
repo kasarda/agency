@@ -27,9 +27,9 @@
             cursor: pointer
             position: relative
             padding-left: 0px
-            transition: padding-left .25s ease-in, opacity .2s ease-in
-            animation: InitLinks .4s ease-in backwards
-            +repeat-delay('.link-', (1: .2, 2: .3, 3: .4, 4: .5))
+            +heading-hover-tran
+            +fadeIn-up-anim
+            +repeat-delay('.link-', $fadeIn-up-delays)
             +min(md)
                 margin: 10px 0
             +min(lg)
@@ -47,7 +47,7 @@
                 width: 0px
                 height: 2px
                 background-color: $light-color
-                transition: width .25s ease-in
+                +hr-width-tran
             &:hover::before
                 width: 40px
 
@@ -75,29 +75,16 @@
             .fill-pattern
                 fill: $light-color
 
-    &[data-active="false"]
-        .letter
-            .Letter
-                opacity: 1
-                transition: opacity .4s ease-in
-
-
+    &[data-active="false"],
     &[data-enter="true"]
         .letter
             .Letter
                 opacity: 1
-                transition: opacity .4s ease-in
+                +fade-project-letter-tran
 
     &[data-active="true"]
         .content
             h2:not([data-active-link="true"])
                 opacity: .5
 
-@keyframes InitLinks
-    from
-        opacity: 0
-        transform: translateY(200%)
-    to
-        opacity: 1
-        transform: translateY(0)
 

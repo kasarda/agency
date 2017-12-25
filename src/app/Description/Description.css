@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Description {
   margin: 15px 0 0 0; }
   @media (min-width: 768px) {

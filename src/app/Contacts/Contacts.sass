@@ -53,16 +53,7 @@
         text-transform: capitalize
         text-align: center
         padding: 15px
-        animation: PopUp .15s 1.2s ease-in backwards, PopDown-ResetBadge .15s 3.5s ease-in forwards
+        +show-badge-anim
         transform: translate(-50%, 0px)
         +min(md)
             width: auto
-
-@keyframes PopUp
-    from
-        transform: translate(-50%, 200px)
-
-
-@keyframes PopDown-ResetBadge
-    to
-        transform: translate(-50%, 200px)

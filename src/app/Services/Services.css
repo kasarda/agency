@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Services .wrapper {
   background-color: #004bd3;
   height: 250px;
@@ -37,7 +41,7 @@
       #Services section [data-animate] {
         opacity: 0; }
         #Services section [data-animate].animate-active {
-          transition: opacity .8s ease-in, transform .6s ease-in;
+          transition: opacity .6s ease-in, transform .4s ease-in;
           opacity: 1;
           transform: translate(0px, 0px); }
       #Services section [data-animate="fadeUp"] {

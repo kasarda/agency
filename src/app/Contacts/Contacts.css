@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Contacts {
   height: 100%;
   width: 100%;
@@ -67,16 +71,8 @@
     text-transform: capitalize;
     text-align: center;
     padding: 15px;
-    animation: PopUp .15s 1.2s ease-in backwards, PopDown-ResetBadge .15s 3.5s ease-in forwards;
+    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3.5s ease-in forwards;
     transform: translate(-50%, 0px); }
     @media (min-width: 768px) {
       #Contacts .badge {
         width: auto; } }
-
-@keyframes PopUp {
-  from {
-    transform: translate(-50%, 200px); } }
-
-@keyframes PopDown-ResetBadge {
-  to {
-    transform: translate(-50%, 200px); } }

@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Side {
   width: 0px;
   align-items: flex-end;
@@ -98,7 +102,7 @@
 
 [data-side-ready="true"][data-redirect="true"] #Side {
   width: 0px;
-  transition-delay: 0.8s; }
+  transition-delay: .8s; }
   [data-side-ready="true"][data-redirect="true"] #Side .heading h2 {
     animation: LeftFadeOutAnim .4s ease-in-out forwards; }
   [data-side-ready="true"][data-redirect="true"] #Side .heading .hr {

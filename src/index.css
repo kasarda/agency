@@ -327,6 +327,10 @@ summary {
 .order-6 {
   order: 6; }
 
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -627,6 +631,47 @@ img {
 @keyframes ColumnFadeOutAnim-Redirect {
   90%, to {
     opacity: 0; } }
+
+@keyframes fadeInUpAnim {
+  from {
+    opacity: 0;
+    transform: translateY(200%); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes PopUpAnim {
+  from {
+    transform: translate(-50%, 200px); } }
+
+@keyframes PopDownAnim-ResetBadge {
+  to {
+    transform: translate(-50%, 200px); } }
+
+@keyframes SlideLeftAnim {
+  to {
+    transform: translateX(0px); } }
+
+@keyframes SlideRightAnim-CloseForm {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(100%); } }
+
+@keyframes bgFadeOutAnim {
+  from {
+    background-color: rgba(0, 0, 0, 0.5); }
+  to {
+    background-color: transparent; } }
+
+@keyframes bgFadeInAnim {
+  to {
+    background-color: rgba(0, 0, 0, 0.5); } }
+
+@keyframes FadeInTopAnim {
+  from {
+    opacity: 0;
+    transform: translateY(50px); } }
 
 @keyframes SlideUpAnim {
   from {

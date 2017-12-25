@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Form {
   z-index: 999;
   position: absolute;
@@ -15,8 +19,7 @@
   height: 100%;
   width: 100%;
   transform: translateX(100%);
-  animation: SlideLeft .4s ease-in forwards;
-  transition: .4s ease-in;
+  animation: SlideLeftAnim .4s ease-in forwards;
   color: #000; }
   #Form .form {
     height: 100%;
@@ -34,7 +37,7 @@
     height: 100%;
     width: 0%;
     background: transparent;
-    animation: FadeDisabled .4s .4s ease-in forwards; }
+    animation: bgFadeInAnim .4s .4s ease-in forwards; }
     @media (min-width: 576px) {
       #Form .disabled-container {
         width: 30%; } }
@@ -86,11 +89,11 @@
       #Form form input, #Form form textarea {
         width: 50%; } }
   #Form[data-close="true"] {
-    animation: SlideRight-CloseForm .4s .4s ease-in both; }
+    animation: SlideRightAnim-CloseForm .4s .4s ease-in both; }
     #Form[data-close="true"] .disabled-container {
-      animation: FadeDisabledClose .4s ease-in forwards; }
+      animation: bgFadeOutAnim .4s ease-in forwards; }
   #Form .init-animation {
-    animation: FadeInRight .2s .4s ease-in backwards; }
+    animation: FadeInTopAnim .2s .4s ease-in backwards; }
     #Form .init-animation.init-animation-1 {
       animation-delay: 0.4s; }
     #Form .init-animation.init-animation-2 {
@@ -103,28 +106,3 @@
       animation-delay: 0.8s; }
     #Form .init-animation.init-animation-6 {
       animation-delay: 0.9s; }
-
-@keyframes FadeInRight {
-  from {
-    opacity: 0;
-    transform: translateY(50px); } }
-
-@keyframes FadeDisabledClose {
-  from {
-    background-color: rgba(0, 0, 0, 0.5); }
-  to {
-    background-color: transparent; } }
-
-@keyframes FadeDisabled {
-  to {
-    background-color: rgba(0, 0, 0, 0.5); } }
-
-@keyframes SlideLeft {
-  to {
-    transform: translateX(0px); } }
-
-@keyframes SlideRight-CloseForm {
-  from {
-    transform: translateX(0); }
-  to {
-    transform: translateX(100%); } }

@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Showcase .wrapper {
   height: 250px;
   width: 100%;
@@ -29,7 +33,7 @@
     #Showcase [data-animate].animate-active {
       opacity: 1;
       transform: translate(0px);
-      transition: opacity .8s ease-in, transform .6s ease-in; }
+      transition: opacity .6s ease-in, transform .4s ease-in; }
   #Showcase [data-animate="fadeUp"] {
     transform: translateY(200px); }
   #Showcase [data-animate="fadeLeft"] {

@@ -7,8 +7,7 @@
     +position(0, null, null, 0, absolute)
     +dimension
     transform: translateX(100%)
-    animation: SlideLeft .4s ease-in forwards
-    transition: .4s ease-in
+    +slide-left-form-anim
     color: $black-color
     .form
         +dimension(100%, 100%)
@@ -22,7 +21,7 @@
     .disabled-container
         +dimension(0%, 100%)
         background: rgba(0, 0, 0, 0)
-        animation: FadeDisabled .4s .4s ease-in forwards
+        +background-fadeIn-anim
         +min(sm)
             width: 30%
         +min(xl)
@@ -60,7 +59,7 @@
             font-family: $primary-font
             width: 100%
             min-height: 50px
-            transition: border-color .15s ease-in
+            +input-border-color-tran
             border-radius: none
             &:invalid:focus
                 border-color: red
@@ -74,37 +73,11 @@
                 width: 50%
 
     &[data-close="true"]
-        animation: SlideRight-CloseForm .4s .4s ease-in both
+        +slide-right-form-anim
         .disabled-container
-            animation: FadeDisabledClose .4s ease-in forwards
+            +background-fadeOut-anim
 
 
     .init-animation
-        animation: FadeInRight .2s .4s ease-in backwards
-        +repeat-delay('.init-animation-', (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9))
-
-@keyframes FadeInRight
-    from
-        opacity: 0
-        transform: translateY(50px)
-
-@keyframes FadeDisabledClose
-    from
-        background-color: rgba(0, 0, 0, .5)
-    to
-        background-color: rgba(0, 0, 0, 0)
-
-
-@keyframes FadeDisabled
-    to
-        background-color: rgba(0, 0, 0, .5)
-
-@keyframes SlideLeft
-    to
-        transform: translateX(0px)
-
-@keyframes SlideRight-CloseForm
-    from
-        transform: translateX(0)
-    to
-        transform: translateX(100%)
+        +fadeIn-up-items-anim
+        +repeat-delay('.init-animation-', $fadeIn-up-items-delays)

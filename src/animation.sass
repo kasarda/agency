@@ -1,18 +1,18 @@
 
-//? Initialize Animation
+//? Initialize Home
 // Home > .rule
 =slide-anim
     animation: SlideAnim .4s ease-in backwards
 
-// Home > Letter > C.letter > .shape
+// Letter > #letter-shape-C > .shape
 =letter-c-anim
     animation: DashAnim .6s .4s ease-in backwards
 
-// Home > Letter -> only IE
+// Letter -> only IE
 =fade-in-ie-anim
     animation: FadeInAnim .4s .4s ease-in backwards
 
-// Home > Letter > rect.background-mask
+// Letter > rect.background-mask
 =move-in-anim
     animation: MoveInAnim .4s 1s ease-in backwards
 
@@ -54,16 +54,16 @@
 
 
 //? Home <=> Page
-// Home > Letter > C.letter > .shape
+// Letter > C.letter > .shape
 =dash-letter-c-tran
     transition: stroke-dashoffset .6s 1.6s ease-in-out
 // reseted delay when [home="false"]
 
-// Home > Letter -> Only IE
+// Letter -> Only IE
 =fade-ie-tran
     transition: opacity .4s 1.6s ease-in-out
 
-// Home > Navigator
+// Navigator
 =navigator-tran
     transition: opacity .4s ease-in-out
 
@@ -72,7 +72,7 @@
     transition: opacity .4s 1.8s ease-in-out
 // reseted delay when [data-home="false"]
 
-// Home > Navigator
+// Navigator
 =heading-finish
     animation: HeadingFinish-RenderPage-RenderImage-Ready 2.2s // fade-heading-tran.del + fade-heading-tran.dur
 
@@ -83,9 +83,12 @@
 =slide-tran-delay
     transition-delay: .6s
 
-// Home > Side
+// Side
 =slide-width-tran
     transition: width .4s 1s ease-in-out
+
+=slide-width-redirect-delay
+    transition-delay: .8s
 
 // Home > .column
 =slide-height-tran
@@ -121,7 +124,7 @@
 
 
 //? Page => Home -> Side
-// Home > Side
+// Side
 =slide-side-width-anim
     animation: SlideSideWidthAnim .4s .8s ease-in backwards
 
@@ -137,7 +140,7 @@
 
 
 //? Page <=> Page
-// Home > Side
+// Side
 =page-seq
     animation-duration: .4s
     animation-delay: .6s, 1.2s, 1.8s
@@ -190,8 +193,8 @@
 
 
 
-//? Page Content
-// Home > Side > .heading > h2
+//? Initialize Side Content
+// Side > .heading > h2
 =fadeIn-left-anim
     animation: FadeInLeftAnim-Ready .4s ease-in-out forwards
 
@@ -204,7 +207,7 @@
 =fadeIn-right-anim
     animation: FadeInRightAnim-Ready .4s ease-in-out forwards
 
-// Home > Side > .heading > .hr
+// Side > .heading > .hr
 =hr-slideIn-anim
     animation: HrSlideInAnim .8s ease-in-out forwards
 
@@ -214,7 +217,7 @@
 =hr-slideIn-slideOut-anim
     animation: HrSlideInOutAnim .4s ease-in-out forwards
 
-// Home > Side > Description > .fadeIn
+// Description > .fadeIn
 =fade-vertical-tran
     transition: opacity .4s ease, transform .4s ease
 
@@ -222,7 +225,7 @@ $fade-vertical-delays: (1: .1, 2: .2, 3: .3, 4: .4)
 $fade-vertical-reverse-delays: (1: .4, 2: .3, 3: .2, 4: .1)
 $fade-vertical-reverse-reset-delays: (1: .4, 2: .3, 3: .2, 4: 0)
 
-// Home > Side > Letter
+// Side > Letter
 =fade-page-letter-tran
     transition: opacity .4s ease-in-out
 
@@ -316,27 +319,146 @@ $fade-vertical-reverse-reset-delays: (1: .4, 2: .3, 3: .2, 4: 0)
 
 
 
-//? to project page
-´
+//? Home => Showcase
+// Home > .column when [data-redirect="true"]
 =col-fadeOut-anim
     animation: ColumnFadeOutAnim-Redirect .4s 1.1s ease-in forwards
 
-=ToProjectPage
+=ToShowcaseKeyframes
     @keyframes ColumnFadeOutAnim-Redirect
         90%, to
             opacity: 0
 
 
 
+//? Projects
+// Projects > .content > h2
+=fadeIn-up-anim
+    animation: fadeInUpAnim .4s ease-in backwards
 
-//? Showcase
+// Projects > .content > h2
+=heading-hover-tran
+    transition: padding-left .25s ease-in, opacity .2s ease-in
 
+$fadeIn-up-delays: (1: .2, 2: .3, 3: .4, 4: .5)
+
+// Projects > .content > h2::before
+=hr-width-tran
+    transition: width .25s ease-in
+
+// Projects > .letter > .Letter
+=fade-project-letter-tran
+    transition: opacity .4s ease-in
+
+
+=ProjectsKeyframes
+    @keyframes fadeInUpAnim
+        from
+            opacity: 0
+            transform: translateY(200%)
+        to
+            opacity: 1
+            transform: translateY(0)
+
+
+
+
+//? Contacts
+// Contacts > .badge when { sended: true }
+=show-badge-anim
+    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3.5s ease-in forwards
+
+
+
+=ContactsKeyframes
+    @keyframes PopUpAnim
+        from
+            transform: translate(-50%, 200px)
+
+    @keyframes PopDownAnim-ResetBadge
+        to
+            transform: translate(-50%, 200px)
+
+
+//? Form
+// Form
+=slide-left-form-anim
+    animation: SlideLeftAnim .4s ease-in forwards
+// when [close="true"]
+=slide-right-form-anim
+    animation: SlideRightAnim-CloseForm .4s .4s ease-in both
+
+
+// Form > .disabled-container
+=background-fadeIn-anim
+    animation: bgFadeInAnim .4s .4s ease-in forwards
+// when [close="true"]
+=background-fadeOut-anim
+    animation: bgFadeOutAnim .4s ease-in forwards
+
+// Form > .init-animation
+=fadeIn-up-items-anim
+    animation: FadeInTopAnim .2s .4s ease-in backwards
+
+$fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9)
+
+// Form > form > input, textarea
+=input-border-color-tran
+    transition: border-color .15s ease-in
+
+
+
+=FormKeyframes
+    @keyframes SlideLeftAnim
+        to
+            transform: translateX(0px)
+
+    @keyframes SlideRightAnim-CloseForm
+        from
+            transform: translateX(0)
+        to
+            transform: translateX(100%)
+
+    @keyframes bgFadeOutAnim
+        from
+            background-color: rgba(0, 0, 0, .5)
+        to
+            background-color: rgba(0, 0, 0, 0)
+
+
+    @keyframes bgFadeInAnim
+        to
+            background-color: rgba(0, 0, 0, .5)
+
+    @keyframes FadeInTopAnim
+        from
+            opacity: 0
+            transform: translateY(50px)
+
+
+
+
+
+
+
+
+
+
+//? Initialize Showcase
+// Showcase > .wrapper
 =slideUp-anim
     animation: SlideUpAnim .4s .4s ease-in backwards
+
+// Showcase > .wrapper > .Letter
 =fadeIn-letter-anim
     animation: FadeInLetterAnim-Overflow .4s .8s ease-in backwards
+
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active
 =scroll-tran
-    transition: opacity .8s ease-in, transform .6s ease-in
+    transition: opacity .6s ease-in, transform .4s ease-in
+
+
 
 =ShowcaseInitializeKeyframes
     @keyframes SlideUpAnim
@@ -350,17 +472,17 @@ $fade-vertical-reverse-reset-delays: (1: .4, 2: .3, 3: .2, 4: 0)
 
 
 
-//? Always active
-// Navigation > Link >
-   Home > Navigator > div
+//? Others
+/* Navigation > Link >
+   Navigator > div
 =hover-tran
     transition: opacity .15s ease-in-out
 
-// Home > Side > Description > .button > a::after
+// Description > .button > a::after
 =move-button-tran
     transition: transform .4s ease-in-out
 
-// Home > Side > Description > .button > a
+// Description > .button > a
 =color-button-tran
     transition: color .4s .3s ease-in
 
@@ -368,6 +490,3 @@ $fade-vertical-reverse-reset-delays: (1: .4, 2: .3, 3: .2, 4: 0)
 //? Prebuild
 =delay($val)
     transition-delay: $val
-
-=duration($val)
-    transition-duration: $val

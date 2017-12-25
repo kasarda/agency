@@ -58,7 +58,8 @@
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Navigation add cursor: default on active link",
     "Replace <br> with -> span display block",
-    "Fixe problem with resizing bg image in Home component inside .rule element"
+    "Fixe problem with resizing bg image in Home component inside .rule element",
+    "Replace .wrapper class with .camera"
   ],
   "done": [
     "Create Services, Contacts and 404 components",

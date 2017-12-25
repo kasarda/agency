@@ -7,6 +7,10 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Showcase > .wrapper > [data-animate].animate-active
+   Services > section > [data-animate].animate-active */
+/* Navigation > Link >
+   Navigator > div */
 #Projects {
   height: 100%;
   width: 100%;
@@ -38,7 +42,7 @@
       position: relative;
       padding-left: 0px;
       transition: padding-left .25s ease-in, opacity .2s ease-in;
-      animation: InitLinks .4s ease-in backwards; }
+      animation: fadeInUpAnim .4s ease-in backwards; }
       #Projects .content h2.link-1 {
         animation-delay: 0.2s; }
       #Projects .content h2.link-2 {
@@ -104,19 +108,8 @@
           width: 150px; } }
       #Projects .letter .Letter .fill-pattern {
         fill: #ffffff; }
-  #Projects[data-active="false"] .letter .Letter {
-    opacity: 1;
-    transition: opacity .4s ease-in; }
-  #Projects[data-enter="true"] .letter .Letter {
+  #Projects[data-active="false"] .letter .Letter, #Projects[data-enter="true"] .letter .Letter {
     opacity: 1;
     transition: opacity .4s ease-in; }
   #Projects[data-active="true"] .content h2:not([data-active-link="true"]) {
     opacity: .5; }
-
-@keyframes InitLinks {
-  from {
-    opacity: 0;
-    transform: translateY(200%); }
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
