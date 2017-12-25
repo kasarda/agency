@@ -101,7 +101,12 @@
     "Created Services component",
     "Rewrite view service",
     "new animation service",
-    "scroll animation is register in index.js"
+    "scroll animation is register in index.js",
+    "Updated index.js",
+    "Created Services Component",
+    "Created Contacts and Form Component",
+    "Animation lvl 5",
+    "Animation are faster"
   ],
   "browsers": {
     "mobile": {
