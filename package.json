@@ -60,6 +60,7 @@
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Add Aria-* attributes",
     "Add preload on main images",
+    "Create web components",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
   ],
   "done": [
@@ -84,7 +85,6 @@
     "State black-color on navigation doesnt work on mobile",
     "Add black color on icons in navigation if navigation is on top of content",
     "Set navigation to be always fixed",
-    "Create web components",
     "Create new Animation system",
     "Initialize contacts and notFound component",
     "Optimize SVG"
