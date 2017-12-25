@@ -36,7 +36,7 @@
   #Description .fadeIn {
     transform: translateY(0px);
     opacity: 0;
-    transition: opacity .6s ease, transform .4s ease; }
+    transition: opacity .4s ease, transform .4s ease; }
     @media (min-width: 768px) {
       #Description .fadeIn {
         transform: translateY(100px); } }
@@ -66,12 +66,7 @@
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-4,
 [data-down="false"][data-side-ready="false"] #Description .fadeIn-4 {
-  transition-delay: 0.1s;
-  transition-duration: 0.6s; }
-  @media (min-width: 768px) {
-    [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-4,
-    [data-down="false"][data-side-ready="false"] #Description .fadeIn-4 {
-      transition-duration: 0.4s; } }
+  transition-delay: 0.1s; }
 
 [data-down="true"][data-side-ready="true"] #Description .fadeIn,
 [data-down="false"][data-side-ready="true"] #Description .fadeIn {
@@ -92,5 +87,7 @@
   transition-delay: 0.2s; }
 
 [data-side-ready="true"][data-redirect="true"] #Description .fadeIn-4 {
-  opacity: 0;
   transition-delay: 0s; }
+
+[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-4 {
+  opacity: 0; }

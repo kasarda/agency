@@ -2,28 +2,26 @@
 //? Initialize Animation
 // Home > .rule
 =slide-anim
-    animation: SlideAnim .4s .4s ease-in backwards
+    animation: SlideAnim .4s ease-in backwards
 
 // Home > Letter > C.letter > .shape
 =letter-c-anim
-    animation: DashAnim .8s .6s ease-in backwards
-
-// Home > Letter > rect.background-mask
-=move-in-anim
-    animation: MoveInAnim 1s 1s ease-in backwards
-
-=letter-desktop-delay
-    animation-delay: 1.4s
+    animation: DashAnim .6s .4s ease-in backwards
 
 // Home > Letter -> only IE
 =fade-in-ie-anim
-    animation: FadeInAnim 1s .4s ease-in backwards
+    animation: FadeInAnim .4s .4s ease-in backwards
+
+// Home > Letter > rect.background-mask
+=move-in-anim
+    animation: MoveInAnim .4s 1s ease-in backwards
 
 // Home > h1
 =fade-in-anim
-    animation: FadeInAnim-Ready 1s 1.4s ease-in backwards
+    animation: FadeInAnim-Ready .4s 1s ease-in backwards
 
-
+=fade-in-ie-delay
+    animation-delay: .4s
 
 
 =InitializeKeyframes
@@ -45,7 +43,6 @@
         from
             opacity: 0
 
-
     @keyframes FadeInAnim-Ready
         from
             opacity: 0
@@ -59,7 +56,8 @@
 //? Home <=> Page
 // Home > Letter > C.letter > .shape
 =dash-letter-c-tran
-    transition: stroke-dashoffset .8s 1.6s ease-in-out
+    transition: stroke-dashoffset .6s 1.6s ease-in-out
+// reseted delay when [home="false"]
 
 // Home > Letter -> Only IE
 =fade-ie-tran
@@ -71,34 +69,40 @@
 
 // Home > h1
 =fade-heading-tran
-    transition: opacity 1s 1.8s ease-in-out
+    transition: opacity .4s 1.8s ease-in-out
+// reseted delay when [data-home="false"]
 
 // Home > Navigator
 =heading-finish
-    animation: HeadingFinish-RenderPage-RenderImage-Ready 2.4s // (fade-heading-tran.del + fade-heading-tran.dur) - .4
+    animation: HeadingFinish-RenderPage-RenderImage-Ready 2.2s // fade-heading-tran.del + fade-heading-tran.dur
 
 // Home > .rule
 =slide-tran
-    transition: width .4s 1.4s ease-in-out
+    transition: width .4s 1.2s ease-in-out
+
+=slide-tran-delay
+    transition-delay: .6s
 
 // Home > Side
 =slide-width-tran
-    transition: width .4s 1.2s ease-in-out
+    transition: width .4s 1s ease-in-out
 
 // Home > .column
 =slide-height-tran
     transition: height .4s .4s ease-in-out, margin .4s .4s ease-in-out
 
 =slide-height-delay
-    transition-delay: 1.6s
+    transition-delay: 1.4s, 1.4s
 
 =rule-finish
-    animation: RuleFinish-SideReady-StartRender 2s // slide-height-delay +  slide-height-transition.duration
+    animation: RuleFinish-SideReady-StartRender 1.8s // slide-height-delay +  slide-height-tran.duration
 
 // Home > .rule > .background
 =fade-background-tran
     transition: opacity .4s .4s
 
+=fade-background-delay
+    transition-delay: 1.8s
 
 
 
@@ -116,7 +120,7 @@
 
 
 
-//? From Page view to Home view -> Side
+//? Page => Home -> Side
 // Home > Side
 =slide-side-width-anim
     animation: SlideSideWidthAnim .4s .8s ease-in backwards
@@ -132,7 +136,7 @@
 
 
 
-//? From Page view to Page view
+//? Page <=> Page
 // Home > Side
 =page-seq
     animation-duration: .4s
@@ -189,38 +193,48 @@
 //? Page Content
 // Home > Side > .heading > h2
 =fadeIn-left-anim
-    animation: FadeInLeftAnim-Ready .6s ease-in-out forwards
+    animation: FadeInLeftAnim-Ready .4s ease-in-out forwards
 
 =left-fadeOut-anim
-    animation: LeftFadeOutAnim .6s ease-in-out forwards
+    animation: LeftFadeOutAnim .4s ease-in-out forwards
 
 =right-fadeOut-anim
-    animation: RightFadeOutAnim .6s ease-in-out forwards
+    animation: RightFadeOutAnim .4s ease-in-out forwards
 
 =fadeIn-right-anim
-    animation: FadeInRightAnim-Ready .6s ease-in-out forwards
+    animation: FadeInRightAnim-Ready .4s ease-in-out forwards
 
 // Home > Side > .heading > .hr
 =hr-slideIn-anim
-    animation: HrSlideInAnim 1s ease-in-out forwards
+    animation: HrSlideInAnim .8s ease-in-out forwards
 
 =hr-slideOut-anim
-    animation: HrSlideOutAnim .6s ease-in-out forwards
+    animation: HrSlideOutAnim .4s ease-in-out forwards
 
 =hr-slideIn-slideOut-anim
-    animation: HrSlideInOutAnim .6s ease-in-out forwards
+    animation: HrSlideInOutAnim .4s ease-in-out forwards
 
 // Home > Side > Description > .fadeIn
 =fade-vertical-tran
-    transition: opacity .6s ease, transform .4s ease
+    transition: opacity .4s ease, transform .4s ease
+
+$fade-vertical-delays: (1: .1, 2: .2, 3: .3, 4: .4)
+$fade-vertical-reverse-delays: (1: .4, 2: .3, 3: .2, 4: .1)
+$fade-vertical-reverse-reset-delays: (1: .4, 2: .3, 3: .2, 4: 0)
 
 // Home > Side > Letter
 =fade-page-letter-tran
     transition: opacity .4s ease-in-out
 
-=move-page-letter-tran
-    transition: x 1s ease-in-out
+=fade-page-letter-delay
+    transition-duration: .6s
 
+=move-page-letter-tran
+    transition: x .6s ease-in-out
+
+=move-page-letter-reset
+    transition-delay: .6s // fade-page-letter-delay
+    transition-duration: 0s
 
 
 =PageContentKeyframes

@@ -68,7 +68,7 @@ $padding-from-screen-mobile: 20px
                 padding-bottom: 0
                 padding-left: 25px
             +ie
-                animation-delay: .6s
+                +fade-in-ie-delay
 
 
     &[data-from]:not([data-home="true"])
@@ -76,7 +76,7 @@ $padding-from-screen-mobile: 20px
             .rule
                 .background
                     opacity: 1
-                    +delay(1.8s)
+                    +fade-background-delay
 
     &[data-home="false"]
         .column
@@ -89,7 +89,7 @@ $padding-from-screen-mobile: 20px
                 margin-left: -50px
         .rule
             width: 100%
-            +delay(.8s)
+            +slide-tran-delay
 
         h1
             opacity: 0

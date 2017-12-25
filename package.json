@@ -57,7 +57,8 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Navigation add cursor: default on active link",
-    "Replace <br> with -> span display block"
+    "Replace <br> with -> span display block",
+    "Fixe problem with resizing bg image in Home component inside .rule element"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -80,7 +81,9 @@
     "Update svgs letters to have one pattern and have new classNames",
     "State black-color on navigation doesnt work on mobile",
     "Add black color on icons in navigation if navigation is on top of content",
-    "Set navigation to be always fixed"
+    "Set navigation to be always fixed",
+    "Create web components",
+    "Create new Animation system"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",

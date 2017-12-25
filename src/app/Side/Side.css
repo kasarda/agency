@@ -11,7 +11,7 @@
   width: 0px;
   align-items: flex-end;
   z-index: 2;
-  transition: width .4s 1.2s ease-in-out;
+  transition: width .4s 1s ease-in-out;
   transform: translateX(0px);
   will-change: transform, width; }
   @media (min-width: 768px) {
@@ -63,27 +63,27 @@
 
 [data-down="true"][data-side-ready="true"] #Side .heading .hr,
 [data-down="false"][data-side-ready="true"] #Side .heading .hr {
-  animation: HrSlideInAnim 1s ease-in-out forwards; }
+  animation: HrSlideInAnim .8s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="true"] #Side .heading h2 {
   transform: translateX(0);
   opacity: 1;
-  animation: FadeInLeftAnim-Ready .6s ease-in-out forwards; }
+  animation: FadeInLeftAnim-Ready .4s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading h2 {
-  animation: LeftFadeOutAnim .6s ease-in-out forwards; }
+  animation: LeftFadeOutAnim .4s ease-in-out forwards; }
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Side .heading .hr {
-  animation: HrSlideOutAnim .6s ease-in-out forwards; }
+  animation: HrSlideOutAnim .4s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="false"] #Side .heading h2 {
-  animation: RightFadeOutAnim .6s ease-in-out forwards; }
+  animation: RightFadeOutAnim .4s ease-in-out forwards; }
 
 [data-down="false"][data-side-ready="false"] #Side .heading .hr {
-  animation: HrSlideInOutAnim .6s ease-in-out forwards; }
+  animation: HrSlideInOutAnim .4s ease-in-out forwards; }
 
 [data-home="false"][data-down="false"][data-side-ready="true"][data-redirect="false"] #Side .heading h2 {
-  animation: FadeInRightAnim-Ready .6s ease-in-out forwards; }
+  animation: FadeInRightAnim-Ready .4s ease-in-out forwards; }
 
 [data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]) #Side,
 [data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
@@ -100,9 +100,9 @@
   width: 0px;
   transition-delay: 0.8s; }
   [data-side-ready="true"][data-redirect="true"] #Side .heading h2 {
-    animation: LeftFadeOutAnim .6s ease-in-out forwards; }
+    animation: LeftFadeOutAnim .4s ease-in-out forwards; }
   [data-side-ready="true"][data-redirect="true"] #Side .heading .hr {
-    animation: HrSlideOutAnim .6s ease-in-out forwards; }
+    animation: HrSlideOutAnim .4s ease-in-out forwards; }
 
 [data-side-ready="true"] #Side {
   animation: none !important; }

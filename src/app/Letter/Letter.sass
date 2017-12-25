@@ -32,8 +32,6 @@
     .background-mask-rect
         x: 100%
         +move-in-anim
-        +min(md)
-            +letter-desktop-delay
 
 
 #ContentLetter
@@ -47,21 +45,18 @@
     .background-mask-rect
         x: 0px
         +move-page-letter-tran
-        +min(md)
-            +letter-desktop-delay
 
 [data-side-ready="true"]
     #ContentLetter
         opacity: 1
-        +duration(.8s)
+        +fade-page-letter-delay
         .background-mask-rect
             x: 100%
 
 [data-side-ready="false"]
     #ContentLetter
         .background-mask-rect
-            +delay(.8s)
-            +duration(0s)
+            +move-page-letter-reset
 
 
 

@@ -40,7 +40,7 @@
   opacity: 1; }
 
 [data-home="true"][data-from] #Navigator {
-  animation: HeadingFinish-RenderPage-RenderImage-Ready 2.4s; }
+  animation: HeadingFinish-RenderPage-RenderImage-Ready 2.2s; }
 
 [data-ready="true"][data-redirect="true"] #Navigator {
   opacity: 0; }
