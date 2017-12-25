@@ -35,25 +35,19 @@
     "60fps scrolling",
     "transform3d(0,0,0) hack for edge - fallback for will-change, use @support will-change if needed",
     "Animate only transform and opacity not left, top ...",
-    "Aria-",
-    "replace some animation on mobiles for performance",
-    "preload",
     "Logger for mobile devices"
   ],
   "todos": [
     "Create logo, favicon and name of company",
-    "Create custom scrollbar",
     "Create service for scroll animation",
     "Add selection",
-    "Change specific easings for animations to be more smooth and better looking",
-    "Optimize animation, analyze performance, alternative for slow devices",
+    "Optimize animation, analyze performance, create alternative for slow devices",
+    "Replace some animation on mobiles for performance",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
-    "Optimize SVG",
     "Clean and optimize code, create better and readable environment",
     "Create better images",
     "Fill lorem ipsum",
     "Try to get wheel service inside Home component with removeEventListener",
-    "Initialize contacts and notFound component",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Navigation add cursor: default on active link",
@@ -63,7 +57,9 @@
     "Recreate design of contacts",
     "Added support for large device using max-width on content",
     "Change naming of classes and structure to be more clear what this doing",
-    "Create small library for server vs local in path and in dev producation in Router basename=agency/build"
+    "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
+    "Add Aria-* attributes",
+    "Add preload on main images"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -88,7 +84,9 @@
     "Add black color on icons in navigation if navigation is on top of content",
     "Set navigation to be always fixed",
     "Create web components",
-    "Create new Animation system"
+    "Create new Animation system",
+    "Initialize contacts and notFound component",
+    "Optimize SVG"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -98,10 +96,11 @@
     "Add sooner ready state on mobile devices",
     "Fix bug with letters when pattern goes where should not go",
     "IE11 => Bad timing, specialy from page to home where animation is done and still not ready",
-    "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery"
+    "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery",
+    "Create custom scrollbar",
+    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
-  "changelog": [
-  ],
+  "changelog": [],
   "browsers": {
     "mobile": {
       "opera-mini": true,
