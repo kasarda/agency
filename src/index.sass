@@ -139,6 +139,15 @@ img
 .inline-block
     display: inline-block
 
+[hidden]
+    display: none !important
+
+.clickable
+    cursor: pointer
+    +hover-tran
+    &:hover
+        opacity: .5
+
 +InitializeKeyframes
 +HomeToPageKeyframes
 +PageToHomeKeyframes

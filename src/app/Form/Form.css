@@ -22,6 +22,7 @@
     height: 100%;
     width: 100%;
     background-color: #ffffff;
+    overflow-y: auto;
     padding: 0 50px; }
     @media (min-width: 576px) {
       #Form .form {
@@ -41,18 +42,27 @@
       #Form .disabled-container {
         width: 62%; } }
   #Form h3 {
-    font-weight: 100; }
+    font-weight: 100;
+    margin-top: 0; }
+    #Form h3 span {
+      display: block; }
   #Form .button {
     position: relative;
     display: inline-block;
-    overflow: hidden;
-    z-index: 1; }
+    z-index: 1;
+    margin-bottom: 25px; }
     #Form .button button {
       background-color: #004bd3;
       position: relative;
       z-index: 1; }
       #Form .button button:focus {
         outline: none; }
+  #Form svg {
+    margin-top: 25px; }
+    @media (max-height: 500px) {
+      #Form svg {
+        height: 48px;
+        width: 48px; } }
   #Form form input, #Form form textarea {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -62,8 +72,9 @@
     font-family: "Montserrat", sans-serif;
     width: 100%;
     min-height: 50px;
-    transition: border-color .15s ease-in; }
-    #Form form input:invalid, #Form form textarea:invalid {
+    transition: border-color .15s ease-in;
+    border-radius: none; }
+    #Form form input:invalid:focus, #Form form textarea:invalid:focus {
       border-color: red; }
     #Form form input:focus, #Form form textarea:focus {
       outline: none;
@@ -78,6 +89,25 @@
     animation: SlideRight-CloseForm .4s .4s ease-in both; }
     #Form[data-close="true"] .disabled-container {
       animation: FadeDisabledClose .4s ease-in forwards; }
+  #Form .init-animation {
+    animation: FadeInRight .2s .4s ease-in backwards; }
+    #Form .init-animation.init-animation-1 {
+      animation-delay: 0.4s; }
+    #Form .init-animation.init-animation-2 {
+      animation-delay: 0.5s; }
+    #Form .init-animation.init-animation-3 {
+      animation-delay: 0.6s; }
+    #Form .init-animation.init-animation-4 {
+      animation-delay: 0.7s; }
+    #Form .init-animation.init-animation-5 {
+      animation-delay: 0.8s; }
+    #Form .init-animation.init-animation-6 {
+      animation-delay: 0.9s; }
+
+@keyframes FadeInRight {
+  from {
+    opacity: 0;
+    transform: translateY(50px); } }
 
 @keyframes FadeDisabledClose {
   from {

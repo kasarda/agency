@@ -14,6 +14,9 @@
   top: 0;
   left: 0;
   background-color: #004bd3; }
+  #Contacts .camera {
+    height: 100%;
+    width: 100%; }
   #Contacts .typography {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -24,6 +27,9 @@
   #Contacts .container address {
     margin: 25px 0;
     line-height: 1.5rem; }
+    @media (max-height: 320px) {
+      #Contacts .container address {
+        margin: 5px 0; } }
   #Contacts .container h4:hover {
     color: #00328e;
     text-decoration: underline; }
@@ -34,11 +40,43 @@
     color: #004bd3;
     z-index: 1;
     margin-top: 25px; }
+    @media (max-height: 320px) {
+      #Contacts .container .button {
+        margin-top: 15px; } }
   #Contacts .container .icons {
     margin-top: 25px;
     width: 100px; }
+    @media (max-height: 320px) {
+      #Contacts .container .icons {
+        margin-top: 15px 0; } }
     #Contacts .container .icons a {
       cursor: pointer;
       transition: opacity .15s ease-in-out; }
       #Contacts .container .icons a:hover {
         opacity: .5; }
+  #Contacts .badge {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 50px;
+    z-index: 999;
+    background-color: #ffffff;
+    color: #004bd3;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 15px;
+    animation: PopUp .15s 1.2s ease-in backwards, PopDown-ResetBadge .15s 3.5s ease-in forwards;
+    transform: translate(-50%, 0px); }
+    @media (min-width: 768px) {
+      #Contacts .badge {
+        width: auto; } }
+
+@keyframes PopUp {
+  from {
+    transform: translate(-50%, 200px); } }
+
+@keyframes PopDown-ResetBadge {
+  to {
+    transform: translate(-50%, 200px); } }

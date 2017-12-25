@@ -6,6 +6,8 @@
     +dimension
     +position(0, 0, absolute)
     background-color: $primary-color
+    .camera
+        +dimension
     .typography
         font-family: $primary-font
         font-weight: 300
@@ -16,6 +18,8 @@
         address
             margin: 25px 0
             line-height: 1.5rem
+            +maxHeight(320px)
+                margin: 5px 0
         h4:hover
             color: #00328e
             text-decoration: underline
@@ -26,11 +30,39 @@
             color: $primary-color
             z-index: 1
             margin-top: 25px
+            +maxHeight(320px)
+                margin-top: 15px
         .icons
             margin-top: 25px
             width: 100px
+            +maxHeight(320px)
+                margin-top: 15px 0
             a
                 cursor: pointer
                 +hover-tran
                 &:hover
                     opacity: .5
+    .badge
+        width: 90%
+        +center(x)
+        bottom: 50px
+        z-index: 999
+        background-color: $light-color
+        color: $primary-color
+        font-weight: $bold
+        text-transform: capitalize
+        text-align: center
+        padding: 15px
+        animation: PopUp .15s 1.2s ease-in backwards, PopDown-ResetBadge .15s 3.5s ease-in forwards
+        transform: translate(-50%, 0px)
+        +min(md)
+            width: auto
+
+@keyframes PopUp
+    from
+        transform: translate(-50%, 200px)
+
+
+@keyframes PopDown-ResetBadge
+    to
+        transform: translate(-50%, 200px)

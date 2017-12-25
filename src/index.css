@@ -472,6 +472,15 @@ img {
 .inline-block {
   display: inline-block; }
 
+[hidden] {
+  display: none !important; }
+
+.clickable {
+  cursor: pointer;
+  transition: opacity .15s ease-in-out; }
+  .clickable:hover {
+    opacity: .5; }
+
 @keyframes DashAnim {
   from {
     stroke-dashoffset: 901.397px; }
