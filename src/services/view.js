@@ -4,7 +4,7 @@ export default (configuration = {}) => {
 
     // Error Handling
     if (!target) {
-        console.error('[in-view] -> target property must be element')
+        console.error('[in-view] -> target property must be an element')
         return
     }
 
@@ -43,7 +43,7 @@ export default (configuration = {}) => {
     }
 
     if (offset.toString() !== '[object Object]') {
-        console.error(`[in-view] -> offset must be plain object and can include properties: top, left, bottom, right with number values`)
+        console.error(`[in-view] -> offset must be a plain object and can include properties: top, left, bottom, right with number values`)
         return
     }
 
