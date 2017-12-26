@@ -3,8 +3,9 @@ import inView from './view'
 
 export function scrollAnimation() {
     const targets = document.querySelectorAll('[data-animate]')
+    const { matches } = window.matchMedia('(min-width: 768px)')
 
-    if (targets.length > 0 && window.innerWidth >= 768) {
+    if (targets.length > 0 && matches) {
         targets.forEach(target => {
 
             const offset = parseFloat(target.dataset.offset) || 0
