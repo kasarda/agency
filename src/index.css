@@ -388,7 +388,8 @@ h3 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: 100;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  margin: 1em 0; }
   @media (min-width: 768px) {
     h3 {
       font-size: 4.375rem; } }
