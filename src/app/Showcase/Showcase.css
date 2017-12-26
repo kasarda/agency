@@ -42,12 +42,6 @@
 #Showcase section {
   text-align: center;
   color: #000; }
-  #Showcase section p {
-    max-width: 500px;
-    margin: 0 auto; }
-    @media (min-width: 768px) {
-      #Showcase section p {
-        max-width: 700px; } }
   #Showcase section .rect-after::after {
     content: '';
     position: absolute;

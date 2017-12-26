@@ -76,7 +76,11 @@ p
     font-size: $paragraph-small-size
     line-height: $paragraph-small-line-height
     letter-spacing: $paragraph-letter-spacing
-    margin: 0
+    text-align: left
+    max-width: 500px
+    margin: 0 auto
+    +min(md)
+        max-width: 700px
     +min(lg)
         font-size: $paragraph-size
         line-height: $paragraph-line-height

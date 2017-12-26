@@ -407,7 +407,12 @@ p {
   font-size: 1.1rem;
   line-height: 1.9rem;
   letter-spacing: 0.09rem;
-  margin: 0; }
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    p {
+      max-width: 700px; } }
   @media (min-width: 992px) {
     p {
       font-size: 1.3rem;
