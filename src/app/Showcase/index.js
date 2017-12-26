@@ -43,7 +43,7 @@ class Showcase extends Component {
         return (
             <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
                 <div
-                    className="wrapper flex justify-center align-end"
+                    className="camera flex justify-center align-end"
                     data-active-navigation
                 >
                     <Letter letter={letter} />
