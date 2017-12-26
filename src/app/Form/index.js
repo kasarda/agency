@@ -47,7 +47,7 @@ class Form extends Component {
                 <div className="row form flex justify-center direction-col">
                     <svg
                         width="18" height="18" viewBox="0 0 24 24"
-                        className="clickable init-animation init-animation-1"
+                        className="primary-hover init-animation init-animation-1"
                         onClick={this.close.bind(this)}
                     >
                         <use xlinkHref="#icon-arrow-right" />

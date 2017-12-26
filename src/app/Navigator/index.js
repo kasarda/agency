@@ -2,11 +2,11 @@ import React from 'react'
 import './Navigator.css'
 
 function Item({ id, letter, currentPage, onPage }) {
-    const setActive = page => currentPage === page ? 'active' : ''
+    const setActive =  currentPage === id ? 'active' : ''
 
     return (
         <div
-            className={setActive(id)}
+            className={setActive}
             onClick={_ => onPage(id)}>
             {letter}
         </div>

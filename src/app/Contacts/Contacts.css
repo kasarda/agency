@@ -49,11 +49,6 @@
     @media (max-height: 320px) {
       #Contacts .container .icons {
         margin-top: 15px 0; } }
-    #Contacts .container .icons a {
-      cursor: pointer;
-      transition: opacity .15s ease-in-out; }
-      #Contacts .container .icons a:hover {
-        opacity: .5; }
   #Contacts .badge {
     width: 90%;
     position: absolute;

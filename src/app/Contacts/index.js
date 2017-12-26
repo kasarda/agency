@@ -67,19 +67,19 @@ class Contacts extends Component {
                         </div>
 
                         <div className="icons flex justify-between">
-                            <a href="https://www.instagram.com">
+                            <a className="primary-hover" href="https://www.instagram.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-instagram" />
                                 </svg>
                             </a>
 
-                            <a href="https://www.twitter.com">
+                            <a className="primary-hover" href="https://www.twitter.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-twitter" />
                                 </svg>
                             </a>
 
-                            <a href="https://www.youtube.com">
+                            <a className="primary-hover" href="https://www.youtube.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-youtube" />
                                 </svg>

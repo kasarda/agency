@@ -496,10 +496,10 @@ img {
 [hidden] {
   display: none !important; }
 
-.clickable {
+.primary-hover {
   cursor: pointer;
   transition: opacity .15s ease-in-out; }
-  .clickable:hover {
+  .primary-hover:hover, .primary-hover.active {
     opacity: .5; }
 
 @keyframes DashAnim {
