@@ -30,10 +30,6 @@
     @media (max-height: 500px) {
       #Description .button {
         margin-top: 0px; } }
-    #Description .button .button-container {
-      position: relative;
-      overflow: hidden;
-      display: inline-block; }
   @media (max-height: 500px) {
     #Description .paragraphs {
       display: none; } }

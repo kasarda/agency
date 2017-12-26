@@ -50,16 +50,9 @@
     #Form h3 span {
       display: block; }
   #Form .button {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
     margin-bottom: 25px; }
     #Form .button button {
-      background-color: #004bd3;
-      position: relative;
-      z-index: 1; }
-      #Form .button button:focus {
-        outline: none; }
+      background-color: #004bd3; }
   #Form svg {
     margin-top: 25px; }
     @media (max-height: 500px) {

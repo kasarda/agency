@@ -38,11 +38,7 @@
     color: #00328e;
     text-decoration: underline; }
   #Contacts .container .button {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
     color: #004bd3;
-    z-index: 1;
     margin-top: 25px; }
     @media (max-height: 320px) {
       #Contacts .container .button {

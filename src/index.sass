@@ -89,39 +89,53 @@ a
 img
     max-width: 100%
 
-.button-primary
-    display: inline-block
-    text-decoration: none
-    color: $light-color
-    text-transform: uppercase
-    font-size: $anchor-size
-    font-weight: $bold
-    letter-spacing: $anchor-letter-spacing
-    text-align: center
-    border: 1px $light-color solid
-    padding: 14px 17px
-    cursor: pointer
-    +min(md)
-        padding: 17px 23px
-    &::after
-        content: ''
-        +dimension
-        +position(0, 0, absolute)
-        transform: translateX(-100%)
-        background-color: $light-color
-        z-index: -1
-        +move-button-tran
-        will-change: transform
-    &:hover::after
-        transform: translateX(0px)
-    &
-        +color-button-tran
-        color: $light-color
 
-    &:hover
-        color: currentColor
-        border-color: currentColor
-        delay(0s)
+.primary-button
+    position: relative
+    overflow: hidden
+    display: inline-block
+    z-index: 1
+    outline: 1px $light-color solid
+    +outline-color-tran
+    &.outline-color:hover
+        outline-color: currentColor
+    & > a,
+    & > button
+        border: none
+        position: relative
+        z-index: 1
+        display: inline-block
+        text-decoration: none
+        color: $light-color
+        text-transform: uppercase
+        font-size: $anchor-size
+        font-weight: $bold
+        letter-spacing: $anchor-letter-spacing
+        text-align: center
+        padding: 14px 17px
+        cursor: pointer
+        +color-button-tran
+        +min(md)
+            padding: 17px 23px
+        &::after
+            content: ''
+            +dimension
+            +position(0, 0, absolute)
+            transform: translateX(-100%)
+            background-color: $light-color
+            z-index: -1
+            +move-button-tran
+            will-change: transform
+        &:hover::after
+            transform: translateX(0px)
+        &:hover
+            color: currentColor
+            delay(0s)
+        &:focus
+            outline: none
+
+
+
 
 .view
     +dimension

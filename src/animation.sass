@@ -478,13 +478,19 @@ $fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9)
 =hover-tran
     transition: opacity .15s ease-in-out
 
-// Description > .button > a::after
+
+// index.sass > .primary-button
+=outline-color-tran
+    transition: outline-color .15s ease-in
+
+// index.sass > .primary-button > a, button
+=color-button-tran
+    transition: color .4s .3s ease-in
+
+// index.sass > .primary-button > ::after
 =move-button-tran
     transition: transform .4s ease-in-out
 
-// Description > .button > a
-=color-button-tran
-    transition: color .4s .3s ease-in
 
 
 //? Prebuild

@@ -62,11 +62,8 @@ class Contacts extends Component {
                         <div className="phone typography">
                             (067) 85 000
                     </div>
-                        <div className="button">
-                            <a
-                                className="button-primary"
-                                onClick={this.toggleForm.bind(this, true)}
-                            >Contact Us</a>
+                        <div className="button primary-button">
+                            <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
                         </div>
 
                         <div className="icons flex justify-between">

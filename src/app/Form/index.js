@@ -59,10 +59,11 @@ class Form extends Component {
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
                         <input className="init-animation init-animation-4" type="email" name="email" placeholder="Your Email" required />
                         <textarea className="init-animation init-animation-5" name="message" placeholder="Message" required></textarea>
-                        <div className="button init-animation init-animation-6">
-                            <button className="button-primary" type="submit">Send Message</button>
+                        <div className="init-animation init-animation-6">
+                            <div className="primary-button button outline-color">
+                                <button type="submit">Send Message</button>
+                            </div>
                         </div>
-
                     </form>
                 </div>
 

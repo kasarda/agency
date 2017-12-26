@@ -421,41 +421,57 @@ a {
 img {
   max-width: 100%; }
 
-.button-primary {
+.primary-button {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 0.688rem;
-  font-weight: 700;
-  letter-spacing: 0.138rem;
-  text-align: center;
-  border: 1px #ffffff solid;
-  padding: 14px 17px;
-  cursor: pointer; }
-  @media (min-width: 768px) {
-    .button-primary {
-      padding: 17px 23px; } }
-  .button-primary::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    background-color: #ffffff;
-    z-index: -1;
-    transition: transform .4s ease-in-out;
-    will-change: transform; }
-  .button-primary:hover::after {
-    transform: translateX(0px); }
-  .button-primary {
-    transition: color .4s .3s ease-in;
-    color: #ffffff; }
-  .button-primary:hover {
-    color: currentColor;
-    border-color: currentColor; }
+  z-index: 1;
+  outline: 1px #ffffff solid;
+  transition: outline-color .15s ease-in; }
+  .primary-button.outline-color:hover {
+    outline-color: currentColor; }
+  .primary-button > a,
+  .primary-button > button {
+    border: none;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.688rem;
+    font-weight: 700;
+    letter-spacing: 0.138rem;
+    text-align: center;
+    padding: 14px 17px;
+    cursor: pointer;
+    transition: color .4s .3s ease-in; }
+    @media (min-width: 768px) {
+      .primary-button > a,
+      .primary-button > button {
+        padding: 17px 23px; } }
+    .primary-button > a::after,
+    .primary-button > button::after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-color: #ffffff;
+      z-index: -1;
+      transition: transform .4s ease-in-out;
+      will-change: transform; }
+    .primary-button > a:hover::after,
+    .primary-button > button:hover::after {
+      transform: translateX(0px); }
+    .primary-button > a:hover,
+    .primary-button > button:hover {
+      color: currentColor; }
+    .primary-button > a:focus,
+    .primary-button > button:focus {
+      outline: none; }
 
 .view {
   height: 100%;

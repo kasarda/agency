@@ -21,8 +21,8 @@ class Description extends Component {
                     {descriptionList}
                 </div>
                 <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>
-                    <div className="button-container" style={{ color: theme }}>
-                        <a className="button-primary" onClick={this.redirect.bind(this)}>view case</a>
+                    <div className="primary-button" style={{ color: theme }}>
+                        <a onClick={this.redirect.bind(this)}>view case</a>
                     </div>
                 </div>
             </div>
