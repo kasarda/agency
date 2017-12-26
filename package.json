@@ -40,7 +40,6 @@
   "todos": [
     "Create logo, favicon and name of company",
     "Create service for scroll animation",
-    "Add selection",
     "Optimize animation, analyze performance, create alternative for slow devices",
     "Replace some animation on mobiles for performance",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
@@ -56,6 +55,7 @@
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Add Aria-* attributes",
     "Add preload on main images",
+    "Fixed problem in Showcase footer when heading go on small divice outside of box",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
   ],
@@ -87,6 +87,7 @@
     "Create web components",
     "Replace .wrapper class with .camera",
     "Replace <br> with -> span display block",
+    "Add selection",
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Change naming of classes and structure to be more clear what this doing"
 
@@ -111,7 +112,8 @@
     "Fixed some css bugs e.g. with primary-button",
     "Optimized theme.sass",
     "Replaced .wrapper class with .camera",
-    "Replaced <br> with -> span display block"
+    "Replaced <br> with -> span display block",
+    "Added selection"
   ],
   "browsers": {
     "mobile": {
