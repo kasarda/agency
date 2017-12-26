@@ -413,10 +413,13 @@ p {
       font-size: 1.3rem;
       line-height: 2.15rem; } }
 
-a {
+a, button {
   text-decoration: none;
   color: currentColor;
-  cursor: pointer; }
+  cursor: pointer;
+  border: none; }
+  a:focus, button:focus {
+    outline: none; }
 
 img {
   max-width: 100%; }
@@ -433,7 +436,6 @@ img {
     transition-delay: .3s; }
   .primary-button > a,
   .primary-button > button {
-    border: none;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -445,7 +447,6 @@ img {
     letter-spacing: 0.138rem;
     text-align: center;
     padding: 14px 17px;
-    cursor: pointer;
     transition: color .4s .3s ease-in; }
     @media (min-width: 768px) {
       .primary-button > a,
@@ -470,9 +471,6 @@ img {
     .primary-button > a:hover,
     .primary-button > button:hover {
       color: currentColor; }
-    .primary-button > a:focus,
-    .primary-button > button:focus {
-      outline: none; }
 
 .view {
   height: 100%;

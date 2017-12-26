@@ -21,7 +21,7 @@ class Services extends Component {
 
         return (
             <div id="Services">
-                <div className="wrapper flex flex-center" data-active-navigation>
+                <div className="camera flex flex-center" data-active-navigation>
                     <h1>
                         We are creating mobile and web app
                     </h1>

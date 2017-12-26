@@ -11,21 +11,21 @@
    Services > section > [data-animate].animate-active */
 /* Navigation > Link >
    Navigator > div */
-#Services .wrapper {
+#Services .camera {
   background-color: #004bd3;
   height: 250px;
   width: 100%;
   padding: 0 20px; }
   @media (min-width: 576px) {
-    #Services .wrapper {
+    #Services .camera {
       height: 50vh; } }
   @media (min-width: 768px) {
-    #Services .wrapper {
+    #Services .camera {
       padding: 0 50px; } }
   @media (min-width: 1200px) {
-    #Services .wrapper {
+    #Services .camera {
       height: 70vh; } }
-  #Services .wrapper h1 {
+  #Services .camera h1 {
     max-width: 700px;
     text-align: center; }
 

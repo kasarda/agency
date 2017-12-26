@@ -81,10 +81,13 @@ p
         font-size: $paragraph-size
         line-height: $paragraph-line-height
 
-a
+a, button
     text-decoration: none
     color: currentColor
     cursor: pointer
+    border: none
+    &:focus
+            outline: none
 
 img
     max-width: 100%
@@ -102,7 +105,6 @@ img
         +outline-color-delay
     & > a,
     & > button
-        border: none
         position: relative
         z-index: 1
         display: inline-block
@@ -114,7 +116,6 @@ img
         letter-spacing: $anchor-letter-spacing
         text-align: center
         padding: 14px 17px
-        cursor: pointer
         +color-button-tran
         +min(md)
             padding: 17px 23px
@@ -132,8 +133,6 @@ img
         &:hover
             color: currentColor
             delay(0s)
-        &:focus
-            outline: none
 
 
 
