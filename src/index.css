@@ -477,6 +477,29 @@ img {
     .primary-button > button:hover {
       color: currentColor; }
 
+form input, form textarea {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin: 25px 0;
+  resize: vertical;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  min-height: 50px;
+  transition: border-color .15s ease-in;
+  border-radius: none; }
+  form input:invalid:focus, form textarea:invalid:focus {
+    border-color: red; }
+  form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #004bd3; }
+  form input::placeholder, form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase; }
+  @media (min-width: 768px) {
+    form input, form textarea {
+      width: 50%; } }
+
 .view {
   height: 100%;
   width: 100%;

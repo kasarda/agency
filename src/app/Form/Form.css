@@ -59,28 +59,6 @@
       #Form svg {
         height: 48px;
         width: 48px; } }
-  #Form form input, #Form form textarea {
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    margin: 25px 0;
-    resize: vertical;
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    min-height: 50px;
-    transition: border-color .15s ease-in;
-    border-radius: none; }
-    #Form form input:invalid:focus, #Form form textarea:invalid:focus {
-      border-color: red; }
-    #Form form input:focus, #Form form textarea:focus {
-      outline: none;
-      border-color: #004bd3; }
-    #Form form input::placeholder, #Form form textarea::placeholder {
-      color: rgba(0, 0, 0, 0.5);
-      text-transform: uppercase; }
-    @media (min-width: 768px) {
-      #Form form input, #Form form textarea {
-        width: 50%; } }
   #Form[data-close="true"] {
     animation: SlideRightAnim-CloseForm .4s .4s ease-in both; }
     #Form[data-close="true"] .disabled-container {
