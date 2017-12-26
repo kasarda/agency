@@ -427,9 +427,10 @@ img {
   display: inline-block;
   z-index: 1;
   outline: 1px #ffffff solid;
-  transition: outline-color .15s ease-in; }
+  transition: outline-color .4s 0s ease-in; }
   .primary-button.outline-color:hover {
-    outline-color: currentColor; }
+    outline-color: currentColor;
+    transition-delay: .3s; }
   .primary-button > a,
   .primary-button > button {
     border: none;
