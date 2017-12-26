@@ -34,9 +34,6 @@
     @media (max-height: 320px) {
       #Contacts .container address {
         margin: 5px 0; } }
-  #Contacts .container h4:hover {
-    color: #00328e;
-    text-decoration: underline; }
   #Contacts .container .button {
     color: #004bd3;
     margin-top: 25px; }

@@ -134,6 +134,8 @@
       margin: 150px auto 50px auto; } }
   #third-section .consulation a:hover {
     color: #00328e; }
+    #third-section .consulation a:hover.underline {
+      text-decoration: underline; }
     #third-section .consulation a:hover h4 {
       text-decoration: underline; }
   #third-section .consulation .container {

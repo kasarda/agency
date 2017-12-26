@@ -52,7 +52,7 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h4 className="email typography">
+                        <h4 className="email typography secondary-hover underline">
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h4>
                         <address className="typography">

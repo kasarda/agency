@@ -502,6 +502,13 @@ img {
   .primary-hover:hover, .primary-hover.active {
     opacity: .5; }
 
+.secondary-hover:hover {
+  color: #00328e; }
+  .secondary-hover:hover.underline {
+    text-decoration: underline; }
+  .secondary-hover:hover h4 {
+    text-decoration: underline; }
+
 @keyframes DashAnim {
   from {
     stroke-dashoffset: 901.397px; }
