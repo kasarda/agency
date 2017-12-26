@@ -20,10 +20,10 @@ class Navigation extends Component {
         return (
             <div id="Navigation">
                 <div className="flex wrap">
-                    <div className="column brand flex align-center">
+                    <div className="column brand logo flex align-center">
                         <NavLink to="/" activeClassName="">Digital</NavLink>
                     </div>
-                    <div className="column links flex justify-end align-center">
+                    <div className="column links link flex justify-end align-center">
                         <Link to="/services" name="services" icon="icon-gear" />
                         <Link to="/projects" name="projects" icon="icon-project" />
                         <Link to="/contacts" name="contacts" icon="icon-mail" />

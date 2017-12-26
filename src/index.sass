@@ -24,68 +24,71 @@ body
     color: $light-color
     overflow: hidden
 
-h1,
-h2,
+
+h1, h2, h3, p
     font-family: $secondary-font
+
+h1, h2
     font-weight: $regular
+
+h1, h2, h4
     margin: 0
-h1
-    font-size: $heading-mobile-size
-    line-height: $heading-mobile-line-height
-    letter-spacing: $heading-letter-spacing
+
+h1, h3, h4
     text-transform: capitalize
+
+h1
+    font-size: $h1-mobile-size
+    line-height: $h1-mobile-height
+    letter-spacing: $h1-spacing
     +min(sm, 500px)
-        font-size: $heading-size
-        line-height: $heading-line-height
+        font-size: $h1-size
+        line-height: $h1-height
 
 h2
-    letter-spacing: $heading-2-letter-spacing
-    line-height: $heading-2-line-height
+    font-size: $h2-mobile-size
+    line-height: $h2-height
+    letter-spacing: $h2-spacing
     text-transform: uppercase
-    font-size: $heading-mobile-size
     +min(md)
-        font-size: $heading-2-small-size
+        font-size: $h2-small-size
     +min(lg)
-        font-size: $heading-size
+        font-size: $h2-size
     +maxHeight(500px)
-        font-size: $heading-mobile-size
+        font-size: $h2-mobile-size
     +maxHeight(300px)
-        font-size: $heading-2-tiny-size
+        font-size: $h2-tiny-size
         line-height: normal
 
 h3
-    color: $black-color
     font-family: $secondary-font
-    font-size: $heading-3-mobile-size
+    font-size: $h3-mobile-size
     font-weight: $light
-    text-transform: capitalize
+    color: $black-color
     margin: 1em 0
     +min(md)
-        font-size: $heading-3-size
+        font-size: $h3-size
 
 h4
-    margin: 0
-    font-weight: $bold
     font-family: $primary-font
-    font-size: $heading-4-mobile-size
-    text-transform: capitalize
+    font-weight: $bold
+    font-size: $h4-mobile-size
     +min(md)
-        font-size: $heading-4-size
+        font-size: $h4-size
 
 
 p
-    font-family: $secondary-font
-    font-size: $paragraph-small-size
-    line-height: $paragraph-small-line-height
-    letter-spacing: $paragraph-letter-spacing
+    font-size: $p-small-size
+    line-height: $p-small-height
+    letter-spacing: $p-spacing
     text-align: left
     max-width: 500px
     margin: 0 auto
     +min(md)
         max-width: 700px
     +min(lg)
-        font-size: $paragraph-size
-        line-height: $paragraph-line-height
+        font-size: $p-size
+        line-height: $p-height
 
 a, button
     text-decoration: none
@@ -94,6 +97,14 @@ a, button
     border: none
     &:focus
         outline: none
+
+.link
+    font-size: $link-size
+    letter-spacing: $link-spacing
+
+.logo
+    font-size: $logo-size
+    letter-spacing: $logo-spacing
 
 img
     max-width: 100%
@@ -111,16 +122,16 @@ img
         +outline-color-delay
     & > a,
     & > button
+        font-size: $a-size
+        font-weight: $bold
+        letter-spacing: $a-spacing
+        text-transform: uppercase
+        text-align: center
+        color: $light-color
         position: relative
         z-index: 1
         display: inline-block
         text-decoration: none
-        color: $light-color
-        text-transform: uppercase
-        font-size: $anchor-size
-        font-weight: $bold
-        letter-spacing: $anchor-letter-spacing
-        text-align: center
         padding: 14px 17px
         +color-button-tran
         +min(md)

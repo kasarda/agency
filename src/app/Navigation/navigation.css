@@ -26,8 +26,6 @@
     color: #000; }
   #Navigation a {
     padding: 0 15px;
-    font-size: 0.688rem;
-    letter-spacing: 0.25rem;
     cursor: pointer;
     transition: opacity .15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
@@ -44,9 +42,7 @@
       #Navigation .brand {
         padding-left: 50px; } }
     #Navigation .brand a {
-      padding: 0;
-      font-size: 1.125rem;
-      letter-spacing: 0.5rem; }
+      padding: 0; }
   #Navigation .links {
     padding-right: 20px; }
     @media (min-width: 768px) {
