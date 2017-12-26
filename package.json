@@ -56,6 +56,7 @@
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Add Aria-* attributes",
     "Add preload on main images",
+    "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
   ],
   "done": [

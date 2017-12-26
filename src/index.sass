@@ -109,6 +109,30 @@ a, button
 img
     max-width: 100%
 
+form
+    input, textarea
+        border: none
+        border-bottom: 1px solid rgba(0,0,0,.5)
+        padding: 15px
+        margin: 25px 0
+        resize: vertical
+        font-family: $primary-font
+        width: 100%
+        min-height: 50px
+        +input-border-color-tran
+        border-radius: none
+        &:invalid:focus
+            border-color: $danger-color
+        &:focus
+            outline: none
+            border-color: $primary-color
+        &::placeholder
+            color: rgba(0,0,0,.5)
+            text-transform: uppercase
+        +min(md)
+            width: 50%
+
+
 
 .primary-button
     position: relative
@@ -151,29 +175,6 @@ img
             color: currentColor
             delay(0s)
 
-form
-    input, textarea
-        border: none
-        border-bottom: 1px solid rgba(0,0,0,.5)
-        padding: 15px
-        margin: 25px 0
-        resize: vertical
-        font-family: $primary-font
-        width: 100%
-        min-height: 50px
-        +input-border-color-tran
-        border-radius: none
-        &:invalid:focus
-            border-color: $danger-color
-        &:focus
-            outline: none
-            border-color: $primary-color
-        &::placeholder
-            color: rgba(0,0,0,.5)
-            text-transform: uppercase
-        +min(md)
-            width: 50%
-
 
 .view
     +dimension
@@ -202,7 +203,14 @@ form
 .secondary-hover
     +secondary-hover
 
+::selection
+    background-color: rgba(255, 255, 255 ,.3)
 
+section, .form
+    ::selection
+        background-color: rgba(0, 0, 0 ,.3)
+
+// keyframes
 +InitializeKeyframes
 +HomeToPageKeyframes
 +PageToHomeKeyframes
