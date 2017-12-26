@@ -56,11 +56,9 @@
     "Replace .wrapper class with .camera",
     "Recreate design of contacts",
     "Added support for large device using max-width on content",
-    "Change naming of classes and structure to be more clear what this doing",
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Add Aria-* attributes",
     "Add preload on main images",
-    "Create web components",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
   ],
   "done": [
@@ -87,7 +85,10 @@
     "Set navigation to be always fixed",
     "Create new Animation system",
     "Initialize contacts and notFound component",
-    "Optimize SVG"
+    "Optimize SVG",
+    "Create web components",
+    "Change naming of classes and structure to be more clear what this doing"
+
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -102,7 +103,10 @@
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
   "changelog": [
-    "Initialize animations are triggering if content is loaded"
+    "Initialize animations are triggering if content is loaded",
+    "Optimized css and classes",
+    "Created better and new css components",
+    "Fixed some css bugs e.g. with primary-button"
   ],
   "browsers": {
     "mobile": {
