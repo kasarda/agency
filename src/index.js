@@ -6,7 +6,11 @@ import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
 import './index.css'
 
-
+/**
+ *
+ * Set [data-loaded="true"] if content is loaded
+ *
+ */
 document.addEventListener('DOMContentLoaded', _ => {
     document.body.dataset.loaded = true
 })
