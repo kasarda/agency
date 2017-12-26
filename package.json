@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.2.0",
+  "version": "2.2.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -104,15 +104,6 @@
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
   "changelog": [
-    "Initialize animations are triggering if content is loaded",
-    "Optimized css and classes",
-    "Created better and new css components",
-    "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
-    "Fixed some css bugs e.g. with primary-button",
-    "Optimized theme.sass",
-    "Replaced .wrapper class with .camera",
-    "Replaced <br> with -> span display block",
-    "Added selection"
   ],
   "browsers": {
     "mobile": {
