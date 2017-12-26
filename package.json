@@ -49,7 +49,6 @@
     "Fill lorem ipsum",
     "Try to get wheel service inside Home component with removeEventListener",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
-    "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Navigation add cursor: default on active link",
     "Replace <br> with -> span display block",
     "Fixe problem with resizing bg image in Home component inside .rule element",
@@ -87,6 +86,7 @@
     "Initialize contacts and notFound component",
     "Optimize SVG",
     "Create web components",
+    "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Change naming of classes and structure to be more clear what this doing"
 
   ],
@@ -106,7 +106,9 @@
     "Initialize animations are triggering if content is loaded",
     "Optimized css and classes",
     "Created better and new css components",
-    "Fixed some css bugs e.g. with primary-button"
+    "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
+    "Fixed some css bugs e.g. with primary-button",
+    "Optimized theme.sass"
   ],
   "browsers": {
     "mobile": {
