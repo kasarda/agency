@@ -164,8 +164,10 @@ class Home extends Component {
                                 style={{ backgroundImage: url }}>
                             </div>
                         </div>
-                        <h1>Digital <br />
-                            Creative Agency</h1>
+                        <h1>
+                            <span className="block">Digital</span>
+                            <span className="block">Creative Agency</span>
+                        </h1>
                     </div>
                 </div>
 
