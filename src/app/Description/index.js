@@ -12,7 +12,7 @@ class Description extends Component {
     render() {
         const { description, theme } = this.props
         const descriptionList = description.map((text, key) =>
-            (<p key={key} className={`fadeIn fadeIn-${key + 1}`}>{text}</p>)
+            (<p key={key} className={`init-animation init-animation-${key + 1}`}>{text}</p>)
         )
 
         return (
@@ -20,7 +20,7 @@ class Description extends Component {
                 <div className="paragraphs hidden-sm-down">
                     {descriptionList}
                 </div>
-                <div className={`button fadeIn fadeIn-${descriptionList.length + 1}`}>
+                <div className={`button init-animation init-animation-${descriptionList.length + 1}`}>
                     <div className="primary-button" style={{ color: theme }}>
                         <a onClick={this.redirect.bind(this)}>view case</a>
                     </div>

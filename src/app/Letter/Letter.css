@@ -53,8 +53,8 @@
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(50%, -50%);
   opacity: 0;
+  transform: translate(50%, -50%);
   transition: opacity .4s ease-in-out; }
   #ContentLetter .background-mask-rect {
     x: 0px;

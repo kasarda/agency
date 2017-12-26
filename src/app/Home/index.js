@@ -161,7 +161,8 @@ class Home extends Component {
                         <div className="rule">
                             <div
                                 className="background"
-                                style={{ backgroundImage: url }}></div>
+                                style={{ backgroundImage: url }}>
+                            </div>
                         </div>
                         <h1>Digital <br />
                             Creative Agency</h1>

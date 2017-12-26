@@ -3,13 +3,13 @@
 @import "animation.sass"
 
 #Navigation
-    width: 100%
     position: fixed
     z-index: 100
+    width: 100%
+    margin-top: 25px
     font-family: $primary-font
     font-weight: $bold
     text-transform: uppercase
-    margin-top: 25px
     +min(md)
         margin-top: 50px
     &.black-color *
@@ -19,11 +19,11 @@
         +primary-hover
 
     .column
-        width: 100%
         position: relative
+        width: 100%
+        max-width: 100%
         flex-basis: 0
         flex-grow: 1
-        max-width: 100%
 
     .brand
         padding-left: 20px

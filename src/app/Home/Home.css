@@ -16,14 +16,14 @@
   #Home .camera {
     height: 100%;
     width: 100%;
-    padding: 0 20px;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    padding: 0 20px; }
     @media (min-width: 768px) and (min-height: 500px) {
       #Home .camera {
         justify-content: center; } }
     #Home .camera .column {
-      height: 150px;
       position: relative;
+      height: 150px;
       margin-right: -20px;
       margin-bottom: 25px;
       animation: none;
@@ -38,8 +38,8 @@
           margin-bottom: 50px; } }
       @media (max-height: 500px) {
         #Home .camera .column {
-          margin-bottom: 25px;
-          height: 150px; } }
+          height: 150px;
+          margin-bottom: 25px; } }
       @media (min-width: 1024px) {
         #Home .camera .column {
           margin-left: 86px; } }
@@ -51,12 +51,12 @@
           margin-left: 250px; } }
     #Home .camera .rule {
       position: absolute;
+      z-index: 1;
+      overflow: hidden;
       height: 100%;
       width: 0px;
       background-color: #ffffff;
-      z-index: 1;
-      transition: width .4s 1.2s ease-in-out;
-      overflow: hidden; }
+      transition: width .4s 1.2s ease-in-out; }
       @media (min-width: 768px) {
         #Home .camera .rule {
           width: 1px;
@@ -73,13 +73,13 @@
         transition: opacity .4s .4s; }
     #Home .camera h1 {
       padding-bottom: 50px;
+      opacity: 1;
       transition: opacity .4s 1.8s ease-in-out;
-      animation: FadeInAnim-Ready .4s 1s ease-in backwards paused;
-      opacity: 1; }
+      animation: FadeInAnim-Ready .4s 1s ease-in backwards paused; }
       @media (min-width: 768px) {
         #Home .camera h1 {
-          padding-bottom: 0;
-          padding-left: 25px; } }
+          padding-left: 25px;
+          padding-bottom: 0; } }
       @media all and (-ms-high-contrast: none) {
         #Home .camera h1 {
           animation-delay: .4s; } }

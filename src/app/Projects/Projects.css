@@ -12,16 +12,16 @@
 /* Navigation > Link >
    Navigator > div */
 #Projects {
-  height: 100%;
-  width: 100%;
-  background-color: #004bd3;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #004bd3; }
   #Projects > div {
+    position: relative;
     height: 100%;
-    width: 100%;
-    position: relative; }
+    width: 100%; }
     @media (min-width: 768px) {
       #Projects > div {
         width: 50%; } }
@@ -34,13 +34,13 @@
         justify-content: flex-start; } }
     @media (max-height: 500px) {
       #Projects .content {
-        align-items: flex-end;
-        padding-bottom: 25px; } }
+        padding-bottom: 25px;
+        align-items: flex-end; } }
     #Projects .content h2 {
-      margin: 5px 0;
-      cursor: pointer;
       position: relative;
       padding-left: 0px;
+      margin: 5px 0;
+      cursor: pointer;
       transition: padding-left .25s ease-in, opacity .2s ease-in;
       animation: fadeInUpAnim .4s ease-in backwards; }
       #Projects .content h2.link-1 {
@@ -64,13 +64,13 @@
         padding-left: 50px; }
       #Projects .content h2::before {
         content: '';
-        display: block;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
         width: 0px;
         height: 2px;
+        display: block;
         background-color: #ffffff;
         transition: width .25s ease-in; }
       #Projects .content h2:hover::before {
@@ -84,8 +84,8 @@
         display: flex; } }
     @media (max-height: 500px) {
       #Projects .letter {
-        align-items: flex-end;
-        padding-bottom: 25px; } }
+        padding-bottom: 25px;
+        align-items: flex-end; } }
     #Projects .letter .Letter {
       opacity: 0;
       height: 150px;

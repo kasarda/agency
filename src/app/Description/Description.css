@@ -33,61 +33,61 @@
   @media (max-height: 500px) {
     #Description .paragraphs {
       display: none; } }
-  #Description .fadeIn {
-    transform: translateY(0px);
+  #Description .init-animation {
     opacity: 0;
+    transform: translateY(0px);
     transition: opacity .4s ease, transform .4s ease; }
     @media (min-width: 768px) {
-      #Description .fadeIn {
+      #Description .init-animation {
         transform: translateY(100px); } }
-  #Description .fadeIn-1 {
+  #Description .init-animation-1 {
     transition-delay: 0.1s; }
-  #Description .fadeIn-2 {
+  #Description .init-animation-2 {
     transition-delay: 0.2s; }
-  #Description .fadeIn-3 {
+  #Description .init-animation-3 {
     transition-delay: 0.3s; }
-  #Description .fadeIn-4 {
+  #Description .init-animation-4 {
     transition-delay: 0.4s; }
 
-[data-side-ready="false"][data-from="0"] #Description .fadeIn {
+[data-side-ready="false"][data-from="0"] #Description .init-animation {
   transition: none; }
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-1,
-[data-down="false"][data-side-ready="false"] #Description .fadeIn-1 {
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .init-animation-1,
+[data-down="false"][data-side-ready="false"] #Description .init-animation-1 {
   transition-delay: 0.4s; }
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-2,
-[data-down="false"][data-side-ready="false"] #Description .fadeIn-2 {
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .init-animation-2,
+[data-down="false"][data-side-ready="false"] #Description .init-animation-2 {
   transition-delay: 0.3s; }
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-3,
-[data-down="false"][data-side-ready="false"] #Description .fadeIn-3 {
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .init-animation-3,
+[data-down="false"][data-side-ready="false"] #Description .init-animation-3 {
   transition-delay: 0.2s; }
 
-[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .fadeIn-4,
-[data-down="false"][data-side-ready="false"] #Description .fadeIn-4 {
+[data-down="true"][data-side-ready="false"]:not([data-from="0"]) #Description .init-animation-4,
+[data-down="false"][data-side-ready="false"] #Description .init-animation-4 {
   transition-delay: 0.1s; }
 
-[data-down="true"][data-side-ready="true"] #Description .fadeIn,
-[data-down="false"][data-side-ready="true"] #Description .fadeIn {
-  transform: translateY(0px);
-  opacity: 1; }
+[data-down="true"][data-side-ready="true"] #Description .init-animation,
+[data-down="false"][data-side-ready="true"] #Description .init-animation {
+  opacity: 1;
+  transform: translateY(0px); }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn:not(.fadeIn-4) {
-  transform: translateY(100px);
-  opacity: 0; }
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation:not(.init-animation-4) {
+  opacity: 0;
+  transform: translateY(100px); }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-1 {
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation-1 {
   transition-delay: 0.4s; }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-2 {
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation-2 {
   transition-delay: 0.3s; }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-3 {
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation-3 {
   transition-delay: 0.2s; }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-4 {
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation-4 {
   transition-delay: 0s; }
 
-[data-side-ready="true"][data-redirect="true"] #Description .fadeIn-4 {
+[data-side-ready="true"][data-redirect="true"] #Description .init-animation-4 {
   opacity: 0; }

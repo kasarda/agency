@@ -20,26 +20,26 @@
     .paragraphs
         +maxHeight(500px)
             display: none
-    .fadeIn
-        transform: translateY(0px)
+    .init-animation
         opacity: 0
+        transform: translateY(0px)
         +fade-vertical-tran
         +min(md)
             transform: translateY(100px)
-    +repeat-delay(' .fadeIn-', $fade-vertical-delays, transition)
+    +repeat-delay(' .init-animation-', $fade-vertical-delays, transition)
 
 
 
 
 [data-side-ready="false"][data-from="0"]
-    #Description .fadeIn
+    #Description .init-animation
         transition: none
 
 
 [data-down="true"][data-side-ready="false"]:not([data-from="0"]),
 [data-down="false"][data-side-ready="false"]
     #Description
-        +repeat-delay(' .fadeIn-', $fade-vertical-reverse-delays, transition)
+        +repeat-delay(' .init-animation-', $fade-vertical-reverse-delays, transition)
 
 
 
@@ -47,15 +47,15 @@
 [data-down="true"][data-side-ready="true"],
 [data-down="false"][data-side-ready="true"]
     #Description
-        .fadeIn
-            transform: translateY(0px)
+        .init-animation
             opacity: 1
+            transform: translateY(0px)
 
 [data-side-ready="true"][data-redirect="true"]
     #Description
-        .fadeIn:not(.fadeIn-4)
-            transform: translateY(100px)
+        .init-animation:not(.init-animation-4)
             opacity: 0
-        +repeat-delay(' .fadeIn-', $fade-vertical-reverse-reset-delays, transition)
-        .fadeIn-4
+            transform: translateY(100px)
+        +repeat-delay(' .init-animation-', $fade-vertical-reverse-reset-delays, transition)
+        .init-animation-4
             opacity: 0

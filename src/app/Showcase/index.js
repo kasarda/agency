@@ -49,7 +49,7 @@ class Showcase extends Component {
                     <Letter letter={letter} />
                 </div>
 
-                <section id="first-section">
+                <section id="intro-section">
                     <div className="description">
                         <h3 data-animate="fadeUp" data-offset="200">{title}</h3>
                         <p data-animate="fadeUp" data-offset="100">
@@ -64,7 +64,7 @@ class Showcase extends Component {
                     </div>
                 </section>
 
-                <section id="second-section">
+                <section id="challenge-section">
                     <div className="description">
                         <h3 data-animate="fadeUp">Challenge</h3>
                         <p data-animate="fadeUp" data-offset="100">
@@ -100,7 +100,7 @@ class Showcase extends Component {
                     </div>
                 </section>
 
-                <section id="third-section">
+                <footer>
                     <div className="consulation">
                         <a>
                             <h4 className="inline-block">Visit Website</h4>
@@ -124,7 +124,7 @@ class Showcase extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </footer>
 
             </div>
         )

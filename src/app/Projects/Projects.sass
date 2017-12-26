@@ -3,12 +3,12 @@
 @import "animation.sass"
 
 #Projects
+    +position(0, 0, absolute)
     +dimension
     background-color: $primary-color
-    +position(0, 0, absolute)
     & > div
-        +dimension
         position: relative
+        +dimension
         +min(md)
             width: 50%
 
@@ -19,14 +19,14 @@
             padding-left: 50px
             justify-content: flex-start
         +maxHeight(500px)
-            align-items: flex-end
             padding-bottom: 25px
+            align-items: flex-end
 
         h2
-            margin: 5px 0
-            cursor: pointer
             position: relative
             padding-left: 0px
+            margin: 5px 0
+            cursor: pointer
             +heading-hover-tran
             +fadeIn-up-anim
             +repeat-delay('.link-', $fadeIn-up-delays)
@@ -41,11 +41,11 @@
 
             &::before
                 content: ''
-                display: block
                 +center(y)
                 left: 0
                 width: 0px
                 height: 2px
+                display: block
                 background-color: $light-color
                 +hr-width-tran
             &:hover::before
@@ -58,8 +58,8 @@
             padding-right: 50px
             display: flex
         +maxHeight(500px)
-            align-items: flex-end
             padding-bottom: 25px
+            align-items: flex-end
         .Letter
             opacity: 0
             +dimension(150px)

@@ -30,18 +30,18 @@
 
 
 
-    section
+    section, footer
         text-align: center
         color: $black-color
 
         .rect-after::after
             content: ''
             +position(300px, 306px, absolute)
+            z-index: -1
             +dimension(1000px, 700px)
             max-width: 70%
-            background: #f6f6f6
-            z-index: -1
             display: none
+            background: #f6f6f6
             +min(xl)
                 display: block
         .description
@@ -50,15 +50,14 @@
             p
                 text-align: left
 
-#first-section
+#intro-section
     .mobile-showcase
-        width: 90%
-        height: 500px
+        +dimension(90%, 500px)
         margin: 50px auto 0 auto
+        overflow: hidden
         background-repeat: no-repeat
         background-size: cover
         color: $light-color
-        overflow: hidden
         box-shadow: 0 0 60px rgba(0, 0, 0, .20)
         +min(md)
             height: 700px
@@ -69,12 +68,12 @@
             height: 90%
 
 
-#second-section
+#challenge-section
     .desktop-showcase
+        position: relative
         width: 100%
         margin-top: 50px
         padding-right: 0px
-        position: relative
         +min(md)
             margin-top: 100px
         +min(xl)
@@ -100,16 +99,16 @@
         +min(xl)
             margin-top: 150px
 
-#third-section
+footer
     .consulation
         width: 90%
+        padding: 10px
+        margin: 50px auto 25px auto
         background-color: $primary-color
         color: $light-color
-        margin: 50px auto 25px auto
-        padding: 10px
         +min(md)
-            margin: 100px auto 25px auto
             padding: 25px
+            margin: 100px auto 25px auto
         +min(xl)
             margin: 150px auto 50px auto
 
@@ -125,15 +124,15 @@
             .column
                 width: 50%
             .next
-                text-align: right
                 padding-right: 20px
+                text-align: right
                 +min(sm)
                     padding-right: 50px
                 +min(lg)
                     padding-right: 100px
             .prev
-                text-align: left
                 padding-left: 20px
+                text-align: left
                 +min(sm)
                     padding-left: 50px
                 +min(lg)

@@ -9,14 +9,14 @@ $padding-from-screen-mobile: 20px
     background-color: $primary-color
     .camera
         +dimension
-        padding: 0 $padding-from-screen-mobile
         justify-content: flex-end
+        padding: 0 $padding-from-screen-mobile
         +min(md, 500px)
             justify-content: center
 
         .column
-            height: 150px
             position: relative
+            height: 150px
             margin-right: -$padding-from-screen-mobile
             margin-bottom: 25px
             animation: none
@@ -28,8 +28,8 @@ $padding-from-screen-mobile: 20px
             +only(sm)
                 margin-bottom: 50px
             +maxHeight(500px)
-                margin-bottom: 25px
                 height: 150px
+                margin-bottom: 25px
 
             +min(1024px)
                 margin-left: 86px
@@ -40,11 +40,11 @@ $padding-from-screen-mobile: 20px
 
         .rule
             position: absolute
+            z-index: 1
+            overflow: hidden
             +dimension(0px, 100%)
             background-color: $light-color
-            z-index: 1
             +slide-tran
-            overflow: hidden
             +min(md)
                 width: 1px
                 +slide-anim
@@ -60,12 +60,12 @@ $padding-from-screen-mobile: 20px
 
         h1
             padding-bottom: 50px
+            opacity: 1
             +fade-heading-tran
             +fade-in-anim
-            opacity: 1
             +min(md)
-                padding-bottom: 0
                 padding-left: 25px
+                padding-bottom: 0
             +ie
                 +fade-in-ie-delay
 
