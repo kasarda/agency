@@ -53,8 +53,8 @@ class Form extends Component {
                         <use xlinkHref="#icon-arrow-right" />
                     </svg>
                     <h3>
-                        <span className="init-animation init-animation-2">Send</span>
-                        <span className="init-animation init-animation-3">a message</span>
+                        <div className="init-animation init-animation-2">Send</div>
+                        <div className="init-animation init-animation-3">a message</div>
                     </h3>
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
                         <input className="init-animation init-animation-4" type="email" name="email" placeholder="Your Email" required />
