@@ -530,6 +530,9 @@ form input, form textarea {
 .inline-block {
   display: inline-block; }
 
+.block {
+  display: block; }
+
 [hidden] {
   display: none !important; }
 
