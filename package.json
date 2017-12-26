@@ -101,7 +101,9 @@
     "Create custom scrollbar",
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
-  "changelog": [],
+  "changelog": [
+    "Initialize animations are triggering if content is loaded"
+  ],
   "browsers": {
     "mobile": {
       "opera-mini": true,

@@ -17,8 +17,8 @@
 
     +ie
         opacity: 1
-        +fade-in-ie-anim
         +fade-ie-tran
+        +fade-in-ie-anim
 
     .fill-pattern
         fill: $black-color
@@ -63,8 +63,8 @@
 #letter-shape-C .shape
     stroke-dasharray: 901.397px
     stroke-dashoffset: 0px
-    +letter-c-anim
     +dash-letter-c-tran
+    +letter-c-anim
 
 
 [data-home="false"]
@@ -82,3 +82,15 @@
 [data-side-ready="true"][data-redirect="true"]
     #ContentLetter
         opacity: 0
+
+[data-loaded="true"]
+    .Letter
+        +ie
+            +play
+
+    #Letter
+        .background-mask-rect
+            +play
+
+    #letter-shape-C .shape
+        +play

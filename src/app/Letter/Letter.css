@@ -33,8 +33,8 @@
   @media all and (-ms-high-contrast: none) {
     .Letter {
       opacity: 1;
-      animation: FadeInAnim .4s .4s ease-in backwards;
-      transition: opacity .4s 1.6s ease-in-out; } }
+      transition: opacity .4s 1.6s ease-in-out;
+      animation: FadeInAnim .4s .4s ease-in backwards paused; } }
   .Letter .fill-pattern {
     fill: #000; }
   .Letter[data-letter="C"] .fill-pattern {
@@ -47,7 +47,7 @@
   transform: translate(-50%, -50%); }
   #Letter .background-mask-rect {
     x: 100%;
-    animation: MoveInAnim .4s 1s ease-in backwards; }
+    animation: MoveInAnim .4s 1s ease-in backwards paused; }
 
 #ContentLetter {
   position: absolute;
@@ -73,8 +73,8 @@
 #letter-shape-C .shape {
   stroke-dasharray: 901.397px;
   stroke-dashoffset: 0px;
-  animation: DashAnim .6s .4s ease-in backwards;
-  transition: stroke-dashoffset .6s 1.6s ease-in-out; }
+  transition: stroke-dashoffset .6s 1.6s ease-in-out;
+  animation: DashAnim .6s .4s ease-in backwards paused; }
 
 [data-home="false"] #letter-shape-C .shape {
   stroke-dashoffset: 901.397px;
@@ -89,3 +89,13 @@
 
 [data-side-ready="true"][data-redirect="true"] #ContentLetter {
   opacity: 0; }
+
+@media all and (-ms-high-contrast: none) {
+  [data-loaded="true"] .Letter {
+    animation-play-state: running; } }
+
+[data-loaded="true"] #Letter .background-mask-rect {
+  animation-play-state: running; }
+
+[data-loaded="true"] #letter-shape-C .shape {
+  animation-play-state: running; }

@@ -6,16 +6,21 @@ import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
 import './index.css'
 
+
+document.addEventListener('DOMContentLoaded', _ => {
+    document.body.dataset.loaded = true
+})
+
 /**
  *
  * Prevent default behavior of scrolling on touch devices,
  * but only for components that are no scrollabel
  *
  */
-document.addEventListener('touchmove', e => {
+document.addEventListener('touchmove', event => {
     const canPrevent = document.body.dataset.preventTouch === 'true'
     if (canPrevent)
-        e.preventDefault()
+        event.preventDefault()
 }, {
     passive: false
 })
@@ -26,7 +31,7 @@ document.addEventListener('touchmove', e => {
  * Set to navigation black color on scrollable component
  * And activated scroll animation
  */
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', _ => {
 
     const nav = document.querySelector('#Navigation')
     const wrapper = document.querySelector('[data-active-navigation]')
