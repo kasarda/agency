@@ -354,10 +354,10 @@ h1, h2, h3, p {
 h1, h2 {
   font-weight: 400; }
 
-h1, h2, h4 {
+h1, h2, h4, h5 {
   margin: 0; }
 
-h1, h3, h4 {
+h1, h3, h4, h5 {
   text-transform: capitalize; }
 
 h1 {
@@ -398,13 +398,16 @@ h3 {
     h3 {
       font-size: 4.375rem; } }
 
-h4 {
+h4, h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.5rem; }
   @media (min-width: 768px) {
-    h4 {
+    h4, h5 {
       font-size: 2rem; } }
+
+h5 {
+  font-weight: 100; }
 
 p {
   font-size: 1.1rem;

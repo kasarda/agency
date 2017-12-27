@@ -31,10 +31,10 @@ h1, h2, h3, p
 h1, h2
     font-weight: $regular
 
-h1, h2, h4
+h1, h2, h4, h5
     margin: 0
 
-h1, h3, h4
+h1, h3, h4, h5
     text-transform: capitalize
 
 h1
@@ -69,13 +69,14 @@ h3
     +min(md)
         font-size: $h3-size
 
-h4
+h4, h5
     font-family: $primary-font
     font-weight: $bold
     font-size: $h4-mobile-size
     +min(md)
         font-size: $h4-size
-
+h5
+    font-weight: $light
 
 p
     font-size: $p-small-size
