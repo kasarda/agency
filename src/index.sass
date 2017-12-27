@@ -157,7 +157,6 @@ address
         position: relative
         z-index: 1
         display: inline-block
-        text-decoration: none
         padding: 14px 17px
         +color-button-tran
         +min(md)
@@ -177,6 +176,19 @@ address
             color: currentColor
             delay(0s)
 
+.badge
+    width: 90%
+    outline: 1px $light-color solid
+    font-size: $a-size
+    font-weight: $bold
+    letter-spacing: $a-spacing
+    text-transform: uppercase
+    text-align: center
+    color: $light-color
+    padding: 14px 17px
+    +min(md)
+        padding: 17px 23px
+        width: auto
 
 .view
     +dimension

@@ -43,20 +43,10 @@
       #Contacts .container .icons {
         margin-top: 15px 0; } }
   #Contacts .badge {
-    width: 90%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     bottom: 50px;
     z-index: 999;
-    background-color: #ffffff;
-    color: #004bd3;
-    font-weight: 700;
-    text-transform: capitalize;
-    text-align: center;
-    padding: 15px;
-    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3.5s ease-in forwards;
-    transform: translate(-50%, 0px); }
-    @media (min-width: 768px) {
-      #Contacts .badge {
-        width: auto; } }
+    transform: translate(-50%, 0px);
+    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3.5s ease-in forwards; }

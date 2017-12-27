@@ -487,7 +487,6 @@ address {
     position: relative;
     z-index: 1;
     display: inline-block;
-    text-decoration: none;
     padding: 14px 17px;
     transition: color .4s .3s ease-in; }
     @media (min-width: 768px) {
@@ -513,6 +512,21 @@ address {
     .primary-button > a:hover,
     .primary-button > button:hover {
       color: currentColor; }
+
+.badge {
+  width: 90%;
+  outline: 1px #ffffff solid;
+  font-size: 0.688rem;
+  font-weight: 700;
+  letter-spacing: 0.138rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 17px; }
+  @media (min-width: 768px) {
+    .badge {
+      padding: 17px 23px;
+      width: auto; } }
 
 .view {
   height: 100%;
