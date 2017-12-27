@@ -104,6 +104,12 @@
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
   "changelog": [
+    "Created some css componnets",
+    "Fixed some issues with css components",
+    "Updated theme",
+    "Changed some easings of animations",
+    "Updated some Home background images",
+    "Added initialize animation on Contacts component"
   ],
   "browsers": {
     "mobile": {
