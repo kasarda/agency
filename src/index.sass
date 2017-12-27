@@ -171,9 +171,11 @@ address
             z-index: -1
             +move-button-tran
             will-change: transform
-        &:hover::after
+        &:hover::after,
+        &:focus::after
             transform: translateX(0px)
-        &:hover
+        &:hover,
+        &:focus
             color: currentColor
             delay(0s)
 

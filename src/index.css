@@ -509,11 +509,13 @@ address {
       z-index: -1;
       transition: transform .4s ease-in-out;
       will-change: transform; }
-    .primary-button > a:hover::after,
-    .primary-button > button:hover::after {
+    .primary-button > a:hover::after, .primary-button > a:focus::after,
+    .primary-button > button:hover::after,
+    .primary-button > button:focus::after {
       transform: translateX(0px); }
-    .primary-button > a:hover,
-    .primary-button > button:hover {
+    .primary-button > a:hover, .primary-button > a:focus,
+    .primary-button > button:hover,
+    .primary-button > button:focus {
       color: currentColor; }
 
 .badge {
