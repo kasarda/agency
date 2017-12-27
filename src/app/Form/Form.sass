@@ -27,7 +27,6 @@
         +min(xl)
             width: 62%
 
-
     h3
         margin-top: 0
 
@@ -37,14 +36,12 @@
             background-color: $primary-color
     svg
         margin-top: 25px
-        +maxHeight(500px)
-            +dimension(48px)
+        min-height: 48px
 
     &[data-close="true"]
         +slide-right-form-anim
         .disabled-container
             +background-fadeOut-anim
-
 
     .init-animation
         +fadeIn-up-items-anim

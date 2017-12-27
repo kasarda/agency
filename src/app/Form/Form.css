@@ -51,11 +51,8 @@
     #Form .button button {
       background-color: #004bd3; }
   #Form svg {
-    margin-top: 25px; }
-    @media (max-height: 500px) {
-      #Form svg {
-        height: 48px;
-        width: 48px; } }
+    margin-top: 25px;
+    min-height: 48px; }
   #Form[data-close="true"] {
     animation: SlideRightAnim-CloseForm .4s .4s ease-in both; }
     #Form[data-close="true"] .disabled-container {
