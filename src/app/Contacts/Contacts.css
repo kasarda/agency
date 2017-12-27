@@ -21,10 +21,6 @@
   #Contacts .camera {
     height: 100%;
     width: 100%; }
-  #Contacts .typography {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-style: normal; }
   @media (min-width: 768px) {
     #Contacts .container {
       margin-left: 50px; } }

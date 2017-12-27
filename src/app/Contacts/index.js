@@ -52,16 +52,16 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h4 className="email typography secondary-hover underline">
+                        <h4 className="email secondary-hover underline">
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h4>
-                        <address className="typography">
+                        <address>
                             Revierstredet 2 OSLO <br />
                             NO-0104 Norway
                     </address>
-                        <div className="phone typography">
+                        <div className="phone">
                             (067) 85 000
-                    </div>
+                        </div>
                         <div className="button primary-button">
                             <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
                         </div>

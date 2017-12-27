@@ -463,6 +463,9 @@ form input, form textarea {
     form input, form textarea {
       width: 50%; } }
 
+address {
+  font-style: normal; }
+
 .primary-button {
   position: relative;
   overflow: hidden;
