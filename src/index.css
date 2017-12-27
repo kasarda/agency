@@ -452,7 +452,7 @@ form input, form textarea {
   transition: border-color .15s ease-in;
   border-radius: none; }
   form input:invalid:focus, form textarea:invalid:focus {
-    border-color: red; }
+    border-color: #ffc107; }
   form input:focus, form textarea:focus {
     outline: none;
     border-color: #004bd3; }
