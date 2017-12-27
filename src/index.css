@@ -502,7 +502,7 @@ address {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 1px));
       background-color: #ffffff;
       z-index: -1;
       transition: transform .4s ease-in-out;
