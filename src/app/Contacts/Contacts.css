@@ -9,7 +9,7 @@
   * */
 /* Showcase > .wrapper > [data-animate].animate-active
    Services > section > [data-animate].animate-active */
-/* Navigation > Link >
+/* Navigation > Link
    Navigator > div */
 #Contacts {
   height: 100%;
@@ -49,4 +49,4 @@
     bottom: 50px;
     z-index: 999;
     transform: translate(-50%, 0px);
-    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3.5s ease-in forwards; }
+    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3s ease-in forwards; }

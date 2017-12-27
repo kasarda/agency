@@ -329,7 +329,7 @@ summary {
 
 /* Showcase > .wrapper > [data-animate].animate-active
    Services > section > [data-animate].animate-active */
-/* Navigation > Link >
+/* Navigation > Link
    Navigator > div */
 *, *::after, *::before {
   box-sizing: border-box; }
