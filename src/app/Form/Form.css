@@ -57,17 +57,3 @@
     animation: SlideRightAnim-CloseForm .4s .4s ease-in both; }
     #Form[data-close="true"] .disabled-container {
       animation: bgFadeOutAnim .4s ease-in forwards; }
-  #Form .init-animation {
-    animation: FadeInTopAnim .2s .4s ease-in backwards; }
-    #Form .init-animation.init-animation-1 {
-      animation-delay: 0.4s; }
-    #Form .init-animation.init-animation-2 {
-      animation-delay: 0.5s; }
-    #Form .init-animation.init-animation-3 {
-      animation-delay: 0.6s; }
-    #Form .init-animation.init-animation-4 {
-      animation-delay: 0.7s; }
-    #Form .init-animation.init-animation-5 {
-      animation-delay: 0.8s; }
-    #Form .init-animation.init-animation-6 {
-      animation-delay: 0.9s; }

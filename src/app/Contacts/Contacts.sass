@@ -33,3 +33,7 @@
         z-index: 999
         transform: translate(-50%, 0px)
         +show-badge-anim
+
+    .init-animation
+        +fadeIn-up-items-anim
+        +repeat-delay('.init-animation-', $fadeIn-up-items-delays)

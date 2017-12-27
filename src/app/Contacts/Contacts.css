@@ -50,3 +50,17 @@
     z-index: 999;
     transform: translate(-50%, 0px);
     animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3s ease-in forwards; }
+  #Contacts .init-animation {
+    animation: FadeInTopAnim .2s .4s ease-out backwards; }
+    #Contacts .init-animation.init-animation-1 {
+      animation-delay: 0.4s; }
+    #Contacts .init-animation.init-animation-2 {
+      animation-delay: 0.5s; }
+    #Contacts .init-animation.init-animation-3 {
+      animation-delay: 0.6s; }
+    #Contacts .init-animation.init-animation-4 {
+      animation-delay: 0.7s; }
+    #Contacts .init-animation.init-animation-5 {
+      animation-delay: 0.8s; }
+    #Contacts .init-animation.init-animation-6 {
+      animation-delay: 0.9s; }
