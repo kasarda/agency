@@ -35,7 +35,7 @@
     #Showcase [data-animate].animate-active {
       opacity: 1;
       transform: translate(0px);
-      transition: opacity .6s ease-in, transform .4s ease-in; }
+      transition: opacity .6s ease-out, transform .4s ease-out; }
   #Showcase [data-animate="fadeUp"] {
     transform: translateY(200px); }
   #Showcase [data-animate="fadeLeft"] {

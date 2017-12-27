@@ -43,7 +43,7 @@
       #Services section [data-animate] {
         opacity: 0; }
         #Services section [data-animate].animate-active {
-          transition: opacity .6s ease-in, transform .4s ease-in;
+          transition: opacity .6s ease-out, transform .4s ease-out;
           opacity: 1;
           transform: translate(0px, 0px); }
       #Services section [data-animate="fadeUp"] {
