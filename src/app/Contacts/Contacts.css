@@ -51,7 +51,7 @@
     bottom: 50px;
     z-index: 999;
     transform: translate(-50%, 0px);
-    animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3s ease-in forwards; }
+    animation: PopUpAnim .15s 1.2s ease-in-out backwards, PopDownAnim-ResetBadge .15s 3s ease-in-out forwards; }
   #Contacts .init-animation {
     animation: FadeInTopAnim .2s .4s ease-out backwards; }
     #Contacts .init-animation.init-animation-1 {

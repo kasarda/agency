@@ -38,7 +38,7 @@
   #Description .init-animation {
     opacity: 0;
     transform: translateY(0px);
-    transition: opacity .4s ease, transform .4s ease; }
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out; }
     @media (min-width: 768px) {
       #Description .init-animation {
         transform: translateY(100px); } }

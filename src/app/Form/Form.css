@@ -39,7 +39,7 @@
     height: 100%;
     width: 0%;
     background: transparent;
-    animation: bgFadeInAnim .4s .4s ease-in forwards; }
+    animation: bgFadeInAnim .4s .4s ease-out forwards; }
     @media (min-width: 576px) {
       #Form .disabled-container {
         width: 30%; } }
