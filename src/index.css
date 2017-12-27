@@ -327,6 +327,8 @@ summary {
 .order-6 {
   order: 6; }
 
+/* Contacts > .init-animation
+   Form > .init-animation */
 /* Showcase > .wrapper > [data-animate].animate-active
    Services > section > [data-animate].animate-active */
 /* Navigation > Link
@@ -740,6 +742,11 @@ section ::selection, .form ::selection {
   to {
     transform: translate(-50%, 200px); } }
 
+@keyframes FadeInTopAnim {
+  from {
+    opacity: 0;
+    transform: translateY(50px); } }
+
 @keyframes SlideLeftAnim {
   to {
     transform: translateX(0px); } }
@@ -759,11 +766,6 @@ section ::selection, .form ::selection {
 @keyframes bgFadeInAnim {
   to {
     background-color: rgba(0, 0, 0, 0.5); } }
-
-@keyframes FadeInTopAnim {
-  from {
-    opacity: 0;
-    transform: translateY(50px); } }
 
 @keyframes SlideUpAnim {
   from {

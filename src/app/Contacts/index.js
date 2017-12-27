@@ -52,34 +52,34 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h5 className="email secondary-hover underline">
+                        <h5 className="init-animation init-animation-1 email secondary-hover underline">
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h5>
                         <address>
-                            Revierstredet 2 OSLO <br />
-                            NO-0104 Norway
-                    </address>
-                        <div className="phone">
+                            <div className="init-animation init-animation-2">Revierstredet 2 OSLO</div>
+                            <div className="init-animation init-animation-3">NO-0104 Norway</div>
+                        </address>
+                        <div className="phone init-animation init-animation-4">
                             (067) 85 000
                         </div>
-                        <div className="button primary-button">
+                        <div className="button primary-button init-animation init-animation-5">
                             <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
                         </div>
 
                         <div className="icons flex justify-between">
-                            <a className="primary-hover" href="https://www.instagram.com">
+                            <a className="primary-hover init-animation init-animation-6" href="https://www.instagram.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-instagram" />
                                 </svg>
                             </a>
 
-                            <a className="primary-hover" href="https://www.twitter.com">
+                            <a className="primary-hover init-animation init-animation-7" href="https://www.twitter.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-twitter" />
                                 </svg>
                             </a>
 
-                            <a className="primary-hover" href="https://www.youtube.com">
+                            <a className="primary-hover init-animation init-animation-8" href="https://www.youtube.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-youtube" />
                                 </svg>

@@ -7,6 +7,8 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
+/* Contacts > .init-animation
+   Form > .init-animation */
 /* Showcase > .wrapper > [data-animate].animate-active
    Services > section > [data-animate].animate-active */
 /* Navigation > Link
@@ -64,3 +66,7 @@
       animation-delay: 0.8s; }
     #Contacts .init-animation.init-animation-6 {
       animation-delay: 0.9s; }
+    #Contacts .init-animation.init-animation-7 {
+      animation-delay: 1s; }
+    #Contacts .init-animation.init-animation-8 {
+      animation-delay: 1.1s; }

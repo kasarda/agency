@@ -368,6 +368,13 @@ $fadeIn-up-delays: (1: .2, 2: .3, 3: .4, 4: .5)
 =show-badge-anim
     animation: PopUpAnim .15s 1.2s ease-in backwards, PopDownAnim-ResetBadge .15s 3s ease-in forwards
 
+/* Contacts > .init-animation
+   Form > .init-animation
+=fadeIn-up-items-anim
+    animation: FadeInTopAnim .2s .4s ease-out backwards
+
+$fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9, 7: 1, 8: 1.1)
+
 
 
 =ContactsKeyframes
@@ -378,6 +385,11 @@ $fadeIn-up-delays: (1: .2, 2: .3, 3: .4, 4: .5)
     @keyframes PopDownAnim-ResetBadge
         to
             transform: translate(-50%, 200px)
+
+    @keyframes FadeInTopAnim
+        from
+            opacity: 0
+            transform: translateY(50px)
 
 
 //? Form
@@ -395,12 +407,6 @@ $fadeIn-up-delays: (1: .2, 2: .3, 3: .4, 4: .5)
 // when [close="true"]
 =background-fadeOut-anim
     animation: bgFadeOutAnim .4s ease-in forwards
-
-// Form > .init-animation
-=fadeIn-up-items-anim
-    animation: FadeInTopAnim .2s .4s ease-out backwards
-
-$fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9)
 
 // Form > form > input, textarea
 =input-border-color-tran
@@ -429,11 +435,6 @@ $fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9)
     @keyframes bgFadeInAnim
         to
             background-color: rgba(0, 0, 0, .5)
-
-    @keyframes FadeInTopAnim
-        from
-            opacity: 0
-            transform: translateY(50px)
 
 
 
