@@ -52,9 +52,9 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h4 className="email secondary-hover underline">
+                        <h5 className="email secondary-hover underline">
                             <a href="mailto:info@digital.com">info@digital.com</a>
-                        </h4>
+                        </h5>
                         <address>
                             Revierstredet 2 OSLO <br />
                             NO-0104 Norway
