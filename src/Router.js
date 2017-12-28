@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
+import { Route, Switch } from 'react-router-dom'
+import { baseName, RouterType } from './services/local'
 import Navigation from './app/Navigation'
 import Home from './app/Home'
 import Projects from './app/Projects'
@@ -86,7 +86,7 @@ class AppRouter extends Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <RouterType basename={baseName}>
                 <div id="outlet">
                     <Navigation />
                     <Switch>
@@ -101,7 +101,7 @@ class AppRouter extends Component {
                         <Route path="**" component={NotFound} />
                     </Switch>
                 </div>
-            </BrowserRouter >
+            </RouterType >
         )
     }
 }
