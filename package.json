@@ -39,7 +39,6 @@
   ],
   "todos": [
     "Create logo, favicon and name of company",
-    "Create service for scroll animation",
     "Optimize animation, analyze performance, create alternative for slow devices",
     "Replace some animation on mobiles for performance",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
@@ -67,6 +66,7 @@
     "Create Faster Content Page Animation on mobile devices",
     "Create BG images for pages -> .e.g. mobile, desktop or web app",
     "Create navigator for pages",
+    "Create service for scroll animation",
     "Add some other animations on letter component and add other letter with dynamicly changing letter",
     "Add hover animation on pages button 'view case'",
     "Replace bootstrap grid with flex",
