@@ -78,6 +78,9 @@
       height: 700px;
       margin: 100px auto 0 auto;
       background-attachment: fixed; } }
+  @media all and (-ms-high-contrast: none) {
+    #intro-section .mobile-showcase {
+      background-attachment: scroll; } }
   #intro-section .mobile-showcase img {
     height: 90%; }
 
