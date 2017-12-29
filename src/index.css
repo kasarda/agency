@@ -506,6 +506,8 @@ address {
       position: absolute;
       top: 0;
       left: 0;
+      display: block;
+      transform: translateX(-101%);
       transform: translateX(calc(-100% - 1px));
       background-color: #ffffff;
       z-index: -1;
