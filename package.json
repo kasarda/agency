@@ -45,7 +45,6 @@
     "Clean and optimize code, create better and readable environment",
     "Create better images",
     "Fill lorem ipsum",
-    "Try to get wheel service inside Home component with removeEventListener",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
     "Navigation add cursor: default on active link",
     "Fixe problem with resizing bg image in Home component inside .rule element",
@@ -91,7 +90,8 @@
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Change naming of classes and structure to be more clear what this doing",
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out",
-    "Stop wheel service events when ctrl is pressed"
+    "Stop wheel service events when ctrl is pressed",
+    "Try to get wheel service inside Home component with removeEventListener"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -112,7 +112,9 @@
     "Changed some easings of animations",
     "Updated some Home background images",
     "Added initialize animation on Contacts component",
-    "Create small library for server vs local in path and in dev producation in Router basename=agency/build"
+    "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
+    "Modified colors",
+    "Removed wheel service and added this functionality into Home component directly, because removeEventListener issues"
   ],
   "browsers": {
     "mobile": {
