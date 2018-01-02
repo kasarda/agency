@@ -337,15 +337,15 @@ summary {
   box-sizing: border-box; }
 
 html {
-  font-size: 14px;
-  height: 100%; }
+  height: 100%;
+  font-size: 14px; }
   @media (min-width: 768px) {
     html {
       font-size: 16px; } }
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   overflow: hidden; }
@@ -391,19 +391,19 @@ h2 {
       line-height: normal; } }
 
 h3 {
+  margin: 1em 0;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: 100;
-  color: #000;
-  margin: 1em 0; }
+  color: #000; }
   @media (min-width: 768px) {
     h3 {
       font-size: 4.375rem; } }
 
 h4, h5 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: 700; }
   @media (min-width: 768px) {
     h4, h5 {
       font-size: 2rem; } }
@@ -412,12 +412,13 @@ h5 {
   font-weight: 100; }
 
 p {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.9rem;
   letter-spacing: 0.09rem;
-  text-align: left;
-  max-width: 500px;
-  margin: 0 auto; }
+  text-align: left; }
   @media (min-width: 768px) {
     p {
       max-width: 700px; } }
@@ -446,21 +447,21 @@ img {
   max-width: 100%; }
 
 form input, form textarea {
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  margin: 25px 0;
-  resize: vertical;
-  font-family: "Montserrat", sans-serif;
   width: 100%;
   min-height: 50px;
-  transition: border-color .15s ease-in;
-  border-radius: none; }
+  padding: 15px;
+  margin: 25px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: none;
+  font-family: "Montserrat", sans-serif;
+  resize: vertical;
+  transition: border-color .15s ease-in; }
   form input:invalid:focus, form textarea:invalid:focus {
     border-color: #ffc107; }
   form input:focus, form textarea:focus {
-    outline: none;
-    border-color: #004bd3; }
+    border-color: #004bd3;
+    outline: none; }
   form input::placeholder, form textarea::placeholder {
     color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase; }
@@ -473,26 +474,26 @@ address {
 
 .primary-button {
   position: relative;
-  overflow: hidden;
-  display: inline-block;
   z-index: 1;
+  display: inline-block;
   outline: 1px #ffffff solid;
+  overflow: hidden;
   transition: outline-color .4s 0s ease-in; }
   .primary-button.outline-color:hover {
     outline-color: currentColor;
     transition-delay: .3s; }
   .primary-button > a,
   .primary-button > button {
-    font-size: 0.688rem;
-    font-weight: 700;
-    letter-spacing: 0.138rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: #ffffff;
     position: relative;
     z-index: 1;
     display: inline-block;
     padding: 14px 17px;
+    font-size: 0.688rem;
+    font-weight: 700;
+    letter-spacing: 0.138rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
     transition: color .4s .3s ease-in; }
     @media (min-width: 768px) {
       .primary-button > a,
@@ -506,13 +507,13 @@ address {
       position: absolute;
       top: 0;
       left: 0;
+      z-index: -1;
       display: block;
+      background-color: #ffffff;
       transform: translateX(-101%);
       transform: translateX(calc(-100% - 1px));
-      background-color: #ffffff;
-      z-index: -1;
-      transition: transform .4s ease-in-out;
-      will-change: transform; }
+      will-change: transform;
+      transition: transform .4s ease-in-out; }
     .primary-button > a:hover::after, .primary-button > a:focus::after,
     .primary-button > button:hover::after,
     .primary-button > button:focus::after {
@@ -524,14 +525,14 @@ address {
 
 .badge {
   width: 90%;
+  padding: 14px 17px;
   outline: 1px #ffffff solid;
   font-size: 0.688rem;
   font-weight: 700;
   letter-spacing: 0.138rem;
-  text-transform: uppercase;
-  text-align: center;
   color: #ffffff;
-  padding: 14px 17px; }
+  text-transform: uppercase;
+  text-align: center; }
   @media (min-width: 768px) {
     .badge {
       padding: 17px 23px;

@@ -12,14 +12,14 @@
     box-sizing: border-box
 
 html
-    font-size: $mobile-size
     height: 100%
+    font-size: $mobile-size
     +min(md)
         font-size: $primary-size
 
 body
-    margin: 0
     padding: 0
+    margin: 0
     font-family: $primary-font
     color: $light-color
     overflow: hidden
@@ -61,30 +61,31 @@ h2
         line-height: normal
 
 h3
+    margin: 1em 0
     font-family: $secondary-font
     font-size: $h3-mobile-size
     font-weight: $light
     color: $dark-color
-    margin: 1em 0
     +min(md)
         font-size: $h3-size
 
 h4, h5
     font-family: $primary-font
-    font-weight: $bold
     font-size: $h4-mobile-size
+    font-weight: $bold
     +min(md)
         font-size: $h4-size
 h5
     font-weight: $light
 
 p
+    width: 100%
+    max-width: 500px
+    margin: 0 auto
     font-size: $p-small-size
     line-height: $p-small-height
     letter-spacing: $p-spacing
     text-align: left
-    max-width: 500px
-    margin: 0 auto
     +min(md)
         max-width: 700px
     +min(lg)
@@ -112,21 +113,21 @@ img
 
 form
     input, textarea
-        border: none
-        border-bottom: 1px solid rgba(0,0,0,.5)
-        padding: 15px
-        margin: 25px 0
-        resize: vertical
-        font-family: $primary-font
         width: 100%
         min-height: 50px
-        +input-border-color-tran
+        padding: 15px
+        margin: 25px 0
+        border: none
+        border-bottom: 1px solid rgba(0,0,0,.5)
         border-radius: none
+        font-family: $primary-font
+        resize: vertical
+        +input-border-color-tran
         &:invalid:focus
             border-color: $danger-color
         &:focus
-            outline: none
             border-color: $primary-color
+            outline: none
         &::placeholder
             color: rgba(0,0,0,.5)
             text-transform: uppercase
@@ -139,26 +140,26 @@ address
 
 .primary-button
     position: relative
-    overflow: hidden
-    display: inline-block
     z-index: 1
+    display: inline-block
     outline: 1px $light-color solid
+    overflow: hidden
     +outline-color-tran
     &.outline-color:hover
         outline-color: currentColor
         +outline-color-delay
     & > a,
     & > button
-        font-size: $a-size
-        font-weight: $bold
-        letter-spacing: $a-spacing
-        text-transform: uppercase
-        text-align: center
-        color: $light-color
         position: relative
         z-index: 1
         display: inline-block
         padding: 14px 17px
+        font-size: $a-size
+        font-weight: $bold
+        letter-spacing: $a-spacing
+        color: $light-color
+        text-transform: uppercase
+        text-align: center
         +color-button-tran
         +min(md)
             padding: 17px 23px
@@ -166,13 +167,13 @@ address
             content: ''
             +dimension
             +position(0, 0, absolute)
+            z-index: -1
             display: block
+            background-color: $light-color
             transform: translateX(-101%)
             transform: translateX(calc(-100% - 1px))
-            background-color: $light-color
-            z-index: -1
-            +move-button-tran
             will-change: transform
+            +move-button-tran
         &:hover::after,
         &:focus::after
             transform: translateX(0px)
@@ -183,14 +184,14 @@ address
 
 .badge
     width: 90%
+    padding: 14px 17px
     outline: 1px $light-color solid
     font-size: $a-size
     font-weight: $bold
     letter-spacing: $a-spacing
+    color: $light-color
     text-transform: uppercase
     text-align: center
-    color: $light-color
-    padding: 14px 17px
     +min(md)
         padding: 17px 23px
         width: auto
