@@ -120,6 +120,8 @@ form
         border: none
         border-bottom: 1px solid rgba(0,0,0,.5)
         border-radius: none
+        outline: none
+        box-shadow: none
         font-family: $primary-font
         resize: vertical
         +input-border-color-tran
@@ -165,7 +167,7 @@ address
             padding: 17px 23px
         &::after
             content: ''
-            +dimension
+            +dimension(calc(100% + 1px), 100%)
             +position(0, 0, absolute)
             z-index: -1
             display: block

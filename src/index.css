@@ -454,6 +454,8 @@ form input, form textarea {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: none;
+  outline: none;
+  box-shadow: none;
   font-family: "Montserrat", sans-serif;
   resize: vertical;
   transition: border-color .15s ease-in; }
@@ -503,7 +505,7 @@ address {
     .primary-button > button::after {
       content: '';
       height: 100%;
-      width: 100%;
+      width: calc(100% + 1px);
       position: absolute;
       top: 0;
       left: 0;
