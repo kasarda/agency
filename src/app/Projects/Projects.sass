@@ -32,12 +32,14 @@
             +repeat-delay('.link-', $fadeIn-up-delays)
             +min(md)
                 margin: 10px 0
+                &:hover
+                    padding-left: 50px
+                &:hover::before
+                    width: 40px
             +min(lg)
                 margin: 15px 0
             +maxHeight(500px)
                 margin: 0
-            &:hover
-                padding-left: 50px
 
             &::before
                 content: ''
@@ -48,8 +50,6 @@
                 display: block
                 background-color: $light-color
                 +hr-width-tran
-            &:hover::before
-                width: 40px
 
     .letter
         padding-right: 20px
