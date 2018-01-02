@@ -67,7 +67,7 @@ class Side extends Component {
                 letter: 'T',
                 heading: 'Artech',
                 description: [
-                    'Created business webside',
+                    'Created business website',
                     'for architect company',
                     'called Artech'
                 ],
