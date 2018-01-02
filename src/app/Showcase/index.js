@@ -105,7 +105,7 @@ class Showcase extends Component {
                         <a>
                             <h4 className="inline-block">Visit Website</h4>
                         </a>
-                        <div className="container flex">
+                        <div className="container flex justify-center">
                             <div className="column next flex justify-end">
                                 <Link to={prev ? prev : ''}>
                                     <div className="content" onClick={this.scrollUp.bind(this)}>

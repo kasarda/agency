@@ -143,8 +143,9 @@ footer .consulation {
     @media (min-width: 768px) {
       footer .consulation .container {
         margin-top: 50px; } }
-    footer .consulation .container .column {
-      width: 50%; }
+    @media (min-width: 576px) {
+      footer .consulation .container .column {
+        width: 50%; } }
     footer .consulation .container .next {
       padding-right: 20px;
       text-align: right; }
