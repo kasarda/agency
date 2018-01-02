@@ -460,7 +460,7 @@ form input, form textarea {
   resize: vertical;
   transition: border-color .15s ease-in; }
   form input:invalid:focus, form textarea:invalid:focus {
-    border-color: #ffc107; }
+    border-color: #d30000; }
   form input:focus, form textarea:focus {
     border-color: #004bd3;
     outline: none; }
