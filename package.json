@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.3.1",
+  "version": "2.3.1-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -105,9 +105,7 @@
     "Create custom scrollbar",
     "Recreate design of contacts"
   ],
-  "changelog": [
-
-  ],
+  "changelog": [],
   "browsers": {
     "mobile": {
       "opera-mini": true,
