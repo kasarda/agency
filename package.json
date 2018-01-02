@@ -51,7 +51,6 @@
     "Added support for large device using max-width on content",
     "Add Aria-* attributes",
     "Add preload on main images",
-    "Fixed problem in Showcase footer when heading go on small divice outside of box",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
     "Add bg color in showcase component in first image background"
@@ -91,7 +90,8 @@
     "Change naming of classes and structure to be more clear what this doing",
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out",
     "Stop wheel service events when ctrl is pressed",
-    "Try to get wheel service inside Home component with removeEventListener"
+    "Try to get wheel service inside Home component with removeEventListener",
+    "Fixed problem in Showcase footer when heading go on small divice outside of box"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -114,7 +114,8 @@
     "Added initialize animation on Contacts component",
     "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
     "Modified colors",
-    "Removed wheel service and added this functionality into Home component directly, because removeEventListener issues"
+    "Removed wheel service and added this functionality into Home component directly, because removeEventListener issues",
+    "Fixed issue in footer Showcase component where long title of link goes outside of box"
   ],
   "browsers": {
     "mobile": {
