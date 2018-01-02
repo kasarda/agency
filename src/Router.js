@@ -8,7 +8,7 @@ import Showcase from './app/Showcase'
 import Services from './app/Services'
 import Contacts from './app/Contacts'
 import NotFound from './app/NotFound'
-
+console.log(baseName)
 
 function RenderShowCase(name) {
 
