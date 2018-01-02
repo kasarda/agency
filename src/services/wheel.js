@@ -28,21 +28,22 @@ export const fakeScroll = cb => {
     }
 
     function listener(event) {
+        if (!event.ctrlKey) {
+            if (event.type === 'wheel') {
+                if (event.deltaY < 0)
+                    event.wheelDown = false
+                else if (event.deltaY > 0)
+                    event.wheelDown = true
+            }
 
-        if (event.type === 'wheel') {
-            if (event.deltaY < 0)
-                event.wheelDown = false
-            else if (event.deltaY > 0)
-                event.wheelDown = true
+            else {
+                event.wheelDown = !Math.max(0, Math.min(1, (event.wheelDelta || -event.detail)))
+            }
+
+            event.wheelOffset = Math.abs(event.wheelDelta || (event.detail * -40))
+
+            cb.call(this, event)
         }
-
-        else {
-            event.wheelDown = !Math.max(0, Math.min(1, (event.wheelDelta || -event.detail)))
-        }
-
-        event.wheelOffset = Math.abs(event.wheelDelta || (event.detail * -40))
-
-        cb.call(this, event)
     }
 
     // for touch devices
@@ -62,7 +63,7 @@ export const fakeScroll = cb => {
 }
 
 export const resetScrollEvents = () => {
-    if('onwheel' in document) {
+    if ('onwheel' in document) {
         document.onwheel = null
     }
     document.ontouchstart = null
