@@ -22,7 +22,7 @@
   width: 100%;
   transform: translateX(100%);
   animation: SlideLeftAnim .4s ease-in forwards;
-  color: #000; }
+  color: #000000; }
   #Form .form {
     height: 100%;
     width: 100%;

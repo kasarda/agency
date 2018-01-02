@@ -43,7 +43,7 @@
 
 #Showcase section, #Showcase footer {
   text-align: center;
-  color: #000; }
+  color: #000000; }
   #Showcase section .rect-after::after, #Showcase footer .rect-after::after {
     content: '';
     position: absolute;

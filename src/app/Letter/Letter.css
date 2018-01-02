@@ -39,7 +39,7 @@
       animation: FadeInAnim .4s .4s ease-in backwards;
       animation-play-state: paused; } }
   .Letter .fill-pattern {
-    fill: #000; }
+    fill: #000000; }
   .Letter[data-letter="C"] .fill-pattern {
     fill: #ffffff; }
 

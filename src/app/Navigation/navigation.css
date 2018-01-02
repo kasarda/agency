@@ -25,7 +25,7 @@
     #Navigation {
       margin-top: 50px; } }
   #Navigation.black-color * {
-    color: #000; }
+    color: #000000; }
   #Navigation a {
     padding: 0 15px;
     cursor: pointer;
@@ -57,4 +57,4 @@
   #Navigation svg .icon {
     fill: #ffffff; }
   #Navigation.black-color svg .icon {
-    fill: #000; }
+    fill: #000000; }
