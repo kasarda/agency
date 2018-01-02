@@ -54,7 +54,9 @@
     "Add preload on main images",
     "Fixed problem in Showcase footer when heading go on small divice outside of box",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
-    "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling"
+    "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
+    "Add bg color in showcase component in first image background",
+    "Stop wheel service events when ctrl is pressed"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
