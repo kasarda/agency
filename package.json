@@ -55,8 +55,7 @@
     "Fixed problem in Showcase footer when heading go on small divice outside of box",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
-    "Add bg color in showcase component in first image background",
-    "Stop wheel service events when ctrl is pressed"
+    "Add bg color in showcase component in first image background"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -91,7 +90,8 @@
     "Add selection",
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
     "Change naming of classes and structure to be more clear what this doing",
-    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
+    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out",
+    "Stop wheel service events when ctrl is pressed"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
