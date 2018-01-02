@@ -90,7 +90,8 @@
     "Replace <br> with -> span display block",
     "Add selection",
     "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
-    "Change naming of classes and structure to be more clear what this doing"
+    "Change naming of classes and structure to be more clear what this doing",
+    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -102,8 +103,7 @@
     "IE11 => Bad timing, specialy from page to home where animation is done and still not ready",
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery",
     "Create custom scrollbar",
-    "Recreate design of contacts",
-    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out"
+    "Recreate design of contacts"
   ],
   "changelog": [
     "Created some css componnets",
