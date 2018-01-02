@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom'
 import Letter from '../Letter'
 import Side from '../Side'
 import Navigator from '../Navigator'
-import { onFakeScroll, resetScrollEvents } from '../../services/wheel'
 import './Home.css'
 
 class Home extends Component {
@@ -21,7 +20,10 @@ class Home extends Component {
             down: undefined,
             from: undefined,
             redirect: false,
-            canRedirect: false
+            canRedirect: false,
+            onFakeScroll: this.onFakeScroll.bind(this),
+            onTouchStart: this.onTouchStart.bind(this),
+            startPos: null
         }
     }
 
@@ -112,18 +114,92 @@ class Home extends Component {
     }
 
 
+    onFakeScroll({ type, changedTouches, deltaY, detail, wheelDelta }) {
+        console.log('skya ku ku du du du dum pum pum')
+
+        let wheelDown,
+            wheelOffset
+
+        const touch = type === 'touchend'
+
+        if (touch) {
+            const { startPos } = this.state
+            const end = changedTouches[0].clientY
+            wheelDown = startPos > end ? false : true
+            wheelOffset = Math.abs(startPos - end)
+
+            this.setState({
+                startPos: null
+            })
+        }
+
+        else {
+            if (type === 'wheel') {
+                if (deltaY < 0)
+                    wheelDown = false
+                else if (deltaY > 0)
+                    wheelDown = true
+            }
+
+            else {
+                wheelDown = !Math.max(0, Math.min(1, (wheelDelta || -detail)))
+            }
+
+            wheelOffset = Math.abs(wheelDelta || (detail * -40))
+        }
+
+
+        const minOffset = wheelOffset >= 50
+
+        if (
+            (touch && !wheelDown && minOffset) ||
+            (!touch && wheelDown)
+        ) {
+            this.setPage('next')
+        }
+        else if (
+            (touch && wheelDown && minOffset) ||
+            (!touch && !wheelDown)
+        ) {
+            this.setPage('prev')
+        }
+
+    }
+
+    onTouchStart({ touches }) {
+        console.log('start touching my ass')
+        this.setState({
+            startPos: touches[0].clientY
+        })
+    }
+
+
     componentDidMount() {
+        const { onFakeScroll, onTouchStart } = this.state
         document.body.dataset.preventTouch = "true"
 
-        onFakeScroll(50,
-            _ => this.setPage('next'),
-            _ => this.setPage('prev')
-        )
+
+        if ('onwheel' in document)
+            document.addEventListener('wheel', onFakeScroll, false)
+        else {
+            document.addEventListener('mousewheel', onFakeScroll, false)
+            document.addEventListener('DOMMouseScroll', onFakeScroll, false)
+        }
+
+        document.addEventListener('touchstart', onTouchStart, false)
+        document.addEventListener('touchend', onFakeScroll, false)
+
     }
 
     componentWillUnmount() {
+        const { onFakeScroll, onTouchStart } = this.state
         document.body.dataset.preventTouch = "false"
-        resetScrollEvents()
+
+        document.removeEventListener('wheel', onFakeScroll)
+        document.removeEventListener('mousewheel', onFakeScroll)
+        document.removeEventListener('DOMMouseScroll', onFakeScroll)
+        document.removeEventListener('touchstart', onTouchStart)
+        document.removeEventListener('touchend', onFakeScroll)
     }
 
     render() {
