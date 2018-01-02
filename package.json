@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.3.0-next",
+  "version": "2.3.1",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -105,18 +105,7 @@
     "Create custom scrollbar",
     "Recreate design of contacts"
   ],
-  "changelog": [
-    "Created some css componnets",
-    "Fixed some issues with css components",
-    "Updated theme",
-    "Changed some easings of animations",
-    "Updated some Home background images",
-    "Added initialize animation on Contacts component",
-    "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
-    "Modified colors",
-    "Removed wheel service and added this functionality into Home component directly, because removeEventListener issues",
-    "Fixed issue in footer Showcase component where long title of link goes outside of box"
-  ],
+  "changelog": [],
   "browsers": {
     "mobile": {
       "opera-mini": true,
