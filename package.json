@@ -105,7 +105,9 @@
     "Create custom scrollbar",
     "Recreate design of contacts"
   ],
-  "changelog": [],
+  "changelog": [
+
+  ],
   "browsers": {
     "mobile": {
       "opera-mini": true,
