@@ -571,6 +571,8 @@ address {
   transition: opacity .15s ease-in-out; }
   .primary-hover:hover, .primary-hover.active {
     opacity: .5; }
+  .primary-hover.active {
+    cursor: default; }
 
 .secondary-hover:hover {
   color: #00328e; }

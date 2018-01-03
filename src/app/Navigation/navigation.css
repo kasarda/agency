@@ -32,6 +32,8 @@
     transition: opacity .15s ease-in-out; }
     #Navigation a:hover, #Navigation a.active {
       opacity: .5; }
+    #Navigation a.active {
+      cursor: default; }
   #Navigation .column {
     position: relative;
     width: 100%;
