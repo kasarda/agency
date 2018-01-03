@@ -4,7 +4,7 @@ import './Navigation.css'
 
 function Link({ to, name, icon }) {
     return (
-        <NavLink to={to}>
+        <NavLink exact to={to}>
             <span className="hidden-sm-down">{name}</span>
             <span className="hidden-md-up">
                 <svg width="18" height="18" viewBox="0 0 24 24">
