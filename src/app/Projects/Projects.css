@@ -42,7 +42,6 @@
       position: relative;
       padding-left: 0px;
       margin: 5px 0;
-      cursor: pointer;
       transition: padding-left .25s ease-in-out, opacity .2s ease-in;
       animation: fadeInUpAnim .4s ease-out backwards; }
       #Projects .content h2.link-1 {
