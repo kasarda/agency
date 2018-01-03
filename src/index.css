@@ -574,13 +574,6 @@ address {
   .primary-hover.active {
     cursor: default; }
 
-.secondary-hover:hover {
-  color: #00328e; }
-  .secondary-hover:hover.underline {
-    text-decoration: underline; }
-  .secondary-hover:hover h4 {
-    text-decoration: underline; }
-
 ::selection {
   background-color: rgba(255, 255, 255, 0.3); }
 

@@ -106,13 +106,13 @@ class Showcase extends Component {
 
                 <footer>
                     <div className="consulation">
-                        <a>
-                            <h4 className="inline-block">Visit Website</h4>
-                        </a>
+                        <h4 className="inline-block primary-hover">
+                            <a>Visit Website</a>
+                        </h4>
                         <div className="container flex justify-center">
                             <div className="column next flex justify-end">
                                 <Link to={prev ? prev : ''}>
-                                    <div className="content" onClick={this.scrollUp.bind(this)}>
+                                    <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
                                         <span>previously</span>
                                         <h4>{prev}</h4>
                                     </div>
@@ -120,7 +120,7 @@ class Showcase extends Component {
                             </div>
                             <div className="column prev flex justify-start">
                                 <Link to={next ? next : ''}>
-                                    <div className="content" onClick={this.scrollUp.bind(this)}>
+                                    <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
                                         <span>next</span>
                                         <h4>{next}</h4>
                                     </div>
