@@ -46,7 +46,6 @@
     "Create better images",
     "Fill lorem ipsum",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
-    "add cursor: default on active link in Navigation",
     "Fixe problem with resizing bg image in Home component inside .rule element",
     "Added support for large device using max-width on content",
     "Add Aria-* attributes",
@@ -92,7 +91,9 @@
     "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out",
     "Stop wheel service events when ctrl is pressed",
     "Try to get wheel service inside Home component with removeEventListener",
-    "Fixed problem in Showcase footer when heading go on small divice outside of box"
+    "Fixed problem in Showcase footer when heading go on small divice outside of box",
+    "add cursor: default on active link in Navigation"
+
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -106,7 +107,9 @@
     "Create custom scrollbar",
     "Recreate design of contacts"
   ],
-  "changelog": [],
+  "changelog": [
+    "Added cursor default on active link"
+  ],
   "browsers": {
     "mobile": {
       "opera-mini": true,
