@@ -21,6 +21,7 @@ function RenderShowCase(name) {
             case 'headphones':
                 state.id = 1
                 state.letter = 'H'
+                state.theme = '#b29992'
                 state.paragraphs = [
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
@@ -33,6 +34,7 @@ function RenderShowCase(name) {
             case 'portfolio':
                 state.id = 2
                 state.letter = 'R'
+                state.theme = '#a0978a'
                 state.paragraphs = [
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
@@ -46,6 +48,7 @@ function RenderShowCase(name) {
             case 'post':
                 state.id = 3
                 state.letter = 'P'
+                state.theme = '#908076'
                 state.paragraphs = [
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
@@ -58,6 +61,7 @@ function RenderShowCase(name) {
             case 'artech':
                 state.id = 4
                 state.letter = 'T'
+                state.theme = '#867d73'
                 state.paragraphs = [
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',

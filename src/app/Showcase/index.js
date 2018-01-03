@@ -8,7 +8,7 @@ class Showcase extends Component {
     scrollUp() {
         window.scrollTo(0, 0)
         resetScrollAnimation()
-   }
+    }
 
     animationEnd({ animationName }) {
         if (/-Overflow/.test(animationName)) {
@@ -37,7 +37,8 @@ class Showcase extends Component {
             next,
             id,
             prev,
-            letter
+            letter,
+            theme
         } = this.props.data
 
         return (
@@ -59,7 +60,10 @@ class Showcase extends Component {
                     <div
                         data-animate="fadeLeft" data-offset="-200"
                         className="mobile-showcase flex flex-center"
-                        style={{ backgroundImage: `url(${require(`../../images/bg${id}.jpg`)})` }}>
+                        style={{
+                            backgroundColor: theme,
+                            backgroundImage: `url(${require(`../../images/bg${id}.jpg`)})`
+                        }}>
                         <img src={require(`../../images/mobile${id}.png`)} alt="website on mobile" />
                     </div>
                 </section>
