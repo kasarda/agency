@@ -115,8 +115,6 @@ class Home extends Component {
 
 
     onFakeScroll({ type, changedTouches, deltaY, detail, wheelDelta }) {
-        console.log('skya ku ku du du du dum pum pum')
-
         let wheelDown,
             wheelOffset
 
@@ -167,7 +165,6 @@ class Home extends Component {
     }
 
     onTouchStart({ touches }) {
-        console.log('start touching my ass')
         this.setState({
             startPos: touches[0].clientY
         })

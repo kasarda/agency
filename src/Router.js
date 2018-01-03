@@ -82,14 +82,24 @@ function RenderShowCase(name) {
 
 
 class AppRouter extends Component {
-
+    constructor() {
+        super()
+        this.state = {
+            toHomePage: false
+        }
+    }
+    onHomePage() {
+        this.setState({
+            toHomePage: true
+        })
+    }
     render() {
         return (
             <RouterType basename={baseName}>
                 <div id="outlet">
-                    <Navigation />
+                    <Navigation onHomePage={this.onHomePage.bind(this)} />
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
                         <Route exact path="/services" component={Services} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/projects/headphones" render={RenderShowCase('headphones')} />

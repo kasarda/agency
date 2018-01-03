@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navigation.css'
-
+import { isPath } from '../../services/local'
 function Link({ to, name, icon }) {
     return (
         <NavLink exact to={to}>
@@ -21,7 +21,12 @@ class Navigation extends Component {
             <div id="Navigation">
                 <div className="flex wrap">
                     <div className="column brand logo flex align-center">
-                        <NavLink to="/" activeClassName="">Digital</NavLink>
+                        {
+                            isPath('/') ?
+                                <a aria-current="true" onClick={_ => this.props.onHomePage()}>Digital</a> :
+                                <NavLink to="/" activeClassName="">Digital</NavLink>
+                        }
+
                     </div>
                     <div className="column links link flex justify-end align-center">
                         <Link to="/services" name="services" icon="icon-gear" />
