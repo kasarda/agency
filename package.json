@@ -110,7 +110,9 @@
   "changelog": [
     "Added cursor default on active link",
     "Fixed problem with Side content when content was visible on Home screen",
-    "Added click event on Digital link if Home component is rendered and we click on this link function toPage(0) will be called"
+    "Added click event on Digital link if Home component is rendered and we click on this link function toPage(0) will be called",
+    "Replaced all secondary-hover with primary-hover",
+    "Added links to address and phone number in Contacts component"
   ],
   "browsers": {
     "mobile": {
