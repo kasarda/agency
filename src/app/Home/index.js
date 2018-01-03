@@ -170,7 +170,10 @@ class Home extends Component {
         })
     }
 
-
+    componentWillReceiveProps() {
+        if(this.props.toHomePage)
+            this.toPage(0)
+    }
     componentDidMount() {
         const { onFakeScroll, onTouchStart } = this.state
         document.body.dataset.preventTouch = "true"
