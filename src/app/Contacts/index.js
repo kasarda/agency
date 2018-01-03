@@ -52,15 +52,17 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h5 className="init-animation init-animation-1 email secondary-hover underline">
+                        <h5 className="init-animation init-animation-1 email primary-hover underline">
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h5>
-                        <address>
-                            <div className="init-animation init-animation-2">Revierstredet 2 OSLO</div>
-                            <div className="init-animation init-animation-3">NO-0104 Norway</div>
+                        <address className="primary-hover">
+                            <a href="https://www.google.sk/maps/place/Gule+Sider/@59.9073903,10.7458804,17.67z/data=!4m5!3m4!1s0x46416e89407f7d17:0x9e3d6703336455cc!8m2!3d59.9076269!4d10.7467514?hl=en" target="_blank">
+                                <div className="init-animation init-animation-2">Revierstredet 2 OSLO</div>
+                                <div className="init-animation init-animation-3">NO-0104 Norway</div>
+                            </a>
                         </address>
-                        <div className="phone init-animation init-animation-4">
-                            (067) 85 000
+                        <div className="phone init-animation init-animation-4 primary-hover">
+                            <a href="tel:85000">(067) 85 000</a>
                         </div>
                         <div className="button primary-button init-animation init-animation-5">
                             <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
