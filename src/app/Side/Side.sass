@@ -46,6 +46,9 @@
 [data-home="false"] #Side
     width: 50%
 
+[data-home="true"][data-ready="true"] #Side
+    overflow: hidden
+
 [data-home="true"][data-from] #Side
     +slide-side-width-anim
     transition: none // important for bug on mobile devices

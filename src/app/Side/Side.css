@@ -59,6 +59,9 @@
 [data-home="false"] #Side {
   width: 50%; }
 
+[data-home="true"][data-ready="true"] #Side {
+  overflow: hidden; }
+
 [data-home="true"][data-from] #Side {
   animation: SlideSideWidthAnim .4s .8s ease-in backwards;
   transition: none; }
