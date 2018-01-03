@@ -52,7 +52,6 @@
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
-    "Add bg color in showcase component in first image background",
     "Fixe problem with mobile form when form is submitted by keyboard"
   ],
   "done": [
@@ -93,8 +92,8 @@
     "Try to get wheel service inside Home component with removeEventListener",
     "Fixed problem in Showcase footer when heading go on small divice outside of box",
     "add cursor: default on active link in Navigation",
-    "On pressed Digital link - toPage(0) will be called"
-
+    "On pressed Digital link - toPage(0) will be called",
+    "Add bg color in showcase component in first image background"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -109,7 +108,9 @@
     "Recreate design of contacts"
   ],
   "changelog": [
-    "Added cursor default on active link"
+    "Added cursor default on active link",
+    "Fixed problem with Side content when content was visible on Home screen",
+    "Added click event on Digital link if Home component is rendered and we click on this link function toPage(0) will be called"
   ],
   "browsers": {
     "mobile": {
