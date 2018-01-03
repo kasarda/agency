@@ -47,7 +47,8 @@
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
-    "Fixe problem with mobile form when form is submitted by keyboard"
+    "Fixe problem with mobile form when form is submitted by keyboard",
+    "Added path function from local service to all require() function"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
