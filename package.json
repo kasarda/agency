@@ -39,15 +39,10 @@
   ],
   "todos": [
     "Create logo, favicon and name of company",
-    "Optimize animation, analyze performance, create alternative for slow devices",
     "Replace some animation on mobiles for performance",
-    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "Clean and optimize code, create better and readable environment",
     "Create better images",
     "Fill lorem ipsum",
-    "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
-    "Fixe problem with resizing bg image in Home component inside .rule element",
-    "Added support for large device using max-width on content",
     "Add Aria-* attributes",
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
@@ -105,7 +100,12 @@
     "IE11 => Bad timing, specialy from page to home where animation is done and still not ready",
     "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery",
     "Create custom scrollbar",
-    "Recreate design of contacts"
+    "Recreate design of contacts",
+    "Optimize animation, analyze performance, create alternative for slow devices",
+    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
+    "Added support for large device using max-width on content",
+    "Fixe problem with resizing bg image in Home component inside .rule element",
+    "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
     "Added cursor default on active link",
