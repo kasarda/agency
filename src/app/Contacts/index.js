@@ -56,7 +56,7 @@ class Contacts extends Component {
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h5>
                         <address className="primary-hover">
-                            <a href="https://www.google.sk/maps/place/Gule+Sider/@59.9073903,10.7458804,17.67z/data=!4m5!3m4!1s0x46416e89407f7d17:0x9e3d6703336455cc!8m2!3d59.9076269!4d10.7467514?hl=en" target="_blank">
+                            <a href="https://www.google.sk/maps/place/Gule+Sider/@59.9073903,10.7458804,17.67z/data=!4m5!3m4!1s0x46416e89407f7d17:0x9e3d6703336455cc!8m2!3d59.9076269!4d10.7467514?hl=en" target="_blank" rel="noopener noreferrer">
                                 <div className="init-animation init-animation-2">Revierstredet 2 OSLO</div>
                                 <div className="init-animation init-animation-3">NO-0104 Norway</div>
                             </a>
