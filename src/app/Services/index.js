@@ -23,7 +23,7 @@ class Services extends Component {
             <div id="Services">
                 <div className="camera flex flex-center" data-active-navigation>
                     <h1>
-                        We are creating mobile and web app
+                        We are creating mobile and web apps
                     </h1>
                 </div>
                 <section className="flex wrap" id="mobile-showcase">
