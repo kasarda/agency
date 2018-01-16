@@ -1,0 +1,42 @@
+@import "ts-modules/lib"
+@import "theme.sass"
+@import "animation.sass"
+
+=wheel-animation
+    animation: WheelAnimation 1s 1s ease-in infinite
+
+#Wheel
+    +center(x)
+    bottom: 120px
+    opacity: 0
+    z-index: 0
+    transition: opacity .4s ease-in
+    animation: none
+    +maxHeight(600px)
+        display: none
+    .mouse
+        width: 15px
+        height: 30px
+        border: 1px solid $light-color
+        border-radius: 10px
+
+        .wheel
+            width: 3px
+            height: 3px
+            background-color: $light-color
+            border-radius: 100%
+            position: relative
+            top: -2px
+            opacity: 1
+            +wheel-animation
+
+[data-ready="true"][data-home="true"] #Wheel
+    opacity: 1
+
+@keyframes WheelAnimation
+    from
+        top: -3px
+        opacity: 0
+    to
+        top: 3px
+        opacity: 1

@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Letter from '../Letter'
 import Side from '../Side'
+import Wheel from '../Wheel'
 import Navigator from '../Navigator'
 import './Home.css'
+
 
 class Home extends Component {
     constructor() {
@@ -247,6 +249,7 @@ class Home extends Component {
                     </div>
                 </div>
 
+                <Wheel />
                 <Navigator onPage={id => this.toPage(id)} currentPage={currentPage} />
             </div>
         )
