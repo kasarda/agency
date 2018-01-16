@@ -29,8 +29,8 @@ function RenderShowCase(name) {
                 ]
                 state.next = 'portfolio'
                 state.prev = 'artech'
-
                 break
+                
             case 'portfolio':
                 state.id = 2
                 state.letter = 'R'
@@ -42,7 +42,6 @@ function RenderShowCase(name) {
                 ]
                 state.next = 'post'
                 state.prev = 'headphones'
-
                 break
 
             case 'post':
@@ -70,6 +69,7 @@ function RenderShowCase(name) {
                 state.next = 'headphones'
                 state.prev = 'post'
                 break
+                
             default:
                 state = {}
 
