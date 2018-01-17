@@ -23,14 +23,14 @@ function RenderShowCase(name) {
                 state.letter = 'H'
                 state.theme = '#b29992'
                 state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
+                    'We created a fast E-shop which provide quality headphones and speakers. The website includes beautiful landing pages for all products and also is fully responsive. The website is using notification so you will be know about new products really quickly.',
+                    'Challenge what we had was to create really fast website which will be working across all platforms and devices what are avaible to us. Our priority was User experience as always.',
+                    'Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.'
                 ]
                 state.next = 'portfolio'
                 state.prev = 'artech'
                 break
-                
+
             case 'portfolio':
                 state.id = 2
                 state.letter = 'R'
@@ -69,7 +69,7 @@ function RenderShowCase(name) {
                 state.next = 'headphones'
                 state.prev = 'post'
                 break
-                
+
             default:
                 state = {}
 
