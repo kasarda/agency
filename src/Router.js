@@ -40,6 +40,9 @@ function RenderShowCase(name) {
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
                 ]
+
+                'We created a portfolio page for the designer and photographer'
+
                 state.next = 'post'
                 state.prev = 'headphones'
                 break

@@ -45,7 +45,7 @@ class Side extends Component {
                 heading: 'Portfolio',
                 description: [
                     'We created a portfolio',
-                    'side for the designer',
+                    'page for the designer',
                     'and photographer.'
                 ],
                 link: '/projects/portfolio'
