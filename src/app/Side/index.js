@@ -44,7 +44,7 @@ class Side extends Component {
                 letter: 'R',
                 heading: 'Portfolio',
                 description: [
-                    'Created a portfolio',
+                    'We created a portfolio',
                     'side for the designer',
                     'and photographer.'
                 ],
@@ -55,7 +55,7 @@ class Side extends Component {
                 letter: 'P',
                 heading: 'Post',
                 description: [
-                    'Created a clever, social',
+                    'We created a clever, social',
                     'network for sharing',
                     'posts, images or videos.'
                 ],
@@ -67,7 +67,7 @@ class Side extends Component {
                 letter: 'T',
                 heading: 'Artech',
                 description: [
-                    'Created business website',
+                    'We created business website',
                     'for architect company',
                     'called Artech'
                 ],
