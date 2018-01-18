@@ -29,8 +29,9 @@ class Services extends Component {
                 <section className="flex wrap" id="mobile-showcase">
                     <div className="column flex justify-start align-center direction-col">
                         <h3 data-animate="fadeUp" data-offset="200">Mobile</h3>
-                        <p data-animate="fadeUp" data-offset="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore non numquam optio, eveniet vero culpa animi in facilis consectetur, exercitationem ipsum aut placeat pariatur facere deleniti, perferendis veritatis ipsa.</p>
-
+                        <p data-animate="fadeUp" data-offset="100">
+                            We are creating mobile apps for iOS and Android. We are making hybrid apps with Ionic, native cross platform apps with React and native apps with Swift and Java.
+                        </p>
                     </div>
                     <div className="column showcase flex justify-center align-end" data-animate="fadeLeft">
                         <img src={require('../../images/mobile1.png')} alt="" />
@@ -43,8 +44,9 @@ class Services extends Component {
                     </div>
                     <div className="column flex flex-center direction-col">
                         <h3 data-animate="fadeUp" data-offset="200">Web</h3>
-                        <p data-animate="fadeUp" data-offset="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore non numquam optio, eveniet vero culpa animi in facilis consectetur, exercitationem ipsum aut placeat pariatur facere deleniti, perferendis veritatis ipsa.</p>
-
+                        <p data-animate="fadeUp" data-offset="100">
+                            We are also creating web app with HTML5, CSS3, JavaScript and Node. Our web app are fully responsive and supported by all major browsers. We can create standart web page, Single page app or even progressive web app.
+                        </p>
                     </div>
                 </section>
             </div>
