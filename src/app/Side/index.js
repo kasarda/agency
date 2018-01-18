@@ -55,7 +55,7 @@ class Side extends Component {
                 letter: 'P',
                 heading: 'Post',
                 description: [
-                    'We created a clever, social',
+                    'We created a clever social',
                     'network for sharing',
                     'posts, images or videos.'
                 ],

@@ -37,8 +37,8 @@ function RenderShowCase(name) {
                 state.theme = '#a0978a'
                 state.paragraphs = [
                     'We created a portfolio page for the designer and the photographer. The website includes dynamic gallery for photos and videos. The page is fully responsive and is progressive web application it means that page is like native application.',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
+                    'Our goals was to create porfolio page which will be progressive web app with gallery. The page is using parallax effects which can increase user exprerience.',
+                    'The website wins couple of awards for example CSS Master awards, Site of the day on Awwwards and much more.'
                 ]
                 state.next = 'post'
                 state.prev = 'headphones'
@@ -49,22 +49,22 @@ function RenderShowCase(name) {
                 state.letter = 'P'
                 state.theme = '#908076'
                 state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
+                    'We created a clever social network for sharing posts, images or videos. The website using secure auth system and has functionality to post anonymouse posts. It is fully responsive website.',
+                    'Our goals was to create secure social network for posting posts for group of people without caring about security. App is usefull for school classes, work stuff or just friends group.',
+                    'We designed to be simple and clear where every post has they own space where you can write comments and liking the post.'
                 ]
                 state.next = 'artech'
                 state.prev = 'portfolio'
                 break
 
-            case 'artech':
+        case 'artech':
                 state.id = 4
                 state.letter = 'T'
                 state.theme = '#867d73'
                 state.paragraphs = [
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!',
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis molestiae ipsam dolores hic debitis, quas quisquam veniam officiis ipsa possimus earum harum aliquid et fugiat accusantium ullam sint a!'
+                    'We created business website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
+                    'Our goals was to create modern portfolio for architecture company. We desided to create progressive web app to increase user experience and loading of the content.',
+                    'We designed to be very simple and clear without noise in background so user can focus on content not on less important things.'
                 ]
                 state.next = 'headphones'
                 state.prev = 'post'
