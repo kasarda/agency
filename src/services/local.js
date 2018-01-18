@@ -1,6 +1,6 @@
 import { HashRouter, BrowserRouter } from 'react-router-dom'
 
-const local = true
+const local = false
 const dev = process.env.NODE_ENV === 'development'
 
 
