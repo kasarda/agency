@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { path } from '../../services/local'
 import './Services.css'
 import { scrollAnimation } from '../../services/animation'
 
@@ -34,13 +35,13 @@ class Services extends Component {
                         </p>
                     </div>
                     <div className="column showcase flex justify-center align-end" data-animate="fadeLeft">
-                        <img src={require('../../images/mobile1.png')} alt="" />
+                        <img src={path(require('../../images/mobile1.png'))} alt="" />
                     </div>
                 </section>
 
                 <section className="flex wrap" id="web-showcase">
                     <div className="column showcase flex flex-center" data-animate="fadeRight" data-offset="-200">
-                        <img src={require('../../images/web.png')} alt="" />
+                        <img src={path(require('../../images/web.png'))} alt="" />
                     </div>
                     <div className="column flex flex-center direction-col">
                         <h3 data-animate="fadeUp" data-offset="200">Web</h3>
