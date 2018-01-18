@@ -6,7 +6,7 @@
     "name": "Filip Kasarda",
     "email": "kasardaafilip@gmail.com"
   },
-  "homepage": "http://kasarda.github.io/agency/build",
+  "homepage-is": "http://kasarda.github.io/agency/build",
   "dependencies": {
     "@types/react": "^16.0.34",
     "@types/react-dom": "^16.0.3",
@@ -114,7 +114,11 @@
     "Fixed problem with Side content when content was visible on Home screen",
     "Added click event on Digital link if Home component is rendered and we click on this link function toPage(0) will be called",
     "Replaced all secondary-hover with primary-hover",
-    "Added links to address and phone number in Contacts component"
+    "Added links to address and phone number in Contacts component",
+    "Changed some images",
+    "Replaced lorem ipsum with real text",
+    "Improved local service and applied path function to all require function",
+    "Created Favicon"
   ],
   "browsers": {
     "mobile": {

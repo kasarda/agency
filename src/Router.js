@@ -23,8 +23,8 @@ function RenderShowCase(name) {
                 state.letter = 'H'
                 state.theme = '#b29992'
                 state.paragraphs = [
-                    'We created a fast E-shop which provide quality headphones and speakers. The website includes beautiful landing pages for all products and also is fully responsive. The website is using notification so you will be know about new products really quickly.',
-                    'Challenge what we had was to create really fast website which will be working across all platforms and devices what are avaible to us. Our priority was User experience as always.',
+                    'We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.',
+                    'Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.',
                     'Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.'
                 ]
                 state.next = 'portfolio'
@@ -36,8 +36,8 @@ function RenderShowCase(name) {
                 state.letter = 'R'
                 state.theme = '#a0978a'
                 state.paragraphs = [
-                    'We created a portfolio page for the designer and the photographer. The website includes dynamic gallery for photos and videos. The page is fully responsive and is progressive web application it means that page is like native application.',
-                    'Our goals was to create porfolio page which will be progressive web app with gallery. The page is using parallax effects which can increase user exprerience.',
+                    'We created a portfolio page for the designer and the photographer. The website includes dynamic gallery for photos and videos. The page is fully responsive and also it is progressive web application which means that page is like native application.',
+                    'Our goal was to create portfolio page which will be progressive web app with gallery. The page uses parallax effects which can increase user experience.',
                     'The website wins couple of awards for example CSS Master awards, Site of the day on Awwwards and much more.'
                 ]
                 state.next = 'post'
@@ -49,9 +49,9 @@ function RenderShowCase(name) {
                 state.letter = 'P'
                 state.theme = '#908076'
                 state.paragraphs = [
-                    'We created a clever social network for sharing posts, images or videos. The website using secure auth system and has functionality to post anonymouse posts. It is fully responsive website.',
-                    'Our goals was to create secure social network for posting posts for group of people without caring about security. App is usefull for school classes, work stuff or just friends group.',
-                    'We designed to be simple and clear where every post has they own space where you can write comments and liking the post.'
+                    'We created a clever social network for sharing posts, images or videos. The website uses secure auth system and is able to post anonymous posts. It is fully responsive website.',
+                    'Our goals was to create secure social network for posting posts for group of people without caring about security. App is useful for school classes, work stuff or just friends group.',
+                    'The website was designed to be very simple and clear where every post has its own space where you can write comments or like the post.'
                 ]
                 state.next = 'artech'
                 state.prev = 'portfolio'
@@ -63,8 +63,8 @@ function RenderShowCase(name) {
                 state.theme = '#867d73'
                 state.paragraphs = [
                     'We created business website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
-                    'Our goals was to create modern portfolio for architecture company. We desided to create progressive web app to increase user experience and loading of the content.',
-                    'We designed to be very simple and clear without noise in background so user can focus on content not on less important things.'
+                    'Our goal was to create modern portfolio for architecture company. We decided to create progressive web app to increase user experience and loading of the content.',
+                    'The website was designed to be very simple and clear without any noise in background so user can focus on content not on less important things.'
                 ]
                 state.next = 'headphones'
                 state.prev = 'post'

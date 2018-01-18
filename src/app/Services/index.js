@@ -46,7 +46,7 @@ class Services extends Component {
                     <div className="column flex flex-center direction-col">
                         <h3 data-animate="fadeUp" data-offset="200">Web</h3>
                         <p data-animate="fadeUp" data-offset="100">
-                            We are also creating web app with HTML5, CSS3, JavaScript and Node. Our web app are fully responsive and supported by all major browsers. We can create standart web page, Single page app or even progressive web app.
+                            We are also creating web app with HTML5, CSS3, JavaScript and Node. Our web app are fully responsive and supported by all major browsers. We can create standart web page, single page app or even progressive web app.
                         </p>
                     </div>
                 </section>
