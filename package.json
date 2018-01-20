@@ -6,7 +6,7 @@
     "name": "Filip Kasarda",
     "email": "kasardaafilip@gmail.com"
   },
-  "homepage-is": "http://kasarda.github.io/agency/build",
+  "homepage": "http://kasarda.github.io/agency/build",
   "dependencies": {
     "@types/react": "^16.0.34",
     "@types/react-dom": "^16.0.3",
