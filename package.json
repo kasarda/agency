@@ -119,7 +119,8 @@
     "Replaced lorem ipsum with real text",
     "Improved local service and applied path function to all require function",
     "Created Favicon",
-    "Images are compressed"
+    "Images are compressed",
+    "Removed unused secondary color"
   ],
   "browsers": {
     "mobile": {
