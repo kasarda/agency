@@ -51,7 +51,7 @@ class Side extends Component {
                 link: '/projects/portfolio'
             },
             {
-                theme: '#908076',
+                theme: '#a9998e',
                 letter: 'P',
                 heading: 'Post',
                 description: [
@@ -63,7 +63,7 @@ class Side extends Component {
             },
 
             {
-                theme: '#867d73',
+                theme: '#c1ab9e',
                 letter: 'T',
                 heading: 'Artech',
                 description: [

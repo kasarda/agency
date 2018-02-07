@@ -47,7 +47,7 @@ function RenderShowCase(name) {
             case 'post':
                 state.id = 3
                 state.letter = 'P'
-                state.theme = '#908076'
+                state.theme = '#a9998e'
                 state.paragraphs = [
                     'We created a clever social network for sharing posts, images or videos. The website uses secure auth system and is able to post anonymous posts. It is fully responsive website.',
                     'Our goals was to create secure social network for posting posts for group of people without caring about security. App is useful for school classes, work stuff or just friends group.',
@@ -60,7 +60,7 @@ function RenderShowCase(name) {
         case 'artech':
                 state.id = 4
                 state.letter = 'T'
-                state.theme = '#867d73'
+                state.theme = '#c1ab9e'
                 state.paragraphs = [
                     'We created business website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
                     'Our goal was to create modern portfolio for architecture company. We decided to create progressive web app to increase user experience and loading of the content.',
