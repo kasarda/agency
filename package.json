@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.4.0",
+  "version": "2.4.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -112,18 +112,6 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Added cursor default on active link",
-    "Fixed problem with Side content when content was visible on Home screen",
-    "Added click event on Digital link if Home component is rendered and we click on this link function toPage(0) will be called",
-    "Replaced all secondary-hover with primary-hover",
-    "Added links to address and phone number in Contacts component",
-    "Changed some images",
-    "Replaced lorem ipsum with real text",
-    "Improved local service and applied path function to all require function",
-    "Created Favicon",
-    "Images are compressed",
-    "Removed unused secondary color",
-    "Updated packages"
   ],
   "browsers": {
     "mobile": {
