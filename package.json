@@ -8,7 +8,7 @@
   },
   "homepage": "http://kasarda.github.io/agency/build",
   "dependencies": {
-    "@types/react": "^16.0.34",
+    "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.3",
     "node-sass-chokidar": "^0.0.3",
@@ -47,8 +47,8 @@
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
-    "Added path function from local service to all require() function",
-    "Rename Headphones"
+    "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
+    "Fixe problem with link DIGITAL in navigation when doesn't work on the server"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -90,7 +90,8 @@
     "add cursor: default on active link in Navigation",
     "On pressed Digital link - toPage(0) will be called",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
-    "Add bg color in showcase component in first image background"
+    "Add bg color in showcase component in first image background",
+    "Added path function from local service to all require() function"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -107,6 +108,7 @@
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "Added support for large device using max-width on content",
     "Fixe problem with resizing bg image in Home component inside .rule element",
+    "Rename Headphones",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
@@ -120,7 +122,8 @@
     "Improved local service and applied path function to all require function",
     "Created Favicon",
     "Images are compressed",
-    "Removed unused secondary color"
+    "Removed unused secondary color",
+    "Updated packages"
   ],
   "browsers": {
     "mobile": {
