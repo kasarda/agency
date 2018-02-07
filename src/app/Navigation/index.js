@@ -16,7 +16,7 @@ function Link({ to, name, icon }) {
     )
 }
 
-function Navigation({ onHomePage}) {
+function Navigation({ onHomePage }) {
     return (
         <div id="Navigation">
             <div className="flex wrap">
