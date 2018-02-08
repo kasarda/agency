@@ -113,7 +113,8 @@
   ],
   "changelog": [
     "Changed images",
-    "New design of footer in Showcase"
+    "New design of footer in Showcase",
+    "Created new functionality for dynamic content in Showcase component"
   ],
   "browsers": {
     "mobile": {
