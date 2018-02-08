@@ -9,6 +9,7 @@ class Side extends Component {
         super()
 
         this.state = {
+            id: 1,
             theme: '#b29992',
             letter: 'H',
             heading: 'Headphones',
@@ -30,6 +31,7 @@ class Side extends Component {
         const index = (renderPage === 0 ? 1 : renderPage) - 1
         const config = [
             {
+                id: 1,
                 theme: '#b29992',
                 letter: 'H',
                 heading: 'Headphones',
@@ -41,6 +43,7 @@ class Side extends Component {
                 link: '/projects/headphones'
             },
             {
+                id: 2,
                 theme: '#a0978a',
                 letter: 'R',
                 heading: 'Portfolio',
@@ -52,6 +55,7 @@ class Side extends Component {
                 link: '/projects/portfolio'
             },
             {
+                id: 3,
                 theme: '#a9998e',
                 letter: 'P',
                 heading: 'Post',
@@ -64,6 +68,7 @@ class Side extends Component {
             },
 
             {
+                id: 4,
                 theme: '#c1ab9e',
                 letter: 'T',
                 heading: 'Artech',
@@ -81,7 +86,7 @@ class Side extends Component {
     }
 
     render() {
-        const { theme, heading, description, letter } = this.state
+        const { theme, heading, description, letter, id } = this.state
         return (
             <div
                 id="Side"
@@ -98,6 +103,7 @@ class Side extends Component {
                     <Description
                         theme={theme}
                         description={description}
+                        id={id}
                         onRedirect={this.onRedirect.bind(this)}
                     />
                 </div>

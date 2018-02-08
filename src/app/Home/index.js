@@ -178,7 +178,6 @@ class Home extends Component {
         const { onFakeScroll, onTouchStart } = this.state
         document.body.dataset.preventTouch = "true"
 
-
         if ('onwheel' in document)
             document.addEventListener('wheel', onFakeScroll, false)
         else {

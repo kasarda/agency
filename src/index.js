@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
-import { path } from './services/local'
+import preload from './services/preload'
 import './index.css'
 
 
@@ -14,24 +14,13 @@ import './index.css'
  *
  */
 
-const images = [
-    'images/project1.jpg',
-    'images/project2.jpg',
-    'images/project3.jpg',
-    'images/project4.jpg'
- ]
+ preload(
+    'project1.jpg',
+    'project2.jpg',
+    'project3.jpg',
+    'project4.jpg'
+)
 
-
-images.forEach(image => {
-    const link = document.createElement('link')
-    link.href = path(require('./'+image))
-    link.rel = 'preload'
-    link.as = 'image'
-    document.head.appendChild(link)
-})
-
-
-//<link rel="preload" href="./static/media/project1.622fe270.jpg" as="image">
 
 /**
  *
