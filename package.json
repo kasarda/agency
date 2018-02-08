@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.5.0",
+  "version": "2.5.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -110,17 +110,7 @@
     "Rename Headphones",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": [
-    "Changed images",
-    "New design of footer in Showcase",
-    "Created new functionality for dynamic content in Showcase component",
-    "Added fade in animation on heading in Service component",
-    "Moved Anchor component to Projects folder",
-    "Compressed images",
-    "Added preloading on images",
-    "Created Preload service",
-    "Created Preload functionality"
-  ],
+  "changelog": [],
   "browsers": {
     "mobile": {
       "opera-mini": true,
