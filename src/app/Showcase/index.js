@@ -4,6 +4,7 @@ import { path } from '../../services/local'
 import Letter from '../Letter'
 import './Showcase.css'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
+import getContent from './content'
 
 class Showcase extends Component {
     scrollUp() {
@@ -40,7 +41,7 @@ class Showcase extends Component {
             prev,
             letter,
             theme
-        } = this.props.data
+        } = getContent(this.props.name)
 
         return (
             <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
