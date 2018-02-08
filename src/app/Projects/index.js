@@ -3,7 +3,6 @@ import Letter from '../Letter'
 import Anchor from './anchor'
 import './Projects.css'
 
-
 class Projects extends Component {
     constructor() {
         super()
