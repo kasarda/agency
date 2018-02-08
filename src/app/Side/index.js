@@ -13,7 +13,7 @@ class Side extends Component {
             letter: 'H',
             heading: 'Headphones',
             description: [
-                'Created fast E-shop',
+                'We created a fast E-shop',
                 'which provide quality',
                 'headphones and speakers.'
             ],
