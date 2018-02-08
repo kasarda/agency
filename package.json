@@ -117,7 +117,9 @@
     "Added fade in animation on heading in Service component",
     "Moved Anchor component to Projects folder",
     "Compressed images",
-    "Added preloading on images"
+    "Added preloading on images",
+    "Created Preload service",
+    "Created Preload functionality"
   ],
   "browsers": {
     "mobile": {
