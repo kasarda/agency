@@ -116,7 +116,8 @@
     "Created new functionality for dynamic content in Showcase component",
     "Added fade in animation on heading in Service component",
     "Moved Anchor component to Projects folder",
-    "Compressed images"
+    "Compressed images",
+    "Added preloading on images"
   ],
   "browsers": {
     "mobile": {
