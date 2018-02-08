@@ -38,16 +38,12 @@
     "Logger for mobile devices"
   ],
   "todos": [
-    "Create logo, favicon and name of company",
-    "Replace some animation on mobiles for performance",
     "Clean and optimize code, create better and readable environment",
     "Create better images",
-    "Fill lorem ipsum",
     "Add Aria-* attributes",
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
-    "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
     "Fixe problem with link DIGITAL in navigation when doesn't work on the server"
   ],
   "done": [
@@ -91,6 +87,10 @@
     "On pressed Digital link - toPage(0) will be called",
     "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
     "Add bg color in showcase component in first image background",
+    "Fill lorem ipsum",
+    "Create logo, favicon and name of company",
+    "Replace some animation on mobiles for performance",
+    "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
     "Added path function from local service to all require() function"
   ],
   "cancel": [
