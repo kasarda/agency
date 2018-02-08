@@ -115,7 +115,8 @@
     "New design of footer in Showcase",
     "Created new functionality for dynamic content in Showcase component",
     "Added fade in animation on heading in Service component",
-    "Moved Anchor component to Projects folder"
+    "Moved Anchor component to Projects folder",
+    "Compressed images"
   ],
   "browsers": {
     "mobile": {
