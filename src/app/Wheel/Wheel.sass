@@ -2,9 +2,6 @@
 @import "theme.sass"
 @import "animation.sass"
 
-=wheel-animation
-    animation: WheelAnimation 1s 1s ease-in infinite
-
 #Wheel
     +center(x)
     bottom: 120px
@@ -32,11 +29,3 @@
 
 [data-ready="true"][data-home="true"] #Wheel
     opacity: 1
-
-@keyframes WheelAnimation
-    from
-        top: -3px
-        opacity: 0
-    to
-        top: 3px
-        opacity: 1

@@ -775,3 +775,11 @@ section ::selection, .form ::selection {
 @keyframes FadeInLetterAnim-Overflow {
   from {
     opacity: 0; } }
+
+@keyframes WheelAnimation {
+  from {
+    top: -3px;
+    opacity: 0; }
+  to {
+    top: 3px;
+    opacity: 1; } }

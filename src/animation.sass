@@ -498,7 +498,18 @@ $fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9, 7: 1, 8: 1.1
 =move-button-tran
     transition: transform .4s ease-in-out
 
+// Wheel > .wheel
+=wheel-animation
+    animation: WheelAnimation 1s 1s ease-in infinite
 
+=WheelKeyframes
+    @keyframes WheelAnimation
+        from
+            top: -3px
+            opacity: 0
+        to
+            top: 3px
+            opacity: 1
 
 //? Prebuild
 =delay($val)
