@@ -114,7 +114,9 @@
   "changelog": [
     "Changed images",
     "New design of footer in Showcase",
-    "Created new functionality for dynamic content in Showcase component"
+    "Created new functionality for dynamic content in Showcase component",
+    "Added fade in animation on heading in Service component",
+    "Moved Anchor component to Projects folder"
   ],
   "browsers": {
     "mobile": {
