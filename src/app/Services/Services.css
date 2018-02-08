@@ -29,7 +29,8 @@
       height: 70vh; } }
   #Services .camera h1 {
     max-width: 700px;
-    text-align: center; }
+    text-align: center;
+    animation: ServiceFadeIn .6s ease-out backwards; }
 
 #Services section {
   padding: 0 20px;
