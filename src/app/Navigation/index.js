@@ -34,7 +34,7 @@ function Navigation({ onHomePage }) {
                 </div>
             </div>
         </div >
-        )
+    )
 }
 
 export default Navigation

@@ -13,8 +13,6 @@ class Contacts extends Component {
         }
     }
 
-
-
     toggleForm(value) {
         this.setState({
             active: value

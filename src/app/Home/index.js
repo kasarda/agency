@@ -7,8 +7,8 @@ import Wheel from '../Wheel'
 import Navigator from '../Navigator'
 import './Home.css'
 
-
 class Home extends Component {
+
     constructor() {
         super()
 
@@ -30,7 +30,6 @@ class Home extends Component {
         }
     }
 
-
     toPage(newPage) {
         const { to, ready } = this.state
 
@@ -44,7 +43,6 @@ class Home extends Component {
             })
         }
     }
-
 
     setPage(type) {
         const { to, length, ready } = this.state
@@ -77,7 +75,6 @@ class Home extends Component {
             }
         }
     }
-
 
     animationEnd({ animationName }) {
         const { to } = this.state
@@ -115,7 +112,6 @@ class Home extends Component {
 
         return true
     }
-
 
     onFakeScroll({ type, changedTouches, deltaY, detail, wheelDelta }) {
         let wheelDown,
@@ -177,6 +173,7 @@ class Home extends Component {
         if(this.props.toHomePage)
             this.toPage(0)
     }
+
     componentDidMount() {
         const { onFakeScroll, onTouchStart } = this.state
         document.body.dataset.preventTouch = "true"

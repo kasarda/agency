@@ -13,9 +13,7 @@ function Item({ id, letter, currentPage, onPage }) {
     )
 }
 
-
 function Navigator({ onPage, currentPage }) {
-
 
     const letters = ['C', 'H', 'R', 'P', 'T']
     const items = letters.map((letter, key) => (
@@ -26,7 +24,6 @@ function Navigator({ onPage, currentPage }) {
             onPage={onPage}
         />
     ))
-
 
     return (
         <div id="Navigator">

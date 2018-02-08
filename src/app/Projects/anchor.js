@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class Anchor extends Component {
+
     constructor() {
         super()
         this.state = {
@@ -9,7 +10,6 @@ class Anchor extends Component {
         }
 
     }
-
 
     enter() {
         const { letter, onMouse } = this.props

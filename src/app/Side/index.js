@@ -4,6 +4,7 @@ import Letter from '../Letter'
 import './Side.css'
 
 class Side extends Component {
+
     constructor() {
         super()
 
@@ -77,7 +78,6 @@ class Side extends Component {
 
         if (config[index])
             this.setState(config[index])
-
     }
 
     render() {

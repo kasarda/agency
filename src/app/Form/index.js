@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Form.css'
 
 class Form extends Component {
+
     constructor() {
         super()
         this.state = {
@@ -21,6 +22,7 @@ class Form extends Component {
             this.props.onToggleForm()
         }
     }
+
     submit(event) {
         event.preventDefault()
         this.props.onSend()
@@ -30,6 +32,7 @@ class Form extends Component {
     componentDidMount() {
         document.body.dataset.preventTouch = "false"
     }
+
     componentWillUnmount() {
         document.body.dataset.preventTouch = "true"
     }
@@ -66,7 +69,6 @@ class Form extends Component {
                         </div>
                     </form>
                 </div>
-
             </div>
         )
     }

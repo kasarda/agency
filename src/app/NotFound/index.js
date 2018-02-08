@@ -9,6 +9,7 @@ class NotFound extends Component {
     componentWillUnmount() {
         document.body.dataset.preventTouch = "false"
     }
+
     render() {
         const { match } = this.props
 

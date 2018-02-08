@@ -7,6 +7,7 @@ import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 import getContent from './content'
 
 class Showcase extends Component {
+
     scrollUp() {
         window.scrollTo(0, 0)
         resetScrollAnimation()
@@ -30,7 +31,6 @@ class Showcase extends Component {
         document.documentElement.style.height = '100%'
         document.querySelector('#Navigation').classList.remove('black-color')
     }
-
 
     render() {
         const {
@@ -133,7 +133,6 @@ class Showcase extends Component {
                         </div>
                     </div>
                 </footer>
-
             </div>
         )
     }
