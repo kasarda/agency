@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Letter from '../Letter'
-import Anchor from '../Anchor'
+import Anchor from './anchor'
 import './Projects.css'
 
 
