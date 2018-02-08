@@ -7,6 +7,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 }
 
 if (!String.prototype.includes) {
+  // eslint-disable-next-line
   String.prototype.includes = function(search, start) {
 
     if (typeof start !== 'number')
