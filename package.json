@@ -38,13 +38,11 @@
     "Logger for mobile devices"
   ],
   "todos": [
-    "Clean and optimize code, create better and readable environment",
-    "Create better images",
     "Add Aria-* attributes",
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
-    "Fixe problem with link DIGITAL in navigation when doesn't work on the server"
+    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -90,6 +88,7 @@
     "Fill lorem ipsum",
     "Create logo, favicon and name of company",
     "Replace some animation on mobiles for performance",
+    "Clean and optimize code, create better and readable environment",
     "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
     "Added path function from local service to all require() function"
   ],
