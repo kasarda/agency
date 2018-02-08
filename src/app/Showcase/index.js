@@ -106,7 +106,9 @@ class Showcase extends Component {
                 </section>
 
                 <footer>
-                    <div className="consulation">
+                    <div className="consulation" style={{
+                        backgroundColor: theme
+                    }}>
                         <h4 className="inline-block primary-hover">
                             <a>Visit Website</a>
                         </h4>
