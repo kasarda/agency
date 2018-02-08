@@ -10,18 +10,22 @@ import Contacts from './app/Contacts'
 import NotFound from './app/NotFound'
 
 class AppRouter extends Component {
+
     constructor() {
         super()
         this.state = {
             toHomePage: false
         }
     }
+
     onHomePage() {
         this.setState({
             toHomePage: true
         })
     }
+
     render() {
+
         return (
             <RouterType basename={baseName}>
                 <div id="outlet">
