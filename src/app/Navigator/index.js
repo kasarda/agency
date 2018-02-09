@@ -1,11 +1,13 @@
 import React from 'react'
 import './Navigator.css'
 
-function Item({ id, letter, currentPage, onPage }) {
+function Button({ id, letter, currentPage, onPage }) {
     const setActive =  currentPage === id ? 'active' : ''
 
     return (
         <div
+            role="button"
+            aria-current={currentPage === id}
             className={setActive}
             onClick={_ => onPage(id)}>
             {letter}
@@ -17,7 +19,7 @@ function Navigator({ onPage, currentPage }) {
 
     const letters = ['C', 'H', 'R', 'P', 'T']
     const items = letters.map((letter, key) => (
-        <Item
+        <Button
             id={key} key={key}
             letter={letter}
             currentPage={currentPage}
@@ -27,7 +29,7 @@ function Navigator({ onPage, currentPage }) {
 
     return (
         <div id="Navigator">
-            <div className="links flex justify-between">
+            <div className="buttons flex justify-between">
                 {items}
             </div>
         </div>

@@ -50,36 +50,36 @@ class Contacts extends Component {
                     </div>
 
                     <div className="container">
-                        <h5 className="init-animation init-animation-1 email primary-hover underline">
+                        <h5 className="anim anim-1 email primary-hover">
                             <a href="mailto:info@digital.com">info@digital.com</a>
                         </h5>
                         <address className="primary-hover">
                             <a href="https://www.google.sk/maps/place/Gule+Sider/@59.9073903,10.7458804,17.67z/data=!4m5!3m4!1s0x46416e89407f7d17:0x9e3d6703336455cc!8m2!3d59.9076269!4d10.7467514?hl=en" target="_blank" rel="noopener noreferrer">
-                                <div className="init-animation init-animation-2">Revierstredet 2 OSLO</div>
-                                <div className="init-animation init-animation-3">NO-0104 Norway</div>
+                                <div className="anim anim-2">Revierstredet 2 OSLO</div>
+                                <div className="anim anim-3">NO-0104 Norway</div>
                             </a>
                         </address>
-                        <div className="phone init-animation init-animation-4 primary-hover">
+                        <div className="phone anim anim-4 primary-hover">
                             <a href="tel:85000">(067) 85 000</a>
                         </div>
-                        <div className="button primary-button init-animation init-animation-5">
+                        <div className="button primary-button anim anim-5">
                             <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
                         </div>
 
                         <div className="icons flex justify-between">
-                            <a className="primary-hover init-animation init-animation-6" href="https://www.instagram.com">
+                            <a className="primary-hover anim anim-6" href="https://www.instagram.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-instagram" />
                                 </svg>
                             </a>
 
-                            <a className="primary-hover init-animation init-animation-7" href="https://www.twitter.com">
+                            <a className="primary-hover anim anim-7" href="https://www.twitter.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-twitter" />
                                 </svg>
                             </a>
 
-                            <a className="primary-hover init-animation init-animation-8" href="https://www.youtube.com">
+                            <a className="primary-hover anim anim-8" href="https://www.youtube.com">
                                 <svg width="18" height="18" viewBox="0 0 24 24">
                                     <use className="fill-light-color" xlinkHref="#icon-youtube" />
                                 </svg>

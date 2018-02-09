@@ -27,19 +27,19 @@
   @media (max-height: 500px) {
     #Navigator {
       bottom: 25px; } }
-  #Navigator .links {
+  #Navigator .buttons {
     width: 170px;
     font-weight: 700; }
-    #Navigator .links div {
+    #Navigator .buttons div {
       position: relative;
       opacity: .5;
       text-transform: uppercase;
       cursor: pointer;
       user-select: none;
       transition: opacity .15s ease-in-out; }
-      #Navigator .links div.active {
+      #Navigator .buttons div.active {
         opacity: 1; }
-      #Navigator .links div:not(.active):hover {
+      #Navigator .buttons div:not(.active):hover {
         opacity: 1; }
 
 [data-ready="true"] #Navigator {

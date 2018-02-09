@@ -28,7 +28,7 @@ function Description({ description, theme, id, onRedirect }) {
     }
 
     const descriptionList = description.map((text, key) =>
-        (<p key={key} className={`init-animation init-animation-${key + 1}`}>{text}</p>)
+        (<p key={key} className={`anim anim-${key + 1}`}>{text}</p>)
     )
 
     return (
@@ -36,7 +36,7 @@ function Description({ description, theme, id, onRedirect }) {
             <div className="paragraphs hidden-sm-down">
                 {descriptionList}
             </div>
-            <div className={`button init-animation init-animation-${descriptionList.length + 1}`}>
+            <div className={`button anim anim-${descriptionList.length + 1}`}>
                 <div className="primary-button" style={{ color: theme }}>
                     <a onClick={redirect}>view case</a>
                 </div>

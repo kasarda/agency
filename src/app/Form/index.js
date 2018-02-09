@@ -50,19 +50,19 @@ class Form extends Component {
                 <div className="row form flex justify-center direction-col">
                     <svg
                         width="18" height="18" viewBox="0 0 24 24"
-                        className="primary-hover init-animation init-animation-1"
+                        className="primary-hover anim anim-1"
                         onClick={this.close.bind(this)}
                     >
                         <use xlinkHref="#icon-arrow-right" />
                     </svg>
                     <h3>
-                        <div className="init-animation init-animation-2">Send</div>
-                        <div className="init-animation init-animation-3">a message</div>
+                        <div className="anim anim-2">Send</div>
+                        <div className="anim anim-3">a message</div>
                     </h3>
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
-                        <input className="init-animation init-animation-4" type="email" name="email" placeholder="Your Email" required />
-                        <textarea className="init-animation init-animation-5" name="message" placeholder="Message" required></textarea>
-                        <div className="init-animation init-animation-6">
+                        <input className="anim anim-4" type="email" name="email" placeholder="Your Email" required />
+                        <textarea className="anim anim-5" name="message" placeholder="Message" required></textarea>
+                        <div className="anim anim-6">
                             <div className="primary-button button outline-color">
                                 <button type="submit">Send Message</button>
                             </div>
