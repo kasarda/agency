@@ -67,7 +67,10 @@
   "changelog": [
     "Fixed problem with function isPath in the Local service when didn't work with the server path",
     "Created and applied new image function in the local service",
-    "Added some Aria attributes, removed unused classes and renamed some classes"
+    "Added some Aria attributes, removed unused classes and renamed some classes",
+    "Fixed problem with height of images in Showcase component when images was loaded",
+    "Added theme background color on row in Showcase component where are desktop images",
+    "Disabled user select on button elements or elements with attribute role=\"button\""
   ],
   "browsers": {
     "mobile": {
