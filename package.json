@@ -36,7 +36,7 @@
     "transform3d(0,0,0) hack for edge - fallback for will-change, use @support will-change if needed",
     "Animate only transform and opacity not left, top ..."
   ],
-  "todos": [
+  "todo": [
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Concat data of pages in Side and in Showcase component",
