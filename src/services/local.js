@@ -11,3 +11,8 @@ export const isPath = name => {
     const pathName = local ? window.location.hash.replace('#', '') : window.location.pathname.replace(/^(\/agency\/build)/, '')
     return pathName === name
 }
+
+export const image = (name, css = false) => {
+    const url = path(require(`../images/${name}`))
+    return css ? `url(${url})` : url
+}

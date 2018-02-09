@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { path } from '../../services/local'
+import { image } from '../../services/local'
 import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
@@ -209,7 +209,7 @@ class Home extends Component {
             redirect, canRedirect, link
         } = this.state
 
-        const url = renderImage > 0 ? `url(${path(require(`../../images/project${renderImage}.jpg`))})` : null
+        const url = renderImage > 0 ? image(`project${renderImage}.jpg`, true) : null
 
         if (canRedirect)
             return <Redirect to={link} />

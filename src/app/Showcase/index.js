@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { path } from '../../services/local'
+import { image } from '../../services/local'
 import Letter from '../Letter'
 import './Showcase.css'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
@@ -64,9 +64,9 @@ class Showcase extends Component {
                         className="mobile-showcase flex flex-center"
                         style={{
                             backgroundColor: theme,
-                            backgroundImage: `url(${path(require(`../../images/bg${id}.jpg`))})`
+                            backgroundImage: image(`bg${id}.jpg`, true)
                         }}>
-                        <img src={path(require(`../../images/mobile${id}.png`))} alt="website on mobile" />
+                        <img src={image(`mobile${id}.png`)} alt="website on mobile" />
                     </div>
                 </section>
 
@@ -80,12 +80,12 @@ class Showcase extends Component {
                     <div className="showcases">
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
-                                <img src={path(require(`../../images/desktop${id}-1.jpg`))} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-1.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
-                                <img src={path(require(`../../images/desktop${id}-2.jpg`))} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-2.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" data-offset="100" className="description between-showcases">
@@ -95,12 +95,12 @@ class Showcase extends Component {
                         </div>
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row">
-                                <img src={path(require(`../../images/desktop${id}-3.jpg`))} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-3.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row">
-                                <img src={path(require(`../../images/desktop${id}-4.jpg`))} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-4.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                     </div>
