@@ -38,30 +38,17 @@
     "Logger for mobile devices"
   ],
   "todos": [
-    "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
+    "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Concat data of pages in Side and in Showcase component",
-    "Fixe problem with desktop images in Showcase component - set default height",
     "Translate texts"
-  ],
-  "done": [
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
     "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
-    "Add version for the client to be sure on mobile if site was updated ar not",
-    "Add some kind of graphic in home page first view",
-    "Add sooner ready state on mobile devices",
     "Fix bug with letters when pattern goes where should not go",
-    "IE11 => Bad timing, specialy from page to home where animation is done and still not ready",
-    "FF, EDGE, IE => letter mask animation doesnt work because css engine doesnt support x propery",
-    "Create custom scrollbar",
-    "Recreate design of contacts",
     "Optimize animation, analyze performance, create alternative for slow devices",
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
-    "Added support for large device using max-width on content",
-    "Fixe problem with resizing bg image in Home component inside .rule element",
-    "Rename Headphones",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
