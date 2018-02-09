@@ -39,7 +39,6 @@
   ],
   "todos": [
     "Add Aria-* attributes",
-    "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
     "Fixe problem with mobile form when form is submitted by keyboard"
   ],
@@ -90,7 +89,8 @@
     "Clean and optimize code, create better and readable environment",
     "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
     "Added path function from local service to all require() function",
-    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly"
+    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly",
+    "Add preload on main images"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
