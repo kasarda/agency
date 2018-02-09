@@ -6,7 +6,9 @@ import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
 import preload from './services/preload'
 import './index.css'
+import { version } from '../package.json'
 
+document.documentElement.dataset.version = version
 
 /**
  *
@@ -71,8 +73,6 @@ window.addEventListener('scroll', _ => {
     scrollAnimation()
 
 })
-
-
 
 
 
