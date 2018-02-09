@@ -62,7 +62,7 @@ class Contacts extends Component {
                         <div className="phone anim anim-4 primary-hover">
                             <a href="tel:85000">(067) 85 000</a>
                         </div>
-                        <div className="button primary-button anim anim-5">
+                        <div className="button primary-button anim anim-5" role="button">
                             <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
                         </div>
 

@@ -525,6 +525,10 @@ address {
     .primary-button > button:focus {
       color: currentColor; }
 
+button, [role="button"] {
+  cursor: pointer;
+  user-select: none; }
+
 .badge {
   width: 90%;
   padding: 14px 17px;

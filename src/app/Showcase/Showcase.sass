@@ -88,11 +88,14 @@
         .row
             width: 90%
             max-width: 1000px
+            line-height: 0
+            box-shadow: 0 0 60px rgba(0, 0, 0, .20)
             +min(xl)
                 width: 100%
 
         img
-            box-shadow: 0 0 60px rgba(0, 0, 0, .20)
+            +min(xl)
+                min-height: 500px
 
     .description.between-showcases
         margin-top: 50px

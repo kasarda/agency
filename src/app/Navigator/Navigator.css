@@ -34,8 +34,6 @@
       position: relative;
       opacity: .5;
       text-transform: uppercase;
-      cursor: pointer;
-      user-select: none;
       transition: opacity .15s ease-in-out; }
       #Navigator .buttons div.active {
         opacity: 1; }

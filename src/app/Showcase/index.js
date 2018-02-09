@@ -79,12 +79,12 @@ class Showcase extends Component {
                     </div>
                     <div className="showcases">
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
-                            <div className="row">
+                            <div className="row" style={{backgroundColor: theme}}>
                                 <img src={image(`desktop${id}-1.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
-                            <div className="row">
+                            <div className="row" style={{backgroundColor: theme}}>
                                 <img src={image(`desktop${id}-2.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
@@ -94,12 +94,12 @@ class Showcase extends Component {
                             </p>
                         </div>
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
-                            <div className="row">
+                            <div className="row" style={{backgroundColor: theme}}>
                                 <img src={image(`desktop${id}-3.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
-                            <div className="row">
+                            <div className="row" style={{backgroundColor: theme}}>
                                 <img src={image(`desktop${id}-4.jpg`)} alt="website on dekstop" />
                             </div>
                         </div>
