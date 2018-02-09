@@ -8,6 +8,6 @@ export const path = name => local ? '.' + name : name
 export const baseName = local ? '/' : dev ? '/' : 'agency/build'
 export const RouterType = local ? HashRouter : BrowserRouter
 export const isPath = name => {
-    const pathName = local ? window.location.hash.replace('#', '') : window.location.pathname
+    const pathName = local ? window.location.hash.replace('#', '') : window.location.pathname.replace(/^(\/agency\/build)/, '')
     return pathName === name
 }
