@@ -41,8 +41,7 @@
     "Add Aria-* attributes",
     "Add preload on main images",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
-    "Fixe problem with mobile form when form is submitted by keyboard",
-    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly"
+    "Fixe problem with mobile form when form is submitted by keyboard"
   ],
   "done": [
     "Create Services, Contacts and 404 components",
@@ -90,7 +89,8 @@
     "Replace some animation on mobiles for performance",
     "Clean and optimize code, create better and readable environment",
     "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
-    "Added path function from local service to all require() function"
+    "Added path function from local service to all require() function",
+    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -110,7 +110,9 @@
     "Rename Headphones",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": [],
+  "changelog": [
+    "Fixed problem with function isPath in the Local service when didn't work with the server path"
+  ],
   "browsers": {
     "mobile": {
       "opera-mini": true,
