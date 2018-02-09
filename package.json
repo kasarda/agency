@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.6.0",
+  "version": "2.6.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -34,8 +34,7 @@
     "flip technique",
     "60fps scrolling",
     "transform3d(0,0,0) hack for edge - fallback for will-change, use @support will-change if needed",
-    "Animate only transform and opacity not left, top ...",
-    "Logger for mobile devices"
+    "Animate only transform and opacity not left, top ..."
   ],
   "todos": [
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
@@ -51,42 +50,5 @@
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": [
-    "Fixed problem with function isPath in the Local service when didn't work with the server path",
-    "Created and applied new image function in the local service",
-    "Added some Aria attributes, removed unused classes and renamed some classes",
-    "Fixed problem with height of images in Showcase component when images was loaded",
-    "Added theme background color on row in Showcase component where are desktop images",
-    "Disabled user select on button elements or elements with attribute role=\"button\""
-  ],
-  "browsers": {
-    "mobile": {
-      "opera-mini": true,
-      "safari": true,
-      "chrome": true,
-      "firefox": true
-    },
-    "desktop": {
-      "chrome": true,
-      "firefox": [
-        true
-      ],
-      "edge14": [
-        true
-      ],
-      "IE11": [
-        true
-      ],
-      "opera": true,
-      "safari": null
-    }
-  },
-  "supports": [
-    "ie 11",
-    "edge 14+",
-    "opera 48+",
-    "firefox 57+",
-    "safari 11/10.3+",
-    "chrome 62+"
-  ]
+  "changelog": []
 }
