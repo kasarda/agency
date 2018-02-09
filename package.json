@@ -38,59 +38,13 @@
     "Logger for mobile devices"
   ],
   "todos": [
-    "Add Aria-* attributes",
     "Fixe problem with Firefox init letter dash animation -> animation is not smooth",
-    "Fixe problem with mobile form when form is submitted by keyboard"
+    "Fixe problem with mobile form when form is submitted by keyboard",
+    "Concat data of pages in Side and in Showcase component",
+    "Fixe problem with desktop images in Showcase component - set default height",
+    "Translate texts"
   ],
   "done": [
-    "Create Services, Contacts and 404 components",
-    "Create showcase home page component (4)",
-    "Create faster duration for animation and rewrite to be more stable and flexible",
-    "Create ready functionality for home component",
-    "Create better system for 'finish animation hacks'",
-    "Create Faster Content Page Animation on mobile devices",
-    "Create BG images for pages -> .e.g. mobile, desktop or web app",
-    "Create navigator for pages",
-    "Create service for scroll animation",
-    "Create small library for server vs local in path and in dev producation in Router basename=agency/build",
-    "Add some other animations on letter component and add other letter with dynamicly changing letter",
-    "Add hover animation on pages button 'view case'",
-    "Replace bootstrap grid with flex",
-    "Rename digital-agency to agency",
-    "Set navigation to be fixed by default",
-    "Add animation: none on not active animation in Home component",
-    "Remove animejs and @types/animejs from dependencies",
-    "Changed Animation in button in  Page => Project page ",
-    "Safari chrome bar and bottom bar goes into content, so navigation is not visible but its there",
-    "Update svgs letters to have one pattern and have new classNames",
-    "State black-color on navigation doesnt work on mobile",
-    "Add black color on icons in navigation if navigation is on top of content",
-    "Set navigation to be always fixed",
-    "Create new Animation system",
-    "Initialize contacts and notFound component",
-    "Optimize SVG",
-    "Create web components",
-    "Replace .wrapper class with .camera",
-    "Replace <br> with -> span display block",
-    "Add selection",
-    "Replaced window.innerWidth with window.matchMedia in scrollAnimation in index.js",
-    "Change naming of classes and structure to be more clear what this doing",
-    "Change specific easings for animations to be more smooth and better looking => just play with ease/-in/-out",
-    "Stop wheel service events when ctrl is pressed",
-    "Try to get wheel service inside Home component with removeEventListener",
-    "Fixed problem in Showcase footer when heading go on small divice outside of box",
-    "add cursor: default on active link in Navigation",
-    "On pressed Digital link - toPage(0) will be called",
-    "Create better user exprerience by adding e.g. scroll button to the Home component to be sure that user know that he can scrolling",
-    "Add bg color in showcase component in first image background",
-    "Fill lorem ipsum",
-    "Create logo, favicon and name of company",
-    "Replace some animation on mobiles for performance",
-    "Clean and optimize code, create better and readable environment",
-    "change bg in footer in Showcase componnet and also change weight of font in next, prev link",
-    "Added path function from local service to all require() function",
-    "Fixe problem with link DIGITAL in navigation when doesn't work on the server properly",
-    "Add preload on main images"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -112,7 +66,8 @@
   ],
   "changelog": [
     "Fixed problem with function isPath in the Local service when didn't work with the server path",
-    "Created and applied new image function in the local service"
+    "Created and applied new image function in the local service",
+    "Added some Aria attributes, removed unused classes and renamed some classes"
   ],
   "browsers": {
     "mobile": {
