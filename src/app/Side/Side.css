@@ -94,7 +94,7 @@
 [data-home="false"][data-down="false"][data-side-ready="true"][data-redirect="false"] #Side .heading h2 {
   animation: FadeInRightAnim-Ready .4s ease-in-out forwards; }
 
-[data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from="4"]) #Side,
+[data-home="false"][data-down="true"]:not([data-from="0"]):not([data-from-last="true"]) #Side,
 [data-home="false"][data-down="false"]:not([data-from="1"]) #Side {
   animation-duration: .4s;
   animation-delay: .6s, 1.2s, 1.8s;

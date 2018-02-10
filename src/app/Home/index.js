@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { image } from '../../services/local'
+import pages from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
@@ -17,11 +18,12 @@ class Home extends Component {
             currentPage: 0,
             renderPage: 0,
             renderImage: 0,
-            length: 4,
+            length: pages.length,
             sideReady: false,
             ready: false,
             down: undefined,
             from: undefined,
+            fromLast: undefined,
             redirect: false,
             canRedirect: false,
             onFakeScroll: this.onFakeScroll.bind(this),
@@ -31,7 +33,7 @@ class Home extends Component {
     }
 
     toPage(newPage) {
-        const { to, ready } = this.state
+        const { to, ready, length } = this.state
 
         if (ready && to !== newPage) {
             this.setState({
@@ -39,6 +41,7 @@ class Home extends Component {
                 sideReady: false,
                 to: newPage,
                 from: to,
+                fromLast: to === length,
                 down: !(to > newPage)
             })
         }
@@ -61,6 +64,7 @@ class Home extends Component {
                 this.setState({
                     to: newPage,
                     from: to,
+                    fromLast: to === length,
                     down: true
                 })
             }
@@ -70,6 +74,7 @@ class Home extends Component {
                 this.setState({
                     to: prevPage,
                     from: to,
+                    fromLast: false,
                     down: false
                 })
             }
@@ -203,7 +208,7 @@ class Home extends Component {
 
     render() {
         const {
-            to, down, from,
+            to, down, from, fromLast,
             sideReady, ready,
             renderPage, currentPage, renderImage,
             redirect, canRedirect, link
@@ -225,6 +230,7 @@ class Home extends Component {
                 data-to={to}
                 data-redirect={redirect}
                 data-current-page={currentPage}
+                data-from-last={fromLast}
                 onAnimationEnd={this.animationEnd.bind(this)}
                 onAnimationStart={this.animationStart.bind(this)}
             >

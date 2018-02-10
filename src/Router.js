@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { baseName, RouterType } from './services/local'
+import { getListOf } from './services/pages'
 import Navigation from './app/Navigation'
 import Home from './app/Home'
 import Projects from './app/Projects'
@@ -25,6 +26,7 @@ class AppRouter extends Component {
     }
 
     render() {
+        const links = getListOf('link')
 
         return (
             <RouterType basename={baseName}>
@@ -34,11 +36,12 @@ class AppRouter extends Component {
                         <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
                         <Route exact path="/services" component={Services} />
                         <Route exact path="/projects" component={Projects} />
-                        <Route exact path="/projects/headphones" component={Showcase} />
-                        <Route exact path="/projects/portfolio" component={Showcase} />
-                        <Route exact path="/projects/post" component={Showcase} />
-                        <Route exact path="/projects/artech" component={Showcase} />
                         <Route exact path="/contacts" component={Contacts} />
+                        {
+                            links.map((link, key) => (
+                                <Route exact path={link} component={Showcase} key={key} />
+                            ))
+                        }
                         <Route path="**" component={NotFound} />
                     </Switch>
                 </div>

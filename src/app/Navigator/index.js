@@ -1,4 +1,5 @@
 import React from 'react'
+import { getListOf } from '../../services/pages'
 import './Navigator.css'
 
 function Button({ id, letter, currentPage, onPage }) {
@@ -17,7 +18,9 @@ function Button({ id, letter, currentPage, onPage }) {
 
 function Navigator({ onPage, currentPage }) {
 
-    const letters = ['C', 'H', 'R', 'P', 'T']
+    const letterFromPages = getListOf('letter')
+
+    const letters = ['C'].concat(letterFromPages)
     const items = letters.map((letter, key) => (
         <Button
             id={key} key={key}

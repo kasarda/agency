@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import pages from '../../services/pages'
 import Letter from '../Letter'
 import Anchor from './anchor'
 import './Projects.css'
@@ -41,21 +42,13 @@ class Projects extends Component {
     }
 
     render() {
-
         const { enter, letter, active } = this.state
 
-        const list = [
-            ['headphones', 'H'],
-            ['portfolio', 'R'],
-            ['post', 'P'],
-            ['artech', 'T']
-        ]
-
-        const projectList = list.map(([name, lett], key) => (
+        const projectList = pages.map(({title, letter}, key) => (
             <Anchor
-                key={key} name={name}
+                key={key} title={title}
                 className={`link-${key + 1}`}
-                letter={lett}
+                letter={letter}
                 onMouse={this.updateLetter.bind(this)}
             />
         ))
