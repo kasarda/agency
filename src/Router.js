@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import { baseName, RouterType } from './services/local'
 import { getListOf } from './services/pages'
 import Navigation from './app/Navigation'
+import Language from './app/Language'
 import Home from './app/Home'
 import Projects from './app/Projects'
 import Showcase from './app/Showcase'
@@ -32,6 +33,7 @@ class AppRouter extends Component {
             <RouterType basename={baseName}>
                 <div id="outlet">
                     <Navigation onHomePage={this.onHomePage.bind(this)} />
+                    <Language />
                     <Switch>
                         <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
                         <Route exact path="/services" component={Services} />
