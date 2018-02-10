@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Language.css'
 
-class Home extends Component {
+class Language extends Component {
 
     constructor() {
         super()
@@ -17,4 +17,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default Language
