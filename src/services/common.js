@@ -16,3 +16,8 @@ export const image = (name, css = false) => {
     const url = path(require(`../images/${name}`))
     return css ? `url(${url})` : url
 }
+
+const storageLang = window.localStorage.getItem('lang')
+export const getLang = () =>  storageLang ? storageLang : (window.navigator.language.includes('sk') ? 'sk' : 'en')
+
+export const text = (primary, seconadry) => document.documentElement.lang === 'sk' ? seconadry : primary

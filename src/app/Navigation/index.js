@@ -1,7 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './Navigation.css'
 import { isPath } from '../../services/local'
+import { text } from '../../services/common'
+import './Navigation.css'
+
 
 function Link({ to, name, icon }) {
     return (
@@ -28,9 +30,9 @@ function Navigation({ onHomePage }) {
                     }
                 </div>
                 <div className="column links link flex justify-end align-center">
-                    <Link to="/services" name="services" icon="icon-gear" />
-                    <Link to="/projects" name="projects" icon="icon-project" />
-                    <Link to="/contacts" name="contacts" icon="icon-mail" />
+                    <Link to="/services" name={text('services', 'servis')} icon="icon-gear" />
+                    <Link to="/projects" name={text('projects', 'projekty')} icon="icon-project" />
+                    <Link to="/contacts" name={text('contacts', 'kontakt')} icon="icon-mail" />
                 </div>
             </div>
         </div >

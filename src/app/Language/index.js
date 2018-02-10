@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
+import { getLang } from '../../services/common'
 import './Language.css'
 
 class Language extends Component {
 
     constructor() {
         super()
-
         this.state = {
-            language: 'en'
+            language: getLang()
         }
     }
 
     onClick(language) {
         this.setState({ language })
+        this.props.onLanguage(language)
     }
 
     render() {

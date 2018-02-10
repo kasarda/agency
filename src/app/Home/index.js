@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { image } from '../../services/common'
-import pages from '../../services/pages'
+import { image, text } from '../../services/common'
+import { getConfig } from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
@@ -18,7 +18,7 @@ class Home extends Component {
             currentPage: 0,
             renderPage: 0,
             renderImage: 0,
-            length: pages.length,
+            length: getConfig().length,
             sideReady: false,
             ready: false,
             down: undefined,
@@ -251,8 +251,8 @@ class Home extends Component {
                             </div>
                         </div>
                         <h1>
-                            <span className="block">Digital</span>
-                            <span className="block">Creative Agency</span>
+                            <span className="block">{text('Digital', 'Digitálna')}</span>
+                            <span className="block">{text('Creative Agency', 'Kreatívna Agentúra')}</span>
                         </h1>
                     </div>
                 </div>

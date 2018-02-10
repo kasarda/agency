@@ -5,10 +5,12 @@ import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
 import preload from './services/preload'
+import { getLang } from './services/common'
 import './index.css'
 import { version } from '../package.json'
 
 document.documentElement.dataset.version = version
+document.documentElement.lang = getLang()
 
 /**
  *

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pages from '../../services/pages'
+import { getConfig } from '../../services/pages'
 import Letter from '../Letter'
 import Anchor from './anchor'
 import './Projects.css'
@@ -44,7 +44,7 @@ class Projects extends Component {
     render() {
         const { enter, letter, active } = this.state
 
-        const projectList = pages.map(({title, letter, id}, key) => (
+        const projectList = getConfig().map(({title, letter, id}, key) => (
             <Anchor
                 key={key} title={title}
                 delay={(id+1)/10}

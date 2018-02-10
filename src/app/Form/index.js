@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { text } from '../../services/common'
 import './Form.css'
 
 class Form extends Component {
@@ -56,15 +57,15 @@ class Form extends Component {
                         <use xlinkHref="#icon-arrow-right" />
                     </svg>
                     <h3>
-                        <div className="anim anim-2">Send</div>
-                        <div className="anim anim-3">a message</div>
+                        <div className="anim anim-2">{text('Send', 'Pošli')}</div>
+                        <div className="anim anim-3">{text('a message', 'nám správu')}</div>
                     </h3>
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
-                        <input className="anim anim-4" type="email" name="email" placeholder="Your Email" required />
-                        <textarea className="anim anim-5" name="message" placeholder="Message" required></textarea>
+                        <input className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email')} required />
+                        <textarea className="anim anim-5" name="message" placeholder={text('Message', 'Správa')} required></textarea>
                         <div className="anim anim-6">
                             <div className="primary-button button outline-color">
-                                <button type="submit">Send Message</button>
+                                <button type="submit">{text('Send Message', 'Odoslať Správu')}</button>
                             </div>
                         </div>
                     </form>

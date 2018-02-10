@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import './Contacts.css'
+import { text } from '../../services/common'
 import Letter from '../Letter'
 import Form from '../Form'
+import './Contacts.css'
 
 class Contacts extends Component {
 
@@ -63,7 +64,7 @@ class Contacts extends Component {
                             <a href="tel:85000">(067) 85 000</a>
                         </div>
                         <div className="button primary-button anim anim-5" role="button">
-                            <a onClick={this.toggleForm.bind(this, true)} >Contact Us</a>
+                            <a onClick={this.toggleForm.bind(this, true)} >{text('Contact Us', 'Kontaktujte Nás')}</a>
                         </div>
 
                         <div className="icons flex justify-between">
@@ -91,7 +92,7 @@ class Contacts extends Component {
                 </div>
                 {sended ? (
                     <div className="badge">
-                        Thanks for feedback
+                        {text('Thanks for feedback', 'Ďakujeme za vašu správu')}
                     </div>
                 ) : null}
 

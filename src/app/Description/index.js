@@ -1,5 +1,6 @@
 import React from 'react'
 import preload from '../../services/preload'
+import { text } from '../../services/common'
 import './Description.css'
 
 function Description({ description, theme, id, onRedirect }) {
@@ -38,7 +39,7 @@ function Description({ description, theme, id, onRedirect }) {
             </div>
             <div className={`button anim anim-${descriptionList.length + 1}`}>
                 <div className="primary-button" style={{ color: theme }}>
-                    <a onClick={redirect}>view case</a>
+                    <a onClick={redirect}>{text('view case', 'zobraziť')}</a>
                 </div>
             </div>
         </div>

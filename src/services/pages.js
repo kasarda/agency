@@ -1,18 +1,20 @@
-const config = [
+import { text } from './common'
+
+export const getConfig = () => ([
     {
         id: 1,
         title: 'headphones',
         letter: 'H',
         theme: '#b29992',
         description: [
-            'We created a fast E-shop',
-            'which provide quality',
-            'headphones and speakers.'
+            text('We created a fast E-shop', 'Vytvorily sme rýchly E-shop'),
+            text('which provide quality', 'ktorý ponúka kvalitné'),
+            text('headphones and speakers.', 'slúchadlá a reproduktory.')
         ],
         paragraphs: [
-            'We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.',
-            'Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.',
-            'Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.'
+            text('We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.', 'lorem ipsum'),
+            text('Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.', 'lorem ipsum'),
+            text('Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.', 'lorem ipsum')
         ],
         link: '/projects/headphones',
         next: 'portfolio',
@@ -75,14 +77,13 @@ const config = [
         next: 'headphones',
         prev: 'post'
     }
-].sort((a, b) => a.id - b.id)
+])
 
 
-export default config
 
 export const getPageById = id => {
     let obj
-    config.forEach(page => {
+    getConfig().forEach(page => {
         if(page.id === parseFloat(id))
             obj = page
     })
@@ -91,7 +92,7 @@ export const getPageById = id => {
 
 export const getPageByLink = link => {
     let obj
-    config.forEach(page => {
+    getConfig().forEach(page => {
         if(page.link === link)
             obj = page
     })
@@ -101,7 +102,7 @@ export const getPageByLink = link => {
 export const getListOf = prop => {
     const array = []
 
-    config.forEach(value => {
+    getConfig().forEach(value => {
         if(prop in value)
             array.push(value[prop])
         else

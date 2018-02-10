@@ -18,6 +18,8 @@
   bottom: 50px;
   left: 50px;
   z-index: 999; }
+  #Language.black-color {
+    color: #000000; }
   #Language .buttons {
     width: 60px; }
     #Language .buttons .button {

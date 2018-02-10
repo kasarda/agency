@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { baseName, RouterType } from './services/local'
 import { getListOf } from './services/pages'
+import { getLang } from './services/common'
 import Navigation from './app/Navigation'
 import Language from './app/Language'
 import Home from './app/Home'
@@ -16,7 +17,8 @@ class AppRouter extends Component {
     constructor() {
         super()
         this.state = {
-            toHomePage: false
+            toHomePage: false,
+            language: getLang()
         }
     }
 
@@ -26,17 +28,22 @@ class AppRouter extends Component {
         })
     }
 
+    onLanguage(language) {
+        this.setState({ language })
+        document.documentElement.lang = language
+        window.localStorage.setItem('lang', language)
+    }
+
     render() {
         const links = getListOf('link')
-
         return (
             <RouterType basename={baseName}>
                 <div id="outlet">
-                    <Navigation onHomePage={this.onHomePage.bind(this)} />
-                    <Language />
+                    <Navigation onHomePage={this.onHomePage.bind(this)}/>
+                    <Language onLanguage={this.onLanguage.bind(this)}/>
                     <Switch>
                         <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
-                        <Route exact path="/services" component={Services} />
+                        <Route exact path="/services" component={Services} />} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/contacts" component={Contacts} />
                         {
