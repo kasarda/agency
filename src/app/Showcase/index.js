@@ -16,35 +16,30 @@ class Showcase extends Component {
     animationEnd({ animationName }) {
         if (/-Overflow/.test(animationName)) {
             scrollAnimation()
-            document.body.style.overflowY = 'visible'
-            document.documentElement.style.height = 'auto'
         }
     }
 
     componentDidMount() {
         scrollAnimation()
-    }
-
-    componentWillUnmount() {
-        window.scrollTo(0, 0)
-        document.body.style.overflowY = 'hidden'
-        document.documentElement.style.height = '100%'
-        document.querySelector('#Navigation').classList.remove('black-color')
+        document.body.style.overflowY = 'visible'
+        document.documentElement.style.height = 'auto'
     }
 
     render() {
         const {
+            id,
             title,
+            letter,
+            theme,
             paragraphs,
             next,
-            id,
-            prev,
-            letter,
-            theme
+            prev
         } = getPageByLink(this.props.match.path)
 
+        const { state } = this.props.location
+        const redirected = (state && state.redirected) || false
         return (
-            <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
+            <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)} data-redirected={redirected}>
                 <div
                     className="camera flex justify-center align-end"
                     data-active-navigation

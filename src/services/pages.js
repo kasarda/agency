@@ -20,7 +20,7 @@ const config = [
     },
     {
         id: 2,
-        title: 'Portfolio',
+        title: 'portfolio',
         letter: 'R',
         theme: '#a0978a',
         description: [
@@ -39,7 +39,7 @@ const config = [
     },
     {
         id: 3,
-        title: 'Post',
+        title: 'post',
         letter: 'P',
         theme: '#a9998e',
         description: [
@@ -58,7 +58,7 @@ const config = [
     },
     {
         id: 4,
-        title: 'Artech',
+        title: 'artech',
         letter: 'T',
         theme: '#c1ab9e',
         description: [

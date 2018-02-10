@@ -217,7 +217,12 @@ class Home extends Component {
         const url = renderImage > 0 ? image(`project${renderImage}.jpg`, true) : null
 
         if (canRedirect)
-            return <Redirect to={link} />
+            return <Redirect push to={{
+                pathname: link,
+                state: {
+                    redirected: true
+                }
+            }} />
 
         return (
             <div

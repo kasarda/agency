@@ -7,7 +7,6 @@
     .camera
         +dimension(100%, 250px)
         background-color: $primary-color
-        +slideUp-anim
         +min(sm)
             height: 50vh
         +min(xl)
@@ -28,6 +27,11 @@
         [data-animate="fadeLeft"]
             transform: translateX(200px)
 
+    &[data-redirected="true"]
+        .camera
+            +slideUp-anim
+            .Letter
+                +fadeIn-letter-delay
 
 
     section, footer
@@ -104,7 +108,7 @@
         +min(xl)
             margin-top: 150px
 
-footer
+#Showcase footer
     .consulation
         width: 90%
         padding: 10px

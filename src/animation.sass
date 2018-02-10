@@ -455,7 +455,10 @@ $fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9, 7: 1, 8: 1.1
 
 // Showcase > .wrapper > .Letter
 =fadeIn-letter-anim
-    animation: FadeInLetterAnim-Overflow .4s .8s ease-in backwards
+    animation: FadeInLetterAnim-Overflow .4s ease-in backwards
+// delay is only applied when showcase location has redirected state
+=fadeIn-letter-delay
+    animation-delay: .8s
 
 /* Showcase > .wrapper > [data-animate].animate-active
    Services > section > [data-animate].animate-active

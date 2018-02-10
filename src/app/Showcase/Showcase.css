@@ -16,8 +16,7 @@
 #Showcase .camera {
   height: 250px;
   width: 100%;
-  background-color: #004bd3;
-  animation: SlideUpAnim .4s .4s ease-in backwards; }
+  background-color: #004bd3; }
   @media (min-width: 576px) {
     #Showcase .camera {
       height: 50vh; } }
@@ -25,7 +24,7 @@
     #Showcase .camera {
       height: 70vh; } }
   #Showcase .camera .Letter {
-    animation: FadeInLetterAnim-Overflow .4s .8s ease-in backwards; }
+    animation: FadeInLetterAnim-Overflow .4s ease-in backwards; }
     #Showcase .camera .Letter .fill-pattern {
       fill: #ffffff; }
 
@@ -40,6 +39,11 @@
     transform: translateY(200px); }
   #Showcase [data-animate="fadeLeft"] {
     transform: translateX(200px); } }
+
+#Showcase[data-redirected="true"] .camera {
+  animation: SlideUpAnim .4s .4s ease-in backwards; }
+  #Showcase[data-redirected="true"] .camera .Letter {
+    animation-delay: .8s; }
 
 #Showcase section, #Showcase footer {
   text-align: center;
@@ -121,45 +125,45 @@
     #challenge-section .description.between-showcases {
       margin-top: 150px; } }
 
-footer .consulation {
+#Showcase footer .consulation {
   width: 90%;
   padding: 10px;
   margin: 50px auto 25px auto;
   color: #ffffff; }
   @media (min-width: 768px) {
-    footer .consulation {
+    #Showcase footer .consulation {
       padding: 25px;
       margin: 100px auto 25px auto; } }
   @media (min-width: 1200px) {
-    footer .consulation {
+    #Showcase footer .consulation {
       margin: 150px auto 50px auto; } }
-  footer .consulation .container {
+  #Showcase footer .consulation .container {
     width: 100%;
     margin-top: 25px; }
     @media (min-width: 768px) {
-      footer .consulation .container {
+      #Showcase footer .consulation .container {
         margin-top: 50px; } }
-    footer .consulation .container .column {
+    #Showcase footer .consulation .container .column {
       font-weight: 700;
       text-align: left; }
       @media (min-width: 576px) {
-        footer .consulation .container .column {
+        #Showcase footer .consulation .container .column {
           width: 50%; } }
-    footer .consulation .container .next {
+    #Showcase footer .consulation .container .next {
       padding-right: 20px; }
       @media (min-width: 576px) {
-        footer .consulation .container .next {
+        #Showcase footer .consulation .container .next {
           padding-right: 50px; } }
       @media (min-width: 992px) {
-        footer .consulation .container .next {
+        #Showcase footer .consulation .container .next {
           padding-right: 100px; } }
-    footer .consulation .container .prev {
+    #Showcase footer .consulation .container .prev {
       padding-left: 20px; }
       @media (min-width: 576px) {
-        footer .consulation .container .prev {
+        #Showcase footer .consulation .container .prev {
           padding-left: 50px; } }
       @media (min-width: 992px) {
-        footer .consulation .container .prev {
+        #Showcase footer .consulation .container .prev {
           padding-left: 100px; } }
-    footer .consulation .container .content {
+    #Showcase footer .consulation .container .content {
       display: inline-block; }
