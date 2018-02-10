@@ -44,10 +44,10 @@ class Projects extends Component {
     render() {
         const { enter, letter, active } = this.state
 
-        const projectList = pages.map(({title, letter}, key) => (
+        const projectList = pages.map(({title, letter, id}, key) => (
             <Anchor
                 key={key} title={title}
-                className={`link-${key + 1}`}
+                delay={(id+1)/10}
                 letter={letter}
                 onMouse={this.updateLetter.bind(this)}
             />

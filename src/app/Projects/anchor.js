@@ -26,13 +26,15 @@ class Anchor extends Component {
     }
 
     render() {
-        const { title, className } = this.props
+        const { title, delay } = this.props
         const { activeLink } = this.state
 
         return (
             <h2
-                className={className}
                 data-active-link={activeLink}
+                style={{
+                    animationDelay: `${delay}s`
+                }}
                 onMouseEnter={this.enter.bind(this)}
                 onMouseLeave={this.leave.bind(this)}
             >

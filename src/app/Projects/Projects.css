@@ -44,14 +44,6 @@
       margin: 5px 0;
       transition: padding-left .25s ease-in-out, opacity .2s ease-in;
       animation: fadeInUpAnim .4s ease-out backwards; }
-      #Projects .content h2.link-1 {
-        animation-delay: 0.2s; }
-      #Projects .content h2.link-2 {
-        animation-delay: 0.3s; }
-      #Projects .content h2.link-3 {
-        animation-delay: 0.4s; }
-      #Projects .content h2.link-4 {
-        animation-delay: 0.5s; }
       @media (min-width: 768px) {
         #Projects .content h2 {
           margin: 10px 0; }
