@@ -12,9 +12,9 @@ export const getConfig = () => ([
             text('headphones and speakers.', 'slúchadlá a reproduktory.')
         ],
         paragraphs: [
-            text('We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.', 'lorem ipsum'),
-            text('Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.', 'lorem ipsum'),
-            text('Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.', 'lorem ipsum')
+            'We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.',
+            'Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.',
+            'Design of the page was designed to be clear and loading of the page to be fast as possible and the landing pages was designed to be representing as much as possible the given product.'
         ],
         link: '/projects/headphones',
         next: 'portfolio',
@@ -101,7 +101,6 @@ export const getPageByLink = link => {
 
 export const getListOf = prop => {
     const array = []
-
     getConfig().forEach(value => {
         if(prop in value)
             array.push(value[prop])
