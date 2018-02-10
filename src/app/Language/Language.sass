@@ -4,9 +4,12 @@
 
 #Language
     position: fixed
-    bottom: 50px
-    left: 50px
+    bottom: 25px
+    left: 20px
     z-index: 999
+    +min(md)
+        left: 50px
+        bottom: 50px
     &.black-color
         color: $dark-color
     .buttons

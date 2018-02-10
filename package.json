@@ -40,7 +40,8 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
-    "Offline fonts"
+    "Offline fonts",
+    "Create language component for mobiles and add black-color functionality"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",

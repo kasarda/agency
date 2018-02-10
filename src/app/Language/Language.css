@@ -15,9 +15,13 @@
    Navigator > div */
 #Language {
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 25px;
+  left: 20px;
   z-index: 999; }
+  @media (min-width: 768px) {
+    #Language {
+      left: 50px;
+      bottom: 50px; } }
   #Language.black-color {
     color: #000000; }
   #Language .buttons {
