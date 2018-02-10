@@ -53,6 +53,7 @@
     "Concated two config objects of pages into new service \"Pages\"",
     "Created functions getPageById, getPageByLink and getListOf for getting data from pages config object",
     "Rewrited and changed some parts of system to be much more dynamic",
-    "Updated \"react-scripts\" package from v1.1.0 to v1.1.1"
+    "Updated \"react-scripts\" package from v1.1.0 to v1.1.1",
+    "Animation delay in Projects component are on h2 elements counted in js for dynamic purpose"
   ]
 }
