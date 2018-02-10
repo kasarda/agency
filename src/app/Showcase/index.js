@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { image } from '../../services/local'
 import { getPageByLink } from '../../services/pages'
+import { setScrollablePage, resetToDefaultPage, image } from '../../services/common'
+import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 import Letter from '../Letter'
 import './Showcase.css'
-import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 
 class Showcase extends Component {
 
@@ -14,15 +14,17 @@ class Showcase extends Component {
     }
 
     animationEnd({ animationName }) {
-        if (/-Overflow/.test(animationName)) {
+        if (/-Overflow/.test(animationName))
             scrollAnimation()
-        }
     }
 
     componentDidMount() {
         scrollAnimation()
-        document.body.style.overflowY = 'visible'
-        document.documentElement.style.height = 'auto'
+        setScrollablePage()
+    }
+
+    componentWillUnmount() {
+        resetToDefaultPage()
     }
 
     render() {

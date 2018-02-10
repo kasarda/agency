@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
-import { image } from '../../services/local'
-import './Services.css'
 import { scrollAnimation } from '../../services/animation'
+import { setScrollablePage, resetToDefaultPage, image } from '../../services/common'
+import './Services.css'
+
 
 class Services extends Component {
 
     componentDidMount() {
         scrollAnimation()
-        document.body.style.overflowY = 'visible'
-        document.documentElement.style.height = 'auto'
+        setScrollablePage()
     }
 
     componentWillUnmount() {
-        window.scrollTo(0, 0)
-        document.body.style.overflowY = 'hidden'
-        document.documentElement.style.height = '100%'
-        document.querySelector('#Navigation').classList.remove('black-color')
+        resetToDefaultPage()
     }
 
     render() {

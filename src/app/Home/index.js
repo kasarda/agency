@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { image } from '../../services/local'
+import { image } from '../../services/common'
 import pages from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
