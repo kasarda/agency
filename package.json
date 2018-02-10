@@ -52,8 +52,10 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Now is Overflow animation in Showcase component trigerred only if was route redirected from Home component",
+    "Now is Overflow animation in Showcase component trigerred only if it was route redirected from Home component",
     "Fixed issue when redirect in Description component didn't push route in history",
-    "Fixed issue when in title of the some pages started title with capital letter"
+    "Fixed issue when in title of the some pages started title with capital letter",
+    "Created new common service for common functionality e.g. \"setScrollablePage\" or \"resetToDefaultPage\"",
+    "\"image\" function from service local is now in common service"
   ]
 }
