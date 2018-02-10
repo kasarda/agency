@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.7.0",
+  "version": "2.7.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -49,11 +49,5 @@
     "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": [
-    "Concated two config objects of pages into new service \"Pages\"",
-    "Created functions getPageById, getPageByLink and getListOf for getting data from pages config object",
-    "Rewrited and changed some parts of system to be much more dynamic",
-    "Updated \"react-scripts\" package from v1.1.0 to v1.1.1",
-    "Animation delay in Projects component are on h2 elements counted in js for dynamic purpose"
-  ]
+  "changelog": []
 }
