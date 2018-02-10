@@ -13,3 +13,15 @@
    Services > section > [data-animate].animate-active */
 /* Navigation > Link
    Navigator > div */
+#Language {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 999; }
+  #Language .buttons {
+    width: 60px; }
+    #Language .buttons .button {
+      font-weight: 400; }
+    #Language .buttons .divider {
+      width: 1px;
+      background-color: currentColor; }
