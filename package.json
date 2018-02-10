@@ -40,8 +40,7 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
-    "Offline fonts",
-    "Created fixed buttons for languages"
+    "Offline fonts"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -52,6 +51,12 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Fixed wrong start_url in manifest"
+    "Fixed wrong start_url in manifest",
+    "Created Language component",
+    "Created language system",
+    "Created new functions in common service",
+    "Config in pages service is now immutable",
+    "Translated some pages",
+    "Replaced preload function from preload service to common service"
   ]
 }
