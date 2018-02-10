@@ -74,44 +74,6 @@ const config = [
         link: '/projects/artech',
         next: 'headphones',
         prev: 'post'
-    },
-    {
-        id: 5,
-        title: 'speaker',
-        letter: 'H',
-        theme: 'tomato',
-        description: [
-            'We created Speaker website',
-            'for architect company',
-            'called Artech'
-        ],
-        paragraphs: [
-            'We created Speaker website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
-            'Our goal was to create modern portfolio for architecture company. We decided to create progressive web app to increase user experience and loading of the content.',
-            'The website was designed to be very simple and clear without any noise in background so user can focus on content not on less important things.'
-        ],
-        link: '/projects/speaker',
-        next: 'headphones',
-        prev: 'post'
-    },
-    {
-        id: 6,
-        title: 'lamp',
-        letter: 'R',
-        theme: 'salmon',
-        description: [
-            'We created Speaker website',
-            'for architect company',
-            'called Artech'
-        ],
-        paragraphs: [
-            'We created Speaker website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
-            'Our goal was to create modern portfolio for architecture company. We decided to create progressive web app to increase user experience and loading of the content.',
-            'The website was designed to be very simple and clear without any noise in background so user can focus on content not on less important things.'
-        ],
-        link: '/projects/lamp',
-        next: 'headphones',
-        prev: 'post'
     }
 ].sort((a, b) => a.id - b.id)
 
