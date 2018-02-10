@@ -1,6 +1,5 @@
 import inView from './view'
 
-
 export function scrollAnimation() {
     const targets = document.querySelectorAll('[data-animate]')
     const { matches } = window.matchMedia('(min-width: 768px)')
@@ -25,7 +24,6 @@ export function scrollAnimation() {
         })
     }
 }
-
 
 export function resetScrollAnimation() {
     const targets = document.querySelectorAll('[data-animate]')

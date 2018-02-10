@@ -1,6 +1,5 @@
 import React from 'react'
-import preload from '../../services/preload'
-import { text } from '../../services/common'
+import { preload, text } from '../../services/common'
 import './Description.css'
 
 function Description({ description, theme, id, onRedirect }) {
