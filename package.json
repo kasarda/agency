@@ -52,6 +52,7 @@
   ],
   "changelog": [
     "Now is Overflow animation in Showcase component trigerred only if was route redirected from Home component",
-    "Fixed issue when redirect in Description component didn't push route in history"
+    "Fixed issue when redirect in Description component didn't push route in history",
+    "Fixed issue when in title of the some pages started title with capital letter"
   ]
 }
