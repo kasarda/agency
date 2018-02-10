@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { image } from '../../services/local'
-import { getPageById } from '../../services/pages'
+import { getPageByLink } from '../../services/pages'
 import Letter from '../Letter'
 import './Showcase.css'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
@@ -41,7 +41,7 @@ class Showcase extends Component {
             prev,
             letter,
             theme
-        } = getPageById(this.props.id)
+        } = getPageByLink(this.props.match.path)
 
         return (
             <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>

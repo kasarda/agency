@@ -1,6 +1,6 @@
 const config = [
     {
-        id: 1,
+        id: 2,
         title: 'headphones',
         letter: 'H',
         theme: '#b29992',
@@ -19,7 +19,7 @@ const config = [
         prev: 'artech'
     },
     {
-        id: 2,
+        id: 1,
         title: 'Portfolio',
         letter: 'R',
         theme: '#a0978a',
@@ -82,6 +82,15 @@ export const getPageById = id => {
     let obj
     config.forEach(page => {
         if(page.id === parseFloat(id))
+            obj = page
+    })
+    return obj
+}
+
+export const getPageByLink = link => {
+    let obj
+    config.forEach(page => {
+        if(page.link === link)
             obj = page
     })
     return obj

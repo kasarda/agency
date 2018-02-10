@@ -59,7 +59,6 @@ class Projects extends Component {
                 onMouse={this.updateLetter.bind(this)}
             />
         ))
-
         return (
             <div
                 id="Projects"

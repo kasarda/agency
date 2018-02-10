@@ -34,10 +34,10 @@ class AppRouter extends Component {
                         <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
                         <Route exact path="/services" component={Services} />
                         <Route exact path="/projects" component={Projects} />
-                        <Route exact path="/projects/headphones" render={_ => <Showcase id="1" />} />
-                        <Route exact path="/projects/portfolio" render={_ => <Showcase id="2" />} />
-                        <Route exact path="/projects/post" render={_ => <Showcase id="3" />} />
-                        <Route exact path="/projects/artech" render={_ => <Showcase id="4" />} />
+                        <Route exact path="/projects/headphones" component={Showcase} />
+                        <Route exact path="/projects/portfolio" component={Showcase} />
+                        <Route exact path="/projects/post" component={Showcase} />
+                        <Route exact path="/projects/artech" component={Showcase} />
                         <Route exact path="/contacts" component={Contacts} />
                         <Route path="**" component={NotFound} />
                     </Switch>
