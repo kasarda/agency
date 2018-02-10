@@ -41,7 +41,8 @@
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
     "Offline fonts",
-    "Create language component for mobiles and add black-color functionality"
+    "Create language component for mobiles and add black-color functionality",
+    "Set tabindex on \"fake\" buttons"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
