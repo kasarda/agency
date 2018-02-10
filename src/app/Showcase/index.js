@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { image } from '../../services/local'
+import { getPageById } from '../../services/pages'
 import Letter from '../Letter'
 import './Showcase.css'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
-import getContent from './content'
 
 class Showcase extends Component {
 
@@ -41,7 +41,7 @@ class Showcase extends Component {
             prev,
             letter,
             theme
-        } = getContent(this.props.name)
+        } = getPageById(this.props.id)
 
         return (
             <div id="Showcase" onAnimationEnd={this.animationEnd.bind(this)}>
@@ -115,7 +115,7 @@ class Showcase extends Component {
                         </h4>
                         <div className="container flex justify-center">
                             <div className="column next flex justify-end">
-                                <Link to={prev ? prev : ''}>
+                                <Link to={prev || ''}>
                                     <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
                                         <span>previously</span>
                                         <h4>{prev}</h4>
@@ -123,7 +123,7 @@ class Showcase extends Component {
                                 </Link>
                             </div>
                             <div className="column prev flex justify-start">
-                                <Link to={next ? next : ''}>
+                                <Link to={next || ''}>
                                     <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
                                         <span>next</span>
                                         <h4>{next}</h4>
