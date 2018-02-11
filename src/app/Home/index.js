@@ -28,6 +28,7 @@ class Home extends Component {
             canRedirect: false,
             onFakeScroll: this.onFakeScroll.bind(this),
             onTouchStart: this.onTouchStart.bind(this),
+            onArrow: this.onArrow.bind(this),
             startPos: null
         }
     }
@@ -167,6 +168,13 @@ class Home extends Component {
         }
 
     }
+    onArrow({ keyCode }) {
+        if(keyCode === 39)
+            this.setPage('next')
+
+        if(keyCode === 37)
+            this.setPage('prev')
+    }
 
     onTouchStart({ touches }) {
         this.setState({
@@ -175,12 +183,12 @@ class Home extends Component {
     }
 
     componentWillReceiveProps() {
-        if(this.props.toHomePage)
+        if (this.props.toHomePage)
             this.toPage(0)
     }
 
     componentDidMount() {
-        const { onFakeScroll, onTouchStart } = this.state
+        const { onFakeScroll, onTouchStart, onArrow } = this.state
         document.body.dataset.preventTouch = "true"
 
         if ('onwheel' in document)
@@ -192,11 +200,12 @@ class Home extends Component {
 
         document.addEventListener('touchstart', onTouchStart, false)
         document.addEventListener('touchend', onFakeScroll, false)
+        document.addEventListener('keydown', onArrow, false)
 
     }
 
     componentWillUnmount() {
-        const { onFakeScroll, onTouchStart } = this.state
+        const { onFakeScroll, onTouchStart, onArrow } = this.state
         document.body.dataset.preventTouch = "false"
 
         document.removeEventListener('wheel', onFakeScroll)
@@ -204,6 +213,8 @@ class Home extends Component {
         document.removeEventListener('DOMMouseScroll', onFakeScroll)
         document.removeEventListener('touchstart', onTouchStart)
         document.removeEventListener('touchend', onFakeScroll)
+        document.removeEventListener('keydown', onArrow)
+
     }
 
     render() {
