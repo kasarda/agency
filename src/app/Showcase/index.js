@@ -71,7 +71,7 @@ class Showcase extends Component {
 
                 <section id="challenge-section">
                     <div className="description">
-                        <h3 data-animate="fadeUp">Challenge</h3>
+                        <h3 data-animate="fadeUp">{text('Challenge', 'Výzva')}</h3>
                         <p data-animate="fadeUp" data-offset="100">
                             {paragraphs[1]}
                         </p>
@@ -124,7 +124,7 @@ class Showcase extends Component {
                             <div className="column prev flex justify-start">
                                 <Link to={next || ''}>
                                     <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
-                                        <span>{text('next', 'další')}</span>
+                                        <span>{text('next', 'ďalší ')}</span>
                                         <h4>{next}</h4>
                                     </div>
                                 </Link>

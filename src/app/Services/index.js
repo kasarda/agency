@@ -48,7 +48,7 @@ class Services extends Component {
                         <p data-animate="fadeUp" data-offset="100">
                             {text(
                                 'We are also creating web app with HTML5, CSS3, JavaScript and Node. Our web app are fully responsive and supported by all major browsers. We can create standart web page, single page app or even progressive web app.',
-                                'Taktiež vytvárame web aplikácie pomocou HTML5, CSS3, JavaScriptu a Nodu. Naše web aplikácie sú plne responzívne a funkčné na všetkých popredných prehliadačoch. Vytvárame štandartné web aplkácie, SPA alebo PWA aplikácie.'
+                                'Taktiež vytvárame web aplikácie pomocou HTML5, CSS3, JavaScriptu a Nodu. Naše web aplikácie sú plne responzívne a funkčné na všetkých popredných prehliadačoch. Vytvárame štandardné web aplikácie, SPA alebo PWA aplikácie.'
                             )}
                         </p>
                     </div>
