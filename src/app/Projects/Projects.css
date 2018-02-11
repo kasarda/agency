@@ -47,9 +47,9 @@
       @media (min-width: 768px) {
         #Projects .content h2 {
           margin: 10px 0; }
-          #Projects .content h2:hover {
+          #Projects .content h2:hover, #Projects .content h2:focus {
             padding-left: 50px; }
-          #Projects .content h2:hover::before {
+          #Projects .content h2:hover::before, #Projects .content h2:focus::before {
             width: 40px; } }
       @media (min-width: 992px) {
         #Projects .content h2 {
