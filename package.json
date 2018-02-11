@@ -40,8 +40,7 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
-    "Offline fonts",
-    "Control fakeScroll with arrows on keyboard"
+    "Offline fonts"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -54,6 +53,7 @@
   ],
   "changelog": [
     "Fixed problem with black-color in showcase when link was redirected from home component",
-    "Created Icon component"
+    "Created Icon component",
+    "Pages in Home component can now be controlled by arrows on keyboard"
   ]
 }
