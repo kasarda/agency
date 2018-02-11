@@ -53,6 +53,7 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Fixed problem with black-color in showcase when link was redirected from home component"
+    "Fixed problem with black-color in showcase when link was redirected from home component",
+    "Created Icon component"
   ]
 }
