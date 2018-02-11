@@ -39,6 +39,11 @@ class AppRouter extends Component {
         if (/-Reset/.test(animationName))
             target.style.animation = 'none'
     }
+    onHomePageTriggered() {
+        this.setState({
+            toHomePage: false
+        })
+    }
 
     render() {
         const links = getListOf('link')
@@ -48,7 +53,7 @@ class AppRouter extends Component {
                     <Navigation onHomePage={this.onHomePage.bind(this)} />
                     <Language onLanguage={this.onLanguage.bind(this)} />
                     <Switch>
-                        <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
+                        <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} onHomePageTriggered={this.onHomePageTriggered.bind(this)} />} />
                         <Route exact path="/services" component={Services} />} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/contacts" component={Contacts} />

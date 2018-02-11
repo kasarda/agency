@@ -182,9 +182,11 @@ class Home extends Component {
         })
     }
 
-    componentWillReceiveProps() {
-        if (this.props.toHomePage)
+    componentWillReceiveProps({ toHomePage }) {
+        if (toHomePage){
             this.toPage(0)
+            this.props.onHomePageTriggered()
+        }
     }
 
     componentDidMount() {
