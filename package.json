@@ -39,7 +39,8 @@
   "todo": [
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
-    "Offline fonts"
+    "Offline fonts",
+    "Add new hover animation for social links and language button"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
