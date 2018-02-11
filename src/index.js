@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
-import { preload, getLang } from './services/common'
+import { preload, getLang, activeInWrapper } from './services/common'
 import './index.css'
 import { version } from '../package.json'
 
@@ -17,7 +17,7 @@ document.documentElement.lang = getLang()
  *
  */
 
- preload(
+preload(
     'project1.jpg',
     'project2.jpg',
     'project3.jpg',
@@ -45,8 +45,8 @@ document.addEventListener('touchmove', event => {
     if (canPrevent)
         event.preventDefault()
 }, {
-    passive: false
-})
+        passive: false
+    })
 
 
 /**
@@ -54,27 +54,12 @@ document.addEventListener('touchmove', event => {
  * Set to navigation black color on scrollable component
  * And activated scroll animation
  */
-window.addEventListener('scroll', _ => {
-
-    const nav = document.querySelector('#Navigation')
-    const wrapper = document.querySelector('[data-active-navigation]')
-
-    if (wrapper && nav) {
-        const position = document.documentElement.scrollTop || document.body.scrollTop
-        const wrapperHeight = wrapper.offsetHeight
-        const marginTop = parseFloat(getComputedStyle(nav).marginTop) || 0
-
-        if (position >= wrapperHeight - marginTop)
-            nav.classList.add('black-color')
-
-        else
-            nav.classList.remove('black-color')
-    }
-
+function scrollListener() {
+    activeInWrapper()
     scrollAnimation()
-
-})
-
+}
+window.addEventListener('scroll', scrollListener)
+scrollListener()
 
 
 /**

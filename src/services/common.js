@@ -1,8 +1,31 @@
 import { path } from './local'
 
+
+export const activeInWrapper = () => {
+    const wrapper = document.querySelector('[data-active-navigation]')
+    const position = document.documentElement.scrollTop || document.body.scrollTop
+
+    if (wrapper) {
+        const elements = document.querySelectorAll('#Language, #Navigation')
+
+        elements.forEach(element => {
+            const { height } = wrapper.getBoundingClientRect()
+
+            const wrapperView = wrapper.offsetTop + height
+            const elementView = element.offsetTop + position
+
+            if (elementView > wrapperView)
+                element.classList.add('black-color')
+            else
+                element.classList.remove('black-color')
+        })
+    }
+}
+
 export const setScrollablePage = () => {
     document.body.style.overflowY = 'visible'
     document.documentElement.style.height = 'auto'
+    activeInWrapper()
 }
 
 export const resetToDefaultPage = () => {
@@ -10,6 +33,7 @@ export const resetToDefaultPage = () => {
     document.body.style.overflowY = 'hidden'
     document.documentElement.style.height = '100%'
     document.querySelector('#Navigation').classList.remove('black-color')
+    document.querySelector('#Language').classList.remove('black-color')
 }
 
 export const image = (name, css = false) => {

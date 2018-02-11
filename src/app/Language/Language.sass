@@ -1,6 +1,5 @@
 @import "ts-modules/lib"
 @import "theme.sass"
-@import "animation.sass"
 
 #Language
     position: fixed
@@ -10,12 +9,10 @@
     +min(md)
         left: 50px
         bottom: 50px
+    +maxHeight(500px)
+        bottom: 25px
     &.black-color
         color: $dark-color
-    .buttons
-        width: 60px
-        .button
-            font-weight: $regular
-        .divider
-            width: 1px
-            background-color: currentColor
+    .button
+        font-weight: $bold
+        text-transform: uppercase

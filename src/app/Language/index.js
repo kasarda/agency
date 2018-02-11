@@ -18,20 +18,14 @@ class Language extends Component {
 
     render() {
         const { language } = this.state
+        const nextLang = language === 'en' ? 'sk' : 'en'
         return (
             <div id="Language">
-                <div className="buttons flex justify-between">
-                    <div
-                        onClick={this.onClick.bind(this, 'en')}
-                        className={`button primary-hover ${language === 'en' && 'active'}`}
-                        role="button">EN</div>
-
-                    <div className="divider"></div>
-
-                    <div
-                        onClick={this.onClick.bind(this, 'sk')}
-                        className={`button primary-hover ${language === 'sk' && 'active'}`}
-                        role="button">SK</div>
+                <div
+                    onClick={this.onClick.bind(this, nextLang)}
+                    className="button primary-hover"
+                    role="button">
+                    {nextLang}
                 </div>
             </div>
         )

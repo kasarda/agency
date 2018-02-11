@@ -7,12 +7,6 @@
   * Copyright (c) 2017-Present, Filip Kasarda
   *
   * */
-/* Contacts > .init-animation
-   Form > .init-animation */
-/* Showcase > .wrapper > [data-animate].animate-active
-   Services > section > [data-animate].animate-active */
-/* Navigation > Link
-   Navigator > div */
 #Language {
   position: fixed;
   bottom: 25px;
@@ -22,12 +16,11 @@
     #Language {
       left: 50px;
       bottom: 50px; } }
+  @media (max-height: 500px) {
+    #Language {
+      bottom: 25px; } }
   #Language.black-color {
     color: #000000; }
-  #Language .buttons {
-    width: 60px; }
-    #Language .buttons .button {
-      font-weight: 400; }
-    #Language .buttons .divider {
-      width: 1px;
-      background-color: currentColor; }
+  #Language .button {
+    font-weight: 700;
+    text-transform: uppercase; }
