@@ -459,8 +459,6 @@ form input, form textarea {
   font-family: "Montserrat", sans-serif;
   resize: vertical;
   transition: border-color .15s ease-in; }
-  form input:invalid:focus, form textarea:invalid:focus {
-    border-color: #d30000; }
   form input:focus, form textarea:focus {
     border-color: #004bd3;
     outline: none; }

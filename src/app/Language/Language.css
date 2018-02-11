@@ -11,7 +11,7 @@
   position: fixed;
   bottom: 25px;
   left: 20px;
-  z-index: 999;
+  z-index: 1000;
   transition: color .4s ease-out; }
   @media (min-width: 768px) {
     #Language {
