@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getPageByLink } from '../../services/pages'
-import { setScrollablePage, resetToDefaultPage, image } from '../../services/common'
+import { setScrollablePage, resetToDefaultPage, image, activeInWrapper } from '../../services/common'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 import Letter from '../Letter'
 import './Showcase.css'
@@ -14,8 +14,10 @@ class Showcase extends Component {
     }
 
     animationEnd({ animationName }) {
-        if (/-Overflow/.test(animationName))
+        if (/-Overflow/.test(animationName)) {
             scrollAnimation()
+            activeInWrapper()
+        }
     }
 
     componentDidMount() {

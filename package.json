@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.9.0",
+  "version": "2.9.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -41,7 +41,8 @@
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
     "Offline fonts",
-    "Set tabindex on \"fake\" buttons"
+    "Set tabindex on \"fake\" buttons",
+    "Created new interactive animations"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
