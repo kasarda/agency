@@ -53,15 +53,6 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Fixed wrong start_url in manifest",
-    "Created Language component",
-    "Created language system",
-    "Created new functions in common service",
-    "Config in pages service is now immutable",
-    "Translated some pages",
-    "Replaced preload function from preload service to common service",
-    "Created new function \"activeInWrapper\" which set class \"black-color\" for elements which are not in the wrapper",
-    "Added xmlns attribute in index.html for svg element where are letters",
-    "Removed svg icon \"icon-mouse\" because this icon was never used"
+    "Fixed problem with black-color in showcase when link was redirected from home component"
   ]
 }
