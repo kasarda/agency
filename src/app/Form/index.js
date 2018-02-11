@@ -53,7 +53,7 @@ class Form extends Component {
                     <Icon name="arrow-right" className="primary-hover anim anim-1" onClick={this.close.bind(this)} />
                     <h3>
                         <div className="anim anim-2">{text('Send', 'Pošli')}</div>
-                        <div className="anim anim-3">{text('a message', 'nám správu')}</div>
+                        <div className="anim anim-3">{text('a message', 'správu')}</div>
                     </h3>
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
                         <input className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email')} required />

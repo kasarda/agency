@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getPageByLink } from '../../services/pages'
-import { setScrollablePage, resetToDefaultPage, image, activeInWrapper } from '../../services/common'
+import { setScrollablePage, resetToDefaultPage, image, activeInWrapper, text } from '../../services/common'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 import Letter from '../Letter'
 import './Showcase.css'
@@ -110,13 +110,13 @@ class Showcase extends Component {
                         backgroundColor: theme
                     }}>
                         <h4 className="inline-block primary-hover">
-                            <a>Visit Website</a>
+                            <a>{text('Visit Website', 'Navštíviť stránku')}</a>
                         </h4>
                         <div className="container flex justify-center">
                             <div className="column next flex justify-end">
                                 <Link to={prev || ''}>
                                     <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
-                                        <span>previously</span>
+                                        <span>{text('previously', 'predošlí')}</span>
                                         <h4>{prev}</h4>
                                     </div>
                                 </Link>
@@ -124,7 +124,7 @@ class Showcase extends Component {
                             <div className="column prev flex justify-start">
                                 <Link to={next || ''}>
                                     <div className="content primary-hover" onClick={this.scrollUp.bind(this)}>
-                                        <span>next</span>
+                                        <span>{text('next', 'další')}</span>
                                         <h4>{next}</h4>
                                     </div>
                                 </Link>
