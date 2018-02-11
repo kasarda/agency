@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.10.0",
+  "version": "2.10.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -47,11 +47,5 @@
     "Optimize animation, analyze performance, create alternative for slow devices",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": [
-    "Fixed problem with black-color in showcase when link was redirected from home component",
-    "Created Icon component",
-    "Pages in Home component can now be controlled by arrows on keyboard",
-    "Added animations on text when language is changed",
-    "Every text is now translated"
-  ]
+  "changelog": []
 }
