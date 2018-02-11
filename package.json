@@ -39,22 +39,19 @@
   "todo": [
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
-    "Translate texts",
     "Offline fonts"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
-    "Show user on mobile something to scroll down, e.g. instead of mouse use finger icon",
     "Fix bug with letters when pattern goes where should not go",
     "Optimize animation, analyze performance, create alternative for slow devices",
-    "Fixed problem with .column width in .wrap in Home component, width is longer then screen because of margin",
-    "Set tabindex on \"fake\" buttons",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
     "Fixed problem with black-color in showcase when link was redirected from home component",
     "Created Icon component",
     "Pages in Home component can now be controlled by arrows on keyboard",
-    "Added animations on text when language is changed"
+    "Added animations on text when language is changed",
+    "Every text is now translated"
   ]
 }
