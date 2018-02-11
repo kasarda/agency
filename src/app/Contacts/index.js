@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { text } from '../../services/common'
 import Letter from '../Letter'
 import Form from '../Form'
+import Icon from '../Icon'
 import './Contacts.css'
 
 class Contacts extends Component {
@@ -69,21 +70,15 @@ class Contacts extends Component {
 
                         <div className="icons flex justify-between">
                             <a className="primary-hover anim anim-6" href="https://www.instagram.com">
-                                <svg width="18" height="18" viewBox="0 0 24 24">
-                                    <use className="fill-light-color" xlinkHref="#icon-instagram" />
-                                </svg>
+                                <Icon name="instagram" light/>
                             </a>
 
                             <a className="primary-hover anim anim-7" href="https://www.twitter.com">
-                                <svg width="18" height="18" viewBox="0 0 24 24">
-                                    <use className="fill-light-color" xlinkHref="#icon-twitter" />
-                                </svg>
+                                <Icon name="twitter" light />
                             </a>
 
                             <a className="primary-hover anim anim-8" href="https://www.youtube.com">
-                                <svg width="18" height="18" viewBox="0 0 24 24">
-                                    <use className="fill-light-color" xlinkHref="#icon-youtube" />
-                                </svg>
+                                <Icon name="youtube" light />
                             </a>
                         </div>
                     </div>

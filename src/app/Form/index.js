@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { text } from '../../services/common'
+import Icon from '../Icon'
 import './Form.css'
 
 class Form extends Component {
@@ -49,13 +50,7 @@ class Form extends Component {
             >
                 <div onClick={this.close.bind(this)} className="row disabled-container"></div>
                 <div className="row form flex justify-center direction-col">
-                    <svg
-                        width="18" height="18" viewBox="0 0 24 24"
-                        className="primary-hover anim anim-1"
-                        onClick={this.close.bind(this)}
-                    >
-                        <use xlinkHref="#icon-arrow-right" />
-                    </svg>
+                    <Icon name="arrow-right" className="primary-hover anim anim-1" onClick={this.close.bind(this)} />
                     <h3>
                         <div className="anim anim-2">{text('Send', 'Pošli')}</div>
                         <div className="anim anim-3">{text('a message', 'nám správu')}</div>

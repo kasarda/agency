@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { isPath } from '../../services/local'
 import { text } from '../../services/common'
+import Icon from '../Icon'
 import './Navigation.css'
 
 
@@ -10,9 +11,7 @@ function Link({ to, name, icon }) {
         <NavLink exact to={to}>
             <span className="hidden-sm-down">{name}</span>
             <span className="hidden-md-up">
-                <svg width="18" height="18" viewBox="0 0 24 24">
-                    <use className="icon" xlinkHref={'#' + icon} />
-                </svg>
+                <Icon name={icon}/>
             </span>
         </NavLink>
     )
@@ -30,9 +29,9 @@ function Navigation({ onHomePage }) {
                     }
                 </div>
                 <div className="column links link flex justify-end align-center">
-                    <Link to="/services" name={text('services', 'servis')} icon="icon-gear" />
-                    <Link to="/projects" name={text('projects', 'projekty')} icon="icon-project" />
-                    <Link to="/contacts" name={text('contacts', 'kontakt')} icon="icon-mail" />
+                    <Link to="/services" name={text('services', 'servis')} icon="gear" />
+                    <Link to="/projects" name={text('projects', 'projekty')} icon="project" />
+                    <Link to="/contacts" name={text('contacts', 'kontakt')} icon="mail" />
                 </div>
             </div>
         </div >
