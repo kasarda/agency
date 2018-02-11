@@ -41,8 +41,7 @@
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Translate texts",
     "Offline fonts",
-    "Set tabindex on \"fake\" buttons",
-    "Created new interactive animations"
+    "Set tabindex on \"fake\" buttons"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
