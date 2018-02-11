@@ -14,6 +14,8 @@ class Language extends Component {
     onClick(language) {
         this.setState({ language })
         this.props.onLanguage(language)
+        document.querySelectorAll('.test-anim').forEach(elem => elem.style.animation = 'XXX .4s ease-out')
+
     }
 
     render() {

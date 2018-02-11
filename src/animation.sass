@@ -519,6 +519,14 @@ $fadeIn-up-items-delays: (1: .4, 2: .5, 3: .6, 4: .7, 5: .8, 6: .9, 7: 1, 8: 1.1
         from
             opacity: 0
 
+    @keyframes fadeInMoveIn-Reset
+        from
+            opacity: 0
+            left: -20px
+        to
+            opacity: 1
+            left: 0
+
 //? Prebuild
 =delay($val)
     transition-delay: $val

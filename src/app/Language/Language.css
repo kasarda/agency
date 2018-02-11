@@ -25,3 +25,9 @@
   #Language .button {
     font-weight: 700;
     text-transform: uppercase; }
+
+.language-item {
+  position: relative; }
+
+#Navigation .language-item {
+  position: static; }

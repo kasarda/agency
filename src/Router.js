@@ -32,15 +32,21 @@ class AppRouter extends Component {
         this.setState({ language })
         document.documentElement.lang = language
         window.localStorage.setItem('lang', language)
+        document.querySelectorAll('.language-item').forEach(elem => elem.style.animation = 'fadeInMoveIn-Reset .4s ease-out')
+    }
+
+    animationEnd({ animationName, target }) {
+        if (/-Reset/.test(animationName))
+            target.style.animation = 'none'
     }
 
     render() {
         const links = getListOf('link')
         return (
             <RouterType basename={baseName}>
-                <div id="outlet">
-                    <Navigation onHomePage={this.onHomePage.bind(this)}/>
-                    <Language onLanguage={this.onLanguage.bind(this)}/>
+                <div id="outlet" onAnimationEnd={this.animationEnd.bind(this)}>
+                    <Navigation onHomePage={this.onHomePage.bind(this)} />
+                    <Language onLanguage={this.onLanguage.bind(this)} />
                     <Switch>
                         <Route exact path="/" render={_ => <Home toHomePage={this.state.toHomePage} />} />
                         <Route exact path="/services" component={Services} />} />

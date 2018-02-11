@@ -56,8 +56,8 @@ class Form extends Component {
                         <div className="anim anim-3">{text('a message', 'správu')}</div>
                     </h3>
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
-                        <input className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email')} required />
-                        <textarea className="anim anim-5" name="message" placeholder={text('Message', 'Správa')} required></textarea>
+                        <input className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email', true)} required />
+                        <textarea className="anim anim-5" name="message" placeholder={text('Message', 'Správa', true)} required></textarea>
                         <div className="anim anim-6">
                             <div className="primary-button button outline-color">
                                 <button type="submit">{text('Send Message', 'Odoslať Správu')}</button>

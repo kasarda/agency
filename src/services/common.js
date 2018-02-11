@@ -1,5 +1,5 @@
 import { path } from './local'
-
+import React from 'react'
 
 export const activeInWrapper = () => {
     const wrapper = document.querySelector('[data-active-navigation]')
@@ -42,15 +42,21 @@ export const image = (name, css = false) => {
 }
 
 const storageLang = window.localStorage.getItem('lang')
-export const getLang = () =>  storageLang ? storageLang : (window.navigator.language.includes('sk') ? 'sk' : 'en')
+export const getLang = () => storageLang ? storageLang : (window.navigator.language.includes('sk') ? 'sk' : 'en')
 
-export const text = (primary, seconadry) => document.documentElement.lang === 'sk' ? seconadry : primary
+export const text = (primary, seconadry, onlyText) => {
+    const content = document.documentElement.lang === 'sk' ? seconadry : primary
+    if (onlyText)
+        return content
+
+    return <span className="language-item">{content}</span>
+}
 
 export const preload = (...images) => {
 
     images.forEach(image => {
         const link = document.createElement('link')
-        link.href = path(require('../images/'+image))
+        link.href = path(require('../images/' + image))
         link.rel = 'preload'
         link.as = 'image'
         document.head.appendChild(link)
