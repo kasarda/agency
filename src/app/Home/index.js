@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { image, text, setTitle } from '../../services/common'
-import { getConfig } from '../../services/pages'
+import { getConfig, getPageById } from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
@@ -228,6 +228,8 @@ class Home extends Component {
             redirect, canRedirect, link
         } = this.state
 
+        const { fallbackTheme } = getPageById(renderImage || 1)
+
         const url = renderImage > 0 ? image(`project${renderImage}.jpg`, true) : null
 
         if (canRedirect)
@@ -261,7 +263,7 @@ class Home extends Component {
                         <div className="rule">
                             <div
                                 className="background"
-                                style={{ backgroundImage: url }}>
+                                style={{ backgroundImage: url, backgroundColor: fallbackTheme }}>
                             </div>
                         </div>
                         <h1>

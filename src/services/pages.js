@@ -6,6 +6,7 @@ export const getConfig = () => ([
         title: 'headphones',
         letter: 'H',
         theme: '#b29992',
+        fallbackTheme: '#d2c7c3',
         description: [
             text('We created a fast E-shop', 'Vytvorili sme rýchly E-shop'),
             text('which provide quality', 'ktorý ponúka kvalitné'),
@@ -36,6 +37,7 @@ export const getConfig = () => ([
         title: 'portfolio',
         letter: 'R',
         theme: '#a0978a',
+        fallbackTheme: '#ddc6a6',
         description: [
             text('We created a portfolio', 'Vytvorili sme portfólio'),
             text('page for the designer', 'pre dizajnéra'),
@@ -66,6 +68,7 @@ export const getConfig = () => ([
         title: 'post',
         letter: 'P',
         theme: '#a9998e',
+        fallbackTheme: '#6a4745',
         description: [
             text('We created a clever social', 'Vytvorili sme chytrú sociálnu'),
             text('network for sharing', 'sieť na zdieľanie príspevkov,'),
@@ -94,6 +97,7 @@ export const getConfig = () => ([
         title: 'artech',
         letter: 'T',
         theme: '#c1ab9e',
+        fallbackTheme: '#d8cbbb',
         description: [
             text('We created business website', 'Vytvorili sme obchodnú stránku'),
             text('for architect company', 'pre architektonickú spoločnosť'),
