@@ -8,7 +8,11 @@ class Form extends Component {
     constructor() {
         super()
         this.state = {
-            close: false
+            close: false,
+            emailValidation: null,
+            messageValidation: null,
+            dirtyEmail: false,
+            dirtyMessage: false
         }
     }
 
@@ -27,8 +31,79 @@ class Form extends Component {
 
     submit(event) {
         event.preventDefault()
-        this.props.onSend()
-        this.close.call(this)
+        const { email, message } = this.refs
+
+        const isEmailValid = this.emailValidation(email)
+        const isMessageValid = this.messageValidation(message)
+
+
+        if(isEmailValid && isMessageValid) {
+            this.props.onSend()
+            this.close.call(this)
+        }
+        else {
+            this.setState({ dirtyEmail: true, dirtyMessage: true })
+            if(!isEmailValid)
+                email.focus()
+            else
+                message.focus()
+        }
+    }
+
+    onBlur({ target }) {
+        if(!this.state.dirtyEmail && target.name === 'email') {
+            this.setState({ dirtyEmail: true })
+            this.emailValidation(target)
+        }
+
+        if(!this.state.dirtyMessage && target.name === 'message') {
+            this.setState({ dirtyMessage: true })
+            this.messageValidation(target)
+        }
+    }
+
+
+    onInput({ target }) {
+        if(this.state.dirtyEmail && target.name === 'email')
+            this.emailValidation(target)
+
+        if(this.state.dirtyMessage && target.name === 'message')
+            this.messageValidation(target)
+    }
+
+
+    emailValidation({ value }) {
+        // eslint-disable-next-line
+        const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        let validation = null
+
+        if(!value.length)
+            validation = text('Email shoudn\'t be empty', 'Email nemôže byť prázdny')
+
+
+        else if(!pattern.test(value))
+            validation = text('Incorrect email', 'Nesprávny email')
+
+        this.setState({ emailValidation: validation })
+        return validation === null
+    }
+
+    messageValidation({ value }) {
+        const { length } = value.replace(/\n/gm, '')
+        const max = 270
+        let validation = null
+
+        if(!length)
+            validation = text('Message shoudn\'t be empty', 'Správa nemôže byť prázdna')
+
+        else if(length < 10)
+            validation = text(`Message musst have at least 10 charakters and you have ${length}`, `Správa musí mať aspoň 10 znakov, ty máš ${length}`)
+
+        else if(length > max)
+            validation = text(`Message can have max ${max} charakters and you have ${length}`, `Správa môže mať maximálne ${max} znakov, ty máš ${length}`)
+
+        this.setState({ messageValidation: validation })
+        return validation === null
     }
 
     componentDidMount() {
@@ -40,7 +115,7 @@ class Form extends Component {
     }
 
     render() {
-        const { close } = this.state
+        const { close, messageValidation, emailValidation } = this.state
         return (
             <div
                 id="Form"
@@ -55,9 +130,13 @@ class Form extends Component {
                         <div className="anim anim-2">{text('Send', 'Pošli')}</div>
                         <div className="anim anim-3">{text('a message', 'správu')}</div>
                     </h3>
-                    <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col">
-                        <input className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email', true)} required />
-                        <textarea className="anim anim-5" name="message" placeholder={text('Message', 'Správa', true)} required></textarea>
+
+
+                    <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col" noValidate>
+                        <span className="validation">{emailValidation}</span>
+                        <input ref="email" onInput={this.onInput.bind(this)} onBlur={this.onBlur.bind(this)} className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email', true)} />
+                        <span className="validation">{messageValidation}</span>
+                        <textarea ref="message" onInput={this.onInput.bind(this)} onBlur={this.onBlur.bind(this)} className="anim anim-5" name="message" placeholder={text('Message', 'Správa', true)} maxLength="270"></textarea>
                         <div className="anim anim-6">
                             <div className="primary-button button outline-color">
                                 <button type="submit">{text('Send Message', 'Odoslať Správu')}</button>

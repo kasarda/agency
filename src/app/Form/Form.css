@@ -46,6 +46,8 @@
     @media (min-width: 1200px) {
       #Form .disabled-container {
         width: 62%; } }
+  #Form .validation {
+    color: #004bd3; }
   #Form h3 {
     margin-top: 0; }
   #Form .button {
