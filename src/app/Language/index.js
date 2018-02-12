@@ -25,7 +25,8 @@ class Language extends Component {
             <div id="Language">
                 <div
                     onClick={this.onClick.bind(this, nextLang)}
-                    className="button primary-hover"
+                    className="button secondary-hover"
+                    data-text={nextLang}
                     role="button">
                     {nextLang}
                 </div>

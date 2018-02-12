@@ -576,6 +576,19 @@ button, [role="button"] {
   .primary-hover.active {
     cursor: default; }
 
+.secondary-hover {
+  position: relative;
+  transition: transform .15s ease-in-out;
+  transform: translateY(0px); }
+  .secondary-hover:hover {
+    transform: translateY(-100%); }
+  .secondary-hover::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: .5; }
+
 ::selection {
   background-color: rgba(255, 255, 255, 0.3); }
 

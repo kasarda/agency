@@ -12,7 +12,8 @@
   bottom: 25px;
   left: 20px;
   z-index: 1000;
-  transition: color .4s ease-out; }
+  transition: color .4s ease-out;
+  overflow: hidden; }
   @media (min-width: 768px) {
     #Language {
       left: 50px;
