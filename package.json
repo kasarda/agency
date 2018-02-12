@@ -50,6 +50,7 @@
   ],
   "changelog": [
     "Added default background color for rule background element in Home component, This background color has origin as fallbackTheme property in pages config",
-    "Now if the Form is active and device has maximum width XS, the Language button will be had dark color"
+    "Now if the Form is active and device has maximum width XS, the Language button will be had dark color",
+    "Removed unused danger color from the theme"
   ]
 }
