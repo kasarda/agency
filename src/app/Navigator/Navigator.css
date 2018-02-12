@@ -29,16 +29,19 @@
       bottom: 25px; } }
   #Navigator .buttons {
     width: 170px;
-    font-weight: 700; }
+    font-weight: 700;
+    overflow: hidden; }
     #Navigator .buttons div {
       position: relative;
-      opacity: .5;
-      text-transform: uppercase;
-      transition: opacity .15s ease-in-out; }
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase; }
       #Navigator .buttons div.active {
-        opacity: 1; }
-      #Navigator .buttons div:not(.active):hover {
-        opacity: 1; }
+        color: #ffffff; }
+      #Navigator .buttons div::before {
+        opacity: 1;
+        color: #ffffff; }
+      #Navigator .buttons div:hover {
+        color: #ffffff; }
 
 [data-ready="true"] #Navigator {
   opacity: 1; }

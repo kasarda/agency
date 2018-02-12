@@ -10,7 +10,7 @@ function Link({ to, name, icon }) {
     return (
         <NavLink exact to={to}>
             <span className="hidden-sm-down secondary-hover" data-text={name}>{name}</span>
-            <span className="hidden-md-up">
+            <span className="hidden-md-up primary-hover">
                 <Icon name={icon}/>
             </span>
         </NavLink>

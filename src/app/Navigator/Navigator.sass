@@ -15,15 +15,18 @@
     .buttons
         width: 170px
         font-weight: 700
+        overflow: hidden
         div
             position: relative
-            opacity: .5
+            color: $light-transparent-color
             text-transform: uppercase
-            +hover-tran
             &.active
+                color: $light-color
+            &::before
                 opacity: 1
-            &:not(.active):hover
-                opacity: 1
+                color: $light-color
+            &:hover
+                color: $light-color
 
 [data-ready="true"]
     #Navigator

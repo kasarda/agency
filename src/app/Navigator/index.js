@@ -9,7 +9,8 @@ function Button({ id, letter, currentPage, onPage }) {
         <div
             role="button"
             aria-current={currentPage === id}
-            className={setActive}
+            className={`${setActive} secondary-hover`}
+            data-text={letter}
             onClick={_ => onPage(id)}>
             {letter}
         </div>
