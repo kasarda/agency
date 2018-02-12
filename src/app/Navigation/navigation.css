@@ -28,12 +28,7 @@
     color: #000000; }
   #Navigation a {
     padding: 0 15px;
-    cursor: pointer;
-    transition: opacity .15s ease-in-out; }
-    #Navigation a:hover, #Navigation a.active {
-      opacity: .5; }
-    #Navigation a.active {
-      cursor: default; }
+    overflow: hidden; }
   #Navigation .column {
     position: relative;
     width: 100%;
@@ -41,7 +36,8 @@
     flex-basis: 0;
     flex-grow: 1; }
   #Navigation .brand {
-    padding-left: 20px; }
+    padding-left: 20px;
+    overflow: hidden; }
     @media (min-width: 768px) {
       #Navigation .brand {
         padding-left: 50px; } }

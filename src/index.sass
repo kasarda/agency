@@ -223,18 +223,25 @@ button, [role="button"]
     display: none !important
 
 .primary-hover
-    +primary-hover
+    cursor: pointer
+    +hover-tran
+    &:hover, &.active
+        opacity: .5
+    &.active
+        cursor: default
 
 .secondary-hover
     position: relative
     transition: transform .15s ease-in-out
     transform: translateY(0px)
+    display: inline-block
     &:hover
         transform: translateY(-100%)
     &::before
         content: attr(data-text)
         +position(100%, 0, absolute)
         opacity: .5
+        cursor: pointer
 
 ::selection
     background-color: rgba(255, 255, 255, .3)
