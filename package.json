@@ -49,6 +49,7 @@
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
   "changelog": [
-    "Added default background color for rule background element in Home component, This background color has origin as fallbackTheme property in pages config"
+    "Added default background color for rule background element in Home component, This background color has origin as fallbackTheme property in pages config",
+    "Now if the Form is active and device has maximum width XS, the Language button will be had dark color"
   ]
 }
