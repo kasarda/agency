@@ -41,7 +41,6 @@
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
     "Add new hover animation for social links and language button",
-    "Change title when path is match",
     "Create License",
     "Fixe cross platform issues"
   ],
@@ -51,5 +50,7 @@
     "Optimize animation, analyze performance, create alternative for slow devices",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": []
+  "changelog": [
+    "Created title system"
+  ]
 }
