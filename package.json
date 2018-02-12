@@ -40,7 +40,8 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
-    "Fixe cross platform issues"
+    "Fixe cross platform issues",
+    "Create loader and run init animation if page is 100% prepare"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
