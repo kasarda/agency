@@ -40,7 +40,8 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
-    "Fixe cross platform issues"
+    "Fixe cross platform issues",
+    "Fixe issue with language in Form validation"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -51,6 +52,7 @@
   "changelog": [
     "Added default background color for rule background element in Home component, This background color has origin as fallbackTheme property in pages config",
     "Now if the Form is active and device has maximum width XS, the Language button will be had dark color",
-    "Removed unused danger color from the theme"
+    "Removed unused danger color from the theme",
+    "Created Validation system in Form component"
   ]
 }

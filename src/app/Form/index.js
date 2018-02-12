@@ -12,7 +12,8 @@ class Form extends Component {
             emailValidation: null,
             messageValidation: null,
             dirtyEmail: false,
-            dirtyMessage: false
+            dirtyMessage: false,
+            max: 400
         }
     }
 
@@ -78,11 +79,11 @@ class Form extends Component {
         let validation = null
 
         if(!value.length)
-            validation = text('Email shoudn\'t be empty', 'Email nemôže byť prázdny')
+            validation = ['The Email cannot be empty', 'Email nemôže byť prázdny']
 
 
         else if(!pattern.test(value))
-            validation = text('Incorrect email', 'Nesprávny email')
+            validation = ['The incorrect email', 'Nesprávny email']
 
         this.setState({ emailValidation: validation })
         return validation === null
@@ -90,17 +91,17 @@ class Form extends Component {
 
     messageValidation({ value }) {
         const { length } = value.replace(/\n/gm, '')
-        const max = 270
+        const { max } = this.state
         let validation = null
 
         if(!length)
-            validation = text('Message shoudn\'t be empty', 'Správa nemôže byť prázdna')
+            validation = ['The Message cannot be empty', 'Správa nemôže byť prázdna']
 
         else if(length < 10)
-            validation = text(`Message musst have at least 10 charakters and you have ${length}`, `Správa musí mať aspoň 10 znakov, ty máš ${length}`)
+            validation = [`The message must have at least 10 characters and you have ${length}`, `Správa musí mať aspoň 10 znakova a ty máš ${length}`]
 
         else if(length > max)
-            validation = text(`Message can have max ${max} charakters and you have ${length}`, `Správa môže mať maximálne ${max} znakov, ty máš ${length}`)
+            validation = [`The message can have a maximum of ${max} characters and you have ${length}`, `Správa môže mať maximálne ${max} znakov a ty máš ${length}`]
 
         this.setState({ messageValidation: validation })
         return validation === null
@@ -115,7 +116,7 @@ class Form extends Component {
     }
 
     render() {
-        const { close, messageValidation, emailValidation } = this.state
+        const { close, messageValidation, emailValidation, max } = this.state
         return (
             <div
                 id="Form"
@@ -131,12 +132,24 @@ class Form extends Component {
                         <div className="anim anim-3">{text('a message', 'správu')}</div>
                     </h3>
 
-
                     <form onSubmit={this.submit.bind(this)} name="message" className="flex direction-col" noValidate>
-                        <span className="validation">{emailValidation}</span>
-                        <input ref="email" onInput={this.onInput.bind(this)} onBlur={this.onBlur.bind(this)} className="anim anim-4" type="email" name="email" placeholder={text('Your Email', 'Tvoj Email', true)} />
-                        <span className="validation">{messageValidation}</span>
-                        <textarea ref="message" onInput={this.onInput.bind(this)} onBlur={this.onBlur.bind(this)} className="anim anim-5" name="message" placeholder={text('Message', 'Správa', true)} maxLength="270"></textarea>
+                        <span className="validation">{emailValidation && text(...emailValidation)}</span>
+                        <input
+                            className="anim anim-4"
+                            type="email" name="email" ref="email"
+                            placeholder={text('Your Email', 'Tvoj Email', true)}
+                            onInput={this.onInput.bind(this)}
+                            onBlur={this.onBlur.bind(this)}
+                        />
+                        <span className="validation">{messageValidation && text(...messageValidation)}</span>
+                        <textarea
+                            className="anim anim-5"
+                            name="message" ref="message"
+                            placeholder={text('Message', 'Správa', true)}
+                            maxLength={max}
+                            onInput={this.onInput.bind(this)}
+                            onBlur={this.onBlur.bind(this)}
+                        ></textarea>
                         <div className="anim anim-6">
                             <div className="primary-button button outline-color">
                                 <button type="submit">{text('Send Message', 'Odoslať Správu')}</button>
