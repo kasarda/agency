@@ -40,7 +40,6 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
-    "Add new hover animation for social links and language button",
     "Fixe cross platform issues"
   ],
   "cancel": [
@@ -51,6 +50,10 @@
   ],
   "changelog": [
     "Created title system",
-    "Created MIT License"
+    "Created MIT License",
+    "Created new css component secondary-hover",
+    "Applied secondary-hover component in Navigation, Navigator and Language component",
+    "Added new color to the theme file - $light-transparent-color",
+    "Removed mixin =primary-hover from the theme file"
   ]
 }
