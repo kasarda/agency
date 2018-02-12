@@ -40,8 +40,7 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
-    "Fixe cross platform issues",
-    "Add default bg in Side component where is background image on the right side"
+    "Fixe cross platform issues"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -49,5 +48,7 @@
     "Optimize animation, analyze performance, create alternative for slow devices",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation"
   ],
-  "changelog": []
+  "changelog": [
+    "Added default background color for rule background element in Home component, This background color has origin as fallbackTheme property in pages config"
+  ]
 }
