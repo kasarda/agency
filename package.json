@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.10.1-next",
+  "version": "2.11.0",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -40,7 +40,8 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard",
     "Offline fonts",
-    "Fixe cross platform issues"
+    "Fixe cross platform issues",
+    "Add default bg in Side component where is background image on the right side"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
