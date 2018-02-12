@@ -19,6 +19,10 @@ class Contacts extends Component {
         this.setState({
             active: value
         })
+        if(value)
+            document.body.classList.add('active-form')
+        else
+            document.body.classList.remove('active-form')
     }
 
     send() {
