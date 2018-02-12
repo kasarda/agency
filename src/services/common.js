@@ -52,6 +52,15 @@ export const text = (primary, seconadry, onlyText) => {
     return <span className="language-item">{content}</span>
 }
 
+
+export const setTitle = (primary, secondary) => {
+    if(secondary)
+        document.title = text(primary, secondary, true)
+    else
+        document.title = primary
+}
+
+
 export const preload = (...images) => {
 
     images.forEach(image => {

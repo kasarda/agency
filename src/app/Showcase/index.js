@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getPageByLink } from '../../services/pages'
-import { setScrollablePage, resetToDefaultPage, image, activeInWrapper, text } from '../../services/common'
+import { setScrollablePage, resetToDefaultPage, image, activeInWrapper, text, setTitle } from '../../services/common'
 import { scrollAnimation, resetScrollAnimation } from '../../services/animation'
 import Letter from '../Letter'
 import './Showcase.css'
@@ -39,6 +39,9 @@ class Showcase extends Component {
             next,
             prev
         } = getPageByLink(this.props.match.path)
+
+        setTitle(`${title.replace(/./, m => m.toUpperCase())} - Digital Agency`)
+
 
         const { state } = this.props.location
         const redirected = (state && state.redirected) || false

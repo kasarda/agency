@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { scrollAnimation } from '../../services/animation'
-import { setScrollablePage, resetToDefaultPage, image, text } from '../../services/common'
+import { setScrollablePage, resetToDefaultPage, image, text, setTitle } from '../../services/common'
 import './Services.css'
 
 
@@ -16,6 +16,7 @@ class Services extends Component {
     }
 
     render() {
+        setTitle('Services - Digital Agency', 'Servis - Digital Agency', true)
 
         return (
             <div id="Services">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getConfig } from '../../services/pages'
+import { setTitle } from '../../services/common'
 import Letter from '../Letter'
 import Anchor from './anchor'
 import './Projects.css'
@@ -42,6 +43,7 @@ class Projects extends Component {
     }
 
     render() {
+        setTitle('Projects - Digital Agency', 'Projekty - Digital Agency', true)
         const { enter, letter, active } = this.state
 
         const projectList = getConfig().map(({title, letter, id}, key) => (

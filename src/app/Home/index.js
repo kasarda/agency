@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { image, text } from '../../services/common'
+import { image, text, setTitle } from '../../services/common'
 import { getConfig } from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
@@ -220,6 +220,7 @@ class Home extends Component {
     }
 
     render() {
+        setTitle('Digital Agency')
         const {
             to, down, from, fromLast,
             sideReady, ready,

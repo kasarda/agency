@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { text } from '../../services/common'
+import { text, setTitle } from '../../services/common'
 import Letter from '../Letter'
 import Form from '../Form'
 import Icon from '../Icon'
@@ -40,6 +40,7 @@ class Contacts extends Component {
     }
 
     render() {
+        setTitle('Contacts - Digital Agency', 'Kontakt - Digital Agency', true)
         const { active, sended } = this.state
         return (
             <div
