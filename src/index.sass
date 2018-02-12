@@ -233,10 +233,11 @@ button, [role="button"]
 .secondary-hover
     position: relative
     transition: transform .15s ease-in-out
-    transform: translateY(0px)
+    transform: translate3d(0px, 0px, 0px)
     display: inline-block
+    will-change: transform
     &:hover
-        transform: translateY(-100%)
+        transform: translate3d(0px, -100%, 0px)
     &::before
         content: attr(data-text)
         +position(100%, 0, absolute)
