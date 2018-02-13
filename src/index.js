@@ -27,10 +27,11 @@ preload(
 
 /**
  *
- * Set [data-loaded="true"] if content is loaded
+ * Set [data-loaded="true"] if page is loaded
  *
  */
-document.addEventListener('DOMContentLoaded', _ => {
+
+window.addEventListener("load", _ => {
     document.body.dataset.loaded = true
 })
 
@@ -67,5 +68,5 @@ scrollListener()
  * Render Main Component
  *
  */
-//ReactDOM.render(<AppRouter />, document.getElementById('root'))
+ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()
