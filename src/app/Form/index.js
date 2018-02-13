@@ -98,7 +98,7 @@ class Form extends Component {
             validation = ['The Message cannot be empty', 'Správa nemôže byť prázdna']
 
         else if(length < 10)
-            validation = [`The message must have at least 10 characters and you have ${length}`, `Správa musí mať aspoň 10 znakova a ty máš ${length}`]
+            validation = [`The message must have at least 10 characters and you have ${length}`, `Správa musí mať aspoň 10 znakov a ty máš ${length}`]
 
         else if(length > max)
             validation = [`The message can have a maximum of ${max} characters and you have ${length}`, `Správa môže mať maximálne ${max} znakov a ty máš ${length}`]
