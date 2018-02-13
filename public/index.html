@@ -13,49 +13,76 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Playfair+Display" rel="stylesheet">
   <title>Digital Agency</title>
   <style type="text/css">
-    html {
-      font-size: 14px
+  body {
+    margin: 0;
+  }
+  .preloader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004bd3;
+  }
+    #loader,
+    #loader::before,
+    #loader::after {
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
     }
 
-    body:not([data-loaded="true"]) {
-      background: #004bd3;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      color: #fff;
+    #loader::before,
+    #loader::after {
+      content: '';
+      position: absolute;
     }
 
-    body:not([data-loaded="true"]) h1 {
-      font-weight: 400;
-      margin: 0;
-      text-transform: capitalize;
-      font-size: 2.500rem;
-      line-height: 2.938rem;
-      letter-spacing: .089rem;
-      animation: loader .8s alternate infinite
+    #loader {
+      position: relative;
+      width: 150px;
+      height: 150px;
     }
 
-    @keyframes loader {
-      from {
-        opacity: 1
+    #loader:before {
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    }
+
+    #loader:after {
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
       }
-      to {
-        opacity: .5
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
 
-    @media (min-width: 576px) and (min-height: 500px) {
-      body:not([data-loaded="true"]) h1 {
-        font-size: 4.188rem;
-        line-height: 4.875rem;
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
       }
-    }
-
-    @media (min-width: 768px) {
-      html {
-        font-size: 16px
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
   </style>
@@ -98,7 +125,9 @@
     </defs>
   </svg>
   <div id="root">
-    <h1>Loading</h1>
+    <div class="preloader">
+      <div id="loader"></div>
+    </div>
   </div>
 </body>
 

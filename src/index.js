@@ -57,8 +57,13 @@ scrollListener()
 *
 */
 
-window.addEventListener("load", e => {
+
+window.addEventListener("load", _ => {
     document.body.dataset.loaded = true
+})
+
+document.addEventListener('DOMContentLoaded', _ => {
     ReactDOM.render(<AppRouter />, document.getElementById('root'))
 })
+
 registerSW()
