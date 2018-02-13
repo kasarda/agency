@@ -37,7 +37,6 @@ class Form extends Component {
         const isEmailValid = this.emailValidation(email)
         const isMessageValid = this.messageValidation(message)
 
-
         if(isEmailValid && isMessageValid) {
             this.props.onSend()
             this.close.call(this)
@@ -80,7 +79,6 @@ class Form extends Component {
 
         if(!value.length)
             validation = ['The Email cannot be empty', 'Email nemôže byť prázdny']
-
 
         else if(!pattern.test(value))
             validation = ['The incorrect email', 'Nesprávny email']
