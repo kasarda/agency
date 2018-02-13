@@ -24,17 +24,6 @@ preload(
     'project4.jpg'
 )
 
-
-/**
- *
- * Set [data-loaded="true"] if page is loaded
- *
- */
-
-window.addEventListener("load", _ => {
-    document.body.dataset.loaded = true
-})
-
 /**
  *
  * Prevent default behavior of scrolling on touch devices,
@@ -49,7 +38,6 @@ document.addEventListener('touchmove', event => {
         passive: false
     })
 
-
 /**
  *
  * Set to navigation black color on scrollable component
@@ -62,11 +50,15 @@ function scrollListener() {
 window.addEventListener('scroll', scrollListener)
 scrollListener()
 
-
 /**
- *
- * Render Main Component
- *
- */
-ReactDOM.render(<AppRouter />, document.getElementById('root'))
+*
+* Set [data-loaded="true"] if page is loaded
+* Render Main Component
+*
+*/
+
+window.addEventListener("load", e => {
+    document.body.dataset.loaded = true
+    ReactDOM.render(<AppRouter />, document.getElementById('root'))
+})
 registerSW()
