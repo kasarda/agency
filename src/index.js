@@ -67,5 +67,5 @@ scrollListener()
  * Render Main Component
  *
  */
-ReactDOM.render(<AppRouter />, document.getElementById('root'))
+//ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()
