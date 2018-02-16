@@ -13,7 +13,7 @@ document.documentElement.lang = getLang()
 
 /**
  *
- * Preload main images
+ * Preload main images and offline fonts
  *
  */
 
@@ -23,6 +23,21 @@ preload(
     'project3.jpg',
     'project4.jpg'
 )
+
+if(!window.navigator.onLine)
+    require('./fonts/fonts.css')
+
+
+/**
+*
+* Set [data-loaded="true"] if page is loaded
+*
+*/
+window.addEventListener("load", _ => {
+    document.body.dataset.loaded = true
+    // Hack for IE to call CSSOM rendering
+    document.documentElement.lang = getLang()
+})
 
 /**
  *
@@ -52,18 +67,8 @@ scrollListener()
 
 /**
 *
-* Set [data-loaded="true"] if page is loaded
 * Render Main Component
 *
 */
-
-
-window.addEventListener("load", _ => {
-    document.body.dataset.loaded = true
-    // Hack for IE to call CSSOM rendering
-    document.documentElement.lang = getLang()
-})
-
-
 ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()
