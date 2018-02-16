@@ -49,7 +49,7 @@ function Letter({ id, letter }) {
 
                 <mask
                     maskUnits="userSpaceOnUse"
-                    id="letter-shape-C">
+                    id={`letter-shape-${letter}`}>
                     <g
                         className="stroke-light-color"
                         style={{ strokeWidth: 80, opacity: 1 }}>
