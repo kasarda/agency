@@ -30,7 +30,6 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Offline fonts",
     "Fixe cross platform issues"
   ],
   "cancel": [
@@ -44,6 +43,7 @@
   "changelog": [
     "Now pages in the Home component can also be controlled by arrow up and down on keyboard",
     "Created better noscript experience",
-    "Added prefixs for inline styles"
+    "Added prefixs for inline styles",
+    "Added support for offline fonts when connection is lost"
   ]
 }
