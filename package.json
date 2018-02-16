@@ -34,7 +34,8 @@
     "Increase Audit score",
     "Create new design of favicon (for splash screen)",
     "Control pages with swaping from left to right and reverse",
-    "Added new alt text and added alt in the Services component for images"
+    "Added new alt text and added alt in the Services component for images",
+    "Fixe hover in navigator when opacity: 1 is applied on not generated content"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
