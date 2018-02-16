@@ -64,9 +64,6 @@ window.addEventListener("load", _ => {
     document.documentElement.lang = getLang()
 })
 
-document.addEventListener('DOMContentLoaded', _ => {
-    //document.body.dataset.loaded = true
-})
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()
