@@ -32,8 +32,7 @@
   "todo": [
     "Fixe cross platform issues",
     "Increase Audit score",
-    "Create new design of favicon (for splash screen)",
-    "New active hover on the second-hover css component"
+    "Create new design of favicon (for splash screen)"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -43,5 +42,7 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard"
   ],
-  "changelog": []
+  "changelog": [
+    "Added new active styles for the secondary-hover css component"
+  ]
 }

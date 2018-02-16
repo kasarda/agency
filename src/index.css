@@ -572,10 +572,13 @@ button, [role="button"] {
 .primary-hover {
   cursor: pointer;
   transition: opacity .15s ease-in-out; }
-  .primary-hover:hover, .primary-hover.active {
+  .primary-hover:hover {
     opacity: .5; }
-  .primary-hover.active {
-    cursor: default; }
+
+.active .primary-hover,
+.active.primary-hover {
+  cursor: default;
+  opacity: .5; }
 
 .secondary-hover {
   position: relative;
