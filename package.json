@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "2.14.0",
+  "version": "2.14.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -40,10 +40,5 @@
     "Fixe problem with Firefox init letter dash animation -> the animation isn't smooth",
     "Fixe problem with mobile form when form is submitted by keyboard"
   ],
-  "changelog": [
-    "Now pages in the Home component can also be controlled by arrow up and down on keyboard",
-    "Created better noscript experience",
-    "Added prefixs for inline styles",
-    "Added support for offline fonts when connection is lost"
-  ]
+  "changelog": []
 }
