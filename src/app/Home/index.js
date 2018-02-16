@@ -169,10 +169,10 @@ class Home extends Component {
 
     }
     onArrow({ keyCode }) {
-        if(keyCode === 39)
+        if (keyCode === 39 || keyCode === 40)
             this.setPage('next')
 
-        if(keyCode === 37)
+        if (keyCode === 37 || keyCode === 38)
             this.setPage('prev')
     }
 
