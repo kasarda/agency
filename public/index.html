@@ -13,17 +13,39 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Playfair+Display" rel="stylesheet">
   <title>Digital Agency</title>
   <style type="text/css">
-  body {
-    margin: 0;
-  }
-  .preloader {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #004bd3;
-  }
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+    }
+
+    #preloader,
+    noscript>div {
+      width: 100%;
+      height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      background-color: #004bd3;
+      padding: 0 10px;
+      color: #fff;
+    }
+
     #loader,
     #loader::before,
     #loader::after {
@@ -90,7 +112,15 @@
 
 <body>
   <noscript>
-    You need to enable JavaScript to run this app.
+    <style type="text/css">
+      #preloader {
+        display: none
+      }
+    </style>
+    <div>
+      <h1>You need to enable JavaScript to run this app</h1>
+      <h1>Pre spustenie tejto aplikácie musíte povoliť JavaScript</h1>
+    </div>
   </noscript>
 
   <!-- Icons -->
@@ -125,7 +155,7 @@
     </defs>
   </svg>
   <div id="root">
-    <div class="preloader">
+    <div id="preloader">
       <div id="loader"></div>
     </div>
   </div>
