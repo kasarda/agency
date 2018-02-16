@@ -529,7 +529,7 @@ button, [role="button"] {
   user-select: none; }
 
 .badge {
-  width: 90%;
+  max-width: 90%;
   padding: 14px 17px;
   background-color: #004bd3;
   outline: 1px #ffffff solid;
