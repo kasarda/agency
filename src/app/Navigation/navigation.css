@@ -30,7 +30,7 @@
     padding: 0 15px;
     overflow: hidden; }
     #Navigation a.active {
-      color: rgba(255, 255, 255, 0.5); }
+      opacity: .5; }
   #Navigation .column {
     position: relative;
     width: 100%;
