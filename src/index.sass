@@ -247,8 +247,11 @@ button, [role="button"]
         +position(100%, 0, absolute)
         opacity: .5
         cursor: pointer
+
 .active .secondary-hover:hover,
-.active.secondary-hover:hover
+.active .secondary-hover::before,
+.active.secondary-hover:hover,
+.active.secondary-hover::before
     transform: none
     cursor: default
 
