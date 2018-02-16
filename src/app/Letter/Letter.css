@@ -38,6 +38,12 @@
       transition: opacity .4s 1.6s ease-in-out;
       animation: FadeInAnim .4s .4s ease-in backwards;
       animation-play-state: paused; } }
+  @supports (-ms-ime-align: auto) {
+    .Letter {
+      opacity: 1;
+      transition: opacity .4s 1.6s ease-in-out;
+      animation: FadeInAnim .4s .4s ease-in backwards;
+      animation-play-state: paused; } }
   .Letter .fill-pattern {
     fill: #000000; }
   .Letter[data-letter="C"] .fill-pattern {
@@ -80,6 +86,14 @@
   transition: stroke-dashoffset .6s 1.6s ease-in-out;
   animation: DashAnim .6s .4s ease-in backwards;
   animation-play-state: paused; }
+  @media all and (-ms-high-contrast: none) {
+    #letter-shape-C .shape {
+      animation: none;
+      opacity: 1; } }
+  @supports (-ms-ime-align: auto) {
+    #letter-shape-C .shape {
+      animation: none;
+      opacity: 1; } }
 
 [data-home="false"] #letter-shape-C .shape {
   stroke-dashoffset: 901.397px;
@@ -92,10 +106,21 @@
   [data-home="false"] #letter-shape-C .shape {
     stroke-dashoffset: 0; } }
 
+@supports (-ms-ime-align: auto) {
+  [data-home="false"] #Letter {
+    opacity: 0;
+    transition-delay: 0s; }
+  [data-home="false"] #letter-shape-C .shape {
+    stroke-dashoffset: 0; } }
+
 [data-side-ready="true"][data-redirect="true"] #ContentLetter {
   opacity: 0; }
 
 @media all and (-ms-high-contrast: none) {
+  [data-loaded="true"] .Letter {
+    animation-play-state: running; } }
+
+@supports (-ms-ime-align: auto) {
   [data-loaded="true"] .Letter {
     animation-play-state: running; } }
 

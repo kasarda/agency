@@ -87,6 +87,9 @@
       @media all and (-ms-high-contrast: none) {
         #Home .camera h1 {
           animation-delay: .4s; } }
+      @supports (-ms-ime-align: auto) {
+        #Home .camera h1 {
+          animation-delay: .4s; } }
   #Home[data-from]:not([data-home="true"]) .camera .rule .background {
     opacity: 1;
     transition-delay: 1.8s; }

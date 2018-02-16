@@ -15,7 +15,7 @@
     +maxHeight(500px)
         +dimension(150px)
 
-    +ie
+    +ms
         opacity: 1
         +fade-ie-tran
         +fade-in-ie-anim
@@ -65,13 +65,18 @@
     stroke-dashoffset: 0px
     +dash-letter-c-tran
     +letter-c-anim
+    +ms
+        animation: none
+        opacity: 1
+
+
 
 
 [data-home="false"]
     #letter-shape-C .shape
         stroke-dashoffset: 901.397px
         +delay(0s)
-    +ie
+    +ms
         #Letter
             opacity: 0
             +delay(0s)
@@ -85,7 +90,7 @@
 
 [data-loaded="true"]
     .Letter
-        +ie
+        +ms
             +play
 
     #Letter

@@ -63,7 +63,8 @@ window.addEventListener("load", _ => {
 })
 
 document.addEventListener('DOMContentLoaded', _ => {
-    ReactDOM.render(<AppRouter />, document.getElementById('root'))
+    //document.body.dataset.loaded = true
 })
 
+ReactDOM.render(<AppRouter />, document.getElementById('root'))
 registerSW()
