@@ -33,8 +33,7 @@
     "Fixe cross platform issues",
     "Increase Audit score",
     "Create new design of favicon (for splash screen)",
-    "Control pages with swaping from left to right and reverse",
-    "Added new alt text and added alt in the Services component for images"
+    "Control pages with swaping from left to right and reverse"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
