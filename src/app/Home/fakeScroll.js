@@ -69,3 +69,29 @@ export function onTouchStart({ touches }) {
         startPosX: touches[0].clientX
     })
 }
+
+export function registerFakeScroll() {
+    const { onFakeScroll, onTouchStart, onArrow } = this.state
+
+    if ('onwheel' in document) {
+        document.addEventListener('wheel', onFakeScroll, false)
+    }
+    else {
+        document.addEventListener('mousewheel', onFakeScroll, false)
+        document.addEventListener('DOMMouseScroll', onFakeScroll, false)
+    }
+
+    document.addEventListener('touchstart', onTouchStart, false)
+    document.addEventListener('touchend', onFakeScroll, false)
+    document.addEventListener('keydown', onArrow, false)
+}
+
+export function unregisterFakeScroll() {
+    const { onFakeScroll, onTouchStart, onArrow } = this.state
+    document.removeEventListener('wheel', onFakeScroll)
+    document.removeEventListener('mousewheel', onFakeScroll)
+    document.removeEventListener('DOMMouseScroll', onFakeScroll)
+    document.removeEventListener('touchstart', onTouchStart)
+    document.removeEventListener('touchend', onFakeScroll)
+    document.removeEventListener('keydown', onArrow)
+}

@@ -6,7 +6,7 @@ import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
 import Navigator from '../Navigator'
-import { onFakeScroll, onTouchStart, onArrow } from './fakeScroll'
+import { onFakeScroll, onTouchStart, onArrow, registerFakeScroll, unregisterFakeScroll } from './fakeScroll'
 import './Home.css'
 
 class Home extends Component {
@@ -129,33 +129,13 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        const { onFakeScroll, onTouchStart, onArrow } = this.state
         document.body.dataset.preventTouch = "true"
-
-        if ('onwheel' in document)
-            document.addEventListener('wheel', onFakeScroll, false)
-        else {
-            document.addEventListener('mousewheel', onFakeScroll, false)
-            document.addEventListener('DOMMouseScroll', onFakeScroll, false)
-        }
-
-        document.addEventListener('touchstart', onTouchStart, false)
-        document.addEventListener('touchend', onFakeScroll, false)
-        document.addEventListener('keydown', onArrow, false)
-
+        registerFakeScroll.call(this)
     }
 
     componentWillUnmount() {
-        const { onFakeScroll, onTouchStart, onArrow } = this.state
         document.body.dataset.preventTouch = "false"
-
-        document.removeEventListener('wheel', onFakeScroll)
-        document.removeEventListener('mousewheel', onFakeScroll)
-        document.removeEventListener('DOMMouseScroll', onFakeScroll)
-        document.removeEventListener('touchstart', onTouchStart)
-        document.removeEventListener('touchend', onFakeScroll)
-        document.removeEventListener('keydown', onArrow)
-
+        unregisterFakeScroll.call(this)
     }
 
     render() {
