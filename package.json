@@ -30,7 +30,7 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time",
+    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge",
     "Safari chrome landscape bar with full height content",
     "Add all animations to animation file"
   ],
