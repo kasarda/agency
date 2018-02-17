@@ -33,7 +33,8 @@
     "Fixe cross platform issues",
     "Increase Audit score",
     "Create new design of favicon (for splash screen)",
-    "Control pages with swaping from left to right and reverse"
+    "Control pages with swaping from left to right and reverse",
+    "Divide Home component into chunks"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
