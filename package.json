@@ -30,8 +30,7 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Fixe cross platform issues",
-    "Increase Audit score"
+    "Fixe cross platform issues"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
@@ -46,6 +45,7 @@
     "New ALT text for images",
     "Now are pages controlled with swaping from left to right and reverse",
     "Divided fake scroll functions into new Home service \"fakeScroll\"",
-    "Changed background_color in manifest from primary blue to white color"
+    "Changed background_color in manifest from primary blue to white color",
+    "Increased Audit score"
   ]
 }
