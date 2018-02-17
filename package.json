@@ -29,15 +29,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "todo": [
-    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge",
-    "Safari chrome landscape bar with full height content"
-  ],
+  "todo": [],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
     "Optimize animation, analyze performance, create alternative for slow devices",
     "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
-    "Fixe problem with mobile form when form is submitted by keyboard"
+    "Fixe problem with mobile form when form is submitted by keyboard",
+    "Safari chrome landscape bar with full height content",
+    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge"
   ],
   "changelog": [
     "Added new active styles for the secondary-hover and primary-hover css component",
