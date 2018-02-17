@@ -29,7 +29,8 @@ class Home extends Component {
             onFakeScroll: this.onFakeScroll.bind(this),
             onTouchStart: this.onTouchStart.bind(this),
             onArrow: this.onArrow.bind(this),
-            startPos: null
+            startPosY: null,
+            startPosX: null
         }
     }
 
@@ -121,18 +122,23 @@ class Home extends Component {
 
     onFakeScroll({ type, changedTouches, deltaY, detail, wheelDelta }) {
         let wheelDown,
-            wheelOffset
+            wheelOffset,
+            wheelLeft,
+            wheelOffsetLeft
 
         const touch = type === 'touchend'
 
         if (touch) {
-            const { startPos } = this.state
+            const { startPos, startPosX } = this.state
             const end = changedTouches[0].clientY
+            const endX = changedTouches[0].clientX
             wheelDown = startPos > end ? false : true
             wheelOffset = Math.abs(startPos - end)
-
+            wheelLeft = startPosX < endX ? false : true
+            wheelOffsetLeft = Math.abs(startPosX - endX)
             this.setState({
-                startPos: null
+                startPosY: null,
+                startPosX: null
             })
         }
 
@@ -152,16 +158,19 @@ class Home extends Component {
         }
 
 
-        const minOffset = wheelOffset >= 50
+        const minOffsetY = wheelOffset >= 50
+        const minOffsetX = wheelOffsetLeft >= 50
 
         if (
-            (touch && !wheelDown && minOffset) ||
+            (touch && !wheelDown && minOffsetY) ||
+            (touch && !wheelLeft && minOffsetX) ||
             (!touch && wheelDown)
         ) {
             this.setPage('next')
         }
         else if (
-            (touch && wheelDown && minOffset) ||
+            (touch && wheelDown && minOffsetY) ||
+            (touch && wheelLeft && minOffsetX) ||
             (!touch && !wheelDown)
         ) {
             this.setPage('prev')
@@ -178,7 +187,8 @@ class Home extends Component {
 
     onTouchStart({ touches }) {
         this.setState({
-            startPos: touches[0].clientY
+            startPosY: touches[0].clientY,
+            startPosX: touches[0].clientX
         })
     }
 
