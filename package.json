@@ -30,7 +30,9 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Fixe cross platform issues"
+    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time",
+    "Badge is breaking text on small devices",
+    "Safari chrome landscape bar with full height content"
   ],
   "cancel": [
     "Fix problem with safari chrome bar -> navigation is not visible on landscape",
