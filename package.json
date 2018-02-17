@@ -31,8 +31,7 @@
   },
   "todo": [
     "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge",
-    "Safari chrome landscape bar with full height content",
-    "Add all animations to animation file"
+    "Safari chrome landscape bar with full height content"
   ],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
@@ -49,6 +48,7 @@
     "Increased Audit score",
     "Renamed black-color to dark color and add dark-color as a css component",
     "Fixed issue with Icon component class when if \"light\" property was undefined returned \"undefined\" class",
-    "Fixed width issue in badge css component"
+    "Fixed width issue in badge css component",
+    "Registered all unregistered animations in animation file"
   ]
 }

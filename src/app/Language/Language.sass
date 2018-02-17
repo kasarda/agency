@@ -1,12 +1,13 @@
 @import "ts-modules/lib"
 @import "theme.sass"
+@import "animation.sass"
 
 #Language
     position: fixed
     bottom: 25px
     left: 20px
     z-index: 1000
-    transition: color .4s ease-out
+    +color-lang-tran
     overflow: hidden
     +min(md)
         left: 50px
