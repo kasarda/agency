@@ -31,18 +31,23 @@
     width: 170px;
     font-weight: 700;
     overflow: hidden; }
-    #Navigator .buttons div {
+    #Navigator .buttons [role="button"] {
+      cursor: default;
       position: relative;
       color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase; }
-      #Navigator .buttons div.active {
+      #Navigator .buttons [role="button"].active {
         color: #ffffff; }
-      #Navigator .buttons div::before {
+      #Navigator .buttons [role="button"]::before {
+        cursor: default;
         opacity: 1;
         color: #ffffff; }
 
 [data-ready="true"] #Navigator {
   opacity: 1; }
+  [data-ready="true"] #Navigator [role="button"]:not(.active),
+  [data-ready="true"] #Navigator [role="button"]:not(.active)::before {
+    cursor: pointer; }
 
 [data-home="true"][data-from] #Navigator {
   animation: HeadingFinish-RenderPage-RenderImage-Ready 2.2s; }

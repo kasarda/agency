@@ -16,19 +16,24 @@
         width: 170px
         font-weight: 700
         overflow: hidden
-        div
+        [role="button"]
+            cursor: default
             position: relative
             color: $light-transparent-color
             text-transform: uppercase
             &.active
                 color: $light-color
             &::before
+                cursor: default
                 opacity: 1
                 color: $light-color
 
 [data-ready="true"]
     #Navigator
         opacity: 1
+        [role="button"]:not(.active),
+        [role="button"]:not(.active)::before
+            cursor: pointer
 
 [data-home="true"][data-from]
     #Navigator
