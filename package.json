@@ -32,7 +32,6 @@
   "todo": [
     "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time",
     "Safari chrome landscape bar with full height content",
-    "Rename black-color",
     "Add all animations to animation file"
   ],
   "cancel": [
@@ -47,6 +46,7 @@
     "Now are pages controlled with swaping from left to right and reverse",
     "Divided fake scroll functions into new Home service \"fakeScroll\"",
     "Changed background_color in manifest from primary blue to white color",
-    "Increased Audit score"
+    "Increased Audit score",
+    "Renamed black-color to dark color and add dark-color as a css component"
   ]
 }
