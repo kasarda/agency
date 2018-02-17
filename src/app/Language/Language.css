@@ -21,8 +21,6 @@
   @media (max-height: 500px) {
     #Language {
       bottom: 25px; } }
-  #Language.black-color {
-    color: #000000; }
   #Language .button {
     font-weight: 700;
     text-transform: uppercase; }

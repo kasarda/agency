@@ -24,8 +24,6 @@
   @media (min-width: 768px) {
     #Navigation {
       margin-top: 50px; } }
-  #Navigation.black-color * {
-    color: #000000; }
   #Navigation a {
     padding: 0 15px;
     overflow: hidden; }
@@ -56,5 +54,3 @@
       padding-right: 0; }
   #Navigation svg .icon {
     fill: #ffffff; }
-  #Navigation.black-color svg .icon {
-    fill: #000000; }

@@ -546,6 +546,11 @@ button, [role="button"] {
       width: auto;
       max-width: none; } }
 
+.dark-color {
+  color: #000000; }
+  .dark-color .icon {
+    fill: #000000 !important; }
+
 .view {
   height: 100%;
   width: 100%;

@@ -15,9 +15,9 @@ export const activeInWrapper = () => {
             const elementView = element.offsetTop + position
 
             if (elementView > wrapperView)
-                element.classList.add('black-color')
+                element.classList.add('dark-color')
             else
-                element.classList.remove('black-color')
+                element.classList.remove('dark-color')
         })
     }
 }
@@ -32,8 +32,8 @@ export const resetToDefaultPage = () => {
     window.scrollTo(0, 0)
     document.body.style.overflowY = 'hidden'
     document.documentElement.style.height = '100%'
-    document.querySelector('#Navigation').classList.remove('black-color')
-    document.querySelector('#Language').classList.remove('black-color')
+    document.querySelector('#Navigation').classList.remove('dark-color')
+    document.querySelector('#Language').classList.remove('dark-color')
 }
 
 export const image = (name, css = false) => {

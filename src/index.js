@@ -55,7 +55,7 @@ document.addEventListener('touchmove', event => {
 
 /**
  *
- * Set to navigation black color on scrollable component
+ * Set to navigation dark color on scrollable component
  * And activated scroll animation
  */
 function scrollListener() {
