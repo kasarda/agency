@@ -167,10 +167,10 @@ class Home extends Component {
                 data-side-ready={sideReady}
                 data-ready={ready}
                 data-from={from}
+                data-from-last={fromLast}
                 data-to={to}
                 data-redirect={redirect}
                 data-current-page={currentPage}
-                data-from-last={fromLast}
                 onAnimationEnd={this.animationEnd.bind(this)}
                 onAnimationStart={this.animationStart.bind(this)}
             >
