@@ -6,6 +6,7 @@ import Letter from '../Letter'
 import Side from '../Side'
 import Wheel from '../Wheel'
 import Navigator from '../Navigator'
+import { onFakeScroll, onTouchStart, onArrow } from './fakeScroll'
 import './Home.css'
 
 class Home extends Component {
@@ -26,9 +27,9 @@ class Home extends Component {
             fromLast: undefined,
             redirect: false,
             canRedirect: false,
-            onFakeScroll: this.onFakeScroll.bind(this),
-            onTouchStart: this.onTouchStart.bind(this),
-            onArrow: this.onArrow.bind(this),
+            onFakeScroll: onFakeScroll.bind(this),
+            onTouchStart: onTouchStart.bind(this),
+            onArrow: onArrow.bind(this),
             startPosY: null,
             startPosX: null
         }
@@ -118,78 +119,6 @@ class Home extends Component {
             this.setState({ renderImage: to })
 
         return true
-    }
-
-    onFakeScroll({ type, changedTouches, deltaY, detail, wheelDelta }) {
-        let wheelDown,
-            wheelOffset,
-            wheelLeft,
-            wheelOffsetLeft
-
-        const touch = type === 'touchend'
-
-        if (touch) {
-            const { startPos, startPosX } = this.state
-            const end = changedTouches[0].clientY
-            const endX = changedTouches[0].clientX
-            wheelDown = startPos > end ? false : true
-            wheelOffset = Math.abs(startPos - end)
-            wheelLeft = startPosX < endX ? false : true
-            wheelOffsetLeft = Math.abs(startPosX - endX)
-            this.setState({
-                startPosY: null,
-                startPosX: null
-            })
-        }
-
-        else {
-            if (type === 'wheel') {
-                if (deltaY < 0)
-                    wheelDown = false
-                else if (deltaY > 0)
-                    wheelDown = true
-            }
-
-            else {
-                wheelDown = !Math.max(0, Math.min(1, (wheelDelta || -detail)))
-            }
-
-            wheelOffset = Math.abs(wheelDelta || (detail * -40))
-        }
-
-
-        const minOffsetY = wheelOffset >= 50
-        const minOffsetX = wheelOffsetLeft >= 50
-
-        if (
-            (touch && !wheelDown && minOffsetY) ||
-            (touch && !wheelLeft && minOffsetX) ||
-            (!touch && wheelDown)
-        ) {
-            this.setPage('next')
-        }
-        else if (
-            (touch && wheelDown && minOffsetY) ||
-            (touch && wheelLeft && minOffsetX) ||
-            (!touch && !wheelDown)
-        ) {
-            this.setPage('prev')
-        }
-
-    }
-    onArrow({ keyCode }) {
-        if (keyCode === 39 || keyCode === 40)
-            this.setPage('next')
-
-        if (keyCode === 37 || keyCode === 38)
-            this.setPage('prev')
-    }
-
-    onTouchStart({ touches }) {
-        this.setState({
-            startPosY: touches[0].clientY,
-            startPosX: touches[0].clientX
-        })
     }
 
     componentWillReceiveProps({ toHomePage }) {
