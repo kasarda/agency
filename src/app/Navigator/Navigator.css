@@ -40,8 +40,6 @@
       #Navigator .buttons div::before {
         opacity: 1;
         color: #ffffff; }
-      #Navigator .buttons div:hover {
-        color: #ffffff; }
 
 [data-ready="true"] #Navigator {
   opacity: 1; }
