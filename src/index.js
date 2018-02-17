@@ -63,7 +63,9 @@ function scrollListener() {
     scrollAnimation()
 }
 window.addEventListener('scroll', scrollListener)
+window.addEventListener("orientationchange", scrollListener)
 scrollListener()
+
 
 /**
 *
