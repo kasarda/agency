@@ -32,7 +32,8 @@
   "todo": [
     "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time",
     "Badge is breaking text on small devices",
-    "Safari chrome landscape bar with full height content"
+    "Safari chrome landscape bar with full height content",
+    "Rename black-color"
   ],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
