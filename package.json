@@ -45,6 +45,7 @@
     "Fixe problem with mobile form when form is submitted by keyboard"
   ],
   "changelog": [
-    "Added new active styles for the secondary-hover and primary-hover css component"
+    "Added new active styles for the secondary-hover and primary-hover css component",
+    "New ALT text for images"
   ]
 }
