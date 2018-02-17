@@ -47,6 +47,8 @@
     "Divided fake scroll functions into new Home service \"fakeScroll\"",
     "Changed background_color in manifest from primary blue to white color",
     "Increased Audit score",
-    "Renamed black-color to dark color and add dark-color as a css component"
+    "Renamed black-color to dark color and add dark-color as a css component",
+    "Fixed issue with Icon component class when if \"light\" property was undefined returned \"undefined\" class",
+    "Fixed width issue in badge css component"
   ]
 }
