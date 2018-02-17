@@ -68,7 +68,7 @@ class Showcase extends Component {
                             backgroundColor: theme,
                             backgroundImage: image(`bg${id}.jpg`, true)
                         }}>
-                        <img src={image(`mobile${id}.png`)} alt="website on mobile" />
+                        <img src={image(`mobile${id}.png`)} alt="mobile web application" />
                     </div>
                 </section>
 
@@ -82,12 +82,12 @@ class Showcase extends Component {
                     <div className="showcases">
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row" style={{backgroundColor: theme}}>
-                                <img src={image(`desktop${id}-1.jpg`)} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-1.jpg`)} alt="desktop web application" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row" style={{backgroundColor: theme}}>
-                                <img src={image(`desktop${id}-2.jpg`)} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-2.jpg`)} alt="desktop web application" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" data-offset="100" className="description between-showcases">
@@ -97,12 +97,12 @@ class Showcase extends Component {
                         </div>
                         <div data-animate="fadeLeft" data-offset="-200" className="desktop-showcase rect-after flex justify-center right">
                             <div className="row" style={{backgroundColor: theme}}>
-                                <img src={image(`desktop${id}-3.jpg`)} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-3.jpg`)} alt="desktop web application" />
                             </div>
                         </div>
                         <div data-animate="fadeUp" className="desktop-showcase flex justify-center left">
                             <div className="row" style={{backgroundColor: theme}}>
-                                <img src={image(`desktop${id}-4.jpg`)} alt="website on dekstop" />
+                                <img src={image(`desktop${id}-4.jpg`)} alt="desktop web application" />
                             </div>
                         </div>
                     </div>

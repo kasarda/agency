@@ -36,13 +36,13 @@ class Services extends Component {
                         </p>
                     </div>
                     <div className="column showcase flex justify-center align-end" data-animate="fadeLeft">
-                        <img src={image('mobile1.png')} alt="" />
+                        <img src={image('mobile1.png')} alt="mobile application" />
                     </div>
                 </section>
 
                 <section className="flex wrap" id="web-showcase">
                     <div className="column showcase flex flex-center" data-animate="fadeRight" data-offset="-200">
-                        <img src={image('web.png')} alt="" />
+                        <img src={image('web.png')} alt="desktop web page" />
                     </div>
                     <div className="column flex flex-center direction-col">
                         <h3 data-animate="fadeUp" data-offset="200">Web</h3>
