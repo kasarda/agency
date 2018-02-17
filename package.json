@@ -29,7 +29,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "todo": [],
+  "todo": [
+    "Change images and theme colors"
+  ],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
     "Optimize animation, analyze performance, create alternative for slow devices",
