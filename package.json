@@ -41,6 +41,7 @@
     "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge"
   ],
   "changelog": [
-    "Added preloading main images to Home component"
+    "Added preloading main images to Home component",
+    "Rewritten \"preload\" function in the common service"
   ]
 }
