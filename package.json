@@ -30,7 +30,7 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Change images and theme colors"
+    "Change images, name and theme color of pages"
   ],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
