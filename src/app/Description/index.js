@@ -8,23 +8,15 @@ function Description({ description, theme, id, onRedirect }) {
         event.preventDefault()
         onRedirect()
 
-        const data = document.head.dataset
-        const preloaded = data.preloaded || '|'
-
-        if(!preloaded.includes(`|${id}|`)) {
-
-            preload(
-                `bg${id}.jpg`,
-                `mobile${id}.png`,
-                `desktop${id}-1.jpg`,
-                `desktop${id}-2.jpg`,
-                `desktop${id}-3.jpg`,
-                `desktop${id}-4.jpg`
-            )
-
-            data.preloaded = `${preloaded}${id}|`
-        }
-
+        preload(
+            id,
+            `bg${id}.jpg`,
+            `mobile${id}.png`,
+            `desktop${id}-1.jpg`,
+            `desktop${id}-2.jpg`,
+            `desktop${id}-3.jpg`,
+            `desktop${id}-4.jpg`
+        )
     }
 
     const descriptionList = description.map((text, key) =>

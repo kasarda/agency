@@ -34,18 +34,15 @@ class Home extends Component {
             startPosX: null
         }
 
-        const data = document.head.dataset
-        const preloaded = data.preloaded || '|'
 
-        if (!preloaded.includes(`|0|`)) {
-            preload(
-                'project1.jpg',
-                'project2.jpg',
-                'project3.jpg',
-                'project4.jpg'
-            )
-            data.preloaded = `${preloaded}0|`
-        }
+
+        preload(
+            0,
+            'project1.jpg',
+            'project2.jpg',
+            'project3.jpg',
+            'project4.jpg'
+        )
     }
 
     toPage(newPage) {
@@ -135,7 +132,7 @@ class Home extends Component {
     }
 
     componentWillReceiveProps({ toHomePage }) {
-        if (toHomePage){
+        if (toHomePage) {
             this.toPage(0)
             this.props.onHomePageTriggered()
         }

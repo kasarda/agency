@@ -54,21 +54,26 @@ export const text = (primary, seconadry, onlyText) => {
 
 
 export const setTitle = (primary, secondary) => {
-    if(secondary)
+    if (secondary)
         document.title = text(primary, secondary, true)
     else
         document.title = primary
 }
 
+const preloaded = []
+export const preload = (id, ...images) => {
+    const isPreloaded = Boolean(preloaded.filter(v => v === id).length)
+    if (!isPreloaded) {
 
-export const preload = (...images) => {
+        images.forEach(image => {
+            const link = document.createElement('link')
+            link.href = path(require('../images/' + image))
+            link.rel = 'preload'
+            link.as = 'image'
+            document.head.appendChild(link)
+        })
 
-    images.forEach(image => {
-        const link = document.createElement('link')
-        link.href = path(require('../images/' + image))
-        link.rel = 'preload'
-        link.as = 'image'
-        document.head.appendChild(link)
-    })
+        preloaded.push(id)
+    }
 
 }
