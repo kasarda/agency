@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { text, setTitle } from '../../services/common'
+import { text, setTitle, preventTouch } from '../../services/common'
 import Letter from '../Letter'
 import Form from '../Form'
 import Icon from '../Icon'
@@ -36,11 +36,11 @@ class Contacts extends Component {
             this.setState({ sended: false })
     }
     componentDidMount() {
-        document.body.dataset.preventTouch = "true"
+        preventTouch(true)
     }
 
     componentWillUnmount() {
-        document.body.dataset.preventTouch = "false"
+        preventTouch(false)
     }
 
     render() {

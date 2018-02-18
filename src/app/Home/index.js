@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { image, text, setTitle, preload } from '../../services/common'
+import { image, text, setTitle, preload, preventTouch } from '../../services/common'
 import { getConfig, getPageById } from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
@@ -139,12 +139,12 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        document.body.dataset.preventTouch = "true"
+        preventTouch(true)
         registerFakeScroll.call(this)
     }
 
     componentWillUnmount() {
-        document.body.dataset.preventTouch = "false"
+        preventTouch(false)
         unregisterFakeScroll.call(this)
     }
 

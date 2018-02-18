@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { text } from '../../services/common'
+import { text, preventTouch } from '../../services/common'
 import Icon from '../Icon'
 import './Form.css'
 
@@ -106,11 +106,11 @@ class Form extends Component {
     }
 
     componentDidMount() {
-        document.body.dataset.preventTouch = "false"
+        preventTouch(false)
     }
 
     componentWillUnmount() {
-        document.body.dataset.preventTouch = "true"
+        preventTouch(true)
     }
 
     render() {

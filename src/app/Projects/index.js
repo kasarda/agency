@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getConfig } from '../../services/pages'
-import { setTitle } from '../../services/common'
+import { setTitle, preventTouch } from '../../services/common'
 import Letter from '../Letter'
 import Anchor from './anchor'
 import './Projects.css'
@@ -35,11 +35,11 @@ class Projects extends Component {
     }
 
     componentDidMount() {
-        document.body.dataset.preventTouch = "true"
+        preventTouch(true)
     }
 
     componentWillUnmount() {
-        document.body.dataset.preventTouch = "false"
+        preventTouch(false)
     }
 
     render() {

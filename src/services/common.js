@@ -77,3 +77,8 @@ export const preload = (id, ...images) => {
     }
 
 }
+
+
+let prevented = false
+export const preventTouch = prevent => prevented = prevent
+export const isPreventTouch = () => prevented

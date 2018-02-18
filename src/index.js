@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
-import { getLang, activeInWrapper } from './services/common'
+import { getLang, activeInWrapper, isPreventTouch } from './services/common'
 import './index.css'
 import { version } from '../package.json'
 
@@ -39,8 +39,7 @@ window.addEventListener("load", _ => {
  *
  */
 document.addEventListener('touchmove', event => {
-    const canPrevent = document.body.dataset.preventTouch === 'true'
-    if (canPrevent)
+    if (isPreventTouch())
         event.preventDefault()
 }, {
         passive: false

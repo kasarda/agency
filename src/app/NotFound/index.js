@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import { text, setTitle } from '../../services/common'
+import { text, setTitle, preventTouch } from '../../services/common'
 import './NotFound.css'
 
 class NotFound extends Component {
     componentDidMount() {
-        document.body.dataset.preventTouch = "true"
+        preventTouch(true)
     }
 
     componentWillUnmount() {
-        document.body.dataset.preventTouch = "false"
+        preventTouch(false)
     }
 
     render() {
