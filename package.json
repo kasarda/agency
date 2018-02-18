@@ -40,5 +40,7 @@
     "Safari chrome landscape bar with full height content",
     "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge"
   ],
-  "changelog": []
+  "changelog": [
+    "Added preloading main images to Home component"
+  ]
 }
