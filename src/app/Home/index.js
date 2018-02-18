@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import { image, text, setTitle } from '../../services/common'
+import { image, text, setTitle, preload } from '../../services/common'
 import { getConfig, getPageById } from '../../services/pages'
 import Letter from '../Letter'
 import Side from '../Side'
@@ -32,6 +32,19 @@ class Home extends Component {
             onArrow: onArrow.bind(this),
             startPosY: null,
             startPosX: null
+        }
+
+        const data = document.head.dataset
+        const preloaded = data.preloaded || '|'
+
+        if (!preloaded.includes(`|0|`)) {
+            preload(
+                'project1.jpg',
+                'project2.jpg',
+                'project3.jpg',
+                'project4.jpg'
+            )
+            data.preloaded = `${preloaded}0|`
         }
     }
 

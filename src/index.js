@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
-import { preload, getLang, activeInWrapper } from './services/common'
+import { getLang, activeInWrapper } from './services/common'
 import './index.css'
 import { version } from '../package.json'
 
@@ -13,16 +13,9 @@ document.documentElement.lang = getLang()
 
 /**
  *
- * Preload main images and offline fonts
+ * load offline fonts if needed
  *
  */
-
-preload(
-    'project1.jpg',
-    'project2.jpg',
-    'project3.jpg',
-    'project4.jpg'
-)
 
 if(!window.navigator.onLine)
     require('./fonts/fonts.css')
