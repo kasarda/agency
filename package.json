@@ -42,6 +42,7 @@
   ],
   "changelog": [
     "Added preloading main images to Home component",
-    "Rewritten \"preload\" function in the common service"
+    "Rewritten \"preload\" function in the common service",
+    "New PreventTouch function"
   ]
 }
