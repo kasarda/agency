@@ -1,11 +1,11 @@
-@import "ts-modules/lib"
+@import "kasarda/lib"
 @import "theme.sass"
 @import "animation.sass"
 
 
 #Showcase
     .camera
-        +dimension(100%, 250px)
+        +size(100%, 250px)
         background-color: $primary-color
         +min(sm)
             height: 50vh
@@ -42,7 +42,7 @@
             content: ''
             +position(300px, 306px, absolute)
             z-index: -1
-            +dimension(1000px, 700px)
+            +size(1000px, 700px)
             max-width: 70%
             display: none
             background: #f6f6f6
@@ -56,7 +56,7 @@
 
 #intro-section
     .mobile-showcase
-        +dimension(90%, 500px)
+        +size(90%, 500px)
         margin: 50px auto 0 auto
         overflow: hidden
         background-repeat: no-repeat

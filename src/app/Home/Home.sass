@@ -1,4 +1,4 @@
-@import "ts-modules/lib"
+@import "kasarda/lib"
 @import "theme.sass"
 @import "animation.sass"
 
@@ -8,7 +8,7 @@ $padding-from-screen-mobile: 20px
 #Home
     background-color: $primary-color
     .camera
-        +dimension
+        +size
         justify-content: flex-end
         padding: 0 $padding-from-screen-mobile
         +min(md, 500px)
@@ -42,7 +42,7 @@ $padding-from-screen-mobile: 20px
             position: absolute
             z-index: 1
             overflow: hidden
-            +dimension(0px, 100%)
+            +size(0px, 100%)
             background-color: $light-color
             +slide-tran
             +min(md)
@@ -51,7 +51,7 @@ $padding-from-screen-mobile: 20px
             +maxHeight(500px)
                 width: 0px
             .background
-                +dimension
+                +size
                 opacity: 0
                 background-repeat: no-repeat
                 background-size: cover

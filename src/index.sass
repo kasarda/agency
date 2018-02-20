@@ -1,9 +1,9 @@
 // Global Styles
 
-@import "ts-modules/lib"
-@import "ts-modules/normalize"
-@import "ts-modules/visibility"
-@import "ts-modules/flex"
+@import "kasarda/lib"
+@import "kasarda/normalize"
+@import "kasarda/visibility"
+@import "kasarda/flex"
 @import "theme.sass"
 @import "animation.sass"
 
@@ -166,7 +166,7 @@ address
             padding: 17px 23px
         &::after
             content: ''
-            +dimension(calc(100% + 1px), 100%)
+            +size(calc(100% + 1px), 100%)
             +position(0, 0, absolute)
             z-index: -1
             display: block
@@ -210,7 +210,7 @@ button, [role="button"]
         fill: $dark-color !important
 
 .view
-    +dimension
+    +size
     +position(0, 0, absolute)
 
 .primary-background

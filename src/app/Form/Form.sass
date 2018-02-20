@@ -1,16 +1,16 @@
-@import "ts-modules/lib"
+@import "kasarda/lib"
 @import "theme.sass"
 @import "animation.sass"
 
 #Form
     z-index: 999
     +position(0, null, null, 0, absolute)
-    +dimension
+    +size
     transform: translateX(100%)
     +slide-left-form-anim
     color: $dark-color
     .form
-        +dimension(100%, 100%)
+        +size(100%, 100%)
         background-color: $light-color
         overflow-y: auto
         padding: 0 50px
@@ -19,7 +19,7 @@
         +min(xl)
             width: 38%
     .disabled-container
-        +dimension(0%, 100%)
+        +size(0%, 100%)
         background: rgba(0, 0, 0, 0)
         +background-fadeIn-anim
         +min(sm)

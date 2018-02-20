@@ -1,14 +1,14 @@
-@import "ts-modules/lib"
+@import "kasarda/lib"
 @import "theme.sass"
 @import "animation.sass"
 
 #Projects
     +position(0, 0, absolute)
-    +dimension
+    +size
     background-color: $primary-color
     & > div
         position: relative
-        +dimension
+        +size
         +min(md)
             width: 50%
 
@@ -62,15 +62,15 @@
             align-items: flex-end
         .Letter
             opacity: 0
-            +dimension(150px)
+            +size(150px)
             +min(sm)
-                +dimension(300px)
+                +size(300px)
             +min(md)
-                +dimension(350px)
+                +size(350px)
             +min(xl, 700px)
-                +dimension(450px)
+                +size(450px)
             +maxHeight(500px)
-                +dimension(150px)
+                +size(150px)
 
             .fill-pattern
                 fill: $light-color
