@@ -43,6 +43,7 @@
   "changelog": [
     "Added preloading main images to Home component",
     "Rewritten \"preload\" function in the common service",
-    "New PreventTouch function"
+    "New PreventTouch function",
+    "Replaced ts-modules with kasarda package"
   ]
 }
