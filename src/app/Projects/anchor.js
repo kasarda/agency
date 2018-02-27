@@ -26,7 +26,7 @@ class Anchor extends Component {
     }
 
     render() {
-        const { title, delay } = this.props
+        const { title, link, delay } = this.props
         const { activeLink } = this.state
 
         return (
@@ -38,7 +38,7 @@ class Anchor extends Component {
                 onMouseEnter={this.enter.bind(this)}
                 onMouseLeave={this.leave.bind(this)}
             >
-                <Link to={`projects/${title}`}>
+                <Link to={link}>
                     {title}
                 </Link>
             </h2>

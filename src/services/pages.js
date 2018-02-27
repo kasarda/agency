@@ -30,12 +30,12 @@ export const getConfig = () => ([
         ],
         link: '/projects/headphones',
         next: 'portfolio',
-        prev: 'artech'
+        prev: 'tradeley'
     },
     {
         id: 2,
         title: 'portfolio',
-        letter: 'R',
+        letter: 'P',
         theme: '#a0978a',
         fallbackTheme: '#ddc6a6',
         description: [
@@ -60,13 +60,13 @@ export const getConfig = () => ([
             )
         ],
         link: '/projects/portfolio',
-        next: 'post',
+        next: 'response',
         prev: 'headphones'
     },
     {
         id: 3,
-        title: 'post',
-        letter: 'P',
+        title: 'response',
+        letter: 'R',
         theme: '#a9998e',
         fallbackTheme: '#6a4745',
         description: [
@@ -88,25 +88,25 @@ export const getConfig = () => ([
                 'Stránka bola navrhnutá aby bola veľmi jednoduchá kde každý príspevok bude mať svoje vlastné miesto kde môžete okomentovať alebo ohodnotiť príspevok.'
             )
         ],
-        link: '/projects/post',
-        next: 'artech',
+        link: '/projects/response',
+        next: 'tradeley',
         prev: 'portfolio'
     },
     {
         id: 4,
-        title: 'artech',
+        title: 'tradeley',
         letter: 'T',
         theme: '#c1ab9e',
         fallbackTheme: '#d8cbbb',
         description: [
             text('We created business website', 'Vytvorili sme obchodnú stránku'),
             text('for architect company', 'pre architektonickú spoločnosť'),
-            text('called Artech', 'nazývanú Artech')
+            text('called Tradeley', 'nazývanú Tradeley')
         ],
         paragraphs: [
             text(
-                'We created business website for architect company called Artech. It is fully responsive progressive web app with very fast loading of content.',
-                'Vytvorili sme obchodnú stránku pre architektonickú spoločnosť nazývanú Artech. Je to plne responzívna PWA stránka s veľmi rýchlym načítaním.'
+                'We created business website for architect company called Tradeley. It is fully responsive progressive web app with very fast loading of content.',
+                'Vytvorili sme obchodnú stránku pre architektonickú spoločnosť nazývanú Tradeley. Je to plne responzívna PWA stránka s veľmi rýchlym načítaním.'
             ),
             text(
                 'Our goal was to create modern portfolio for architecture company. We decided to create progressive web app to increase user experience and loading of the content.',
@@ -117,9 +117,9 @@ export const getConfig = () => ([
                 'Stránka bola navrhnutá aby bola veľmi jednoduchá bez hluku v pozadí takže sa užívateľ môže sústrediť na samotný obsah stránky nie na menej dôležité veci.'
             )
         ],
-        link: '/projects/artech',
+        link: '/projects/tradeley',
         next: 'headphones',
-        prev: 'post'
+        prev: 'response'
     }
 ])
 

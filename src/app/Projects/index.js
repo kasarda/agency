@@ -46,9 +46,10 @@ class Projects extends Component {
         setTitle('Projects - Digital Agency', 'Projekty - Digital Agency', true)
         const { enter, letter, active } = this.state
 
-        const projectList = getConfig().map(({title, letter, id}, key) => (
+        const projectList = getConfig().map(({title, letter, link, id}, key) => (
             <Anchor
                 key={key} title={title}
+                link={link}
                 delay={(id+1)/10}
                 letter={letter}
                 onMouse={this.updateLetter.bind(this)}
