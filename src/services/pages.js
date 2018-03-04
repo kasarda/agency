@@ -8,19 +8,19 @@ export const getConfig = () => ([
         theme: '#b29992',
         fallbackTheme: '#d2c7c3',
         description: [
-            text('We created a fast E-shop', 'Vytvorili sme rýchly E-shop'),
+            text('We created a fast E-shop', 'Vytvorili sme rýchly E-shop,'),
             text('which provide quality', 'ktorý ponúka kvalitné'),
             text('headphones and speakers.', 'slúchadlá a reproduktory.')
         ],
         paragraphs: [
             text(
                 'We created a fast E-shop which provides headphones and speakers of great quality. The website includes beautiful landing pages for all products and also is fully responsive. The website uses notifications so you will know about new products really quickly.',
-                'Vytvorili sme rýchly E-shop ktorý ponúka kvalitné slúchadlá a reproduktory. Stránka obsahuje prekrásne Landing page pre všetky produkty a je plne responzívna. Stránka využíva notifikácie takže budete vedieť informácie o nových produktoch veľmi rýchlo.'
+                'Vytvorili sme rýchly E-shop, ktorý ponúka kvalitné slúchadlá a reproduktory. Stránka obsahuje prekrásne Landing page pre všetky produkty a je plne responzívna. Stránka využíva notifikácie takže budete vedieť informácie o nových produktoch veľmi rýchlo.'
             ),
 
             text(
                 'Our challenge was to create really fast website which will be working across all platforms and devices which are available to us. Our priority was user experience as always.',
-                'Výzvou bolo vytvoriť veľmi rýchlu stránku ktorá bude funkčná na každej platforme a zariadeniach ktoré sú dostupné. Našou prioritou bolo ako vždy user experience.'
+                'Výzvou bolo vytvoriť veľmi rýchlu stránku, ktorá bude funkčná na každej platforme a zariadeniach, ktoré sú dostupné. Našou prioritou bolo ako vždy user experience.'
             ),
 
             text(
@@ -51,7 +51,7 @@ export const getConfig = () => ([
 
             text(
                 'Our goal was to create portfolio page which will be progressive web app with gallery. The page uses parallax effects which can increase user experience.',
-                'Naším cieľom bolo vytvoriť portfólio ktoré bude PWA s dynamickou galériou. Stránka používa parallax efekty ktoré zvyšujú user experience.'
+                'Naším cieľom bolo vytvoriť portfólio, ktoré bude PWA s dynamickou galériou. Stránka používa parallax efekty, ktoré zvyšujú user experience.'
             ),
 
             text(
@@ -114,7 +114,7 @@ export const getConfig = () => ([
             ),
             text(
                 'The website was designed to be very simple and clear without any noise in background so user can focus on content not on less important things.',
-                'Stránka bola navrhnutá aby bola veľmi jednoduchá bez hluku v pozadí takže sa užívateľ môže sústrediť na samotný obsah stránky nie na menej dôležité veci.'
+                'Stránka bola navrhnutá aby bola veľmi jednoduchá bez hluku v pozadí, takže sa užívateľ môže sústrediť na samotný obsah stránky nie na menej dôležité veci.'
             )
         ],
         link: '/projects/tradeley',
