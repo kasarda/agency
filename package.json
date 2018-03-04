@@ -8,7 +8,7 @@
   },
   "homepage": "http://kasarda.github.io/agency/build",
   "dependencies": {
-    "@types/react": "^16.0.38",
+    "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "@types/react-router-dom": "^4.2.4",
     "node-sass-chokidar": "^0.0.3",
@@ -30,7 +30,6 @@
     "eject": "react-scripts eject"
   },
   "todo": [
-    "Change images, name and theme color of pages"
   ],
   "cancel": [
     "Fix bug with letters when pattern goes where should not go",
@@ -44,6 +43,8 @@
     "Added preloading main images to Home component",
     "Rewritten \"preload\" function in the common service",
     "New PreventTouch function",
-    "Replaced ts-modules with kasarda package"
+    "Replaced ts-modules with kasarda package",
+    "Changed images, names and text of pages",
+    "Updated packages"
   ]
 }
