@@ -39,7 +39,7 @@ window.addEventListener("load", _ => {
 /**
  *
  * Prevent default behavior of scrolling on touch devices,
- * but only for components that are no scrollabel
+ * but only for components that are not scrollabel
  *
  */
 document.addEventListener('touchmove', event => {
