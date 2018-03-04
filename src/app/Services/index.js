@@ -16,7 +16,7 @@ class Services extends Component {
     }
 
     render() {
-        setTitle('Services - Digital Agency', 'Servis - Digital Agency', true)
+        setTitle('Services - Digital Agency', 'Servis - Digital Agency')
 
         return (
             <div id="Services">

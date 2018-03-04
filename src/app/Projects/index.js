@@ -43,7 +43,7 @@ class Projects extends Component {
     }
 
     render() {
-        setTitle('Projects - Digital Agency', 'Projekty - Digital Agency', true)
+        setTitle('Projects - Digital Agency', 'Projekty - Digital Agency')
         const { enter, letter, active } = this.state
 
         const projectList = getConfig().map(({title, letter, link, id}, key) => (
