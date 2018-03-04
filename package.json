@@ -1,6 +1,6 @@
 {
   "name": "agency",
-  "version": "3.1.0",
+  "version": "3.1.0-next",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
@@ -29,23 +29,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "todo": [
-  ],
-  "cancel": [
-    "Fix bug with letters when pattern goes where should not go",
-    "Optimize animation, analyze performance, create alternative for slow devices",
-    "in scroll-animation add class when element is not visible but is on top of current scroll position and this class add active animation style but without animation",
-    "Fixe problem with mobile form when form is submitted by keyboard",
-    "Safari chrome landscape bar with full height content",
-    "Fixe EDGE primary-button in Contacts component -> hover color transition doesnt work for the first time => currentColor cannot be animated in the Edge"
-  ],
-  "changelog": [
-    "Added preloading main images to Home component",
-    "Rewritten \"preload\" function in the common service",
-    "New PreventTouch function",
-    "Replaced ts-modules with kasarda package",
-    "Changed images, names and text of pages",
-    "Updated packages",
-    "Added SEO meta tags"
-  ]
+  "todo": [],
+  "changelog": []
 }
