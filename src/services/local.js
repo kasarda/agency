@@ -1,8 +1,7 @@
 import { HashRouter, BrowserRouter } from 'react-router-dom'
 
-const local = false
+export const local = false
 const dev = process.env.NODE_ENV === 'development'
-
 
 export const path = name => local ? '.' + name : name
 export const baseName = local ? '/' : dev ? '/' : 'agency/build'

@@ -5,8 +5,9 @@ import AppRouter from './Router'
 import registerSW from './sw'
 import { scrollAnimation } from './services/animation'
 import { getLang, activeInWrapper, isPreventTouch } from './services/common'
-import './index.css'
+import { local } from './services/local'
 import { version } from '../package.json'
+import './index.css'
 
 document.documentElement.dataset.version = version
 document.documentElement.lang = getLang()
@@ -17,9 +18,12 @@ document.documentElement.lang = getLang()
  *
  */
 
-if(!window.navigator.onLine)
-    require('./fonts/fonts.css')
-
+if (window.navigator.onLine === false) {
+    var link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = './fonts/fonts.css'
+    document.head.appendChild(link)
+}
 
 /**
 *
@@ -65,4 +69,6 @@ scrollListener()
 *
 */
 ReactDOM.render(<AppRouter />, document.getElementById('root'))
-registerSW()
+
+if(!local)
+    registerSW()

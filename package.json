@@ -1,12 +1,12 @@
 {
   "name": "agency",
-  "version": "3.1.0-next",
+  "version": "3.2.0",
   "private": true,
   "author": {
     "name": "Filip Kasarda",
     "email": "kasardaafilip@gmail.com"
   },
-  "homepage": "http://kasarda.github.io/agency/build",
+  "homepage": "https://kasarda.github.io/agency/build/",
   "dependencies": {
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
