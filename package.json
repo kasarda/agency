@@ -45,6 +45,7 @@
     "New PreventTouch function",
     "Replaced ts-modules with kasarda package",
     "Changed images, names and text of pages",
-    "Updated packages"
+    "Updated packages",
+    "Added SEO meta tags"
   ]
 }
