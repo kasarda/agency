@@ -19,7 +19,7 @@ document.documentElement.lang = getLang()
  */
 
 if (window.navigator.onLine === false) {
-    var link = document.createElement('link')
+    const link = document.createElement('link')
     link.rel = 'stylesheet'
     link.href = './fonts/fonts.css'
     document.head.appendChild(link)

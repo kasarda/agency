@@ -1,4 +1,3 @@
-//import '@digitalkaoz/preload-polyfill'
 
 if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
