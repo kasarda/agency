@@ -12,7 +12,7 @@ class NotFound extends Component {
     }
 
     render() {
-        setTitle('Not Found - Digital Agency', 'Nenašlo sa - Digital Agency', true)
+        setTitle('Not Found - Digital Agency', 'Nenašlo sa - Digital Agency')
 
         const { match } = this.props
 
