@@ -149,7 +149,7 @@ export const getListOf = prop => {
         if(prop in value)
             array.push(value[prop])
         else
-            console.error(`[Services:Pages] -> property "${prop}" doesn't exist in object`)
+            console.error(`[Services:Pages] -> property "${prop}" doesn't exist in the config object`)
     })
 
     return array

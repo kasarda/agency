@@ -10,7 +10,7 @@ class Projects extends Component {
         super()
 
         this.state = {
-            enter: false, //* true if some of link is entered
+            enter: false, //* true if some of the link is entered
             active: false, //* true if .links element is entered
             letter: 'C'
         }

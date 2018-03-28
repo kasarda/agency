@@ -44,8 +44,8 @@ export const image = (name, css = false) => {
 const storageLang = window.localStorage.getItem('lang')
 export const getLang = () => storageLang ? storageLang : (window.navigator.language.includes('sk') ? 'sk' : 'en')
 
-export const text = (primary, seconadry, onlyText) => {
-    const content = document.documentElement.lang === 'sk' ? seconadry : primary
+export const text = (primary, secondary, onlyText) => {
+    const content = document.documentElement.lang === 'sk' ? secondary : primary
     if (onlyText)
         return content
 

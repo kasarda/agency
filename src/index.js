@@ -30,7 +30,7 @@ if (window.navigator.onLine === false) {
 * Set [data-loaded="true"] if page is loaded
 *
 */
-window.addEventListener("load", _ => {
+window.addEventListener('load', _ => {
     document.body.dataset.loaded = true
     // Hack for IE to call CSSOM rendering
     document.documentElement.lang = getLang()
